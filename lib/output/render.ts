@@ -423,7 +423,15 @@ export function groupRaw(
       for (const [id, b] of buckets[cat].entries()) {
         if (subcatOf.get(id) === subId) sources.push(toSourceGroup(id, b, limit));
       }
-      if (sources.length === 0) continue;
+      // 广东地区IPO 的 6 个二级标签（深交/北交/上交/港交/辅导/国外）始终渲染，
+      // 即使当天为空也保留标签 + “暂无内容”占位，保证结构稳定可见。
+      if (sources.length === 0) {
+        if (cat === 'gd-ipo') {
+          subs.push({ id: subId, name: SUBCATEGORY_LABELS[subId] ?? subId, sources: [] });
+          continue;
+        }
+        continue;
+      }
       subs.push({
         id: subId,
         name: SUBCATEGORY_LABELS[subId] ?? subId,
@@ -535,6 +543,11 @@ function renderSourceTabs(
 }
 
 function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
+  if (sub.sources.length === 0) {
+    return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+    <p class="empty">${STR.emptySource}</p>
+  </div>`;
+  }
   return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
     ${renderSourceTabs(category, sub.id, sub.sources)}
     <div class="source-contents">

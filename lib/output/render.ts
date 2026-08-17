@@ -36,6 +36,7 @@ const TEXTS_ZH = {
   subXViral: "X 推文",
   subBlogWeekly: "博客周刊",
   subCnCommunity: "中文社区",
+  subCnTech: "国内技术",
   subOverseasCommunity: "海外社区",
   subFinanceNews: "财经新闻",
   subFinanceCommunity: "社区讨论",
@@ -86,6 +87,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   subXViral: "X Viral",
   subBlogWeekly: "Blog Weekly",
   subCnCommunity: "Chinese Community",
+  subCnTech: "Chinese Tech",
   subOverseasCommunity: "Overseas Community",
   subFinanceNews: "Finance News",
   subFinanceCommunity: "Community",
@@ -175,13 +177,13 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // Locale filtering at registry level decides which actually appears:
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
-  tech: ["trending-papers", "x-viral", "ai-news"], 
+  tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
   finance: ["news"],
   'gd-ipo': ["szse", "bse", "sse", "hkex", "em-ipo-tutoring", "foreign"],
   politics: ["world"],
 };
 
-const TECH_MAIN_SUBS = new Set(["github-trending", "trending-papers", "x-viral", "ai-news"]);
+const TECH_MAIN_SUBS = new Set(["github-trending", "trending-papers", "x-viral", "ai-news", "cn-tech"]);
 const TECH_COMMUNITY_SUBS = new Set(["cn-community", "overseas-community"]);
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
@@ -190,6 +192,7 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "cn-community": STR.subCnCommunity,
   "overseas-community": STR.subOverseasCommunity,
   "ai-news": STR.subAiNews,
+  "cn-tech": STR.subCnTech,
   "x-viral": STR.subXViral,
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
@@ -252,6 +255,7 @@ function displayLimitFor(
  */
 export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   "tech:ai-news": 15,
+  "tech:cn-tech": 15,
   "finance:news": 12,
   "politics:world": 15,
 };

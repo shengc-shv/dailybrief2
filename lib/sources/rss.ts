@@ -1,6 +1,7 @@
 import Parser from "rss-parser";
 import { curlFetch } from "./curl-fetch";
 import type { Category, RawArticle } from "./types";
+import { isGuangdongEnterprise } from "./guangdong.mjs";
 
 const parser = new Parser({
   timeout: 15000,
@@ -37,7 +38,7 @@ export async function fetchRss(
     feed = await parser.parseURL(url);
   }
 
-  return (feed.items ?? [])
+  const mapped = (feed.items ?? [])
     .slice(0, limit)
     .map((item) => ({
       sourceId,
@@ -51,4 +52,20 @@ export async function fetchRss(
       category,
     }))
     .filter((a) => a.title && a.url);
+
+  // 广东地区 IPO 类源（目前即"国外"子分类的 RSS 资信源）需按广东企业过滤：
+  // 这些源没有股票代码可解析省份，只能用公司名/正文中的广东城市名识别。
+  // 其余分类（tech / finance / politics）不受影响。
+  if (category === "gd-ipo") {
+    const before = mapped.length;
+    const kept = mapped.filter((a) =>
+      isGuangdongEnterprise(`${a.title} ${a.excerpt ?? ""}`),
+    );
+    console.log(
+      `[rss ${sourceId}] 广东企业过滤: ${before} → ${kept.length} 条`,
+    );
+    return kept;
+  }
+
+  return mapped;
 }

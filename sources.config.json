@@ -293,7 +293,7 @@
     "subcategory": "foreign",
     "enabled": true,
     "locales": ["zh", "en"],
-    "note": "全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁。"
+    "note": "全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
   },
   {
     "id": "techcrunch",
@@ -304,7 +304,7 @@
     "subcategory": "foreign",
     "enabled": true,
     "locales": ["zh", "en"],
-    "note": "全球科技创业/融资/IPO 动态，更新高频。"
+    "note": "全球科技创业/融资/IPO 动态，更新高频。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
   },
   {
     "id": "eu-startups",
@@ -315,7 +315,7 @@
     "subcategory": "foreign",
     "enabled": true,
     "locales": ["zh", "en"],
-    "note": "欧洲创业公司融资/IPO 动态。"
+    "note": "欧洲创业公司融资/IPO 动态。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
   },
   {
     "id": "strictlyvc",
@@ -326,6 +326,6 @@
     "subcategory": "foreign",
     "enabled": true,
     "locales": ["en"],
-    "note": "美国 VC/融资轮次观察，偏一级市场。"
+    "note": "美国 VC/融资轮次观察，偏一级市场。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
   }
 ]

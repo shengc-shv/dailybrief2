@@ -1,10 +1,12 @@
-name: Test Run (No AI, No Publish)
+name: Test Run (AI pre-fill, no publish)
 
 on:
   workflow_dispatch:
   schedule:
-    # 每周一 03:17 UTC 刷新粤企注册表（沙盒验证；后续手动搬到 daily.yml）
-    - cron: "17 3 * * 1"
+    # 每日 07:30 北京时间（UTC 23:30）跑 AI 预填，赶在 daily.yml（默认 08:00 北京时间）之前，
+    # 把当日/滚动文章分析好写进 data/article-history.json；daily.yml 走 dry-run 直接复用 → AI 成本≈0。
+    # 若你改了 daily.yml 的 REPORT_HOUR，请把这里的 cron 同步提前到它之前。
+    - cron: "30 23 * * *"
 
 jobs:
   test:
@@ -33,8 +35,28 @@ jobs:
             echo '[]' > data/crawled-articles.json
           fi
 
-      - name: Dry run (no AI)
-        run: npm run dry-run
+      # AI 预填：用 LLM 分析文章并把摘要写进 data/article-history.json（复用历史缓存去重，
+      # 已解读过的不再调用 LLM）。daily.yml 后续走 npm dry-run 直接复用这些摘要，自身不再消费 AI。
+      - name: AI pre-fill (生成摘要并回写 history)
+        env:
+          LLM_BACKEND: ${{ vars.LLM_BACKEND || 'anthropic' }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
+          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+          MINIMAX_BASE_URL: ${{ vars.MINIMAX_BASE_URL }}
+          ZHIPU_BASE_URL: ${{ vars.ZHIPU_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          WEB_MODE: 'true'
+        run: npm run daily
 
       - name: Upload HTML for preview
         uses: actions/upload-artifact@v4
@@ -57,24 +79,34 @@ jobs:
           fi
 
   # 每周刷新粤企注册表（企业名/股票/城市 单一真相源）。
-  # 仅重建 JSON 并在有变化时提交回 main；不发布任何报告。
-  # 后续手动搬到 daily.yml 时，复制本 job 即可（daily.yml 已有 contents: write 权限更佳）。
+  # 仅周一（北京时间）运行，重建 JSON 并在有变化时提交回 main；不发布任何报告。
+  # 注意：本 job 跟随 test.yml 的每日 cron 触发，但用「周一(北京时间)」闸门限制为每周一次。
   refresh-guangdong-registry:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
+      - name: Weekly gate (only Monday, Asia/Shanghai)
+        id: gw
+        run: |
+          DOW=$(TZ=Asia/Shanghai date +%u)   # 1=Monday
+          if [ "$DOW" = "1" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; else echo "run=false" >> "$GITHUB_OUTPUT"; fi
+
       - uses: actions/checkout@v4
+        if: steps.gw.outputs.run == 'true'
 
       - name: Setup Node
+        if: steps.gw.outputs.run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Refresh 粤企注册表 (EastMoney F10 复核省份)
+        if: steps.gw.outputs.run == 'true'
         run: node scripts/seed-guangdong-registry.mjs
 
       - name: Commit updated registry (if changed)
+        if: steps.gw.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

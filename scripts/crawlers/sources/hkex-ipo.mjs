@@ -30,7 +30,7 @@ const IPO_KEYWORDS = [
 // 广东企业识别统一入口：按港股代码 + 公司名在粤企注册表命中（覆盖"公告只写企业名/
 // 代码、不写地点"的情况，如腾讯/网易/小鹏），退化到城市名匹配。单一事实源见
 // lib/sources/guangdong.mjs 与 guangdong-registry.json（不再在此重复维护关键词列表）。
-import { isGuangdongEnterprise } from '../../lib/sources/guangdong.mjs';
+import { isGuangdongEnterprise } from '../../../lib/sources/guangdong.mjs';
 
 export class HKEXCrawler extends BaseCrawler {
   constructor() {

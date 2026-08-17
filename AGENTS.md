@@ -4,7 +4,9 @@ Operational knowledge for any AI coding agent working on this repo (Claude Code,
 
 ## What this project is
 
-`daily-brief` is a local-first pipeline that fetches 23 RSS / API news sources daily (22 in en mode after locale filtering), runs LLM enrichment, and renders a single self-contained HTML report. It runs on the user's machine via the OS scheduler, OR in GitHub Actions publishing to GitHub Pages. No web framework, no DB, no servers.
+`daily-brief` is a local-first pipeline that fetches the news sources declared in `sources.config.json` (24 enabled in the default zh mode), runs LLM enrichment, and renders a single self-contained HTML report. It runs on the user's machine via the OS scheduler, OR in GitHub Actions publishing to GitHub Pages. No web framework, no DB, no servers.
+
+This repository is a **fork of [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief)**. Fork-specific additions: a `gd-ipo` (广东地区 IPO) category plus a set of A-share / HK IPO crawlers under `scripts/crawlers/` whose output (`data/crawled-articles.json`) is merged into the report; and a Chinese/Finance-curated source list (the upstream English-community sources — github-trending, Hacker News, V2EX, LinuxDo — are not in this fork's default config).
 
 The repo's `CLAUDE.md` includes this file via `@AGENTS.md`. Don't add stack-specific lore (Next.js, etc.) — there's none in this codebase.
 
@@ -66,7 +68,7 @@ sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
 
 ## Adding a source
 
-1. Edit `sources.config.json` — append an entry. Fields: `id` (unique), `name`, `type` (`rss`/`api`/`scrape`), `url`, `category` (`tech`/`finance`/`politics`), optional `subcategory`, `enabled`, `useCurl`, `lang`, `locales`, `notes`.
+1. Edit `sources.config.json` — append an entry. Fields: `id` (unique), `name`, `type` (`rss`/`api`/`scrape`), `url`, `category` (`tech`/`finance`/`politics`/`gd-ipo`), optional `subcategory`, `enabled`, `useCurl`, `lang`, `locales`, `notes`.
 2. For non-RSS types: add a fetcher in `lib/sources/<id>.ts` exporting `fetchXxx(sourceId)` returning `RawArticle[]`, then add a branch in `lib/sources/dispatch.ts`.
 3. Run `npm run sources:check` to validate the JSON, then `npm run dry-run` to verify the fetch.
 

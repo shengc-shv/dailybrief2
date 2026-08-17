@@ -84,7 +84,8 @@ async function main() {
       }
       console.log(`  ✅ 加载爬虫数据 ${count} 条（跳过 ${items.length - count} 条重复）`);
     } catch (err) {
-      console.warn(`  ⚠️ 加载爬虫数据失败: ${err.message}`);
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`  ⚠️ 加载爬虫数据失败: ${msg}`);
     }
   } else {
     console.log(`  ℹ️ 爬虫数据文件不存在: ${dataPath}`);

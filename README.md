@@ -12,9 +12,11 @@
 [![Demo: live](https://img.shields.io/badge/demo-leiting--eric.github.io%2FDailyBrief-brightgreen.svg)](https://leiting-eric.github.io/DailyBrief)
 [![Stars](https://img.shields.io/github/stars/leiting-eric/DailyBrief?style=social)](https://github.com/leiting-eric/DailyBrief)
 
-> **你的私人 AI 每日简报，跑在你自己掌控的基础设施上。** 默认启用 26 个数据源 · LLM 摘要 · 21 个股票/加密标的**技术指标 + AI 交易点评** · 中英双语 · 6 个 LLM 后端可选。
+> **你的私人 AI 每日简报，跑在你自己掌控的基础设施上。** 默认启用 24 个数据源 · LLM 摘要 · 21 个股票/加密标的**技术指标 + AI 交易点评** · 中英双语 · 6 个 LLM 后端可选。
 >
 > **三种部署任选**：[**🚀 5 分钟 Fork 到 GitHub Actions**](#a-github-actions--pages零基础设施推荐) · [**💻 本地一键装**](#b-本地一键装) · [**🤖 一句话让 AI Agent 帮你装**](#c-给-ai-agent-一句话装)。
+>
+> 🍴 **本仓库是 [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief) 的 fork**：默认信源精简为中文/财经向（tech + finance + `gd-ipo` 广东地区IPO）；上游英文社区源（GitHub Trending / Hacker News / V2EX / LinuxDo）不在默认配置，`politics` / `community` 两个 L1 tab 默认无启用源；A 股 / 港股 IPO 爬虫（`scripts/crawlers/`）经 `data/crawled-articles.json` 并入 `gd-ipo` tab。实时信源以 `sources.config.json` / `npm run sources` 为准。
 
 **🌐 Live demos** —
 [📰 leiting-eric.github.io/DailyBrief](https://leiting-eric.github.io/DailyBrief)（A 方式 · GitHub Actions + Pages）
@@ -25,7 +27,7 @@
 
 ## ✨ 核心特性
 
-- **🌍 全网多源聚合**：默认启用 26 个数据源，覆盖硅谷科技、AI 前沿、全球财经、国际时政、中文社区，一份报告通吃
+- **🌍 全网多源聚合**：默认启用 24 个数据源，覆盖硅谷科技、AI 前沿、全球财经、广东地区 IPO，一份报告通吃
 - **📈 21 个标的实时行情**：美股 / 加密 / 港股 / 商品外汇 / 宏观信号，附 SMA / RSI / MACD 技术指标 + LLM 每日交易点评
 - **🤖 6 个 LLM 后端可插拔**：Claude CLI / Anthropic / OpenAI / DeepSeek / MiniMax / Zhipu，一个环境变量切换，不绑死任何家
 - **🌐 中英双语**：`REPORT_LOCALE=en` 一切——数据源、prompt、UI 文案、Bullish/Bearish stance 全套切英文
@@ -38,15 +40,16 @@
 
 ## 📚 信源图谱
 
-当前 registry 共 53 个源，默认启用 26 个；按 locale 过滤后 zh 模式有效 24 个、en 模式有效 23 个，分布如下：
+当前 registry 共 25 个源，默认启用 24 个；按 locale 过滤后 zh 模式有效 24 个、en 模式有效 21 个，分布如下：
 
 ### 🧑‍💻 技术动态
 
 <p align="center"><img src="docs/screenshots/tech.png" alt="技术动态 — GitHub Trending / X 推文 / AI 媒体" width="720"></p>
 
-- **GitHub Trending** · 热榜每日刷新
-- **AI 媒体**（merged）：OpenAI / DeepMind / Hugging Face Blog / TLDR AI / Smol AI / Latent Space / MIT Tech Review
+- **Hugging Face Papers**（huggingface-papers）· 每日 AI 论文热榜（本 fork 用其替代上游的 GitHub Trending）
+- **AI 媒体**（merged）：OpenAI / DeepMind / Hugging Face Blog / TLDR AI / Smol AI / Latent Space / MIT Tech Review / Simon Willison
 - **X 推文**（attentionvc-ai）：精选 AI 圈大佬动态
+- *注：上游的 GitHub Trending 不在本 fork 默认配置中。*
 
 ### 📈 市场行情（非新闻源，21 个标的）
 
@@ -64,15 +67,18 @@
 
 **BBC / Guardian / NYT / NPR / DW 中文 / Al Jazeera / The Diplomat** — 7 家主流国际媒体的 World 频道
 
+> *注：本 fork 默认未启用 `politics` 类信源，`时政观察` tab 默认无内容；在 `sources.config.json` 启用对应源即可恢复。*
+
 ### 💰 财经要点
 
 <p align="center"><img src="docs/screenshots/finance.png" alt="财经要点 — Bloomberg / WSJ / FT 全球财经" width="720"></p>
 
 **Bloomberg / WSJ / FT / BBC Business / Economist** — 5 家全球财经主力
 
-### 💬 社区讨论
-- **zh 模式**：V2EX 热榜 / LinuxDo 热帖
-- **en 模式**：Hacker News / Reddit r/stocks（自动替换上面两个）
+### 💬 社区讨论（本 fork 默认未启用）
+> 上游的社区源（V2EX / LinuxDo / Hacker News / Reddit r/stocks）不在本 fork 的默认 `sources.config.json` 中，因此 `community` tab 默认无内容。需要时在 `sources.config.json` 启用对应源即可恢复。
+- **zh 模式**：V2EX 热榜 / LinuxDo 热帖（需启用）
+- **en 模式**：Hacker News / Reddit r/stocks（需启用，自动替换上面两个）
 
 > 完整列表 + 启用状态：`npm run sources` 查看；改源 → 编辑 [`sources.config.json`](sources.config.json)。
 
@@ -299,10 +305,10 @@ REPORT_LOCALE=zh    # 默认 — 中文 mode，含 V2EX / LinuxDo / DW 中文等
 
 | Locale | 启用源数 | 主要构成 |
 |---|---|---|
-| `zh` | 24 | 21 个全球英文源（附中文摘要）+ 3 个中文专属（V2EX / LinuxDo / DW 中文）|
-| `en` | 23 | 21 个全球英文源 + 2 个英文社区（Hacker News + r/stocks）|
+| `zh` | 24 | tech 10（Hugging Face Papers / X 推文 / AI 媒体 等）+ finance 13 + gd-ipo 1（广东地区IPO）|
+| `en` | 21 | 与 zh 相同的集合，但 3 个中文专属财经源（人民财经 / 新华财经 / FT中文网）仅在 zh 模式；无英文社区源 |
 
-英文 mode 完整切换：HTML UI 文案、enrichment / digest / trading-commentary 三套 prompt、stance 词（"偏上行/偏下行/中性" → Bullish/Bearish/Neutral）、日期格式（zh-CN → en-GB）、Markdown 输出 —— 全部跟着 `REPORT_LOCALE` 切。**中文社区源在英文 mode 下被自动过滤掉**。
+英文 mode 完整切换：HTML UI 文案、enrichment / digest / trading-commentary 三套 prompt、stance 词（"偏上行/偏下行/中性" → Bullish/Bearish/Neutral）、日期格式（zh-CN → en-GB）、Markdown 输出 —— 全部跟着 `REPORT_LOCALE` 切。**中文专属源（如人民财经 / 新华财经 / FT中文网）在英文 mode 下被自动过滤掉**。
 
 ---
 
@@ -544,9 +550,11 @@ MIT
 [![Demo: live](https://img.shields.io/badge/demo-leiting--eric.github.io%2FDailyBrief-brightgreen.svg)](https://leiting-eric.github.io/DailyBrief)
 [![Stars](https://img.shields.io/github/stars/leiting-eric/DailyBrief?style=social)](https://github.com/leiting-eric/DailyBrief)
 
-> **Your own AI-curated daily news brief, on infrastructure you control.** 26 sources enabled by default · LLM summaries · 21-ticker market panel with SMA/RSI/MACD signals + AI commentary · bilingual (zh/en) · 6 swappable LLM backends.
+> **Your own AI-curated daily news brief, on infrastructure you control.** 24 sources enabled by default · LLM summaries · 21-ticker market panel with SMA/RSI/MACD signals + AI commentary · bilingual (zh/en) · 6 swappable LLM backends.
 >
 > **Three deployment paths, pick one:** [**🚀 5-min GitHub Actions fork**](#a-github-actions--pages-zero-infra-recommended) · [**💻 local one-liner install**](#b-local-one-liner-install) · [**🤖 have an AI agent install it for you**](#c-have-an-ai-agent-install-it-for-you).
+>
+> 🍴 **This repo is a fork of [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief)**: the default source set is curated to Chinese/Finance-focused tech + finance + a `gd-ipo` (Guangdong IPO) category; upstream English-community sources (GitHub Trending / Hacker News / V2EX / LinuxDo) are absent, so the `politics` / `community` L1 tabs have no enabled sources by default. A-share / HK IPO crawlers under `scripts/crawlers/` feed the `gd-ipo` tab via `data/crawled-articles.json`. The live list is in `sources.config.json` / `npm run sources`.
 
 **🌐 Live demos** —
 [📰 leiting-eric.github.io/DailyBrief](https://leiting-eric.github.io/DailyBrief) (path A · GitHub Actions + Pages)
@@ -557,7 +565,7 @@ MIT
 
 ## ✨ Core features
 
-- **🌍 Multi-source aggregation** — 26 sources enabled by default, spanning Silicon Valley tech, AI frontier, global finance, international politics, and developer communities. One report covers it all.
+- **🌍 Multi-source aggregation** — 24 sources enabled by default, spanning Silicon Valley tech, AI frontier, global finance, and Guangdong IPO. One report covers it all.
 - **📈 21 live tickers** — US stocks / crypto / HK / commodities / macro signals, with SMA / RSI / MACD indicators + daily LLM-written trading commentary
 - **🤖 6 swappable LLM backends** — Claude CLI / Anthropic / OpenAI / DeepSeek / MiniMax / Zhipu. One env var to switch, no vendor lock-in.
 - **🌐 Bilingual (zh/en)** — set `REPORT_LOCALE=en` to flip the entire stack: sources, prompts, UI text, Bullish/Bearish stance labels — all switch.
@@ -570,15 +578,16 @@ MIT
 
 ## 📚 Source roster
 
-The registry currently contains 53 sources, with 26 enabled by default. After locale filtering, zh mode uses 24 active sources and en mode uses 23:
+The registry currently contains 25 sources, with 24 enabled by default. After locale filtering, zh mode uses 24 active sources and en mode uses 21:
 
 ### 🧑‍💻 Tech
 
 <p align="center"><img src="docs/screenshots/tech.png" alt="Tech panel — GitHub Trending / X posts / AI media" width="720"></p>
 
-- **GitHub Trending** · refreshed daily
-- **AI media** (merged): OpenAI / DeepMind / Hugging Face Blog / TLDR AI / Smol AI / Latent Space / MIT Tech Review
+- **Hugging Face Papers** (huggingface-papers) · daily AI paper trending (this fork replaces upstream GitHub Trending)
+- **AI media** (merged): OpenAI / DeepMind / Hugging Face Blog / TLDR AI / Smol AI / Latent Space / MIT Tech Review / Simon Willison
 - **X posts** (attentionvc-ai): curated AI thought-leader feed
+- *Note: upstream GitHub Trending is not in this fork's default config.*
 
 ### 📈 Markets (21 tickers, not news)
 
@@ -596,15 +605,18 @@ The registry currently contains 53 sources, with 26 enabled by default. After lo
 
 **BBC / Guardian / NYT / NPR / DW Chinese / Al Jazeera / The Diplomat** — 7 major international outlets' World feeds
 
+> *Note: this fork does not enable any `politics` sources by default, so the World panel is empty until you enable them in `sources.config.json`.*
+
 ### 💰 Finance
 
 <p align="center"><img src="docs/screenshots/finance.png" alt="Finance — Bloomberg / WSJ / FT" width="720"></p>
 
 **Bloomberg / WSJ / FT / BBC Business / Economist** — 5 global finance heavyweights
 
-### 💬 Community
-- **zh mode**: V2EX top threads / LinuxDo trending
-- **en mode**: Hacker News / Reddit r/stocks (auto-substituted)
+### 💬 Community (not enabled by default in this fork)
+> The upstream community sources (V2EX / LinuxDo / Hacker News / Reddit r/stocks) are not in this fork's default `sources.config.json`, so the `community` tab is empty by default. Enable the corresponding sources in `sources.config.json` to bring it back.
+- **zh mode**: V2EX top threads / LinuxDo trending (when enabled)
+- **en mode**: Hacker News / Reddit r/stocks (when enabled, auto-substitutes the above)
 
 > Full list + enabled status: run `npm run sources`. To edit sources, modify [`sources.config.json`](sources.config.json).
 

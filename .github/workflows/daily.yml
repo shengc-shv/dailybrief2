@@ -272,6 +272,22 @@ jobs:
             git push
           fi
 
+      # 裁剪历史到最近 N 天（默认 7），被移除数据写入 data/article-history-backup.json 累积保留（不丢弃）。
+      - name: Trim history to recent N days (keep backup)
+        run: node scripts/cleanup-history.mjs
+
+      - name: Commit trimmed history + backup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/article-history.json data/article-history-backup.json
+          if git diff --cached --quiet; then
+            echo "裁剪无变化，跳过提交"
+          else
+            git commit -m "chore: 裁剪历史到最近7天并备份移除数据 ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
       - name: Build static site (index + archive)
         run: npm run build-site
 

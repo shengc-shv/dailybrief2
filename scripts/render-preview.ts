@@ -65,7 +65,8 @@ function main() {
     `📊 本地历史 ${Object.keys(history).length} 条 ｜ 其中含 AI 摘要 ${withSummary} 条 ｜ 渲染文章 ${articles.length} 条`,
   );
 
-  // 2) 复用项目分组逻辑（含 当天/过去7天 时间拆分、L2/L3 标签）。
+  // 2) 复用项目分组逻辑（L2/L3 标签；仅广东地区IPO 应用 当天/过去7天 时间拆分，
+  //    技术动态/财经要点 只展示当天、无历史标签——由 render.ts 的 TIME_SPLIT_CATEGORIES 控制）。
   const raw = groupRaw(articles, loadAllSources());
 
   // 3) 由预加载摘要构建 digest（按分类聚合，按 importance 排序取 top-N）。

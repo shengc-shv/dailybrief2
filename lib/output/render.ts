@@ -172,6 +172,14 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
 };
 
 /**
+ * 仅这些分类在 L2 子面板内展示"当天 / 过去7天"时间拆分。
+ *  - 技术动态、财经要点：只看当天（热门），不暴露历史库存，故不渲染时间标签。
+ *  - 广东地区IPO：只有它需要历史回溯（过去7天，按信息发生时间 publishedAt）。
+ *  - 市场行情：在线生成的当日宏观数据，由独立 trading 面板渲染，不在此时间拆分体系内。
+ */
+const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo"]);
+
+/**
  * L2 ordering per category. Categories not listed render flat (no L2 tabs).
  */
 const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
@@ -568,6 +576,12 @@ function countItems(sources: SourceGroup[]): number {
   return sources.reduce((n, s) => n + s.items.length, 0);
 }
 
+/** Sum only the "当天" (fetchedToday) items across subgroups — used for the
+ *  top-level tab badge of categories that don't expose a 过去7天 backlog. */
+function countItemsToday(subs: SubGroup[]): number {
+  return subs.reduce((n, sg) => n + countItems(filterByTime(sg.sources, true)), 0);
+}
+
 function renderSourcesBlock(
   category: Category,
   subId: string,
@@ -583,13 +597,18 @@ function renderSourcesBlock(
 }
 
 function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
-  const todaySrc = filterByTime(sub.sources, true);
-  const pastSrc = filterByTime(sub.sources, false);
-  const todayCount = countItems(todaySrc);
-  const pastCount = countItems(pastSrc);
-  // 空 sub（如 gd-ipo 的占位标签）：两个时间面板都显示空，但标签结构保留。
+  const usesTimeSplit = TIME_SPLIT_CATEGORIES.has(category);
+  const activeCls = isActive ? " active" : "";
+  const subAttr = `data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}"`;
+
+  // 空 sub 占位结构：
+  //  - 需要时间拆分的（gd-ipo）保留"当天 / 过去7天"两个空面板，结构稳定可见；
+  //  - 其他分类（技术动态 / 财经要点）直接显示"今日无内容"。
   if (sub.sources.length === 0) {
-    return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+    if (!usesTimeSplit) {
+      return `<div class="sub-content${activeCls}" ${subAttr}><p class="empty">${STR.emptySource}</p></div>`;
+    }
+    return `<div class="sub-content${activeCls}" ${subAttr}>
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">0</span></button>
       <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">0</span></button>
@@ -600,7 +619,22 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
     </div>
   </div>`;
   }
-  return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+
+  // 不需要时间拆分的分类（技术动态 / 财经要点）：只渲染当天抓取的条目，
+  // 不出现"过去7天"标签。
+  if (!usesTimeSplit) {
+    const todaySrc = filterByTime(sub.sources, true);
+    return `<div class="sub-content${activeCls}" ${subAttr}>
+      ${renderSourcesBlock(category, sub.id, todaySrc)}
+    </div>`;
+  }
+
+  // 需要时间拆分（广东地区IPO）：当天 vs 过去7天。
+  const todaySrc = filterByTime(sub.sources, true);
+  const pastSrc = filterByTime(sub.sources, false);
+  const todayCount = countItems(todaySrc);
+  const pastCount = countItems(pastSrc);
+  return `<div class="sub-content${activeCls}" ${subAttr}>
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">${todayCount}</span></button>
       <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">${pastCount}</span></button>
@@ -658,8 +692,8 @@ export function renderHtml(
       0,
     );
   const counts = {
-    tech: sumItems(techMainSubs),
-    finance: sumItems(raw.finance),
+    tech: countItemsToday(techMainSubs),
+    finance: countItemsToday(raw.finance),
     'gd-ipo': sumItems(raw['gd-ipo'] || []),
      politics: sumItems(raw.politics),
   };

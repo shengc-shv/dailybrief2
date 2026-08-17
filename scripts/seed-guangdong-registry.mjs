@@ -1,5 +1,5 @@
 /**
- * 粤企注册表种子生成器（维护工具，不进 CI）
+ * 粤企注册表种子生成器（维护工具；同时由 test.yml 每周一定时刷新）
  *
  * 作用：生成 lib/sources/guangdong-registry.json —— 广东地区企业
  *   「企业名 / 别名(含英文名) / 股票代码 / 注册城市」的单一真相源。
@@ -119,6 +119,20 @@ const companies = [];
 const kept = [];
 const dropped = [];
 
+// 载入既有注册表：A股在 emweb 偶发瞬断时，沿用旧的城市值，避免周更误删企业
+let oldMap = new Map();
+if (fs.existsSync(OUT)) {
+  try {
+    const prev = JSON.parse(fs.readFileSync(OUT, "utf8"));
+    for (const c of prev.companies || []) {
+      for (const code of c.codes || []) oldMap.set(String(code).toUpperCase(), c);
+      oldMap.set(c.name, c);
+    }
+  } catch {
+    /* 旧文件损坏则忽略，走全量重建 */
+  }
+}
+
 for (const c of CANDIDATES) {
   if (c.type === "a") {
     await sleep(120);
@@ -126,8 +140,23 @@ for (const c of CANDIDATES) {
     if (info && info.province === "广东") {
       companies.push({ name: c.name, aliases: c.aliases || [], codes: c.codes, city: info.city || "" });
       kept.push(`${c.name}(${c.codes[0]}) -> ${info.city}`);
+    } else if (info && info.province) {
+      // 明确解析为非广东省份（如北京/上海），剔除
+      dropped.push(`${c.name}(${c.codes[0]}) -> 非广东(${info.province})`);
     } else {
-      dropped.push(`${c.name}(${c.codes[0]}) -> 非广东或解析失败(${info ? info.province : "err"})`);
+      // 解析失败（瞬断）：若旧表有此企业则沿用，避免周更误删
+      const old = oldMap.get(c.name) || oldMap.get(String(c.codes[0]).toUpperCase());
+      if (old) {
+        companies.push({
+          name: old.name,
+          aliases: old.aliases || c.aliases || [],
+          codes: old.codes || c.codes,
+          city: old.city || "",
+        });
+        kept.push(`${c.name}(${c.codes[0]}) -> ${old.city || "?"} [解析失败,沿用旧值]`);
+      } else {
+        dropped.push(`${c.name}(${c.codes[0]}) -> 解析失败且无旧值,剔除`);
+      }
     }
   } else {
     companies.push({ name: c.name, aliases: c.aliases || [], codes: c.codes, city: c.city || "" });

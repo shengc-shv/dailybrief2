@@ -8,6 +8,8 @@ import type { WatchlistPick } from "../ai/trading-commentary";
 import { REPORT_LOCALE,loadAllSources  } from "../sources/registry";
 import { getReportTz } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { V2EX_OFF_TOPIC_RE } from "../sources/v2ex";
 import type { TickerAnalysis } from "../trading/signals";
 import {
@@ -15,6 +17,7 @@ import {
   ASSET_GROUP_ORDER,
   type AssetGroup,
 } from "../trading/watchlist";
+import { classifyGdIpo, type GdIssuerRegistry } from "../classify/gdIpo";
 
 // ----- i18n -----
 
@@ -191,7 +194,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // overseas-community (Hacker News / r/stocks).
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
   finance: ["news"],
-  'gd-ipo': ["szse", "bse", "sse", "hkex", "em-ipo-tutoring", "foreign"],
+  'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
   politics: ["world"],
 };
 
@@ -209,13 +212,13 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
   world: STR.subWorld,
-  // 广东地区IPO 的 6 个二级标签
-  szse: "深交",
-  bse: "北交",
-  sse: "上交",
-  hkex: "港交",
-  "em-ipo-tutoring": "东方财富IPO辅导",
-  foreign: "国外",
+  // 广东地区IPO 的 6 个二级标签（地域→市场 分发；预备上市统一进 IPO辅导）
+  szse: "深交所",
+  sse: "上交所",
+  bse: "北交所",
+  hkex: "港交所",
+  "ipo-tutoring": "IPO辅导",
+  overseas: "境外",
 };
 
 /**
@@ -287,6 +290,22 @@ export function isSportsArticle(title: string): boolean {
   return POLITICS_SPORTS_RE.test(title);
 }
 
+// 广东发行人注册表（结构化地域信号，优先于关键词兜底）
+let _gdIssuersCache: GdIssuerRegistry | undefined | null = null;
+function loadGdIssuers(): GdIssuerRegistry | undefined {
+  if (_gdIssuersCache !== null) return _gdIssuersCache ?? undefined;
+  try {
+    const raw = readFileSync(
+      join(process.cwd(), "data", "gd-issuers.json"),
+      "utf8",
+    );
+    _gdIssuersCache = JSON.parse(raw) as GdIssuerRegistry;
+  } catch {
+    _gdIssuersCache = undefined;
+  }
+  return _gdIssuersCache ?? undefined;
+}
+
 function mergedLimitFor(
   category: Category,
   subId: string,
@@ -319,6 +338,13 @@ export function groupRaw(
     'gd-ipo': new Map(),
   };
 
+  // 广东地区IPO：文章级三道闸分类后，按 classifier 决定的子标签归桶
+  // （一个源如巨潮可能同时含深/沪/京，不能再靠 sourceId 定 sub）。
+  const gdSubs = new Map<string, Bucket>();
+  // 广东公司但非IPO类（财报/分红/解禁等）→ 转财经要点「news」合并流
+  const financeExtra: ArticleInput[] = [];
+  const gdIssuers = loadGdIssuers();
+
   // console.log('[groupRaw] buckets keys:', Object.keys(buckets));
   // console.log('[groupRaw] buckets[gd-ipo] size:', buckets['gd-ipo']?.size);
   // Pre-seed empty buckets for every enabled source so per-source-tabbed
@@ -341,6 +367,35 @@ export function groupRaw(
       V2EX_OFF_TOPIC_RE.test(a.title)
     )
       continue;
+    // 广东地区IPO：先过三道闸分类器，再决定归哪个子标签 / 是否转财经 / 丢弃
+    if (a.category === "gd-ipo") {
+      const res = classifyGdIpo(
+        {
+          title: a.title,
+          excerpt: a.excerpt,
+          url: a.url,
+          sourceId: a.sourceId,
+          source: a.source,
+          publishedAt: a.publishedAt,
+          stockCode: (a as ArticleInput & { stockCode?: string }).stockCode,
+          registeredProvince: (a as ArticleInput & { registeredProvince?: string })
+            .registeredProvince,
+        },
+        { gdIssuers },
+      );
+      if (res.action === "drop") continue;
+      if (res.action === "finance") {
+        financeExtra.push(a);
+        continue;
+      }
+      let b = gdSubs.get(res.sub);
+      if (!b) {
+        b = { sourceName: SUBCATEGORY_LABELS[res.sub] ?? res.sub, items: [] };
+        gdSubs.set(res.sub, b);
+      }
+      b.items.push(a);
+      continue;
+    }
     const map = buckets[a.category];
     let b = map.get(a.sourceId);
     if (!b) {
@@ -360,6 +415,51 @@ export function groupRaw(
           (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
       );
     }
+  }
+
+  // 广东公司但非IPO类（财报/分红/解禁等）→ 并入财经要点「news」合并流
+  if (financeExtra.length > 0) {
+    const sid = "_gd_finance";
+    subcatOf.set(sid, "news");
+    const b =
+      buckets["finance"].get(sid) ??
+      ({ sourceName: "广东公司公告", items: [] } as Bucket);
+    b.items.push(...financeExtra);
+    buckets["finance"].set(sid, b);
+  }
+
+  // 广东地区IPO：按 classifier 结果（gdSubs）构建子标签，始终渲染全部 6 个
+  function buildGdIpoSubs(): SubGroup[] {
+    const order = SUBCATEGORY_ORDER["gd-ipo"];
+    const subs: SubGroup[] = [];
+    for (const subId of order) {
+      const b = gdSubs.get(subId);
+      if (!b || b.items.length === 0) {
+        subs.push({
+          id: subId,
+          name: SUBCATEGORY_LABELS[subId] ?? subId,
+          sources: [],
+        });
+        continue;
+      }
+      b.items.sort(
+        (a, b) =>
+          (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
+      );
+      subs.push({
+        id: subId,
+        name: SUBCATEGORY_LABELS[subId] ?? subId,
+        sources: [
+          {
+            sourceId: "_merged",
+            sourceName: SUBCATEGORY_LABELS[subId] ?? subId,
+            items: b.items,
+            merged: true,
+          },
+        ],
+      });
+    }
+    return subs;
   }
 
   function toSourceGroup(
@@ -390,6 +490,11 @@ export function groupRaw(
   };
   
   for (const cat of Object.keys(buckets) as Category[]) {
+    // 广东地区IPO 已由分类器文章级分发，单独构建
+    if (cat === "gd-ipo") {
+      out["gd-ipo"] = buildGdIpoSubs();
+      continue;
+    }
     const order = SUBCATEGORY_ORDER[cat];
     if (!order) {
       // Flat: one synthetic subgroup with every source.

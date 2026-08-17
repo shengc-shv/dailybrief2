@@ -191,15 +191,68 @@
     "locales": ["zh"]
   },
   {
-  "id": "gd-local-scraper",
-  "name": "广东本地企业动态",
-  "type": "api",
-  "url": "file://./data/crawled-articles.json",
-  "category": "gd-ipo",
-  "subcategory": "news",
-  "enabled": false,
-  "locales": ["zh"]
-},
+    "id": "cninfo",
+    "name": "巨潮A股披露",
+    "type": "api",
+    "url": "https://www.cninfo.com.cn/new/disclosure/stock",
+    "category": "gd-ipo",
+    "subcategory": "szse",
+    "enabled": true,
+    "locales": ["zh"],
+    "note": "深交所/上交所/北交所全披露平台。统一抓取后由分类器按『地域→类型→市场』分发到深/沪/京子标签；非IPO类（财报/分红/解禁）转财经要点。"
+  },
+  {
+    "id": "hkex-disclosure",
+    "name": "港交所披露易",
+    "type": "rss",
+    "url": "https://www.hkexnews.hk/rss/listedco.xml",
+    "category": "gd-ipo",
+    "subcategory": "hkex",
+    "enabled": true,
+    "locales": ["zh", "en"],
+    "note": "港交所公告，覆盖广东企业港股上市/辅导动态。"
+  },
+  {
+    "id": "gd-local-scraper",
+    "name": "广东本地企业动态",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "news",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-szse",
+    "name": "深交所IPO公告(历史兼容)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "szse",
+    "enabled": false,
+    "locales": ["zh"],
+    "note": "旧管线预过滤的广东深交所公告，保留以兼容历史侧车数据；分发由分类器按文章决定。"
+  },
+  {
+    "id": "gd-hkex",
+    "name": "港交所IPO公告(历史兼容)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "hkex",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-em-ipo",
+    "name": "东方财富IPO辅导(历史兼容)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "enabled": false,
+    "locales": ["zh"]
+  },
   {
     "id": "simonwillison",
     "name": "Simon Willison's Weblog",
@@ -250,9 +303,9 @@
     "type": "rss",
     "url": "https://news.crunchbase.com/feed/",
     "category": "gd-ipo",
-    "subcategory": "news",
+    "subcategory": "overseas",
     "enabled": true,
     "locales": ["zh", "en"],
-    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁（每小时）。"
+    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；仅广东企业出海上市（境外子标签）才进广东IPO，其余丢弃。"
   }
 ]

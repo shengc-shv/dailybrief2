@@ -8,6 +8,8 @@ import type { WatchlistPick } from "../ai/trading-commentary";
 import { REPORT_LOCALE,loadAllSources  } from "../sources/registry";
 import { getReportTz } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { V2EX_OFF_TOPIC_RE } from "../sources/v2ex";
 import type { TickerAnalysis } from "../trading/signals";
 import {
@@ -15,6 +17,7 @@ import {
   ASSET_GROUP_ORDER,
   type AssetGroup,
 } from "../trading/watchlist";
+import { classifyGdIpo, type GdIssuerRegistry } from "../classify/gdIpo";
 
 // ----- i18n -----
 
@@ -38,7 +41,8 @@ const TEXTS_ZH = {
   subCnCommunity: "中文社区",
   subCnTech: "国内技术",
   subOverseasCommunity: "海外社区",
-  subFinanceNews: "财经新闻",
+  subFinanceNews: "国际财经",
+  subFinanceCn: "国内财经",
   subFinanceCommunity: "社区讨论",
   subWorld: "国际要闻",
   subOverseasNews: "海外科技",
@@ -47,7 +51,7 @@ const TEXTS_ZH = {
   emptyCategory: "该分类今日无内容。",
   emptyGroup: "该组今日无数据。",
   timeToday: "当天",
-  timePast30: "过去30天",
+  timePast7: "过去7天",
   footer: "内容均来自原媒体，本站仅作摘要整理与回链。",
   summaryLabelNews: "中文摘要",
   summaryLabelIntro: "中文介绍",
@@ -100,7 +104,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   emptyCategory: "No content in this category today.",
   emptyGroup: "No data for this group today.",
   timeToday: "Today",
-  timePast30: "Past 30d",
+  timePast7: "Past 7d",
   footer:
     "Content sourced from original publishers; this site provides summary and backlinks only.",
   summaryLabelNews: "Summary",
@@ -172,6 +176,14 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
 };
 
 /**
+ * 仅这些分类在 L2 子面板内展示"当天 / 过去7天"时间拆分。
+ *  - 技术动态、财经要点：只看当天（热门），不暴露历史库存，故不渲染时间标签。
+ *  - 广东地区IPO：只有它需要历史回溯（过去7天，按信息发生时间 publishedAt）。
+ *  - 市场行情：在线生成的当日宏观数据，由独立 trading 面板渲染，不在此时间拆分体系内。
+ */
+const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo"]);
+
+/**
  * L2 ordering per category. Categories not listed render flat (no L2 tabs).
  */
 const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
@@ -182,8 +194,8 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
-  finance: ["news"],
-  'gd-ipo': ["szse", "bse", "sse", "hkex", "em-ipo-tutoring", "foreign"],
+  finance: ["cn-finance", "news"],
+  'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
   politics: ["world"],
 };
 
@@ -200,14 +212,15 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "x-viral": STR.subXViral,
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
+  "cn-finance": STR.subFinanceCn,
   world: STR.subWorld,
-  // 广东地区IPO 的 6 个二级标签
-  szse: "深交",
-  bse: "北交",
-  sse: "上交",
-  hkex: "港交",
-  "em-ipo-tutoring": "东方财富IPO辅导",
-  foreign: "国外",
+  // 广东地区IPO 的 6 个二级标签（地域→市场 分发；预备上市统一进 IPO辅导）
+  szse: "深交所",
+  sse: "上交所",
+  bse: "北交所",
+  hkex: "港交所",
+  "ipo-tutoring": "IPO辅导",
+  overseas: "境外",
 };
 
 /**
@@ -261,7 +274,17 @@ export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   "tech:ai-news": 15,
   "tech:cn-tech": 15,
   "finance:news": 12,
+  "finance:cn-finance": 18,
   "politics:world": 15,
+};
+
+/**
+ * 合并流中单源最多贡献的条数。避免某一源条目过多、按时间降序时把同子标签下
+ * 其他源整屏挤出（例如国内财经若某源日期较新、12 条上限会被它独占）。
+ * 缺省不限制（undefined）即沿用旧行为。
+ */
+const MERGE_PER_SOURCE_CAP: Record<string, number> = {
+  "finance:cn-finance": 6,
 };
 
 /**
@@ -277,6 +300,22 @@ const POLITICS_SPORTS_RE =
 
 export function isSportsArticle(title: string): boolean {
   return POLITICS_SPORTS_RE.test(title);
+}
+
+// 广东发行人注册表（结构化地域信号，优先于关键词兜底）
+let _gdIssuersCache: GdIssuerRegistry | undefined | null = null;
+function loadGdIssuers(): GdIssuerRegistry | undefined {
+  if (_gdIssuersCache !== null) return _gdIssuersCache ?? undefined;
+  try {
+    const raw = readFileSync(
+      join(process.cwd(), "data", "gd-issuers.json"),
+      "utf8",
+    );
+    _gdIssuersCache = JSON.parse(raw) as GdIssuerRegistry;
+  } catch {
+    _gdIssuersCache = undefined;
+  }
+  return _gdIssuersCache ?? undefined;
 }
 
 function mergedLimitFor(
@@ -311,6 +350,13 @@ export function groupRaw(
     'gd-ipo': new Map(),
   };
 
+  // 广东地区IPO：文章级三道闸分类后，按 classifier 决定的子标签归桶
+  // （一个源如巨潮可能同时含深/沪/京，不能再靠 sourceId 定 sub）。
+  const gdSubs = new Map<string, Bucket>();
+  // 广东公司但非IPO类（财报/分红/解禁等）→ 转财经要点「news」合并流
+  const financeExtra: ArticleInput[] = [];
+  const gdIssuers = loadGdIssuers();
+
   // console.log('[groupRaw] buckets keys:', Object.keys(buckets));
   // console.log('[groupRaw] buckets[gd-ipo] size:', buckets['gd-ipo']?.size);
   // Pre-seed empty buckets for every enabled source so per-source-tabbed
@@ -333,6 +379,35 @@ export function groupRaw(
       V2EX_OFF_TOPIC_RE.test(a.title)
     )
       continue;
+    // 广东地区IPO：先过三道闸分类器，再决定归哪个子标签 / 是否转财经 / 丢弃
+    if (a.category === "gd-ipo") {
+      const res = classifyGdIpo(
+        {
+          title: a.title,
+          excerpt: a.excerpt,
+          url: a.url,
+          sourceId: a.sourceId,
+          source: a.source,
+          publishedAt: a.publishedAt,
+          stockCode: (a as ArticleInput & { stockCode?: string }).stockCode,
+          registeredProvince: (a as ArticleInput & { registeredProvince?: string })
+            .registeredProvince,
+        },
+        { gdIssuers },
+      );
+      if (res.action === "drop") continue;
+      if (res.action === "finance") {
+        financeExtra.push(a);
+        continue;
+      }
+      let b = gdSubs.get(res.sub);
+      if (!b) {
+        b = { sourceName: SUBCATEGORY_LABELS[res.sub] ?? res.sub, items: [] };
+        gdSubs.set(res.sub, b);
+      }
+      b.items.push(a);
+      continue;
+    }
     const map = buckets[a.category];
     let b = map.get(a.sourceId);
     if (!b) {
@@ -352,6 +427,51 @@ export function groupRaw(
           (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
       );
     }
+  }
+
+  // 广东公司但非IPO类（财报/分红/解禁等）→ 并入财经要点「国内财经」合并流
+  if (financeExtra.length > 0) {
+    const sid = "_gd_finance";
+    subcatOf.set(sid, "cn-finance");
+    const b =
+      buckets["finance"].get(sid) ??
+      ({ sourceName: "广东公司公告", items: [] } as Bucket);
+    b.items.push(...financeExtra);
+    buckets["finance"].set(sid, b);
+  }
+
+  // 广东地区IPO：按 classifier 结果（gdSubs）构建子标签，始终渲染全部 6 个
+  function buildGdIpoSubs(): SubGroup[] {
+    const order = SUBCATEGORY_ORDER["gd-ipo"];
+    const subs: SubGroup[] = [];
+    for (const subId of order) {
+      const b = gdSubs.get(subId);
+      if (!b || b.items.length === 0) {
+        subs.push({
+          id: subId,
+          name: SUBCATEGORY_LABELS[subId] ?? subId,
+          sources: [],
+        });
+        continue;
+      }
+      b.items.sort(
+        (a, b) =>
+          (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
+      );
+      subs.push({
+        id: subId,
+        name: SUBCATEGORY_LABELS[subId] ?? subId,
+        sources: [
+          {
+            sourceId: "_merged",
+            sourceName: SUBCATEGORY_LABELS[subId] ?? subId,
+            items: b.items,
+            merged: true,
+          },
+        ],
+      });
+    }
+    return subs;
   }
 
   function toSourceGroup(
@@ -382,6 +502,11 @@ export function groupRaw(
   };
   
   for (const cat of Object.keys(buckets) as Category[]) {
+    // 广东地区IPO 已由分类器文章级分发，单独构建
+    if (cat === "gd-ipo") {
+      out["gd-ipo"] = buildGdIpoSubs();
+      continue;
+    }
     const order = SUBCATEGORY_ORDER[cat];
     if (!order) {
       // Flat: one synthetic subgroup with every source.
@@ -403,8 +528,11 @@ export function groupRaw(
         // time-sorted SourceGroup. Articles keep their `source` field so
         // the renderer can label them.
         const flat: ArticleInput[] = [];
+        const perCap = MERGE_PER_SOURCE_CAP[`${cat}:${subId}`];
         for (const [id, b] of buckets[cat].entries()) {
-          if (subcatOf.get(id) === subId) flat.push(...b.items);
+          if (subcatOf.get(id) === subId) {
+            flat.push(...(perCap ? b.items.slice(0, perCap) : b.items));
+          }
         }
         if (flat.length === 0) continue;
         flat.sort(
@@ -553,7 +681,7 @@ function renderSourceTabs(
 /**
  * Keep only the articles of each source that match the time window.
  * `todayOnly=true` → fetched in the current run (`fetchedToday`);
- * `todayOnly=false` → carried from the rolling 30-day history.
+ * `todayOnly=false` → carried from the rolling 7-day history.
  */
 function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[] {
   return sources.map((s) => ({
@@ -566,6 +694,12 @@ function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[]
 
 function countItems(sources: SourceGroup[]): number {
   return sources.reduce((n, s) => n + s.items.length, 0);
+}
+
+/** Sum only the "当天" (fetchedToday) items across subgroups — used for the
+ *  top-level tab badge of categories that don't expose a 过去7天 backlog. */
+function countItemsToday(subs: SubGroup[]): number {
+  return subs.reduce((n, sg) => n + countItems(filterByTime(sg.sources, true)), 0);
 }
 
 function renderSourcesBlock(
@@ -583,16 +717,21 @@ function renderSourcesBlock(
 }
 
 function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
-  const todaySrc = filterByTime(sub.sources, true);
-  const pastSrc = filterByTime(sub.sources, false);
-  const todayCount = countItems(todaySrc);
-  const pastCount = countItems(pastSrc);
-  // 空 sub（如 gd-ipo 的占位标签）：两个时间面板都显示空，但标签结构保留。
+  const usesTimeSplit = TIME_SPLIT_CATEGORIES.has(category);
+  const activeCls = isActive ? " active" : "";
+  const subAttr = `data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}"`;
+
+  // 空 sub 占位结构：
+  //  - 需要时间拆分的（gd-ipo）保留"当天 / 过去7天"两个空面板，结构稳定可见；
+  //  - 其他分类（技术动态 / 财经要点）直接显示"今日无内容"。
   if (sub.sources.length === 0) {
-    return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+    if (!usesTimeSplit) {
+      return `<div class="sub-content${activeCls}" ${subAttr}><p class="empty">${STR.emptySource}</p></div>`;
+    }
+    return `<div class="sub-content${activeCls}" ${subAttr}>
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">0</span></button>
     </nav>
     <div class="time-contents">
       <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
@@ -600,10 +739,25 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
     </div>
   </div>`;
   }
-  return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+
+  // 不需要时间拆分的分类（技术动态 / 财经要点）：只渲染当天抓取的条目，
+  // 不出现"过去7天"标签。
+  if (!usesTimeSplit) {
+    const todaySrc = filterByTime(sub.sources, true);
+    return `<div class="sub-content${activeCls}" ${subAttr}>
+      ${renderSourcesBlock(category, sub.id, todaySrc)}
+    </div>`;
+  }
+
+  // 需要时间拆分（广东地区IPO）：当天 vs 过去7天。
+  const todaySrc = filterByTime(sub.sources, true);
+  const pastSrc = filterByTime(sub.sources, false);
+  const todayCount = countItems(todaySrc);
+  const pastCount = countItems(pastSrc);
+  return `<div class="sub-content${activeCls}" ${subAttr}>
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">${todayCount}</span></button>
-      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">${pastCount}</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">${pastCount}</span></button>
     </nav>
     <div class="time-contents">
       <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
@@ -658,8 +812,8 @@ export function renderHtml(
       0,
     );
   const counts = {
-    tech: sumItems(techMainSubs),
-    finance: sumItems(raw.finance),
+    tech: countItemsToday(techMainSubs),
+    finance: countItemsToday(raw.finance),
     'gd-ipo': sumItems(raw['gd-ipo'] || []),
      politics: sumItems(raw.politics),
   };
@@ -960,7 +1114,7 @@ export function renderHtml(
   .sub-content { display: none; }
   .sub-content.active { display: block; }
 
-  /* ===== time split (当天 / 过去30天) — sits inside each L2 sub-content ===== */
+  /* ===== time split (当天 / 过去7天) — sits inside each L2 sub-content ===== */
   .time-tabs {
     display: flex;
     gap: 0.35rem;
@@ -1393,7 +1547,7 @@ export function renderHtml(
       });
     });
   });
-  // Time split (当天 / 过去30天) — scoped to the parent .sub-content so it
+  // Time split (当天 / 过去7天) — scoped to the parent .sub-content so it
   // doesn't interfere with sibling L2 tabs sharing the same data-cat.
   document.querySelectorAll('.time-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {

@@ -106,14 +106,14 @@ async function main() {
     }
   }
 
-  // 合并滚动 30 天历史：今日抓取 + 历史缓存（按 fetchedToday 打标），
-  // 使渲染同时拥有「当天」与「过去30天」两个时间标签。
+  // 合并滚动 7 天历史（窗口按信息发生时间 publishedAt 计）：今日抓取 + 历史缓存（按 fetchedToday 打标），
+  // 使渲染同时拥有「当天」与「过去7天」两个时间标签。
   const history = loadHistory();
   const nowIso = new Date().toISOString();
   const rolling = buildRolling(articles, history);
   // dry-run 无 AI：仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
   saveHistory(articles, history, nowIso);
-  console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去30天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);
+  console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去7天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);
 
   // 统计各分类数量
   const catCount: Record<string, number> = {};

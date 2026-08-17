@@ -7,7 +7,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "deepmind-blog",
@@ -17,7 +20,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "huggingface-blog",
@@ -27,7 +33,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "huggingface-papers",
@@ -37,8 +46,17 @@
     "category": "tech",
     "subcategory": "trending-papers",
     "enabled": true,
-    "locales": ["zh", "en"],
-    "keywords": ["LLM", "agent", "RAG", "reasoning", "coding"]
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "keywords": [
+      "LLM",
+      "agent",
+      "RAG",
+      "reasoning",
+      "coding"
+    ]
   },
   {
     "id": "tldr-ai",
@@ -48,7 +66,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "smol-ai-news",
@@ -58,7 +79,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "latent-space",
@@ -68,7 +92,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "mit-tech-review-ai",
@@ -78,7 +105,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "attentionvc-ai",
@@ -88,7 +118,10 @@
     "category": "tech",
     "subcategory": "x-viral",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "bloomberg-markets",
@@ -98,7 +131,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "wsj-markets",
@@ -108,7 +144,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "ft-companies",
@@ -118,7 +157,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "bbc-business",
@@ -128,7 +170,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "economist-finance",
@@ -138,7 +183,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "cnbc-top",
@@ -148,7 +196,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "yahoo-finance",
@@ -158,7 +209,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "investing-news",
@@ -168,7 +222,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"]
+    "locales": [
+      "zh",
+      "en"
+    ]
   },
   {
     "id": "people-finance",
@@ -176,9 +233,11 @@
     "type": "rss",
     "url": "http://www.people.com.cn/rss/finance.xml",
     "category": "finance",
-    "subcategory": "news",
+    "subcategory": "cn-finance",
     "enabled": true,
-    "locales": ["zh"]
+    "locales": [
+      "zh"
+    ]
   },
   {
     "id": "xinhua-finance",
@@ -186,59 +245,87 @@
     "type": "rss",
     "url": "http://www.xinhuanet.com/finance/news_finance.xml",
     "category": "finance",
-    "subcategory": "news",
+    "subcategory": "cn-finance",
     "enabled": true,
-    "locales": ["zh"]
+    "locales": [
+      "zh"
+    ]
+  },
+  {
+    "id": "cninfo",
+    "name": "巨潮A股披露",
+    "type": "api",
+    "url": "https://www.cninfo.com.cn/new/disclosure/stock",
+    "category": "gd-ipo",
+    "subcategory": "szse",
+    "enabled": true,
+    "locales": [
+      "zh"
+    ],
+    "note": "深交所/上交所/北交所全披露平台。统一抓取后由分类器按『地域→类型→市场』分发到深/沪/京子标签；非IPO类（财报/分红/解禁）转财经要点。"
+  },
+  {
+    "id": "hkex-disclosure",
+    "name": "港交所披露易",
+    "type": "rss",
+    "url": "https://www.hkexnews.hk/rss/listedco.xml",
+    "category": "gd-ipo",
+    "subcategory": "hkex",
+    "enabled": true,
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "note": "港交所公告，覆盖广东企业港股上市/辅导动态。"
+  },
+  {
+    "id": "gd-local-scraper",
+    "name": "广东本地企业动态",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "news",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ]
   },
   {
     "id": "gd-szse",
-    "name": "深交所IPO",
+    "name": "深交所IPO公告(历史兼容)",
     "type": "api",
-    "url": "internal://crawler",
+    "url": "file://./data/crawled-articles.json",
     "category": "gd-ipo",
     "subcategory": "szse",
     "enabled": false,
-    "locales": ["zh"]
-  },
-  {
-    "id": "gd-sse",
-    "name": "上交所IPO",
-    "type": "api",
-    "url": "internal://crawler",
-    "category": "gd-ipo",
-    "subcategory": "sse",
-    "enabled": false,
-    "locales": ["zh"]
-  },
-  {
-    "id": "gd-bse",
-    "name": "北交所IPO",
-    "type": "api",
-    "url": "internal://crawler",
-    "category": "gd-ipo",
-    "subcategory": "bse",
-    "enabled": false,
-    "locales": ["zh"]
+    "locales": [
+      "zh"
+    ],
+    "note": "旧管线预过滤的广东深交所公告，保留以兼容历史侧车数据；分发由分类器按文章决定。"
   },
   {
     "id": "gd-hkex",
-    "name": "港交所IPO",
+    "name": "港交所IPO公告(历史兼容)",
     "type": "api",
-    "url": "internal://crawler",
+    "url": "file://./data/crawled-articles.json",
     "category": "gd-ipo",
     "subcategory": "hkex",
     "enabled": false,
-    "locales": ["zh"]
+    "locales": [
+      "zh"
+    ]
   },
   {
     "id": "gd-em-ipo",
-    "name": "东方财富IPO辅导",
+    "name": "东方财富IPO辅导(历史兼容)",
     "type": "api",
-    "url": "internal://crawler",
+    "url": "file://./data/crawled-articles.json",
     "category": "gd-ipo",
-    "subcategory": "em-ipo-tutoring",
+    "subcategory": "ipo-tutoring",
     "enabled": false,
-    "locales": ["zh"]
+    "locales": [
+      "zh"
+    ]
   },
   {
     "id": "simonwillison",
@@ -248,7 +335,10 @@
     "category": "tech",
     "subcategory": "ai-news",
     "enabled": true,
-    "locales": ["zh", "en"],
+    "locales": [
+      "zh",
+      "en"
+    ],
     "note": "独立开发者视角的 AI 工具评测与 LLM 进展，更新极高频。"
   },
   {
@@ -259,10 +349,12 @@
     "category": "tech",
     "subcategory": "cn-tech",
     "enabled": true,
-    "locales": ["zh"],
+    "locales": [
+      "zh"
+    ],
     "lang": "zh",
     "useCurl": true,
-    "note": "国内权威的软件开发/架构/工程实践媒体，已验证 RSS 可用（约 20 条/次）。"
+    "note": "国内权威的软件开发/架构/工程实践媒体，已验证 RSS 可用。"
   },
   {
     "id": "qbitai",
@@ -272,10 +364,12 @@
     "category": "tech",
     "subcategory": "cn-tech",
     "enabled": true,
-    "locales": ["zh"],
+    "locales": [
+      "zh"
+    ],
     "lang": "zh",
     "useCurl": true,
-    "note": "国内权威 AI/前沿科技媒体，已验证 RSS 可用（约 10 条/次）。"
+    "note": "国内权威 AI/前沿科技媒体，已验证 RSS 可用。"
   },
   {
     "id": "sspai",
@@ -285,12 +379,14 @@
     "category": "tech",
     "subcategory": "cn-tech",
     "enabled": true,
-    "locales": ["zh"],
+    "locales": [
+      "zh"
+    ],
     "lang": "zh",
     "useCurl": true,
     "note": "数字工具/效率/软件评测类中文社区媒体，已验证 RSS 可用。"
   },
-   {
+  {
     "id": "guardian-business",
     "name": "The Guardian Business",
     "type": "rss",
@@ -298,7 +394,10 @@
     "category": "finance",
     "subcategory": "news",
     "enabled": true,
-    "locales": ["zh", "en"],
+    "locales": [
+      "zh",
+      "en"
+    ],
     "note": "已验证可用。英美市场与经济新闻，无付费墙。"
   },
   {
@@ -309,7 +408,10 @@
     "category": "finance",
     "subcategory": "macro",
     "enabled": true,
-    "locales": ["zh", "en"],
+    "locales": [
+      "zh",
+      "en"
+    ],
     "note": "已验证可用。美联储全部公告（FOMC 声明、纪要、监管），宏观信号第一手来源。"
   },
   {
@@ -318,9 +420,11 @@
     "type": "rss",
     "url": "https://www.ftchinese.com/rss/news",
     "category": "finance",
-    "subcategory": "news",
+    "subcategory": "cn-finance",
     "enabled": true,
-    "locales": ["zh"],
+    "locales": [
+      "zh"
+    ],
     "note": "已验证可用。FT 中文版综合新闻，全球宏观+中国市场视角，中文语境下最值得加的金融源。"
   },
   {
@@ -329,42 +433,12 @@
     "type": "rss",
     "url": "https://news.crunchbase.com/feed/",
     "category": "gd-ipo",
-    "subcategory": "foreign",
+    "subcategory": "overseas",
     "enabled": true,
-    "locales": ["zh", "en"],
-    "note": "全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
-  },
-  {
-    "id": "techcrunch",
-    "name": "TechCrunch",
-    "type": "rss",
-    "url": "https://techcrunch.com/feed/",
-    "category": "gd-ipo",
-    "subcategory": "foreign",
-    "enabled": true,
-    "locales": ["zh", "en"],
-    "note": "全球科技创业/融资/IPO 动态，更新高频。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
-  },
-  {
-    "id": "eu-startups",
-    "name": "EU-Startups",
-    "type": "rss",
-    "url": "https://www.eu-startups.com/feed/",
-    "category": "gd-ipo",
-    "subcategory": "foreign",
-    "enabled": true,
-    "locales": ["zh", "en"],
-    "note": "欧洲创业公司融资/IPO 动态。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
-  },
-  {
-    "id": "strictlyvc",
-    "name": "StrictlyVC",
-    "type": "rss",
-    "url": "https://strictlyvc.com/feed/",
-    "category": "gd-ipo",
-    "subcategory": "foreign",
-    "enabled": true,
-    "locales": ["en"],
-    "note": "美国 VC/融资轮次观察，偏一级市场。已按广东企业（城市名）过滤，仅保留涉及广东地区的条目。"
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；仅广东企业出海上市（境外子标签）才进广东IPO，其余丢弃。"
   }
 ]

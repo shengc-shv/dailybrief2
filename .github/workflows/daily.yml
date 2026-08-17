@@ -254,7 +254,7 @@ jobs:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           WEB_MODE: 'true'
-        run: npm dry-run
+        run: npm run dry-run
 
       # 回写滚动 30 天文章历史（当天/过去30天 的数据源，兼 AI 摘要缓存）。
       # 每次 run 都会更新 lastSeenAt，故通常会有 diff；仅在有变化时提交到 main。

@@ -1,12 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { HKEXCrawler } from './sources/hkex-ipo.mjs';  // 只导入港交所
-import { SSEAPICrawler } from './sources/sse-api.mjs';
-import { SZSEAPICrawler } from './sources/szse-api-crawler.mjs';
-import { BSEAPICrawler } from './sources/bse-api.mjs';
-import { EastMoneyIPOCrawler } from './sources/eastmoney-ipo.mjs';
-import { TonghuashunIPOCrawler } from './sources/tonghuashun-ipo.mjs';
-import { CNInfoCrawler } from './sources/cninfo-crawler.mjs';
+import { HKEXCrawler } from './sources/hkex-ipo.mjs';  // 港交所
+import { SSEAPICrawler } from './sources/sse-api.mjs';  // 上交所（cninfo）
+import { SZSEAPICrawler } from './sources/szse-api-crawler.mjs';  // 深交所（cninfo）
+import { BSEAPICrawler } from './sources/bse-api.mjs';  // 北交所（bse.cn）
+import { EastMoneyIPOCrawler } from './sources/eastmoney-ipo.mjs';  // 东方财富IPO辅导
+import { TonghuashunIPOCrawler } from './sources/tonghuashun-ipo.mjs';  // 同花顺新股预披露
 const OUTPUT_PATH = path.resolve(process.cwd(), 'data/crawled-articles.json');
 
 async function main() {
@@ -19,7 +18,6 @@ async function main() {
     new BSEAPICrawler(),
     new EastMoneyIPOCrawler(),
     new TonghuashunIPOCrawler(),
-    new CNInfoCrawler(),
   ];
 
   const allResults = [];

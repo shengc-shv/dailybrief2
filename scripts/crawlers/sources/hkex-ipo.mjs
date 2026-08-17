@@ -1,21 +1,50 @@
 import { BaseCrawler } from '../base-crawler.mjs';
 
 /**
- * 港交所披露易 - 公告爬虫（使用官方JSON接口）
+ * 港交所（HKEX）IPO 公告爬虫
  * 数据来源: https://www1.hkexnews.hk/ncms/json/eds/lcisehk7relsde_1.json
- * 
- * 过滤逻辑：必须同时满足「广东地区」+「IPO相关」
- * - 地区关键词：Guangzhou, Guangdong, Shenzhen, China, 广州, 广东, 深圳
- * - IPO关键词：IPO, listing, prospectus, 上市, 招股, 公开发行, 辅导备案
+ *          （披露易「最新公司公告」JSON 接口，云端可达）
+ *
+ * 重构要点（相较旧版）：
+ * 1) 旧版靠英文地区词 "China / Guangdong / Shenzhen ..." 双重匹配，其中 "China" 过于宽泛
+ *    （几乎每家中国公司都中），导致出来的数据看不出具体是哪家企业；
+ * 2) 新版聚焦「港股 IPO / 新股上市」类公告（招股章程、全球发售、发售价、配发结果、
+ *    申请版本、聆讯后资料集、上市等），并以「广东城市英文名 + 中文城市名」识别广东企业，
+ *    去掉 "China" 这个宽泛词；
+ * 3) 每条结果都明确带上「公司名称 + 港股代码 + 公告标题 + 日期」，让"具体是哪家广东企业"
+ *    一目了然（注：港交所公告多为英文，无省份字段，广东识别依赖公司名/公告中的城市名，
+ *    这是目前最可靠的方案；名称不含城市的广东企业可能漏判，属已知局限）。
  */
+
+const IPO_KEYWORDS = [
+  // 中文（港股 IPO 流程术语）
+  '招股', '招股章程', '全球发售', '发售价', '股份发售', '配发结果', '新上市',
+  '申请版本', '聆讯', '上市', '公开发售', '国际发售',
+  // 英文
+  'IPO', 'global offer', 'prospectus', 'listing', 'placing', 'offer for sale',
+  'subscription', 'application proof', 'post-vetting', 'heard', 'allotment',
+  'public offer', 'result', 'initial public offering',
+];
+
+// 广东（含 21 个地级市）中英文城市名，用于识别广东企业。不含 "China"（过于宽泛）。
+const GUANGDONG_KEYWORDS = [
+  '广东', '广州', '深圳', '东莞', '佛山', '珠海', '中山', '惠州', '江门', '汕头',
+  '湛江', '肇庆', '梅州', '汕尾', '河源', '阳江', '清远', '潮州', '揭阳', '云浮',
+  'Guangdong', 'Shenzhen', 'Guangzhou', 'Dongguan', 'Foshan', 'Zhuhai',
+  'Zhongshan', 'Huizhou', 'Jiangmen', 'Shantou', 'Zhanjiang', 'Zhaoqing',
+  'Meizhou', 'Shanwei', 'Heyuan', 'Yangjiang', 'Qingyuan', 'Chaozhou',
+  'Jieyang', 'Yunfu',
+];
+
 export class HKEXCrawler extends BaseCrawler {
   constructor() {
     super({
       name: '港交所IPO公告',
-      // 父类不再使用 keywords 过滤，但保留以便子类可能引用
       keywords: [],
       timeout: 15000,
+      retries: 3,
     });
+    this.windowDays = 7;
   }
 
   async getUrls() {
@@ -27,33 +56,18 @@ export class HKEXCrawler extends BaseCrawler {
 
   async parseArticle(responseText, url) {
     const articles = [];
-    // 计算 30 天前的时间戳
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-
-    // 地区关键词（中英文）
-    const regionKeywords = [
-      'Guangzhou', 'Guangdong', 'Shenzhen', 'China',
-      '广州', '广东', '深圳'
-    ];
-
-    // IPO 相关关键词
-    const ipoKeywords = [
-      'IPO', 'listing', 'prospectus', 'listing document',
-      'initial public offering', 'offer', 'placing',
-      'global offering', 'public offer', 'subscription',
-      '上市', '招股', '公开发行', '辅导备案'
-    ];
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - this.windowDays);
 
     try {
       const data = JSON.parse(responseText);
-
       if (!data.newsInfoLst || !Array.isArray(data.newsInfoLst)) {
         console.warn(`[${this.name}] JSON中未找到 newsInfoLst 数组`);
         return articles;
       }
 
       const list = data.newsInfoLst;
+      console.log(`[${this.name}] 接口共返回 ${list.length} 条公告（最近${this.windowDays}天窗口内筛选）`);
 
       for (const item of list) {
         const title = item.title || item.lTxt || '';
@@ -61,13 +75,12 @@ export class HKEXCrawler extends BaseCrawler {
         const relTime = item.relTime || '';
         const webPath = item.webPath || '';
         const fileExt = item.ext || 'pdf';
-        const fileSize = item.size || '';
 
         const stockInfo = item.stock || [];
         const stockCodes = stockInfo.map(s => s.sc || '').filter(Boolean).join(', ');
         const stockNames = stockInfo.map(s => s.sn || '').filter(Boolean).join(', ');
 
-        // 解析日期
+        // 解析日期（DD/MM/YYYY）
         let pubDate = relTime;
         if (pubDate) {
           const dateMatch = pubDate.match(/(\d{2})\/(\d{2})\/(\d{4})/);
@@ -78,33 +91,24 @@ export class HKEXCrawler extends BaseCrawler {
           pubDate = new Date().toISOString().slice(0, 10);
         }
 
-        // ⭐ 过滤 30 天前的数据
         const itemDate = new Date(pubDate);
-        if (itemDate < thirtyDaysAgo) {
-          continue;
-        }
+        if (isNaN(itemDate.getTime()) || itemDate < sevenDaysAgo) continue;
 
-        // ⭐ 双重过滤：地区 + IPO（AND 逻辑）
-        const allText = `${title} ${shortTitle} ${stockNames} ${stockCodes}`;
-        const lowerText = allText.toLowerCase();
+        // ⭐ 过滤 1：必须是 IPO / 新股上市类公告
+        const allText = `${title} ${shortTitle} ${stockNames}`.toLowerCase();
+        const isIpo = IPO_KEYWORDS.some(kw => allText.includes(kw.toLowerCase()));
+        if (!isIpo) continue;
 
-        // 检查地区关键词
-        const isRegion = regionKeywords.some(kw =>
-          lowerText.includes(kw.toLowerCase())
+        // ⭐ 过滤 2：必须是广东企业（公司名 / 公告中出现广东城市名；不含宽泛的 "China"）
+        const isGuangdong = GUANGDONG_KEYWORDS.some(kw =>
+          `${title} ${shortTitle} ${stockNames}`.includes(kw),
         );
+        if (!isGuangdong) continue;
 
-        // 检查 IPO 关键词
-        const isIpo = ipoKeywords.some(kw =>
-          lowerText.includes(kw.toLowerCase())
-        );
-
-        // 必须同时满足地区 + IPO
-        if (!isRegion || !isIpo) {
-          continue;
-        }
-
-        let fullTitle = title;
-        if (stockNames) fullTitle += ` (${stockNames})`;
+        // 标题：明确展示"哪家公司"
+        let fullTitle = stockNames || title;
+        if (stockCodes) fullTitle += ` (${stockCodes})`;
+        if (title && title !== stockNames) fullTitle += ` — ${title}`;
 
         let pdfUrl = '';
         if (webPath) {
@@ -113,23 +117,22 @@ export class HKEXCrawler extends BaseCrawler {
             : `https://www1.hkexnews.hk${webPath}`;
         }
 
-        let excerpt = `港交所公告: ${title}`;
-        if (stockCodes) excerpt += ` | 股票: ${stockCodes}`;
-        if (stockNames) excerpt += ` (${stockNames})`;
+        let excerpt = `港交所公告`;
+        if (stockCodes) excerpt += ` | 代码: ${stockCodes}`;
+        if (stockNames) excerpt += ` | 公司: ${stockNames}`;
         if (relTime) excerpt += ` | 时间: ${relTime}`;
         if (fileExt) excerpt += ` | 格式: ${fileExt.toUpperCase()}`;
-        if (fileSize) excerpt += ` | 大小: ${fileSize}`;
 
         articles.push({
           title: fullTitle,
           url: pdfUrl || url,
-          excerpt: excerpt,
+          excerpt,
           publishedAt: pubDate,
+          sourceId: 'gd-hkex',
         });
       }
 
-      console.log(`[${this.name}] 匹配到 ${articles.length} 条广东IPO相关公告（共 ${list.length} 条，最近30天）`);
-
+      console.log(`[${this.name}] 匹配到 ${articles.length} 家广东企业港股IPO相关公告`);
     } catch (err) {
       console.error(`[${this.name}] 解析JSON失败:`, err.message);
     }

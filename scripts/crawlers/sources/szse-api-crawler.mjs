@@ -33,7 +33,7 @@ export class SZSEAPICrawler extends BaseCrawler {
       timeout: 15000,
       retries: 3,
     });
-    this.windowDays = 14;      // 回溯窗口（天）
+    this.windowDays = 7;       // 回溯窗口（天）
     this.maxPages = 12;        // 翻页上限，防止异常时无限翻
     this.searchKey = '首次公开发行';
   }
@@ -147,6 +147,7 @@ export class SZSEAPICrawler extends BaseCrawler {
           url: detailUrl,
           excerpt: `深交所公告 | ${title} | 日期: ${pubDate}`,
           publishedAt: pubDate,
+          sourceId: 'gd-szse',
         });
       }
 

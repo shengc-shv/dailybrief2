@@ -2,37 +2,70 @@ name: Test Run (No AI, No Publish)
 
 on:
   workflow_dispatch:
+  schedule:
+    # 每周一 03:17 UTC 刷新粤企注册表（沙盒验证；后续手动搬到 daily.yml）
+    - cron: "17 3 * * 1"
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run crawlers
         run: node scripts/crawlers/run-all.mjs
         continue-on-error: true
-      
+
       - name: Ensure data file exists
         run: |
           mkdir -p data
           if [ ! -f data/crawled-articles.json ]; then
             echo '[]' > data/crawled-articles.json
           fi
-      
+
       - name: Dry run (no AI)
         run: npm run dry-run
-      
+
       - name: Upload HTML for preview
         uses: actions/upload-artifact@v4
         with:
           name: preview-report
           path: daily_reports/
+
+  # 每周刷新粤企注册表（企业名/股票/城市 单一真相源）。
+  # 仅重建 JSON 并在有变化时提交回 main；不发布任何报告。
+  # 后续手动搬到 daily.yml 时，复制本 job 即可（daily.yml 已有 contents: write 权限更佳）。
+  refresh-guangdong-registry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh 粤企注册表 (EastMoney F10 复核省份)
+        run: node scripts/seed-guangdong-registry.mjs
+
+      - name: Commit updated registry (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lib/sources/guangdong-registry.json
+          if git diff --cached --quiet; then
+            echo "粤企注册表无变化，跳过提交"
+          else
+            git commit -m "chore: 每周刷新粤企注册表 ($(date -u +%Y-%m-%d))"
+            git push
+          fi

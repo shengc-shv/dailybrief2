@@ -1,4 +1,5 @@
 import { fetch } from 'undici';
+import { lookupByCode } from '../../lib/sources/guangdong.mjs';
 
 /**
  * 股票代码 -> 注册省份 解析器（共享模块）
@@ -64,7 +65,12 @@ export async function provinceOf(stockCode, exchange) {
   }
 }
 
-/** 是否为广东省（含深圳/广州等地，省份字段即 "广东"）。 */
+/**
+ * 是否为广东省（含深圳/广州等地，省份字段即 "广东"）。
+ * 优先查本地粤企注册表（离线秒级，且覆盖港股/中概代码 F10 解析不到的情况），
+ * 查不到再走东方财富 F10 解析省份（A 股兜底）。
+ */
 export async function isGuangdong(stockCode, exchange) {
+  if (lookupByCode(stockCode)) return true;
   return (await provinceOf(stockCode, exchange)) === '广东';
 }

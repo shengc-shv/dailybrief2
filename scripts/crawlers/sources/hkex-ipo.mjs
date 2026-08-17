@@ -12,8 +12,9 @@ import { BaseCrawler } from '../base-crawler.mjs';
  *    申请版本、聆讯后资料集、上市等），并以「广东城市英文名 + 中文城市名」识别广东企业，
  *    去掉 "China" 这个宽泛词；
  * 3) 每条结果都明确带上「公司名称 + 港股代码 + 公告标题 + 日期」，让"具体是哪家广东企业"
- *    一目了然（注：港交所公告多为英文，无省份字段，广东识别依赖公司名/公告中的城市名，
- *    这是目前最可靠的方案；名称不含城市的广东企业可能漏判，属已知局限）。
+ *    一目了然。广东识别改用粤企注册表（lib/sources/guangdong.mjs + guangdong-registry.json）：
+ *    优先按港股代码 / 公司名（含英文名，如 Tencent / 网易 / 小鹏）精确命中，退化到城市名匹配，
+ *    从而覆盖"公告只写企业名、不写地点"的情况。注册表未收录的粤企仍可能漏判（可在 JSON 中补充）。
  */
 
 const IPO_KEYWORDS = [
@@ -26,15 +27,10 @@ const IPO_KEYWORDS = [
   'public offer', 'result', 'initial public offering',
 ];
 
-// 广东（含 21 个地级市）中英文城市名，用于识别广东企业。不含 "China"（过于宽泛）。
-const GUANGDONG_KEYWORDS = [
-  '广东', '广州', '深圳', '东莞', '佛山', '珠海', '中山', '惠州', '江门', '汕头',
-  '湛江', '肇庆', '梅州', '汕尾', '河源', '阳江', '清远', '潮州', '揭阳', '云浮',
-  'Guangdong', 'Shenzhen', 'Guangzhou', 'Dongguan', 'Foshan', 'Zhuhai',
-  'Zhongshan', 'Huizhou', 'Jiangmen', 'Shantou', 'Zhanjiang', 'Zhaoqing',
-  'Meizhou', 'Shanwei', 'Heyuan', 'Yangjiang', 'Qingyuan', 'Chaozhou',
-  'Jieyang', 'Yunfu',
-];
+// 广东企业识别统一入口：按港股代码 + 公司名在粤企注册表命中（覆盖"公告只写企业名/
+// 代码、不写地点"的情况，如腾讯/网易/小鹏），退化到城市名匹配。单一事实源见
+// lib/sources/guangdong.mjs 与 guangdong-registry.json（不再在此重复维护关键词列表）。
+import { isGuangdongEnterprise } from '../../lib/sources/guangdong.mjs';
 
 export class HKEXCrawler extends BaseCrawler {
   constructor() {
@@ -99,9 +95,13 @@ export class HKEXCrawler extends BaseCrawler {
         const isIpo = IPO_KEYWORDS.some(kw => allText.includes(kw.toLowerCase()));
         if (!isIpo) continue;
 
-        // ⭐ 过滤 2：必须是广东企业（公司名 / 公告中出现广东城市名；不含宽泛的 "China"）
-        const isGuangdong = GUANGDONG_KEYWORDS.some(kw =>
-          `${title} ${shortTitle} ${stockNames}`.includes(kw),
+        // ⭐ 过滤 2：必须是广东企业。优先按港股代码 + 公司名在粤企注册表命中
+        //   （覆盖"公告只写企业名/代码、不写地点"的情况，如腾讯/网易/小鹏），
+        //   退化到城市名匹配。统一入口见 lib/sources/guangdong.mjs。
+        const stockCodeArr = stockInfo.map((s) => s.sc || '').filter(Boolean);
+        const isGuangdong = isGuangdongEnterprise(
+          `${title} ${shortTitle} ${stockNames}`,
+          { codes: stockCodeArr },
         );
         if (!isGuangdong) continue;
 

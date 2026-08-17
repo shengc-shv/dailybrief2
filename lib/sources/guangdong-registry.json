@@ -1,0 +1,639 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-17",
+  "note": "广东地区企业单一真相源：企业名/别名(含英文名)/股票代码/注册城市。A股由东方财富F10校验省份；港股中概人工标注。匹配逻辑见 lib/sources/guangdong.mjs。",
+  "companies": [
+    {
+      "name": "白云山",
+      "aliases": [
+        "Baiyunshan"
+      ],
+      "codes": [
+        "600332"
+      ],
+      "city": ""
+    },
+    {
+      "name": "保利发展",
+      "aliases": [
+        "Poly Develop"
+      ],
+      "codes": [
+        "600048"
+      ],
+      "city": ""
+    },
+    {
+      "name": "贝特瑞",
+      "aliases": [
+        "BTR"
+      ],
+      "codes": [
+        "835185"
+      ],
+      "city": "深圳市"
+    },
+    {
+      "name": "比亚迪",
+      "aliases": [
+        "BYD"
+      ],
+      "codes": [
+        "002594",
+        "1211.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "碧桂园",
+      "aliases": [
+        "Country Garden"
+      ],
+      "codes": [
+        "2007.HK"
+      ],
+      "city": "佛山市"
+    },
+    {
+      "name": "传音控股",
+      "aliases": [
+        "Transsion"
+      ],
+      "codes": [
+        "688036"
+      ],
+      "city": ""
+    },
+    {
+      "name": "大族激光",
+      "aliases": [
+        "Han's Laser"
+      ],
+      "codes": [
+        "002008"
+      ],
+      "city": ""
+    },
+    {
+      "name": "德方纳米",
+      "aliases": [
+        "Dynanonic"
+      ],
+      "codes": [
+        "300769"
+      ],
+      "city": ""
+    },
+    {
+      "name": "德赛电池",
+      "aliases": [
+        "Desay Battery"
+      ],
+      "codes": [
+        "000049"
+      ],
+      "city": ""
+    },
+    {
+      "name": "富途",
+      "aliases": [
+        "Futu"
+      ],
+      "codes": [
+        "FUTU"
+      ],
+      "city": "深圳市"
+    },
+    {
+      "name": "格力电器",
+      "aliases": [
+        "Gree"
+      ],
+      "codes": [
+        "000651"
+      ],
+      "city": ""
+    },
+    {
+      "name": "工业富联",
+      "aliases": [
+        "Foxconn Industrial"
+      ],
+      "codes": [
+        "601138"
+      ],
+      "city": ""
+    },
+    {
+      "name": "广发证券",
+      "aliases": [
+        "GF Securities"
+      ],
+      "codes": [
+        "000776",
+        "1776.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "广汽集团",
+      "aliases": [
+        "GAC"
+      ],
+      "codes": [
+        "601238"
+      ],
+      "city": ""
+    },
+    {
+      "name": "国信证券",
+      "aliases": [
+        "Guosen"
+      ],
+      "codes": [
+        "002736"
+      ],
+      "city": ""
+    },
+    {
+      "name": "海大集团",
+      "aliases": [
+        "Haid Group"
+      ],
+      "codes": [
+        "002311"
+      ],
+      "city": ""
+    },
+    {
+      "name": "虎牙",
+      "aliases": [
+        "HUYA"
+      ],
+      "codes": [
+        "HUYA"
+      ],
+      "city": "广州市"
+    },
+    {
+      "name": "华侨城A",
+      "aliases": [
+        "OCT"
+      ],
+      "codes": [
+        "000069"
+      ],
+      "city": ""
+    },
+    {
+      "name": "欢聚",
+      "aliases": [
+        "JOYY",
+        "YY Inc"
+      ],
+      "codes": [
+        "YY"
+      ],
+      "city": "广州市"
+    },
+    {
+      "name": "汇川技术",
+      "aliases": [
+        "Inovance"
+      ],
+      "codes": [
+        "300124"
+      ],
+      "city": ""
+    },
+    {
+      "name": "惠泰医疗",
+      "aliases": [
+        "HeartCare"
+      ],
+      "codes": [
+        "688617"
+      ],
+      "city": ""
+    },
+    {
+      "name": "金地集团",
+      "aliases": [
+        "Gemdale"
+      ],
+      "codes": [
+        "600383"
+      ],
+      "city": ""
+    },
+    {
+      "name": "金域医学",
+      "aliases": [
+        "Kingmed"
+      ],
+      "codes": [
+        "603882"
+      ],
+      "city": ""
+    },
+    {
+      "name": "锦龙股份",
+      "aliases": [
+        "Jinlong"
+      ],
+      "codes": [
+        "000712"
+      ],
+      "city": ""
+    },
+    {
+      "name": "康泰生物",
+      "aliases": [
+        "Kangtai"
+      ],
+      "codes": [
+        "300601"
+      ],
+      "city": ""
+    },
+    {
+      "name": "立讯精密",
+      "aliases": [
+        "Luxshare"
+      ],
+      "codes": [
+        "002475"
+      ],
+      "city": ""
+    },
+    {
+      "name": "丽珠集团",
+      "aliases": [
+        "Livzon"
+      ],
+      "codes": [
+        "000513"
+      ],
+      "city": ""
+    },
+    {
+      "name": "迈瑞医疗",
+      "aliases": [
+        "Mindray"
+      ],
+      "codes": [
+        "300760"
+      ],
+      "city": ""
+    },
+    {
+      "name": "美的集团",
+      "aliases": [
+        "Midea"
+      ],
+      "codes": [
+        "000333",
+        "0300.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "纳思达",
+      "aliases": [
+        "Ninestars"
+      ],
+      "codes": [
+        "002180"
+      ],
+      "city": ""
+    },
+    {
+      "name": "欧菲光",
+      "aliases": [
+        "OFILM"
+      ],
+      "codes": [
+        "002456"
+      ],
+      "city": ""
+    },
+    {
+      "name": "平安银行",
+      "aliases": [
+        "Ping An Bank"
+      ],
+      "codes": [
+        "000001"
+      ],
+      "city": ""
+    },
+    {
+      "name": "全志科技",
+      "aliases": [
+        "Allwinner"
+      ],
+      "codes": [
+        "300458"
+      ],
+      "city": ""
+    },
+    {
+      "name": "深南电路",
+      "aliases": [
+        "SCC"
+      ],
+      "codes": [
+        "002916"
+      ],
+      "city": ""
+    },
+    {
+      "name": "深信服",
+      "aliases": [
+        "Sangfor"
+      ],
+      "codes": [
+        "300454"
+      ],
+      "city": ""
+    },
+    {
+      "name": "深圳能源",
+      "aliases": [
+        "Shenzhen Energy"
+      ],
+      "codes": [
+        "000027"
+      ],
+      "city": ""
+    },
+    {
+      "name": "视源股份",
+      "aliases": [
+        "CVTE"
+      ],
+      "codes": [
+        "002841"
+      ],
+      "city": ""
+    },
+    {
+      "name": "顺丰控股",
+      "aliases": [
+        "SF Express",
+        "SF Holding"
+      ],
+      "codes": [
+        "002352"
+      ],
+      "city": ""
+    },
+    {
+      "name": "拓邦股份",
+      "aliases": [
+        "Topband"
+      ],
+      "codes": [
+        "002139"
+      ],
+      "city": ""
+    },
+    {
+      "name": "汤臣倍健",
+      "aliases": [
+        "By-Health"
+      ],
+      "codes": [
+        "300146"
+      ],
+      "city": ""
+    },
+    {
+      "name": "腾讯控股",
+      "aliases": [
+        "Tencent",
+        "Tencent Holdings"
+      ],
+      "codes": [
+        "0700.HK"
+      ],
+      "city": "深圳市"
+    },
+    {
+      "name": "腾讯音乐",
+      "aliases": [
+        "Tencent Music"
+      ],
+      "codes": [
+        "TME"
+      ],
+      "city": "深圳市"
+    },
+    {
+      "name": "万科企业",
+      "aliases": [
+        "Vanke"
+      ],
+      "codes": [
+        "2202.HK"
+      ],
+      "city": "深圳市"
+    },
+    {
+      "name": "万科A",
+      "aliases": [
+        "China Vanke",
+        "Vanke"
+      ],
+      "codes": [
+        "000002"
+      ],
+      "city": ""
+    },
+    {
+      "name": "网易",
+      "aliases": [
+        "NetEase"
+      ],
+      "codes": [
+        "9999.HK"
+      ],
+      "city": "广州市"
+    },
+    {
+      "name": "唯品会",
+      "aliases": [
+        "Vipshop"
+      ],
+      "codes": [
+        "VIPS"
+      ],
+      "city": "广州市"
+    },
+    {
+      "name": "温氏股份",
+      "aliases": [
+        "Wens"
+      ],
+      "codes": [
+        "300498"
+      ],
+      "city": ""
+    },
+    {
+      "name": "稳健医疗",
+      "aliases": [
+        "Winner"
+      ],
+      "codes": [
+        "300888"
+      ],
+      "city": ""
+    },
+    {
+      "name": "小鹏汽车",
+      "aliases": [
+        "XPeng"
+      ],
+      "codes": [
+        "9868.HK",
+        "XPEV"
+      ],
+      "city": "广州市"
+    },
+    {
+      "name": "欣旺达",
+      "aliases": [
+        "Sunwoda"
+      ],
+      "codes": [
+        "300207"
+      ],
+      "city": ""
+    },
+    {
+      "name": "新产业",
+      "aliases": [
+        "Snibe"
+      ],
+      "codes": [
+        "300832"
+      ],
+      "city": ""
+    },
+    {
+      "name": "信立泰",
+      "aliases": [
+        "Salubris"
+      ],
+      "codes": [
+        "002294"
+      ],
+      "city": ""
+    },
+    {
+      "name": "信维通信",
+      "aliases": [
+        "Sunway"
+      ],
+      "codes": [
+        "300136"
+      ],
+      "city": ""
+    },
+    {
+      "name": "亿纬锂能",
+      "aliases": [
+        "EVE Energy"
+      ],
+      "codes": [
+        "300014"
+      ],
+      "city": ""
+    },
+    {
+      "name": "远光软件",
+      "aliases": [
+        "YGSoft"
+      ],
+      "codes": [
+        "002063"
+      ],
+      "city": ""
+    },
+    {
+      "name": "粤电力A",
+      "aliases": [
+        "Yuedian"
+      ],
+      "codes": [
+        "000539"
+      ],
+      "city": ""
+    },
+    {
+      "name": "招商银行",
+      "aliases": [
+        "China Merchants Bank",
+        "CMB"
+      ],
+      "codes": [
+        "600036",
+        "3968.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "招商证券",
+      "aliases": [
+        "CMS"
+      ],
+      "codes": [
+        "600999"
+      ],
+      "city": ""
+    },
+    {
+      "name": "中国平安",
+      "aliases": [
+        "Ping An"
+      ],
+      "codes": [
+        "601318",
+        "2318.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "中信证券",
+      "aliases": [
+        "CITIC Securities"
+      ],
+      "codes": [
+        "600030"
+      ],
+      "city": ""
+    },
+    {
+      "name": "中兴通讯",
+      "aliases": [
+        "ZTE"
+      ],
+      "codes": [
+        "000063",
+        "0763.HK"
+      ],
+      "city": ""
+    },
+    {
+      "name": "TCL科技",
+      "aliases": [
+        "TCL"
+      ],
+      "codes": [
+        "000100"
+      ],
+      "city": ""
+    }
+  ]
+}

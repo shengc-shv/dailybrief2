@@ -46,6 +46,8 @@ const TEXTS_ZH = {
   emptySource: "该源今日无内容。",
   emptyCategory: "该分类今日无内容。",
   emptyGroup: "该组今日无数据。",
+  timeToday: "当天",
+  timePast30: "过去30天",
   footer: "内容均来自原媒体，本站仅作摘要整理与回链。",
   summaryLabelNews: "中文摘要",
   summaryLabelIntro: "中文介绍",
@@ -97,6 +99,8 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   emptySource: "No content from this source today.",
   emptyCategory: "No content in this category today.",
   emptyGroup: "No data for this group today.",
+  timeToday: "Today",
+  timePast30: "Past 30d",
   footer:
     "Content sourced from original publishers; this site provides summary and backlinks only.",
   summaryLabelNews: "Summary",
@@ -546,16 +550,68 @@ function renderSourceTabs(
     .join("")}</nav>`;
 }
 
+/**
+ * Keep only the articles of each source that match the time window.
+ * `todayOnly=true` → fetched in the current run (`fetchedToday`);
+ * `todayOnly=false` → carried from the rolling 30-day history.
+ */
+function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[] {
+  return sources.map((s) => ({
+    ...s,
+    items: s.items.filter((a) =>
+      todayOnly ? a.fetchedToday === true : a.fetchedToday !== true,
+    ),
+  }));
+}
+
+function countItems(sources: SourceGroup[]): number {
+  return sources.reduce((n, s) => n + s.items.length, 0);
+}
+
+function renderSourcesBlock(
+  category: Category,
+  subId: string,
+  sources: SourceGroup[],
+): string {
+  if (sources.length === 0) {
+    return `<p class="empty">${STR.emptySource}</p>`;
+  }
+  return `${renderSourceTabs(category, subId, sources)}
+  <div class="source-contents">
+    ${sources.map((s, i) => renderSourceContent(category, subId, s, i === 0)).join("\n")}
+  </div>`;
+}
+
 function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
+  const todaySrc = filterByTime(sub.sources, true);
+  const pastSrc = filterByTime(sub.sources, false);
+  const todayCount = countItems(todaySrc);
+  const pastCount = countItems(pastSrc);
+  // 空 sub（如 gd-ipo 的占位标签）：两个时间面板都显示空，但标签结构保留。
   if (sub.sources.length === 0) {
     return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
-    <p class="empty">${STR.emptySource}</p>
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">0</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
+      <div class="time-content" data-time-content="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
+    </div>
   </div>`;
   }
   return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
-    ${renderSourceTabs(category, sub.id, sub.sources)}
-    <div class="source-contents">
-      ${sub.sources.map((s, i) => renderSourceContent(category, sub.id, s, i === 0)).join("\n")}
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">${todayCount}</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">${pastCount}</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
+        ${renderSourcesBlock(category, sub.id, todaySrc)}
+      </div>
+      <div class="time-content" data-time-content="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
+        ${renderSourcesBlock(category, sub.id, pastSrc)}
+      </div>
     </div>
   </div>`;
 }
@@ -903,6 +959,38 @@ export function renderHtml(
   }
   .sub-content { display: none; }
   .sub-content.active { display: block; }
+
+  /* ===== time split (当天 / 过去30天) — sits inside each L2 sub-content ===== */
+  .time-tabs {
+    display: flex;
+    gap: 0.35rem;
+    margin: 0 0 0.9rem;
+  }
+  .time-tab {
+    background: var(--card);
+    border: 1px solid transparent;
+    padding: 0.32rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--fg-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .time-tab:hover { border-color: var(--muted); color: var(--fg); }
+  .time-tab.active {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+  }
+  .time-tab .count {
+    font-size: 0.68rem;
+    opacity: 0.75;
+    margin-left: 0.35rem;
+  }
+  .time-content { display: none; }
+  .time-content.active { display: block; }
 
   /* ===== L3 source-tabs ===== */
   .source-tabs {
@@ -1302,6 +1390,21 @@ export function renderHtml(
       });
       panel.querySelectorAll('.sub-content').forEach(function (p) {
         p.classList.toggle('active', p.dataset.subContent === sub);
+      });
+    });
+  });
+  // Time split (当天 / 过去30天) — scoped to the parent .sub-content so it
+  // doesn't interfere with sibling L2 tabs sharing the same data-cat.
+  document.querySelectorAll('.time-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var subContent = btn.closest('.sub-content');
+      if (!subContent) return;
+      var time = btn.dataset.time;
+      subContent.querySelectorAll('.time-tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      subContent.querySelectorAll('.time-content').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.timeContent === time);
       });
     });
   });

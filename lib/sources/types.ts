@@ -66,4 +66,11 @@ export interface RawArticle {
    * used by GitHub Trending for "Language · ★stars · forks · stars today".
    */
   meta?: string;
+  /**
+   * Set by the report entrypoint (daily.ts / dry-run.ts) after merging the
+   * rolling 30-day history. `true` = fetched in the current run (shown under
+   * the "当天" tab); absent/false = carried from previous runs' history
+   * (shown under the "过去30天" tab). Never set by fetchers.
+   */
+  fetchedToday?: boolean;
 }

@@ -7,6 +7,7 @@ import { sources, loadAllSources } from "../lib/sources/registry";
 import { fetchSource } from "../lib/sources/dispatch";
 import type { ArticleInput } from "../lib/ai/pipeline";
 import { groupRaw, renderHtml } from "../lib/output/render";
+import { loadHistory, buildRolling, saveHistory } from "../lib/output/history";
 import { todayKey } from "../lib/utils";
 
 const OUTPUT_DIR = "daily_reports";
@@ -105,7 +106,14 @@ async function main() {
     }
   }
 
-  console.log(`\n📊 总文章数: ${articles.length}`);
+  // 合并滚动 30 天历史：今日抓取 + 历史缓存（按 fetchedToday 打标），
+  // 使渲染同时拥有「当天」与「过去30天」两个时间标签。
+  const history = loadHistory();
+  const nowIso = new Date().toISOString();
+  const rolling = buildRolling(articles, history);
+  // dry-run 无 AI：仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
+  saveHistory(articles, history, nowIso);
+  console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去30天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);
 
   // 统计各分类数量
   const catCount: Record<string, number> = {};
@@ -116,10 +124,10 @@ async function main() {
 
   // ----- 渲染 HTML（无 AI）-----
   console.log(`\n🎨 渲染 HTML 报告 (${date})...`);
-  const raw = groupRaw(articles, sources);
+  const raw = groupRaw(rolling, sources);
   
   // 生成空报告（不含 AI 摘要）
-  const report = generateEmptyReport(articles);
+  const report = generateEmptyReport(rolling);
   
   const html = renderHtml(report, raw, date);
 

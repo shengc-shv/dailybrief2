@@ -23,6 +23,12 @@ import {
   renderHtml,
   renderMarkdown,
 } from "../lib/output/render";
+import {
+  loadHistory,
+  buildRolling,
+  saveHistory,
+  type HistoryStore,
+} from "../lib/output/history";
 import { analyzeWatchlist } from "../lib/trading/runner";
 import { fetchCryptoFearGreed } from "../lib/trading/fear-greed";
 import { fetchCryptoGlobal } from "../lib/trading/coingecko";
@@ -31,6 +37,30 @@ import type { TradingSection } from "../lib/ai/pipeline";
 import { todayKey } from "../lib/utils";
 
 const OUTPUT_DIR = "daily_reports";
+
+/**
+ * Rolling 30-day article history + AI-summary cache. Loaded once in main(),
+ * read by every `enrich*` helper (to skip LLM calls for already-analyzed
+ * URLs), and rewritten at the end of the run.
+ */
+let history: HistoryStore = {};
+
+/**
+ * Reuse previously-generated AI summaries from the history so we don't pay
+ * to re-analyze the same URL. Returns the subset that still needs analysis.
+ */
+function applyCache(items: ArticleInput[]): ArticleInput[] {
+  const pending: ArticleInput[] = [];
+  for (const a of items) {
+    const cached = history[a.url]?.summary;
+    if (cached) {
+      a.summary = cached;
+    } else {
+      pending.push(a);
+    }
+  }
+  return pending;
+}
 
 async function fetchAll(): Promise<ArticleInput[]> {
   const articles: ArticleInput[] = [];
@@ -51,17 +81,22 @@ async function fetchAll(): Promise<ArticleInput[]> {
 async function enrichGhTrending(articles: ArticleInput[]): Promise<void> {
   const gh = articles.filter((a) => a.sourceId === "github-trending");
   if (gh.length === 0) return;
+  const pending = applyCache(gh);
+  if (pending.length === 0) {
+    console.log(`[daily] enriching GitHub Trending: ${gh.length} 条全部命中历史缓存，跳过 LLM`);
+    return;
+  }
   console.log(
-    `[daily] enriching ${gh.length} GitHub Trending repos with ${REPORT_LOCALE} summaries…`,
+    `[daily] enriching ${pending.length}/${gh.length} GitHub Trending repos with ${REPORT_LOCALE} summaries…`,
   );
   const t0 = Date.now();
-  const summaries = await enrichGithubTrendingSummaries(gh);
-  for (const a of gh) {
+  const summaries = await enrichGithubTrendingSummaries(pending);
+  for (const a of pending) {
     const s = summaries.get(a.url);
     if (s) a.summary = s;
   }
   console.log(
-    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${gh.length}`,
+    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
   );
 }
 
@@ -97,24 +132,29 @@ async function enrichXViral(articles: ArticleInput[]): Promise<void> {
     .filter((a) => a.sourceId === "attentionvc-ai")
     .slice(0, 20);
   if (xPosts.length === 0) return;
-  console.log(`[daily] enriching ${xPosts.length} X posts with ${REPORT_LOCALE} summaries…`);
+  const pending = applyCache(xPosts);
+  if (pending.length === 0) {
+    console.log(`[daily] enriching X 推文: ${xPosts.length} 条全部命中历史缓存，跳过 LLM`);
+    return;
+  }
+  console.log(`[daily] enriching ${pending.length}/${xPosts.length} X posts with ${REPORT_LOCALE} summaries…`);
   const t0 = Date.now();
   // Author handle is encoded in the URL (https://x.com/{handle}/status/{id})
   // — extract it to help the model identify whose claim it is.
   const summaries = await enrichXViralSummaries(
-    xPosts.map((a) => ({
+    pending.map((a) => ({
       url: a.url,
       title: a.title,
       excerpt: a.excerpt,
       author: a.url.match(/x\.com\/([^/]+)\//)?.[1] ?? "",
     })),
   );
-  for (const a of xPosts) {
+  for (const a of pending) {
     const s = summaries.get(a.url);
     if (s) a.summary = s;
   }
   console.log(
-    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${xPosts.length}`,
+    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
   );
 }
 
@@ -128,19 +168,24 @@ async function enrichTrendingPapers(articles: ArticleInput[]): Promise<void> {
     .filter((a) => a.sourceId === "huggingface-papers")
     .slice(0, 20);
   if (papers.length === 0) return;
+  const pending = applyCache(papers);
+  if (pending.length === 0) {
+    console.log(`[daily] enriching 热门论文: ${papers.length} 条全部命中历史缓存，跳过 LLM`);
+    return;
+  }
   console.log(
-    `[daily] enriching ${papers.length} trending papers with ${REPORT_LOCALE} summaries…`,
+    `[daily] enriching ${pending.length}/${papers.length} trending papers with ${REPORT_LOCALE} summaries…`,
   );
   const t0 = Date.now();
   const summaries = await enrichTrendingPapersSummaries(
-    papers.map((a) => ({ url: a.url, title: a.title, excerpt: a.excerpt })),
+    pending.map((a) => ({ url: a.url, title: a.title, excerpt: a.excerpt })),
   );
-  for (const a of papers) {
+  for (const a of pending) {
     const s = summaries.get(a.url);
     if (s) a.summary = s;
   }
   console.log(
-    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${papers.length}`,
+    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
   );
 }
 
@@ -183,18 +228,24 @@ async function enrichMergedSubgroup(
     )
     .slice(0, limit);
   const toEnrich = top.filter((a) => !sameLocaleIds.has(a.sourceId));
-  if (toEnrich.length === 0) return;
+  const pending = applyCache(toEnrich);
+  if (pending.length === 0) {
+    console.log(
+      `[daily] enriching ${category}:${subcategory}: ${toEnrich.length} 条全部命中历史缓存，跳过 LLM`,
+    );
+    return;
+  }
   console.log(
-    `[daily] enriching ${toEnrich.length}/${top.length} ${category}:${subcategory} items with ${REPORT_LOCALE} summaries…`,
+    `[daily] enriching ${pending.length}/${toEnrich.length} ${category}:${subcategory} items with ${REPORT_LOCALE} summaries…`,
   );
   const t0 = Date.now();
-  const summaries = await enrichFinanceNewsSummaries(toEnrich);
-  for (const a of toEnrich) {
+  const summaries = await enrichFinanceNewsSummaries(pending);
+  for (const a of pending) {
     const s = summaries.get(a.url);
     if (s) a.summary = s;
   }
   console.log(
-    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${toEnrich.length}`,
+    `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
   );
 }
 
@@ -242,6 +293,10 @@ async function main() {
   // Fail fast on misconfigured backend before we spend 30s fetching
   // 500+ articles only to discover the LLM has no credentials.
   validateBackendCredentials();
+
+  // 加载滚动 30 天历史（含已解读的 AI 摘要缓存），供富集去重 + 过去30天 tab 使用。
+  history = loadHistory();
+  console.log(`[daily] 已加载历史缓存: ${Object.keys(history).length} 条（来自 data/article-history.json）`);
 
   const date = todayKey();
   console.log(`[daily] ${date} — fetching sources…\n`);
@@ -293,19 +348,24 @@ async function main() {
   await enrichAiNews(articles);
   await enrichXViral(articles);
   
-  // ===== 为 gd-ipo 数据生成中文摘要（新增）=====
+  // ===== 为 gd-ipo 数据生成中文摘要（复用历史缓存去重）=====
   const gdIpoArticles = articles.filter(a => a.category === 'gd-ipo');
   if (gdIpoArticles.length > 0) {
-    console.log(`[daily] enriching ${gdIpoArticles.length} gd-ipo items with ${REPORT_LOCALE} summaries…`);
-    const t0 = Date.now();
-    const summaries = await enrichFinanceNewsSummaries(gdIpoArticles);
-    for (const a of gdIpoArticles) {
-      const s = summaries.get(a.url);
-      if (s) a.summary = s;
+    const pending = applyCache(gdIpoArticles);
+    if (pending.length === 0) {
+      console.log(`[daily] enriching gd-ipo: ${gdIpoArticles.length} 条全部命中历史缓存，跳过 LLM`);
+    } else {
+      console.log(`[daily] enriching ${pending.length}/${gdIpoArticles.length} gd-ipo items with ${REPORT_LOCALE} summaries…`);
+      const t0 = Date.now();
+      const summaries = await enrichFinanceNewsSummaries(pending);
+      for (const a of pending) {
+        const s = summaries.get(a.url);
+        if (s) a.summary = s;
+      }
+      console.log(
+        `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
+      );
     }
-    console.log(
-      `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${gdIpoArticles.length}`,
-    );
   }
   // Trading signals: Yahoo fetch + indicators + commentary. Non-fatal —
   // if it errors, we still ship the news digest.
@@ -323,17 +383,25 @@ async function main() {
   if (trading) report.trading = trading;
   console.log(`[daily] digest ready in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 
+  // 回写历史缓存（含今日 AI 摘要），并构建「当天 + 过去30天」滚动列表用于渲染。
+  const nowIso = new Date().toISOString();
+  history = saveHistory(articles, history, nowIso);
+  const rolling = buildRolling(articles, history);
+  console.log(
+    `[daily] 历史缓存已更新: ${Object.keys(history).length} 条（含今日 ${articles.length} 条）；渲染滚动列表 ${rolling.length} 条`,
+  );
+
   const dateDir = path.join(OUTPUT_DIR, date);
   fs.mkdirSync(dateDir, { recursive: true });
   const base = path.join(dateDir, date);
-  const raw = groupRaw(articles, sources);
+  const raw = groupRaw(rolling, sources);
   fs.writeFileSync(`${base}.json`, JSON.stringify(report, null, 2), "utf8");
-  // Sidecar with all fetched articles + LLM-attached summary, so
-  // scripts/render.ts can rebuild HTML/MD for UI iteration without
-  // re-fetching or re-calling the LLM.
+  // Sidecar with the rolling article list (today + past-30d) + LLM-attached
+  // summary, so scripts/render.ts can rebuild HTML/MD for UI iteration
+  // without re-fetching or re-calling the LLM.
   fs.writeFileSync(
     `${base}-articles.json`,
-    JSON.stringify({ date, articles }, null, 2),
+    JSON.stringify({ date, articles: rolling }, null, 2),
     "utf8",
   );
   fs.writeFileSync(`${base}.html`, renderHtml(report, raw, date), "utf8");

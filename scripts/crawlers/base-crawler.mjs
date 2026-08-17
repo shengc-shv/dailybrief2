@@ -9,6 +9,8 @@ export class BaseCrawler {
     this.name = options.name || 'unknown';
     this.keywords = options.keywords || ['广州', '上市', 'IPO', '辅导备案'];
     this.timeout = options.timeout || 15000;
+    // 抓取失败后的重试次数（不含首次）。默认 0；易被反爬/WAF 掐断的源可设高，如 3。
+    this.retries = options.retries ?? 0;
     this.userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
     this.results = [];
   }
@@ -29,12 +31,32 @@ export class BaseCrawler {
   }
 
   /**
-   * 通用抓取方法 - 子类一般不需要重写
+   * 指数退避（仅用于重试之间）
+   */
+  _backoff(attempt) {
+    const ms = 1000 * attempt * attempt + Math.random() * 1000; // 第1次重试~2s, 第2次~5s ...
+    return new Promise(r => setTimeout(r, ms));
+  }
+
+  /**
+   * 把底层错误原因（undici 的 err.cause）转成可读字符串，否则只会看到 "fetch failed" 黑盒
+   */
+  _causeText(err) {
+    const c = err && err.cause;
+    if (!c) return '';
+    const code = c.code || c.name || '';
+    const msg = c.message || String(c);
+    return ` | cause=${code ? code + ': ' : ''}${msg}`;
+  }
+
+  /**
+   * 通用抓取方法 - 子类一般不需要重写（含失败重试）
    */
   async run() {
-  console.log(`[${this.name}] 开始抓取...`);
+  console.log(`[${this.name}] 开始抓取... retries=${this.retries}`);
   const items = await this.getUrls();
   let total = 0;
+  const maxAttempts = this.retries + 1;
 
   for (const item of items) {
     const targetUrl = typeof item === 'string' ? item : item.url;
@@ -42,32 +64,49 @@ export class BaseCrawler {
     const headers = item.headers || { 'User-Agent': this.userAgent };
     const body = item.body || undefined;
 
-    try {
-      const fetchOptions = {
-        method: method,
-        headers: headers,
-        signal: AbortSignal.timeout(this.timeout),
-      };
-      if (method === 'POST' && body) {
-        fetchOptions.body = body;
+    let articles = [];
+    let ok = false;
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      try {
+        const fetchOptions = {
+          method: method,
+          headers: headers,
+          signal: AbortSignal.timeout(this.timeout),
+        };
+        if (method === 'POST' && body) {
+          fetchOptions.body = body;
+        }
+
+        const resp = await fetch(targetUrl, fetchOptions);
+        if (!resp.ok) {
+          // 仅对可重试状态（5xx / 429 限流 / 403 反爬）重试；4xx 其他直接放弃
+          const retriable = resp.status >= 500 || resp.status === 429 || resp.status === 403;
+          console.warn(`[${this.name}] ${targetUrl} 返回 ${resp.status}（尝试 ${attempt}/${maxAttempts}）${retriable ? '，将重试' : '，放弃'}`);
+          if (retriable && attempt < maxAttempts) {
+            await this._backoff(attempt);
+            continue;
+          }
+          break;
+        }
+
+        const text = await resp.text();
+        articles = await this.parseArticle(text, targetUrl);
+        ok = true;
+        break;
+      } catch (err) {
+        console.warn(`[${this.name}] ${targetUrl} 抓取失败（尝试 ${attempt}/${maxAttempts}）: ${err.message}${this._causeText(err)}`);
+        if (attempt < maxAttempts) {
+          await this._backoff(attempt);
+          continue;
+        }
       }
-
-      const resp = await fetch(targetUrl, fetchOptions);
-      if (!resp.ok) {
-        console.warn(`[${this.name}] ${targetUrl} 返回 ${resp.status}，跳过`);
-        continue;
-      }
-
-      const text = await resp.text();
-      const articles = await this.parseArticle(text, targetUrl);
-
-      // 直接使用全部数据，不过滤，由子类在 parseArticle 中自行决定
-      this.results.push(...articles);
-      total += articles.length;
-      console.log(`[${this.name}] 从 ${targetUrl} 抓取 ${articles.length} 条`);
-    } catch (err) {
-      console.warn(`[${this.name}] ${targetUrl} 抓取失败: ${err.message}`);
     }
+
+    // 直接使用全部数据，不过滤，由子类在 parseArticle 中自行决定
+    this.results.push(...articles);
+    total += articles.length;
+    console.log(`[${this.name}] 从 ${targetUrl} 抓取 ${articles.length} 条${ok ? '' : '（最终失败）'}`);
 
     await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
   }

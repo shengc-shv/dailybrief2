@@ -15,6 +15,8 @@ export class SSEAPICrawler extends BaseCrawler {
       name: '上交所IPO公告',
       keywords: [],   // 父类不过滤，传空数组
       timeout: 15000,
+      // 上交所 query.sse.com.cn 反爬/WAF 对云端 IP 常在连接层直接掐断，给足重试
+      retries: 3,
     });
   }
 

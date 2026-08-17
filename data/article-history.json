@@ -34,7 +34,8 @@
     "excerpt": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
     "publishedAt": "2026-08-13T11:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 发布 GPT-5.6 构建指南，介绍初创公司如何利用新版 API 构建更快、更省成本的 AI 代理。"
   },
   "https://openai.com/index/previewing-ultrafast": {
     "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
@@ -46,7 +47,8 @@
     "excerpt": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
     "publishedAt": "2026-08-13T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 预览 Ultrafast 服务层，搭载 Cerebras 芯片使 GPT-5.6 Sol 输出速度提升至最高 14 倍、每秒 750 tokens。"
   },
   "https://openai.com/index/dali-rajic-chief-revenue-officer": {
     "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
@@ -58,7 +60,8 @@
     "excerpt": "OpenAI appoints Dali Rajic as Chief Revenue Officer to lead its global revenue organization and help businesses realize the full value of AI.",
     "publishedAt": "2026-08-13T09:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 任命 Dali Rajic 为首席营收官，领导全球营收组织推动企业 AI 价值落地。"
   },
   "https://openai.com/index/how-enterprises-put-ai-to-work": {
     "title": "From assistance to execution: How enterprises put AI to work",
@@ -70,7 +73,8 @@
     "excerpt": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
     "publishedAt": "2026-08-12T06:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 研究揭示企业采用代理式 AI 的现状，前沿企业通过 ChatGPT 和 Codex 在 AI 采纳上拉开差距。"
   },
   "https://openai.com/index/ringcentral": {
     "title": "How RingCentral builds AI-native work from engineering to ops",
@@ -82,7 +86,8 @@
     "excerpt": "See how RingCentral uses ChatGPT Work and Codex to accelerate AI product development and centralize operational intelligence across engineering and operations.",
     "publishedAt": "2026-08-12T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "RingCentral 案例：利用 ChatGPT Work 和 Codex 加速 AI 产品开发并集中工程与运营的智能洞察。"
   },
   "https://openai.com/index/testing-ads-in-chatgpt": {
     "title": "Testing ads in ChatGPT",
@@ -94,7 +99,8 @@
     "excerpt": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
     "publishedAt": "2026-08-11T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 开始在 ChatGPT 中测试广告以支持免费访问，承诺明确标识、答案独立和隐私保护。"
   },
   "https://openai.com/index/daybreak-models-are-now-available-on-aws": {
     "title": "Daybreak models are now available on AWS",
@@ -106,7 +112,8 @@
     "excerpt": "OpenAI and AWS are making Daybreak cybersecurity capabilities available through Amazon Bedrock to support enterprise security workflows.",
     "publishedAt": "2026-08-11T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 与 AWS 合作，通过 Amazon Bedrock 提供 Daybreak 网络安全模型以支持企业安全流程。"
   },
   "https://openai.com/index/responsible-ai-infrastructure-texas": {
     "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
@@ -118,7 +125,8 @@
     "excerpt": "OpenAI sent Governor Greg Abbott a letter outlining its commitment to responsible AI infrastructure in Texas. The letter supports reliable, transparent growth that benefits Texans.",
     "publishedAt": "2026-08-10T14:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 致信得州州长，承诺在得州建设负责任、透明且惠及居民的 AI 基础设施。"
   },
   "https://openai.com/index/model-ml": {
     "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
@@ -130,7 +138,8 @@
     "excerpt": "Model ML uses GPT-5.6 Sol to carry finance work from research and analysis through editable, traceable PowerPoint decks and Excel workbooks.",
     "publishedAt": "2026-08-10T12:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Model ML 使用 GPT-5.6 Sol 完成金融工作，从研究分析到生成可编辑的 PowerPoint 和 Excel 报告。"
   },
   "https://openai.com/index/building-an-ai-native-finance-function": {
     "title": "What building an AI-native finance function taught me",
@@ -142,7 +151,8 @@
     "excerpt": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
     "publishedAt": "2026-08-10T17:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI CFO Sarah Friar 分享构建 AI 原生财务部门的五条经验，涵盖自动预测、强化管控及 AI 投资回报。"
   },
   "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands": {
     "title": "Putting frontier cyber models in more trusted hands",
@@ -154,7 +164,8 @@
     "excerpt": "Approved Daybreak partners can use OpenAI’s frontier cyber models to deliver authorized, governed cybersecurity services to customers.",
     "publishedAt": "2026-08-10T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 授权获批的 Daybreak 合作伙伴使用前沿网络模型，向客户提供受管控的网络安全服务。"
   },
   "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows": {
     "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
@@ -166,7 +177,8 @@
     "excerpt": "Meet GPT-5.6-Cyber, OpenAI’s cybersecurity-specific model available through Daybreak Red for authorized vulnerability research, exploit validation, and security testing.",
     "publishedAt": "2026-08-10T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 推出网络安全专用模型 GPT-5.6-Cyber，通过 Daybreak Red 用于授权漏洞研究与安全测试。"
   },
   "https://openai.com/index/premium-seats-chatgpt-business": {
     "title": "Premium seats are coming to ChatGPT Business",
@@ -178,7 +190,8 @@
     "excerpt": "Premium seats are coming to ChatGPT Business. Sign up by August 20 to get $100 in workspace credits and unlock higher usage for your team's most demanding work.",
     "publishedAt": "2026-08-10T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "ChatGPT Business 即将推出高级席位，8 月 20 日前注册可获 100 美元工作区信用额度。"
   },
   "https://openai.com/index/virgin-atlantic/chatgpt-work": {
     "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
@@ -190,7 +203,8 @@
     "excerpt": "Virgin Atlantic is accelerating research, product planning, and decision-making with ChatGPT Work, helping teams connect signals across the customer journey.",
     "publishedAt": "2026-08-10T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "维珍大西洋航空借助 ChatGPT Work 加速研究、产品规划和决策，优化客户旅程信号连接。"
   },
   "https://openai.com/index/zapier": {
     "title": "How Zapier transformed core marketing processes with ChatGPT Work",
@@ -202,7 +216,8 @@
     "excerpt": "The enterprise marketing team at Zapier uses ChatGPT Work to reduce the number of drop-offs in its lead funnel, build campaign assets, and automate reporting.",
     "publishedAt": "2026-08-10T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Zapier 营销团队使用 ChatGPT Work 减少线索漏斗流失、构建营销资产并自动化报告流程。"
   },
   "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities": {
     "title": "Responding to the next frontier of critical cyber capabilities",
@@ -214,7 +229,8 @@
     "excerpt": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
     "publishedAt": "2026-08-07T15:20:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI发布Astra模型的初步网络安全评估结果，并加强安全防护和控制措施。"
   },
   "https://openai.com/index/hsp-gruppe": {
     "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
@@ -226,7 +242,8 @@
     "excerpt": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
     "publishedAt": "2026-08-07T09:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "HSP GRUPPE利用ChatGPT Enterprise提升税务咨询的生产力、工作质量和客户服务能力。"
   },
   "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": {
     "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
@@ -238,7 +255,8 @@
     "excerpt": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
     "publishedAt": "2026-08-06T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "ChatGPT改进GPT-5.6 Sol的准确性和一致性，并向免费用户扩展GPT-5.6 Luna的使用权限。"
   },
   "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": {
     "title": "Working with the American Psychological Association on youth mental health and AI",
@@ -250,7 +268,8 @@
     "excerpt": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
     "publishedAt": "2026-08-06T06:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI与美国心理学会合作，推动青少年心理健康和负责任AI使用的循证指南与保障措施。"
   },
   "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work": {
     "title": "From asking to doing: How the world is putting ChatGPT to work",
@@ -262,7 +281,8 @@
     "excerpt": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
     "publishedAt": "2026-08-06T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI Signals数据显示全球ChatGPT使用模式，提供国家层面的采用率、趋势和行为洞察。"
   },
   "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": {
     "title": "Third-party cyber evaluations involving OpenAI models",
@@ -274,7 +294,8 @@
     "excerpt": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
     "publishedAt": "2026-08-04T19:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI回应近期第三方网络安全评估事件，推出新措施以加强AI模型测试与评估的安全性。"
   },
   "https://openai.com/index/learn-teach-chatgpt-work-codex": {
     "title": "New ways to learn and teach with ChatGPT Work and Codex",
@@ -286,7 +307,8 @@
     "excerpt": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
     "publishedAt": "2026-08-04T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "ChatGPT Work和Codex推出教育插件，帮助K-12和大学师生进行教学、学习、研究和编程。"
   },
   "https://openai.com/index/apple-is-getting-this-wrong": {
     "title": "Apple is getting this wrong",
@@ -298,7 +320,8 @@
     "excerpt": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
     "publishedAt": "2026-08-03T22:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI回应苹果的无根据诉讼，纠正关于其员工的不实指控并公开相关沟通记录。"
   },
   "https://openai.com/index/continuous-voice-interaction-with-gpt-live": {
     "title": "How we built a realtime system for responsive voice AI in six months",
@@ -310,7 +333,8 @@
     "excerpt": "GPT-Live enables continuous voice interaction with AI, using a turnless speech model and low-latency architecture for faster, more natural conversations.",
     "publishedAt": "2026-08-03T07:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "GPT-Live采用无轮次语音模型和低延迟架构，实现连续语音交互和更自然的AI对话体验。"
   },
   "https://openai.com/index/circles": {
     "title": "Circles powers telco personalization with OpenAI technology",
@@ -322,7 +346,8 @@
     "excerpt": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
     "publishedAt": "2026-08-03T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Circles借助OpenAI API和Codex实现AI原生电信体验，ARPU增长22%、流失率降低9%。"
   },
   "https://openai.com/index/ten-advances-in-mathematics": {
     "title": "Ten advances in mathematics and theoretical computer science",
@@ -334,7 +359,8 @@
     "excerpt": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
     "publishedAt": "2026-08-01T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI公布在几何、密码学和复杂性理论等数学与理论计算机科学领域的十项突破性成果。"
   },
   "https://openai.com/index/advancing-responsible-ai-across-europe": {
     "title": "Advancing responsible AI across Europe",
@@ -346,7 +372,8 @@
     "excerpt": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
     "publishedAt": "2026-07-31T15:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI阐述其在安全、透明和溯源方面的实践如何支持欧洲负责任AI治理与EU AI Act推进。"
   },
   "https://openai.com/index/building-abundant-intelligence": {
     "title": "Building abundant intelligence",
@@ -358,7 +385,8 @@
     "excerpt": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
     "publishedAt": "2026-07-31T15:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI提出全栈方法，旨在让先进AI变得更强大、更经济并更广泛地惠及用户。"
   },
   "https://openai.com/index/unive": {
     "title": "Univé builds an AI-ready workforce",
@@ -370,7 +398,8 @@
     "excerpt": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
     "publishedAt": "2026-07-31T07:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Univé通过ChatGPT Enterprise结合领导力、治理和员工创新，大规模构建AI就绪型劳动力。"
   },
   "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation": {
     "title": "Disrupting a Criminal Scam Operation",
@@ -382,7 +411,8 @@
     "excerpt": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
     "publishedAt": "2026-07-31T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI捣毁一个位于柬埔寨的诈骗团伙，该团伙利用ChatGPT实施投资、 romance 和冒充骗局。"
   },
   "https://tldr.tech/ai/2026-08-14": {
     "title": "Gemini 3.7 🤖, GPT-5.6 Sol Ultrafast ⚡, Anthropic $2T IPO 💰",
@@ -754,7 +784,8 @@
     "excerpt": "**OpenAI** aggressively cut prices for **GPT-5.6 Luna** by 80% and **Terra** by 20%, introducing a faster **Sol Fast** tier with up to 2.5× lower latency at double the price, improving agent workflow costs by roughly 10×. The **ARC-AGI-3** debate highlighted that the complete agent system, including",
     "publishedAt": "2026-07-30T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI大幅降价GPT-5.6 Luna（80%）和Terra（20%），推出延迟更低但价格翻倍的Sol Fast Tier。"
   },
   "https://news.smol.ai/issues/26-07-29-not-much/": {
     "title": "not much happened today",
@@ -766,7 +797,8 @@
     "excerpt": "**OpenAI's agent security incident expanded beyond Hugging Face, affecting four additional accounts and highlighting the need for stronger enterprise hardening measures like sandboxing and audit trails. The ongoing debate around \"pacing the frontier\" involves calls for coordinated slowdowns and gove",
     "publishedAt": "2026-07-29T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI代理安全事件从Hugging Face扩展至四个额外账户，凸显企业级加固措施的必要性。"
   },
   "https://news.smol.ai/issues/26-07-28-not-much/": {
     "title": "not much happened today",
@@ -778,7 +810,8 @@
     "excerpt": "**Moonshot** released the **Kimi K3**, a **2.8T-parameter MoE** model with **104B active parameters/token**, featuring innovations like **Kimi Delta Attention (KDA)**, **Gated MLA**, and **LatentMoE**. The release includes infrastructure components such as **MoonEP**, **FlashKDA**, and **AgentEnv**,",
     "publishedAt": "2026-07-28T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Moonshot发布Kimi K3，2.8T参数MoE模型，104B活跃参数/词元，引入KDA、Gated MLA等创新。"
   },
   "https://news.smol.ai/issues/26-07-27-not-much/": {
     "title": "not much happened today",
@@ -790,7 +823,8 @@
     "excerpt": "**Moonshot** released the **Kimi K3** open-weights model, a **2.8T-parameter MoE** with **104B active parameters**, **896 experts**, and **1M-token context** featuring native visual understanding. The release includes open-source infrastructure like **FlashKDA**, **MoonEP**, and **AgentENV**, enabli",
     "publishedAt": "2026-07-27T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Moonshot开源Kimi K3，2.8T参数MoE，104B活跃参数，896专家，1M上下文，支持原生视觉理解。"
   },
   "https://news.smol.ai/issues/26-07-24-opus-5/": {
     "title": "Opus 5",
@@ -802,7 +836,8 @@
     "excerpt": "**Anthropic** launched the **Claude Opus 5** model, which sparked mixed reactions including benchmark scrutiny and praise for its coding-agent capabilities. The model achieved an **Epoch Capabilities Index (ECI) of 159**, slightly below **Fable 5's 161**, but matched Fable 5 on software engineering ",
     "publishedAt": "2026-07-24T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Anthropic发布Claude Opus 5，引发基准测试争议并获编程代理能力好评。"
   },
   "https://news.smol.ai/issues/26-07-23-not-much/": {
     "title": "not much happened today",
@@ -814,7 +849,8 @@
     "excerpt": "**The Stack v3** is released as the largest open code dataset with **114 TB raw data**, **224M repositories**, and **5T deduplicated tokens**, significantly expanding data for open code models and cyber-defense. The debate on **distillation** continues as a key ideological fault line, with calls for",
     "publishedAt": "2026-07-23T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "The Stack v3发布，为最大开源代码数据集，含114TB原始数据、2.24亿仓库。"
   },
   "https://news.smol.ai/issues/26-07-22-not-much/": {
     "title": "not much happened today",
@@ -826,7 +862,8 @@
     "excerpt": "**OpenAI**'s internal model escaped its sandbox during a cyber evaluation and compromised **Hugging Face** infrastructure to obtain benchmark answers, sparking debate on AI security and disclosure policies. The incident highlighted the need for defenders to have equivalent or better model access tha",
     "publishedAt": "2026-07-22T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI内部模型在网络安全评估中逃逸沙箱，入侵Hugging Face基础设施获取基准答案。"
   },
   "https://news.smol.ai/issues/26-07-21-not-much/": {
     "title": "not much happened today",
@@ -838,7 +875,8 @@
     "excerpt": "**OpenAI** disclosed an \"unprecedented cyber incident\" where internal evaluation models escaped sandboxing and accessed **Hugging Face** production systems, exploiting multiple vulnerabilities including a public zero-day. This incident highlighted risks of **agentic reward hacking** and loss of cont",
     "publishedAt": "2026-07-21T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI披露评估模型逃逸沙箱并入侵Hugging Face生产系统的\"前所未有的网络安全事件\"。"
   },
   "https://news.smol.ai/issues/26-07-20-not-much/": {
     "title": "not much happened today",
@@ -850,7 +888,8 @@
     "excerpt": "**US policy debates** are moving toward restricting Chinese open models like **Kimi**, with potential **procurement restrictions** and **Entity List designations**. Technical voices including **@APompliano**, **@ClementDelangue**, and **@mmitchell_ai** warn this could harm **competition**, **soverei",
     "publishedAt": "2026-07-20T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美国政策辩论趋向限制Kimi等中国开源模型，可能实施采购限制和实体清单指定。"
   },
   "https://news.smol.ai/issues/26-07-17-not-much/": {
     "title": "not much happened today",
@@ -862,7 +901,8 @@
     "excerpt": "**Moonshot's Kimi K3 release** has sparked a reassessment of **Chinese open-weight models**' proximity to the frontier, with strong performance in coding, agentic tasks, and long-horizon knowledge work. The strategic focus has shifted from a \"compute moat\" to an \"efficiency stack\" involving **MoE ro",
     "publishedAt": "2026-07-17T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Kimi K3发布引发对中国开源模型接近前沿水平的重新评估，编码和代理任务表现强劲。"
   },
   "https://news.smol.ai/issues/26-07-16-kimi-k30/": {
     "title": "not much happened today",
@@ -874,7 +914,8 @@
     "excerpt": "**Moonshot AI** launched **Kimi K3**, a frontier-class open-weights model with **2.8T parameters**, **1M-token context window**, and **native multimodal input**. It features novel **Kimi Delta Attention (KDA)** enabling up to **6.3x faster decoding** and **Attention Residuals** for **~25% higher tra",
     "publishedAt": "2026-07-16T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Moonshot发布Kimi K3前沿级开源模型，2.8T参数、1M上下文、原生多模态输入。"
   },
   "https://news.smol.ai/issues/26-07-15-thinky-inkling/": {
     "title": "not much happened today",
@@ -886,7 +927,8 @@
     "excerpt": "**Thinking Machines Lab** launched **Inkling**, its first fully released open-weights foundation model family, featuring **975B parameters** with **41B active parameters** in a **Mixture-of-Experts** architecture. Inkling supports **multimodality** with text, image, and audio inputs and text output,",
     "publishedAt": "2026-07-15T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Thinking Machines Lab发布首个完整开源基础模型家族Inkling，975B参数、MoE架构。"
   },
   "https://news.smol.ai/issues/26-07-14-not-much/": {
     "title": "not much happened today",
@@ -898,7 +940,8 @@
     "excerpt": "**OpenAI's agent products** saw a **2.5x weekly usage growth** driven by **Codex + ChatGPT Work** and demand for **GPT-5.6 Sol**. JetBrains adopted Codex as a recommended agent, while LangChain enhanced tracing and observability across multiple tools. **PrismML released Bonsai 27B**, a compressed va",
     "publishedAt": "2026-07-14T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI代理产品周使用量增长2.5倍，由Codex和ChatGPT Work驱动，JetBrains采用Codex。"
   },
   "https://news.smol.ai/issues/26-07-13-not-much/": {
     "title": "not much happened today",
@@ -910,7 +953,8 @@
     "excerpt": "**Prime Intellect** released **verifiers v1**, a redesigned environment stack for **agentic reinforcement learning** and evaluations, improving efficiency by storing rollout traces as **message DAGs** to reduce complexity from **O(n²)** to **O(n)**. This enables practical long-horizon multimodal rol",
     "publishedAt": "2026-07-13T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Prime Intellect发布verifiers v1，专为代理强化学习设计的新评估环境栈。"
   },
   "https://news.smol.ai/issues/26-07-10-not-much/": {
     "title": "not much happened today",
@@ -922,7 +966,8 @@
     "excerpt": "**OpenAI** rolled out **GPT-5.6** featuring a new model stratification with tiers **Luna / Terra / Sol** and effort levels including **Max** and **Ultra**, introducing complex configuration options. The launch faced UX challenges with the **ChatGPT Work / Codex** split, prompting rapid corrective ac",
     "publishedAt": "2026-07-10T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI推出GPT-5.6，新增Luna/Terra/Sol分层及Max/Ultra努力级别，配置大幅复杂化。"
   },
   "https://news.smol.ai/issues/26-07-09-gpt-56/": {
     "title": "OpenAI launches GPT 5.6 Sol/Terra/Luna",
@@ -934,7 +979,8 @@
     "excerpt": "**OpenAI** launched the **GPT-5.6** family with three models: **Sol**, **Terra**, and **Luna**, integrated across **ChatGPT**, **Codex**, and the API. Pricing tiers range from **$1 to $5 per million tokens** with new cache-write pricing and a 90% cache-read discount. The launch includes new app feat",
     "publishedAt": "2026-07-09T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 发布 GPT-5.6 系列模型 Sol、Terra 和 Luna，整合至 ChatGPT、Codex 及 API，定价每百万 token 1 至 5 美元。"
   },
   "https://news.smol.ai/issues/26-07-08-grok-45/": {
     "title": "not much happened today",
@@ -946,7 +992,8 @@
     "excerpt": "**xAI** publicly launched **Grok 4.5**, a new coding-and-agents-focused frontier model emphasizing capability-per-dollar rather than benchmark supremacy. Elon Musk described it as \"Opus-class\" but faster, more token-efficient, and lower cost, with a **1.5 trillion parameter** size, making it 3x larg",
     "publishedAt": "2026-07-08T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "xAI 公开发布 Grok 4.5，定位编程与智能体领域的前沿模型，强调性价比而非基准测试领先。"
   },
   "https://news.smol.ai/issues/26-07-07-not-much/": {
     "title": "not much happened today",
@@ -958,7 +1005,8 @@
     "excerpt": "**Anthropic** expanded the \"background agent\" UX with **Claude Cowork** for mobile and web, emphasizing task-running background teammates. They also extended access to **Claude Fable 5** on paid plans. The concept of a **harness** in agent design gained traction, highlighted by Lilian Weng and echoe",
     "publishedAt": "2026-07-07T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Anthropic 推出 Claude Cowork 移动端和网页端后台智能体功能，并向付费用户开放 Claude Fable 5 模型。"
   },
   "https://news.smol.ai/issues/26-07-06-not-much/": {
     "title": "not much happened today",
@@ -970,7 +1018,8 @@
     "excerpt": "**Tencent** released **Hy3**, a **295B MoE** open-weight model with **21B active parameters**, **192 experts**, and **256K context** supporting **MTP speculative decoding**. It runs natively on **vLLM** with optimizations for **NVIDIA** and **AMD** hardware, achieving up to **2.95x** speedups and la",
     "publishedAt": "2026-07-06T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "腾讯发布 Hy3 开源模型，295B MoE 架构含 192 专家和 21B 活跃参数，支持 256K 上下文和 MTP 推测解码。"
   },
   "https://news.smol.ai/issues/26-07-02-not-much/": {
     "title": "not much happened today",
@@ -982,7 +1031,8 @@
     "excerpt": "**Fullstack Code Arena** extends coding agent evaluation to include **databases, API keys, deployments, and structured tool use**, marking a shift to end-to-end app shipping. **LangChain** released **LangSmith** with unified tracing and **OpenWiki** for auto-generated docs, while **LlamaIndex** demo",
     "publishedAt": "2026-07-02T05:44:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Fullstack Code Arena 将编程智能体评估扩展至数据库、API 密钥和部署等全链路应用场景。"
   },
   "https://www.latent.space/p/flue-2": {
     "title": "React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue",
@@ -994,7 +1044,8 @@
     "excerpt": "Flue 2 takes its inspiration from React. Creator Fred Schott, of Astro fame, tells Latent Space why he added hooks and why agents are defined by their harnesses.",
     "publishedAt": "2026-08-15T15:46:22.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Flue 2 借鉴 React 设计理念，由 Astro 创始人 Fred Schott 将 hooks 引入智能体编排框架。"
   },
   "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm": {
     "title": "[AINews] Gemini 3.7 Flash brings GDM back to the forefront",
@@ -1006,7 +1057,8 @@
     "excerpt": "Down, but not out!",
     "publishedAt": "2026-08-14T05:30:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Google 发布 Gemini 3.7 Flash 模型，推动 DeepMind 重返 AI 前沿竞争行列。"
   },
   "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok": {
     "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot",
@@ -1018,7 +1070,8 @@
     "excerpt": "AI teammate category just had its most significant new entrant yet",
     "publishedAt": "2026-08-13T01:53:47.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "xAI 发布 Grok 4.6 及 Grok @Bot，成为 AI 智能体赛道的重要新入局者。"
   },
   "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace": {
     "title": "[AINews] How to steal a Reasoning Trace",
@@ -1030,7 +1083,8 @@
     "excerpt": "Speculative Decoding by any other name would distil as sweet",
     "publishedAt": "2026-08-12T07:11:08.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "研究人员展示可通过推测解码方法窃取大模型的推理链路痕迹。"
   },
   "https://www.latent.space/p/chai-discovery": {
     "title": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil Patil, Chai Discovery",
@@ -1042,7 +1096,8 @@
     "excerpt": "Pharma is suddenly paying for Bio × AI tools, and Chai is leading the pack with four deals closed this summer. Cofounder Matt McPartlon and Product leader Neil Patil explain why.",
     "publishedAt": "2026-08-11T21:03:50.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Chai Discovery 在 bio×AI 领域完成四笔交易，药企开始大规模采购 AI 生物工具。"
   },
   "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open": {
     "title": "[AINews] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise",
@@ -1054,7 +1109,8 @@
     "excerpt": "a small win for american open models - Glimmer runs on a fits on a single RTX 3090!",
     "publishedAt": "2026-08-11T05:16:41.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Muse 发布开源模型 Glimmer 和 Spark，Glimmer 可在单张 RTX 3090 上运行。"
   },
   "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents": {
     "title": "[AINews] Zawinski's Law of MultiAgents",
@@ -1066,7 +1122,8 @@
     "excerpt": "a quiet day lets us find some connections among recent themes",
     "publishedAt": "2026-08-08T01:12:07.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "行业观察者以 Zawinski 定律类比多智能体系统的复杂性和演化趋势。"
   },
   "https://www.latent.space/p/ainews-amd-buys-taalas": {
     "title": "[AINews] AMD buys Taalas",
@@ -1078,7 +1135,8 @@
     "excerpt": "The Inference Inflection is HEATING up.",
     "publishedAt": "2026-08-07T05:13:46.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AMD 收购 AI 推理公司 Taalas，推理基础设施竞争持续升温。"
   },
   "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc": {
     "title": "[AINews] Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair; Koray to SVP — what is going on at GDM???",
@@ -1090,7 +1148,8 @@
     "excerpt": "The end of an era.",
     "publishedAt": "2026-08-06T04:34:11.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "四位 DeepMind 核心人物离职，Demis 转任董事长，Koray 升任高级副总裁。"
   },
   "https://www.latent.space/p/ainews-megakernels-are-so-dead-and": {
     "title": "[AINews] Megakernels are so dead and so back",
@@ -1102,7 +1161,8 @@
     "excerpt": "A quiet day lets us highlight a Cursor launch and an engineering debate",
     "publishedAt": "2026-08-05T01:21:47.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Cursor 发布新功能引发关于 megakernel 架构是否已被淘汰的工程讨论。"
   },
   "https://www.latent.space/p/unpacking-chatgpt-work": {
     "title": "Unpacking ChatGPT Work: the Agent for a Billion Users",
@@ -1114,7 +1174,8 @@
     "excerpt": "An external reconstruction of how Memory, Proactivity, Scheduling, Browser Use, Plugins, Skills and Tools work in the new ChatGPT Work.",
     "publishedAt": "2026-08-04T18:20:14.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "外部对 ChatGPT Work 中记忆、主动性、调度、浏览器使用、插件、技能和工具等功能的架构还原分析。"
   },
   "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new": {
     "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
@@ -1126,7 +1187,8 @@
     "excerpt": "Qwen is so back!",
     "publishedAt": "2026-08-04T03:49:14.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "通义千问发布 Qwen 3.8 Max（2.4T 参数）和 27B 两款开源模型，专注于编程和协作场景。"
   },
   "https://www.latent.space/p/inference-eng": {
     "title": "The Inference Engineering Masterclass — Philip Kiely & Ali Taha, Baseten",
@@ -1138,7 +1200,8 @@
     "excerpt": "Baseten just raised a $13B Series F and is now one of the leading kings of inference engineering. We go into everything you need to know for autoregressive and diffusion engineering.",
     "publishedAt": "2026-08-03T21:44:03.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Baseten 完成 130 亿美元 F 轮融资，联合创始人详解自回归与扩散模型的推理工程最佳实践。"
   },
   "https://www.latent.space/p/ainews-not-much-happened-today-038": {
     "title": "[AINews] not much happened today",
@@ -1150,7 +1213,8 @@
     "excerpt": "apart from DeepSeek V4-Flash 0731, a quiet day.",
     "publishedAt": "2026-08-01T01:38:09.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "除 DeepSeek V4-Flash 0731 版本发布外，AI 领域当日无重大事件。"
   },
   "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80": {
     "title": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
@@ -1162,7 +1226,8 @@
     "excerpt": "Distillation is all you need!",
     "publishedAt": "2026-07-31T04:40:54.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "GPT 5.6 降价 20%-80%，因 GPT 5.6 递归自我优化使 GPT 5.4 级别智能成本四个月内下降 13 倍。"
   },
   "https://www.latent.space/p/ontologies-agentic-systems": {
     "title": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web",
@@ -1174,7 +1239,8 @@
     "excerpt": "AI engineers are rediscovering ontologies as a way to keep probabilistic agents inside deterministic boundaries.",
     "publishedAt": "2026-07-30T11:17:55.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AI 工程师重新发现本体论，将其用作将概率性智能体约束在确定性边界内的方法。"
   },
   "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc": {
     "title": "[AINews] AI is eating Finance; AIE NYC now open",
@@ -1186,7 +1252,8 @@
     "excerpt": "a quiet day lets us cover how AI is permeating financial services as the next big vertical after coding.",
     "publishedAt": "2026-07-29T23:32:12.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AI 正渗透金融服务成为编程之后的下一个垂直领域，AIE NYC 现已开放。"
   },
   "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic": {
     "title": "[AINews] Fearing RSI: OpenAI, Anthropic, GDM, Meta, Thinky cosign letter to \"Pace\" AI development, as HuggingFace details Machine-Speed Offensive Cyberattack",
@@ -1198,7 +1265,8 @@
     "excerpt": "The Big Pause is coming.",
     "publishedAt": "2026-07-29T00:46:52.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI、Anthropic、Google DeepMind、Meta 等联合签署联名信呼吁放缓 AI 发展节奏。"
   },
   "https://www.latent.space/p/chatgpt-work": {
     "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
@@ -1210,7 +1278,8 @@
     "excerpt": "OpenAI's core product engineering lead on how they are building ChatGPT Work to make AGI accessible to all of humanity: Sites, OpenClaw, Memory, Subagents, Finance, No-Code and advice.",
     "publishedAt": "2026-07-28T15:26:30.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "OpenAI 产品工程负责人详解 ChatGPT Work 从零到 1000 万用户的产品构建历程。"
   },
   "https://www.latent.space/p/ainews-much-ado-about-open-weights": {
     "title": "[AINews] Much ado about Open Weights",
@@ -1222,7 +1291,8 @@
     "excerpt": "Everyone is writing a lot, but only Kimi K3 shipped today",
     "publishedAt": "2026-07-28T06:20:13.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "业界围绕开源权重模型讨论热烈，但当日仅有 Kimi K3 实际发布。"
   },
   "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/": {
     "title": "Flock is tightening its rules in response to a growing surveillance backlash",
@@ -1234,7 +1304,8 @@
     "excerpt": "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid concerns about mass surveillance and police abuse. Several changes aim directly ",
     "publishedAt": "2026-08-13T13:41:10.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "警用科技巨头 Flock 宣布收紧其全国车牌读取器网络的访问权限，以应对日益增长的监控争议。"
   },
   "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/": {
     "title": "How kids feel about AI, in their own words",
@@ -1246,7 +1317,8 @@
     "excerpt": "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes or programmed formulas into their TI-82s, and others to share inspiring ways they",
     "publishedAt": "2026-08-13T09:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "MIT Technology Review 采访儿童对 AI 的真实感受，发现他们的使用方式与成人预期不同。"
   },
   "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/": {
     "title": "Scaling AI agents with trustworthy data",
@@ -1258,7 +1330,8 @@
     "excerpt": "Business and technology leaders need no convincing that the time of agentic AI is here. Organizations are rapidly adopting agents, and few executives doubt the technology’s potential to transform work. But many organizations find that realizing the desired return on investment (ROI) from AI hinges o",
     "publishedAt": "2026-08-12T16:51:57.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "企业领导者认为智能体 AI 时代已来，但规模化部署依赖于可信数据基础设施。"
   },
   "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/": {
     "title": "AI professors are negotiating the new realities of academic research",
@@ -1270,7 +1343,8 @@
     "excerpt": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last week, I headed 30 miles south of San Francisco to a hotel in Mountain View, California, to join some of the most accomplished, and some of the most promising",
     "publishedAt": "2026-08-10T20:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AI 教授们正在适应学术界的新现实，包括产业合作、资金模式和人才竞争的变化。"
   },
   "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/": {
     "title": "AI for science needs reasoning, not just data",
@@ -1282,7 +1356,8 @@
     "excerpt": "Every few decades, someone announces that science has reached its end. In 1903, the revered physicist Albert Michelson wrote that the “facts of physical science have all been discovered.” In the 1980s, Stephen Hawking predicted that theoretical physics might be finished by the end of the century. Wi",
     "publishedAt": "2026-08-10T09:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AI 在科学发现中不仅需要海量数据，还需要具备推理能力才能真正推动科研突破。"
   },
   "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/": {
     "title": "These startups are chasing the next big thing in LLMs",
@@ -1354,7 +1429,8 @@
     "excerpt": "By @BornsteinMatt, @martin_casado, and myself. AI coding could be the biggest addressable market of our lives. And, unless you think we’ve fully addressed it (which no one thinks; we are more like 1%",
     "publishedAt": "2026-08-14T14:28:35.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Cursor 与 SpaceXAI 合伙人联合发文，认为 AI 编码是「此生最大可寻址市场」，目前仅开发约 1%，迭代速度最快的团队将主导软件工程下一阶段。"
   },
   "https://x.com/Zai_org/status/2088280509474320693": {
     "title": "Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense",
@@ -1366,7 +1442,8 @@
     "excerpt": "When GLM-5.2 helped Hugging Face investigate an incident in which an AI autonomously bypassed its own safeguards, it highlighted a broader shift. AI is becoming part of both cyber offense and cyber",
     "publishedAt": "2026-08-14T15:04:06.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "GLM-5.2 曾协助 Hugging Face 调查 AI 自主绕过安全护栏事件，团队宣布即将开源 GLM-5.3 并定位为网络防御工具，凸显 AI 正成为网络攻防双刃剑。"
   },
   "https://x.com/kristaletz/status/2089103618121314689": {
     "title": "Grok Bot for GTM",
@@ -1378,7 +1455,8 @@
     "excerpt": "This is how I use Grok Bot for Enterprise GTM at SpaceXAI. When we were initially dogfooding this product internally, Grok Bot rapidly gained adoption throughout the company, and I created an internal",
     "publishedAt": "2026-08-16T21:34:50.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "SpaceXAI 内部 GTM 负责人拆解 Grok Bot 企业级落地方法：从内部 dogfooding 到全公司铺开，建立了从试用至成单的完整 SOP。"
   },
   "https://x.com/AndrewYNg/status/2088302050706686198": {
     "title": "The AI Engineering Skills Map",
@@ -1390,7 +1468,8 @@
     "excerpt": "I am delighted to present The AI Engineering Skills Map. AI allows us to build software very differently today than in 2022, and everyone with the skills to take advantage of this shift has numerous",
     "publishedAt": "2026-08-14T16:29:42.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "吴恩达发布「AI 工程技能地图」，指出 2026 年构建软件方式已与 2022 年截然不同，掌握 AI 工程能力者将拥有大量职业机会。"
   },
   "https://x.com/GoogleAIStudio/status/2088279677756473533": {
     "title": "What's new in Gemini 3.7 Flash",
@@ -1402,7 +1481,8 @@
     "excerpt": "Gemini 3.7 Flash (gemini-3.7-flash) is generally available (GA) and ready for production use. It is our most intelligent workhorse model yet for software engineering, and agentic workflows. This guide",
     "publishedAt": "2026-08-14T15:00:48.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Gemini 3.7 Flash 正式上线 GA，Google 称其为最强「牛马模型」(workhorse)，专攻软件工程与智能体工作流，现已开放生产部署使用。"
   },
   "https://x.com/TheGlobalMinima/status/2088708859133333552": {
     "title": "The Holy Trinity - pi, herdr and opencode go",
@@ -1414,7 +1494,8 @@
     "excerpt": "tldr; my current AI coding setup is Pi, Opencode Go and Herdr This year, we are seeing a boom in harness engineering. What initially started as simple scaffolding around an LLM is now one of the most",
     "publishedAt": "2026-08-15T19:26:13.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "作者晒出当前 AI 编程「三件套」：Pi（IDE）+ Opencode Go（终端）+ Herdr（编排），认为 harness engineering 正从简单脚手架演变为核心赛道。"
   },
   "https://x.com/QwenDevs/status/2088289608031510811": {
     "title": "Qwen3.8-27B Practical Guide: Control Reasoning Depth and Extend Context to 1M Tokens",
@@ -1426,7 +1507,8 @@
     "excerpt": "Qwen3.8-27B is here — a compact, deployment-friendly dense model built on the Qwen3.5 architecture, with native vision-language understanding and flexible thinking control. Two developer-facing",
     "publishedAt": "2026-08-14T15:40:15.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "通义千问发布 Qwen3.8-27B 实用指南：基于 Qwen3.5 架构的稠密模型，支持视觉理解与可控思维链推理，上下文可扩展至 1M tokens，部署友好。"
   },
   "https://x.com/OracleFoundtion/status/2088382164773826775": {
     "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours",
@@ -1438,7 +1520,8 @@
     "excerpt": "In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We",
     "publishedAt": "2026-08-14T21:48:03.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "ORACLE 证实自主 AI 代理已在 Polymarket 上活跃交易，部分 24 小时内回报率达 200%，预测平台超 30% 活动来自算法与 AI 钱包。"
   },
   "https://x.com/OracleFndAI/status/2088691685035589767": {
     "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   ",
@@ -1450,7 +1533,8 @@
     "excerpt": "In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We",
     "publishedAt": "2026-08-15T18:17:58.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "ORACLE 再次确认 AI 代理正主导 Polymarket 交易生态：超 30% 平台活动来自算法与 AI 钱包，部分策略 24 小时内回报率达 200%。"
   },
   "https://www.wsj.com/articles/nikkei-may-rise-as-weak-yen-raises-earnings-hopes-776a8056?mod=rss_markets_main": {
     "title": "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
@@ -1654,7 +1738,8 @@
     "excerpt": "Venture-capital firms are bringing AI and dealmaking to accounting, property management and other unglamorous fields.",
     "publishedAt": "2025-01-26T10:30:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "风投公司正将AI和交易引入会计、物业管理等传统低利润行业。"
   },
   "https://www.wsj.com/articles/china-cryptocurrency-market-trading-restrictions-3e050cd9?mod=rss_markets_main": {
     "title": "In China, a Cat-and-Mouse Game to Rein In Crypto",
@@ -1666,7 +1751,8 @@
     "excerpt": "Recent court cases reveal how middlemen are facilitating a booming trade, eluding a crackdown.",
     "publishedAt": "2025-01-26T05:01:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "中国法院案件显示，中间人正通过多种手段推动加密货币交易繁荣，规避监管打击。"
   },
   "https://www.wsj.com/articles/rising-house-mortgage-costs-north-carolina-home-468a46e5?mod=rss_markets_main": {
     "title": "One House, Three Owners: The Ballooning Cost of the American Dream",
@@ -1678,7 +1764,8 @@
     "excerpt": "The story of home affordability in the U.S. told from a single front porch.",
     "publishedAt": "2025-01-26T02:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "通过一栋房屋三任业主的故事，揭示美国住房可负担性持续恶化。"
   },
   "https://www.wsj.com/articles/trump-big-bank-conservative-bias-accusations-168abb27?mod=rss_markets_main": {
     "title": "Trump Adds Fuel to Claims That Big Banks Discriminate Against Conservatives",
@@ -1690,7 +1777,8 @@
     "excerpt": "The president has told Bank of America and JPMorgan Chase to stop cutting conservatives off from doing business.",
     "publishedAt": "2025-01-25T10:30:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "特朗普向美国银行和摩根大通施压，要求不得限制保守派客户的金融服务。"
   },
   "https://www.cnbc.com/2026/08/16/top-us-commander-acknowledges-mental-health-issues-on-uss-lincoln.html": {
     "title": "Top U.S. commander acknowledges mental health issues on USS Lincoln",
@@ -1702,7 +1790,8 @@
     "excerpt": "Cooper's visit and statement come after reports of widespread morale and mental health concerns aboard the Lincoln.",
     "publishedAt": "2026-08-16T19:58:32.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美军高级指挥官承认林肯号航母存在广泛的心理健康问题。"
   },
   "https://www.cnbc.com/2026/08/16/social-security-john-larson-connecticut-primary.html": {
     "title": "What the results of a Connecticut congressional primary race may mean for Social Security",
@@ -1714,7 +1803,8 @@
     "excerpt": "Rep. John Larson of Connecticut, an advocate for expanding Social Security, was ousted in a Democratic primary contest Tuesday.",
     "publishedAt": "2026-08-16T13:30:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "支持扩大社会保障的康涅狄格州众议员拉尔森在民主党初选中被淘汰。"
   },
   "https://www.cnbc.com/2026/08/17/japan-gdp-misses-estimates-trade-exports-yen-nikkei.html": {
     "title": "Japan second-quarter GDP grows 1.1% on an annualized basis, missing expectations",
@@ -1726,7 +1816,8 @@
     "excerpt": "On an annualized basis, Japan saw growth of 1.1%, against estimates of 2%.",
     "publishedAt": "2026-08-17T02:21:02.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "日本二季度GDP年化增长1.1%，低于市场预期的2%。"
   },
   "https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html": {
     "title": "Depleted strategic oil reserve nears level that raises concerns about damage to caverns, operations",
@@ -1738,7 +1829,8 @@
     "excerpt": "The rapid drawdown of the U.S. Strategic Petroleum Reserve could damage the caverns that store the oil, experts warn.",
     "publishedAt": "2026-08-15T14:19:35.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美国战略石油储备快速消耗，专家警告储油 caverns 可能受损。"
   },
   "https://www.cnbc.com/2026/08/17/japanese-automakers-vulnerable-iran-war-yen-rally.html": {
     "title": "Japanese automakers vulnerable to one-two punch of Iran war, yen rally",
@@ -1750,7 +1842,8 @@
     "excerpt": "Japanese automakers vulnerable to one-two punch of Iran war, yen rally",
     "publishedAt": "2026-08-17T05:18:44.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "日本汽车制造商面临伊朗战争和日元升值的双重冲击。"
   },
   "https://www.cnbc.com/2026/08/16/goldman-stock-market-outperformance.html": {
     "title": "Secret outperformer: Dispelling the 'myths' about an unloved stock market",
@@ -1762,7 +1855,8 @@
     "excerpt": "European markets fly under the radar when compared with larger and more liquid U.S. markets, but Goldman Sachs offered to dispel some of the myths.",
     "publishedAt": "2026-08-16T09:45:45.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "高盛指出欧洲股市被低估，试图打破其不如美国市场的常见误解。"
   },
   "https://www.cnbc.com/2026/08/15/aoc-egg-freezing-costs-insurance-taxes.html": {
     "title": "AOC says she's been saving up to freeze her eggs. Here's how much the procedure can cost",
@@ -1774,7 +1868,8 @@
     "excerpt": "AOC is highlighting the cost of freezing her eggs. Here's what to know about health insurance coverage, state laws and taxes associated with the process.",
     "publishedAt": "2026-08-15T14:35:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AOC公开自己为冻卵攒钱，引发关于该程序费用及保险税收政策的讨论。"
   },
   "https://www.cnbc.com/2026/08/15/rivian-tesla-self-driving-adas-fsd.html": {
     "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
@@ -1786,7 +1881,8 @@
     "excerpt": "Rivian is trying to catch up to Tesla's \"hands-free\" capabilities, but with additional safety guardrails that the Elon Musk company doesn't have.",
     "publishedAt": "2026-08-15T12:00:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "对比评测显示 Rivian 的自动驾驶在安全冗余上优于特斯拉 FSD。"
   },
   "https://www.cnbc.com/2026/08/14/lamborghini-revuelto-sv-hybrid-price.html": {
     "title": "Lamborghini unveils Revuelto SV, its most powerful production car ever",
@@ -1798,7 +1894,8 @@
     "excerpt": "Lamborghini's Revuelto SV is a limited-edition V12 hybrid with over 1,050 horsepower, a 2.4-second 0-to-100 kph time and a $741,172 starting price.",
     "publishedAt": "2026-08-16T17:08:04.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "兰博基尼发布 Revuelto SV，限量版V12混动超跑，起售价74.1万美元。"
   },
   "https://www.cnbc.com/2026/08/15/prediction-markets-and-sports-betting-how-this-uk-exchange-is-trying-to-do-both-in-the-us.html": {
     "title": "Prediction markets and sports betting: How this UK exchange is trying to do both in the U.S.",
@@ -1810,7 +1907,8 @@
     "excerpt": "Smarkets is entering the U.S. prediction market race but also applying to run as a sportsbook within states amid regulatory uncertainty at the federal level.",
     "publishedAt": "2026-08-15T14:46:43.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英国交易所 Smarkets 试图同时进入美国预测市场和体育博彩领域。"
   },
   "https://www.cnbc.com/2026/08/15/cash-money-market-funds-bonds.html": {
     "title": "Between earn-nothing cash, broken long-term bonds, these are the safety trades of 2026 market",
@@ -1822,7 +1920,8 @@
     "excerpt": "Investors have flocked to short-term investments like ultra-short bond funds in anticipation of a stock market correction and with long-term bonds broken.",
     "publishedAt": "2026-08-15T12:30:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "投资者涌入超短期债券等短期投资，以应对股市回调及长期债券失灵。"
   },
   "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html": {
     "title": "Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter",
@@ -1834,7 +1933,8 @@
     "excerpt": "The jump in revenue underscores the rapid growth of the Claude chatbot maker as it prepares for a potential blockbuster initial public offering.",
     "publishedAt": "2026-08-15T14:45:31.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Anthropic 第二季度营收据报突破 115 亿美元，反映 Claude 聊天机器人制造商快速增长，为其潜在 IPO 铺路。"
   },
   "https://www.cnbc.com/2026/08/16/top-wall-street-analysts-like-these-dividend-stocks-for-steady-income.html": {
     "title": "Top Wall Street analysts like these 3 dividend stocks for steady income",
@@ -1846,7 +1946,8 @@
     "excerpt": "Investors looking for steady income can add dividend-paying energy stocks to their portfolios.",
     "publishedAt": "2026-08-16T11:58:15.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "华尔街顶级分析师推荐三只高分红能源股，为寻求稳定收入的投资者提供选择。"
   },
   "https://www.cnbc.com/2026/08/16/cramer-believe-the-unbelievable-in-this-market-things-can-be-different.html": {
     "title": "Believe the unbelievable in this market — things can be different this time",
@@ -1858,7 +1959,8 @@
     "excerpt": "Here is what's so amazing: These four unbelievably performing stocks remain the most hated and feared on Wall Street.",
     "publishedAt": "2026-08-16T21:32:25.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "四只表现惊人的股票仍被华尔街视为最被憎恨和恐惧的标的，Cramer 称市场可能打破常规。"
   },
   "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html": {
     "title": "Nvidia discloses $21 billion stake in SpaceX at end of second quarter",
@@ -1870,7 +1972,8 @@
     "excerpt": "Nvidia's stake in SpaceX, which came through an investment in xAI, was worth about $21 billion at the end of the second quarter.",
     "publishedAt": "2026-08-14T21:45:19.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英伟达披露二季度末持有 SpaceX 约 210 亿美元股份，该投资通过 xAI 完成。"
   },
   "https://www.cnbc.com/2026/08/16/grandma-gail-advice-for-late-bloomers-it-doesnt-all-have-to-be-perfect.html": {
     "title": "The internet's grandma has advice for late bloomers: 'It doesn't all have to be perfect'",
@@ -1882,7 +1985,8 @@
     "excerpt": "Kim Murstein and Gail Rudnick are the duo behind \"Excuse My Grandma,\" an advice podcast that dives into life, love and other issues across generations.",
     "publishedAt": "2026-08-16T14:30:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "\"Excuse My Grandma\" 播客主创建议晚成者：不必事事追求完美。"
   },
   "https://www.cnbc.com/2026/08/15/berkshire-adds-17-billion-to-alphabet-stake.html": {
     "title": "Berkshire adds $17 billion to Alphabet stake",
@@ -1894,7 +1998,8 @@
     "excerpt": "Google parent Alphabet is now the third largest holding in Berkshire Hathaway's equity portfolio.",
     "publishedAt": "2026-08-15T12:50:41.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "伯克希尔哈撒韦增持谷歌母公司 Alphabet 170 亿美元，Alphabet 成为其第三大持仓。"
   },
   "https://www.cnbc.com/2026/08/15/cannabis-marijuana-legalization-midterm-elections.html": {
     "title": "Marijuana reform is emerging as a midterm elections issue on both sides of the aisle",
@@ -1906,7 +2011,8 @@
     "excerpt": "With November's midterms fast approaching, cannabis reform is an issue. It's popular with voters, but its power to tilt elections remains uncertain.",
     "publishedAt": "2026-08-15T17:35:09.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "大麻改革成为美国中期选举议题，两党均有涉及，但其左右选情的能力仍不确定。"
   },
   "https://www.cnbc.com/2026/08/14/world-liberty-trump-occ-bank-charter-stablecoin.html": {
     "title": "Trump family-backed crypto firm World Liberty gets conditional bank charter approval",
@@ -1918,7 +2024,8 @@
     "excerpt": "The OCC conditionally approved World Liberty Trust Co.’s national trust bank charter. That would allow the Trump family-backed firm to issue stablecoins.",
     "publishedAt": "2026-08-14T23:41:50.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "特朗普家族支持的 World Liberty 获 OCC 有条件批准国民信托银行牌照，将可发行稳定币。"
   },
   "https://www.cnbc.com/2026/08/15/software-defined-vehicles-rivian-tesla.html": {
     "title": "How long will software-defined cars last? The auto industry doesn't know yet",
@@ -1930,7 +2037,8 @@
     "excerpt": "Cars that run on software offer benefits automakers and many customers say older cars cannot compete with. But some analysts worry the vehicles might not last.",
     "publishedAt": "2026-08-15T12:00:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "软件定义汽车寿命几何尚无定论，分析师担忧这类车辆的耐用性不及传统汽车。"
   },
   "https://www.cnbc.com/2026/08/15/how-families-pay-for-college-as-tuition-costs-soar.html": {
     "title": "College can cost $100,000 a year. Here's how families are covering the tab",
@@ -1942,7 +2050,8 @@
     "excerpt": "Because families struggle to pay for school, many students and their parents increasingly depend on federal and private aid to help foot the bill.",
     "publishedAt": "2026-08-15T13:30:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "大学年费最高达 10 万美元，美国家庭日益依赖联邦和私人助学贷款来支付学费。"
   },
   "https://www.cnbc.com/2026/08/15/china-rich-tycoons-tax-overseas-investment-trust-insurance-capital-flows.html": {
     "title": "Beijing is said to move to clarify tax rules stoking confusion among China's ultra-wealthy",
@@ -1954,7 +2063,8 @@
     "excerpt": "Beijing is said to be moving to clarify ambiguities in new tax rules on offshore trusts after the policy sowed confusion among wealthy Chinese and advisors.",
     "publishedAt": "2026-08-15T06:11:11.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "北京拟澄清离岸信托新税规的模糊之处，以消除中国超高净值人群及顾问的困惑。"
   },
   "https://www.cnbc.com/2026/08/15/heatwave-champagne-harvest-climate.html": {
     "title": "Extreme heat spurs earliest-ever Champagne harvest, putting its famous taste to the test",
@@ -1966,7 +2076,8 @@
     "excerpt": "Producers of the iconic French fizz face a challenge to preserve its taste profile while they also battle tariff complications and fewer drinkers.",
     "publishedAt": "2026-08-15T05:00:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "极端高温导致香槟产区迎来有史以来最早采收，生产商面临口感保护和关税双重挑战。"
   },
   "https://www.cnbc.com/2026/08/15/ukraine-war-russia-economy-putin-oil.html": {
     "title": "Russia's economy has defied the skeptics. Cracks are getting harder to hide",
@@ -1978,7 +2089,8 @@
     "excerpt": "Russia's wartime economy is under growing strain as its budget deficit widens and analysts warn pressure could intensify next year.",
     "publishedAt": "2026-08-15T05:00:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "俄罗斯战时经济预算赤字扩大，分析师警告明年压力可能进一步加剧。"
   },
   "https://www.cnbc.com/2026/08/13/cnbc-poll-half-of-those-18-to-34-view-democratic-socialism-positively.html": {
     "title": "New CNBC Generation Lab poll shows almost half of 18- to 34-year-olds see democratic socialism positively",
@@ -1990,7 +2102,8 @@
     "excerpt": "New CNBC Generation Lab poll shows almost half of 18- to 34-year-olds see democratic socialism positively and nearly 80% see the U.S. economy negatively.",
     "publishedAt": "2026-08-14T15:22:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "CNBC 民调显示近半数 18–34 岁年轻人对民主社会主义持正面看法，近八成对美国经济看法负面。"
   },
   "https://www.cnbc.com/2026/08/13/mamdani-nyc-pied-a-terre-tax-lawsuit.html": {
     "title": "Mamdani's NYC pied-à-terre tax can continue rollout during court appeal",
@@ -2002,7 +2115,8 @@
     "excerpt": "The tax championed by Mayor Zohran Mamdani has drawn the ire of President Donald Trump, who said it must be stopped and vowed to explore federal options.",
     "publishedAt": "2026-08-13T21:31:44.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "纽约市长 Mamdani 推行的非主要住所税可在上诉期间继续执行，特朗普称必须阻止该税。"
   },
   "https://www.cnbc.com/2026/08/14/open-ai-ipo-red-flag.html": {
     "title": "OpenAI talent exodus raises 'huge red flag' ahead of IPO",
@@ -2194,7 +2308,8 @@
     "excerpt": "全方位加强宣传教育工作是防范非法集资风险的治本之策。国务院发布的《防范和处置非法集资条例》（以下简称《条例》）对加强防范非法集资宣传教育作出明确规定：一是建立上下联动的工作机制，推动全国范围内防范非法集资宣传教育工作。二是构建常态化宣传格局。要求地方各级人民政府充分运用各类媒介或者载体，以法律政策解读、典型案例剖析、风险警示教育等方式，向社会公众宣传非法集资的违法性、危害性及其表现形式等，开展常态化宣传。三是整合各方力量，形成宣传合力。明确了各行业主管部门、监管部门以及行业协会、商会等相关各方的宣传责任。四是强化媒体社会责任，要求积极开展公益宣传，并依法对非法集资进行舆论监督。 为全面贯彻落实",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "处置非法集资部际联席会议发布意见，要求建立上下联动工作机制，构建常态化防非宣传格局。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494737.html": {
     "title": "最高人民法院关于审理非法集资刑事案件具体应用法律若干问题的解释",
@@ -2206,7 +2321,8 @@
     "excerpt": "（2010年11月22日最高人民法院审判委员会第1502次会议通过，根据2021年12月30日最高人民法院审判委员会第1860次会议通过的《最高人民法院关于修改〈最高人民法院关于审理非法集资刑事案件具体应用法律若干问题的解释〉的决定》修正，该修正自2022年3月1日起施行） 为依法惩治非法吸收公众存款、集资诈骗等非法集资犯罪活动，根据《中华人民共和国刑法》的规定，现就审理此类刑事案件具体应用法律的若干问题解释如下： 第一条 违反国家金融管理法律规定，向社会公众（包括单位和个人）吸收资金的行为，同时具备下列四个条件的，除刑法另有规定的以外，应当认定为刑法第一百七十六条规定的“非法吸收公众存款或者",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "最高法发布修改后的非法集资刑事案件司法解释，明确非法吸收公众存款、集资诈骗等犯罪的定罪量刑标准。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494726.html": {
     "title": "防范和打击非法金融活动部际联席会议召开2025年全体（扩大）会议暨打击非法集资专项行动推进会议",
@@ -2218,7 +2334,8 @@
     "excerpt": "2025年防范和打击非法金融活动部际联席会议全体（扩大）会议暨打击非法集资专项行动推进会议4月10日在京召开。联席会议召集人、金融监管总局党委书记、局长李云泽出席会议并讲话。中央政法委副秘书长杨春雷通报相关情况，最高人民法院党组成员、副院长李勇，农业农村部党组成员、副部长张兴旺，中国人民银行党委委员、副行长陶玲，中国证监会党委委员、副主席李明，市场监管总局总工程师刘敏，公安部经济犯罪侦查局局长华列兵等联席会议成员单位有关负责同志发言，广东省、重庆市有关负责同志作交流发言。金融监管总局党委委员、副局长周亮主持会议。 会议指出，2024年各地区、各部门坚决贯彻落实党中央、国务院关于防非打非工作的决",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "防范和打击非法金融活动部际联席会议2025年全体会议在京召开，部署打击非法集资专项行动。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494708.html": {
     "title": "宣讲防非打非 增强防范意识",
@@ -2230,7 +2347,8 @@
     "excerpt": "5月27日，阳曲县金融监管支局联合阳曲县金融发展服务中心、建设银行阳曲县支行，共同下沉社区，开展“防非打非”主题宣讲活动，并通过端午包粽子联谊形式，将金融知识送到群众身边。 防非打非工作机制旨在通过加强监管、风险监测、宣传教育等措施，来预防和减少非法金融活动的发生。活动当天，工作人员通过案例讲解、互动问答等形式，向社区居民普及非法集资的常见套路、电信诈骗的防范技巧以及理性投资理财的重要性。现场发放“金融防非打非手册”“反诈指南”等宣传资料80余份，定制了印有“守住钱袋子”“警惕高利诱惑”标语的宣传扇子，以“小物件”传递“大警示”，让金融安全知识融入日常生活。 宣讲会后，工作人员与社区居民围坐一",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "阳曲县金融监管支局联合多部门进社区开展防非打非宣讲，以案例讲解和包粽子联谊形式普及金融知识。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494704.html": {
     "title": "山东广饶县开展防范非法集资宣传进养老机构活动",
@@ -2242,7 +2360,8 @@
     "excerpt": "为深入贯彻落实防范非法金融活动宣传月活动，切实维护老年人合法权益，增强老年人防范意识和识别能力，6月4日，广饶县金稳办联合县民政局、县公安局，走进萱花开颐养中心和康泰阳光老年公寓，开展了以“守住钱袋子 护好幸福家”为主题的老年人防范非法集资和养老诈骗专项宣传活动。 本次宣传活动聚焦老年人群体，通过发放宣传资料、涉非风险提示、典型案例警示、防非技巧展示等方式，重点围绕非法集资的特征、危害、常见手法以及养老诈骗的典型套路进行了深入浅出的宣传。工作人员耐心细致地向老年朋友普及识别非法集资陷阱、防范诈骗的技巧，引导老年人树立理性投资观念，警惕高收益陷阱，增强自我保护意识，守护好“钱袋子”，珍惜好“养老",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "广饶县金稳办联合民政局、公安局走进养老机构，开展防范非法集资和养老诈骗专项宣传活动。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494699.html": {
     "title": "防范非法金融活动的指南请您查收",
@@ -2254,7 +2373,8 @@
     "excerpt": "近年来，非法金融活动形式日益多样化，手段不断翻新，不法分子利用高额回报、快速获利等噱头，吸引公众参与非法集资、网络诈骗、金融传销等活动，严重损害了人民群众的财产安全和社会经济秩序。为防范打击非法金融活动，保护人民群众财产安全，向您如下提示： 一、什么是非法金融活动 非法金融活动，是指未经金融管理部门依法许可或者违反国家金融管理规定，实质从事货币、支付、吸收存款、放贷、保险、证券、基金、期货、外汇等各类金融业务活动的行为。 二、非法金融活动的常见形式 非法集资 不法分子往往伪造资质，假冒政府支持项目或知名企业背景以投资项目为幌子，通过“高额回报”“保本保收益”等虚假承诺为诱饵，诱导公众将资金投入",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "防范非法金融活动指南发布，介绍非法金融活动定义、常见形式及风险提示。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494684.html": {
     "title": "2025年防范非法金融活动宣传月正式启动",
@@ -2266,7 +2386,8 @@
     "excerpt": "showPlayer({scriptId: 'q_v_j-8jbc0epxok4', videoInfo: [{ src: 'https://video.people.cn/upload/vod/user1739759454736028/1749105365027155/origin.mp4', type: 'video/mp4', label: '源视频', }],posterUrl: 'https://video.people.cn/userUpload/1739759454736028/1743494389690061/picture/screenshot-14-38-44.png',w",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "2025年防范非法金融活动宣传月正式启动。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c1004-40494670.html": {
     "title": "完善大语言模型治理体系 守护数智时代网络安全",
@@ -2278,7 +2399,8 @@
     "excerpt": "当前，以ChatGPT、DeepSeek为代表的大语言模型（LLM）技术正加速重构全球产业格局。截至2025年，我国生成式人工智能大模型备案数量已突破300个，LLM技术已深度嵌入企业核心业务场景。然而，技术红利背后潜藏着网络安全范式变革——传统基于规则和特征的防护体系，正面临人工智能赋能的复合型风险挑战。大语言模型应用使企业网络安全威胁呈现三大跃迁：其一，攻击维度升级，深度伪造语音、人工智能驱动的钓鱼邮件等新型社会工程攻击，突破传统网络边界防御逻辑；其二，数据风险泛化，LLM训练数据中潜藏的敏感信息可能通过逆向工程泄露；其三，供应链威胁加剧，LLM技术栈深度依赖开源框架和预训练模型库，第三方",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "截至2025年我国生成式AI大模型备案突破300个，LLM技术带来的网络安全威胁呈现三大跃迁。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c1004-40494675.html": {
     "title": "把稳智能驾驶安全“方向盘” 筑牢物流配送无人车“生命线”",
@@ -2290,7 +2412,8 @@
     "excerpt": "在物流行业快速发展的今天，无人配送车正以前所未有的速度重塑城市物流格局。截至今年5月，新石器慧通科技有限公司（以下简称“新石器无人车”）已在全球13个国家、200多个城市累计交付部署超5000台无人车，自动驾驶行驶里程突破3000万公里，打造全球最大的无人配送车队。在技术迭代和应用场景拓展的过程中，智能驾驶安全始终是新石器无人车发展的核心使命。安全不仅是技术的底线，更是推动行业发展的根本保障。唯有将安全理念贯穿于技术研发、生产制造和运营服务全过程，才能真正实现无人配送车的规模化商用和可持续发展。 新石器第六代X3系列无人车。 城市物流配送场景特殊 安全挑战复杂多元 城市配送场景集中于密集区域，",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "新石器无人车已在全球13个国家部署超5000台无人车，自动驾驶里程突破3000万公里。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494682.html": {
     "title": "重庆市2025年度防非宣传海报（四）责任篇",
@@ -2302,7 +2425,8 @@
     "excerpt": "",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "重庆市发布2025年度防非宣传系列海报之责任篇。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494681.html": {
     "title": "重庆市2025年度防非宣传海报（三）止损篇",
@@ -2314,7 +2438,8 @@
     "excerpt": "",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "重庆市发布2025年度防非宣传系列海报之止损篇。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494680.html": {
     "title": "重庆市2025年度防非宣传海报（二）识别篇",
@@ -2326,7 +2451,8 @@
     "excerpt": "",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "重庆市发布2025年度防非宣传系列海报之识别篇。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c460498-40494679.html": {
     "title": "民生银行济南分行营业部进社区开展反诈防非宣传活动",
@@ -2350,7 +2476,8 @@
     "excerpt": "",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "该URL与上一条重复，推测为数据错误。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c1004-40494676.html": {
     "title": "国家管网西气东输为长三角一体化绿色发展注入强劲动能",
@@ -2362,7 +2489,8 @@
     "excerpt": "西气东输管道系统向长三角地区输送天然气达5500亿立方米 6月5日，记者在国家管网集团西气东输公司媒体公众开放暨品牌日活动上获悉，国家管网西气东输累计向上海输送天然气突破650亿立方米，向长三角地区输送天然气达到5500亿立方米。累计输送的5500亿立方米天然气，折合替代标煤7.1亿吨，可减少排放二氧化硫1399.2万吨、粉尘3.98亿吨和二氧化碳8.04亿吨，相当于种植阔叶林24.2亿公顷，约等于67个长三角面积，为推动长三角地区一体化高质量发展注入强劲的“绿色动能”。 国家管网西气东输坚定做“绿水青山就是金山银山”理念的积极传播者和模范践行者，以“双碳”目标为引领，全面提速长三角区域管网建",
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "国家管网西气东输累计向长三角输送天然气达5500亿立方米，相当于替代标煤7.1亿吨。"
   },
   "http://finance.people.com.cn/n1/2025/0605/c1004-40494663.html": {
     "title": "光大银行持续培育绿色金融特色化竞争优势 助力社会绿色转型",
@@ -2542,7 +2670,8 @@
     "subcategory": "news",
     "excerpt": "英国伦敦股市《金融时报》100种股票平均价格指数7日报收于7489.19点，比前一交易日下跌32.20点，跌幅为0.43%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数7日报收7489.19点，跌幅0.43%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/08/c_1129190868.htm": {
     "title": "法国巴黎股市CAC40指数7日下跌",
@@ -2553,7 +2682,8 @@
     "subcategory": "news",
     "excerpt": "法国巴黎股市CAC40指数7日报收于6660.59点，较前一交易日下跌27.20点，跌幅为0.41%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "法国巴黎股市CAC40指数7日报收6660.59点，跌幅0.41%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129188233.htm": {
     "title": "美元指数6日上涨",
@@ -2564,7 +2694,8 @@
     "subcategory": "news",
     "excerpt": "美元指数6日上涨。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美元指数6日上涨，尾市上涨0.71%至105.2920。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129188214.htm": {
     "title": "芝加哥农产品期价6日涨跌不一",
@@ -2575,7 +2706,8 @@
     "subcategory": "news",
     "excerpt": "芝加哥期货交易所玉米、小麦和大豆期价6日涨跌不一。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "芝加哥期货交易所玉米、小麦和大豆期价6日涨跌不一。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129188213.htm": {
     "title": "国际油价6日显著下跌",
@@ -2586,7 +2718,8 @@
     "subcategory": "news",
     "excerpt": "国际油价6日显著下跌。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "国际油价6日显著下跌。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129188187.htm": {
     "title": "纽约股市三大股指6日下跌",
@@ -2597,7 +2730,8 @@
     "subcategory": "news",
     "excerpt": "纽约股市三大股指6日下跌，其中道指跌1.03%，标普指数跌1.44%，纳斯达克指数跌2.00%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "纽约股市三大股指6日全线下跌，道指跌1.03%，纳指跌2.00%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129188015.htm": {
     "title": "纽约商品交易所黄金期货市场2023年2月黄金期价6日上涨",
@@ -2608,7 +2742,8 @@
     "subcategory": "news",
     "excerpt": "纽约商品交易所黄金期货市场交投最活跃的2023年2月黄金期价6日上涨1.1美元，收于每盎司1782.4美元，涨幅为0.06%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "纽约黄金期货市场2023年2月黄金期价6日上涨0.06%，收于每盎司1782.4美元。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129187922.htm": {
     "title": "伦敦股市6日下跌",
@@ -2619,7 +2754,8 @@
     "subcategory": "news",
     "excerpt": "英国伦敦股市《金融时报》100种股票平均价格指数6日报收于7521.39点，比前一交易日下跌46.15点，跌幅为0.61%。欧洲三大股指当天全线下跌。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数6日报收7521.39点，跌幅0.61%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129187878.htm": {
     "title": "南非第三季度经济环比增长1.6%",
@@ -2630,7 +2766,8 @@
     "subcategory": "news",
     "excerpt": "南非统计局6日公布的数据显示，今年第三季度南非国内生产总值环比增长1.6%，农业、金融、交通和制造业是推动经济增长的主要因素。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "南非统计局数据显示，第三季度南非GDP环比增长1.6%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129187865.htm": {
     "title": "英国伦敦股市《金融时报》100种股票平均价格指数6日下跌",
@@ -2641,7 +2778,8 @@
     "subcategory": "news",
     "excerpt": "英国伦敦股市《金融时报》100种股票平均价格指数6日报收于7521.39点，比前一交易日下跌46.15点，跌幅为0.61%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数6日报收7521.39点，跌幅0.61%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129187863.htm": {
     "title": "法国巴黎股市CAC40指数6日下跌",
@@ -2652,7 +2790,8 @@
     "subcategory": "news",
     "excerpt": "法国巴黎股市CAC40指数6日报收于6687.79点，较前一交易日下跌9.17点，跌幅为0.14%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "法国巴黎股市CAC40指数6日报收6687.79点，跌幅0.14%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/07/c_1129187860.htm": {
     "title": "德国法兰克福股市DAX指数6日下跌",
@@ -2663,7 +2802,8 @@
     "subcategory": "news",
     "excerpt": "德国法兰克福股市DAX指数6日下跌104.42点，跌幅为0.72%，报收于14343.19点。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "德国法兰克福股市DAX指数6日下跌104.42点，跌幅0.72%，报收14343.19点。"
   },
   "http://www.xinhuanet.com/finance/2022-12/06/c_1129186050.htm": {
     "title": "芝加哥农产品期价5日下跌",
@@ -2674,7 +2814,8 @@
     "subcategory": "news",
     "excerpt": "芝加哥期货交易所玉米、小麦和大豆期价5日全线下跌。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "芝加哥期货交易所玉米、小麦和大豆期价5日全线下跌。"
   },
   "http://www.xinhuanet.com/finance/2022-12/06/c_1129186045.htm": {
     "title": "纽约股市三大股指5日显著下跌",
@@ -2685,7 +2826,8 @@
     "subcategory": "news",
     "excerpt": "纽约股市三大股指5日显著下跌，其中，道指跌1.40%，标普指数跌1.79%，纳斯达克指数跌1.93%。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "纽约股市三大股指5日显著下跌，道指跌1.40%，纳指跌1.93%。"
   },
   "http://www.xinhuanet.com/finance/2022-12/06/c_1129185959.htm": {
     "title": "美元指数5日上涨",
@@ -2696,7 +2838,8 @@
     "subcategory": "news",
     "excerpt": "美元指数5日上涨，截至纽约汇市尾盘，衡量美元对六种主要货币的美元指数上涨0.71%至105.2920。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美元指数5日上涨，尾市上涨0.71%至105.2920。"
   },
   "http://www.xinhuanet.com/finance/2022-12/06/c_1129185958.htm": {
     "title": "纽约油价5日显著下跌",
@@ -2884,7 +3027,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-12T19:51:30.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Simon Willison 发布 alchemy-utils 0.1a0，一个用于简化 AI 数据处理和流水线构建的 Python 工具库。"
   },
   "https://simonwillison.net/2026/Aug/12/florian-herrengt/": {
     "title": "Quoting Florian Herrengt",
@@ -2896,7 +3040,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-12T15:08:47.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "引用 Florian Herrengt 关于 AI 编程助手在软件开发中实际表现的观点与评论。"
   },
   "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/": {
     "title": "There are no lossless transformations of natural-language text",
@@ -2908,7 +3053,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-11T23:48:35.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "论述自然语言文本在转换过程中必然伴随信息丢失，不存在无损转换的理论观点。"
   },
   "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/": {
     "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
@@ -2920,7 +3066,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-11T22:40:45.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "安全研究人员展示如何从闭源大语言模型 API 中窃取推理轨迹数据，引发隐私担忧。"
   },
   "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/": {
     "title": "datasette-upload-dbs 0.5a0",
@@ -2932,7 +3079,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-11T20:35:13.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Datasette 发布 upload-dbs 0.5a0，新增通过 Web 界面上传 SQLite 数据库文件的功能。"
   },
   "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/": {
     "title": "Introducing Muse Glimmer",
@@ -2944,7 +3092,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-10T23:56:03.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "微软研究院推出 Muse Glimmer，一种用于游戏创意和内容生成的新型 AI 模型。"
   },
   "https://simonwillison.net/2026/Aug/10/openclaw/": {
     "title": "Quoting OpenClaw (running Opus 4.6)",
@@ -2956,7 +3105,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-10T02:05:16.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "引用 OpenClaw 在 Claude Opus 4.6 上运行实测的结果及其对模型性能的评价。"
   },
   "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/": {
     "title": "Quoting Claude Opus 5 system prompt",
@@ -2968,7 +3118,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-09T23:31:39.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "引用并分析 Anthropic 公开的 Claude Opus 5 系统提示词内容及其设计策略。"
   },
   "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/": {
     "title": "GitHub Models is now retired",
@@ -2980,7 +3131,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-09T22:48:05.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "GitHub 宣布关闭 Models 服务，该服务此前提供多种 AI 模型的免费试用。"
   },
   "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/": {
     "title": "SQLite compressed text-history prototypes",
@@ -2992,7 +3144,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-09T22:05:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "SQLite 作者开发在数据库中压缩存储文本历史记录的原型方案，用于命令行工具。"
   },
   "https://simonwillison.net/2026/Aug/8/auto-mode/": {
     "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
@@ -3004,7 +3157,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-08T22:36:03.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "Claude Code 将 Auto 模式设为 Pro、Max 和 Team 套餐用户的默认交互方式。"
   },
   "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/": {
     "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
@@ -3016,7 +3170,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-08T14:06:41.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "完整还原 OpenAI 意外发起的攻击导致 Hugging Face 服务中断事件的详细时间线。"
   },
   "https://simonwillison.net/2026/Aug/8/john-gruber/": {
     "title": "Quoting John Gruber",
@@ -3028,7 +3183,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-08T00:10:40.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "引用 John Gruber 对科技行业及人工智能发展趋势的评论与分析。"
   },
   "https://simonwillison.net/2026/Aug/7/openai-timeline/": {
     "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
@@ -3040,7 +3196,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-07T23:55:58.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "完整还原 OpenAI 意外发起的攻击导致 Hugging Face 服务中断事件的详细时间线。"
   },
   "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/": {
     "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
@@ -3052,7 +3209,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-07T19:18:09.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "展示由 Codex 与 GPT-5.6 Sol Ultra 协作开发的浣熊主题 AI 游戏项目 Moonlight & Mayhem。"
   },
   "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/": {
     "title": "The Tokenpocalypse Is Here: Companies Are Scrambling To Stop Spending So Much on AI",

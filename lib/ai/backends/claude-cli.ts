@@ -38,7 +38,7 @@ export function runClaudeCli({
 
   return new Promise((resolve, reject) => {
     const child = spawn(cli, args, {
-      shell: true,
+      shell: false,
       stdio: ["pipe", "pipe", "pipe"],
     });
 

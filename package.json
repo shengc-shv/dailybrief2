@@ -8,6 +8,7 @@
     "render": "tsx scripts/render.ts",
     "regen-trading": "tsx scripts/regen-trading.ts",
     "regen-enrich": "tsx scripts/regen-enrich.ts",
+    "init-history": "tsx scripts/init-history.ts",
     "quota-report": "tsx scripts/quota-report.ts",
     "sources": "tsx scripts/sources.ts",
     "sources:check": "tsx scripts/sources.ts check",

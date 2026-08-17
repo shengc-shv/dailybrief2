@@ -256,22 +256,6 @@ jobs:
           WEB_MODE: 'true'
         run: npm run dry-run
 
-      # 回写滚动 30 天文章历史（当天/过去30天 的数据源，兼 AI 摘要缓存）。
-      # 每次 run 都会更新 lastSeenAt，故通常会有 diff；仅在有变化时提交到 main。
-      # 注意：本步骤提交的是主分支上的 data/article-history.json，与下方发布到
-      # gh-pages 的报告互不干扰。
-      - name: Commit rolling history (article-history.json)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/article-history.json
-          if git diff --cached --quiet; then
-            echo "历史文件无变化，跳过提交"
-          else
-            git commit -m "chore: 更新当日文章历史缓存 ($(date -u +%Y-%m-%d))"
-            git push
-          fi
-
       - name: Build static site (index + archive)
         run: npm run build-site
 

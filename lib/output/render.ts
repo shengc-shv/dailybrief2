@@ -29,12 +29,14 @@ const TEXTS_ZH = {
   catFinance: "财经要点",
   catPolitics: "时政观察",
   catTrading: "市场行情",
+  catGdIpo: "广东地区IPO",
   catCommunity: "社区讨论",
   subAiNews: "AI 媒体",
   subTrendingPapers: "热门论文",
   subXViral: "X 推文",
   subBlogWeekly: "博客周刊",
   subCnCommunity: "中文社区",
+  subCnTech: "国内技术",
   subOverseasCommunity: "海外社区",
   subFinanceNews: "财经新闻",
   subFinanceCommunity: "社区讨论",
@@ -44,6 +46,8 @@ const TEXTS_ZH = {
   emptySource: "该源今日无内容。",
   emptyCategory: "该分类今日无内容。",
   emptyGroup: "该组今日无数据。",
+  timeToday: "当天",
+  timePast7: "过去7天",
   footer: "内容均来自原媒体，本站仅作摘要整理与回链。",
   summaryLabelNews: "中文摘要",
   summaryLabelIntro: "中文介绍",
@@ -78,12 +82,14 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   catFinance: "Finance",
   catPolitics: "World",
   catTrading: "Markets",
+  catGdIpo: "Guangdong IPO",
   catCommunity: "Community",
   subAiNews: "AI Media",
   subTrendingPapers: "Trending Papers",
   subXViral: "X Viral",
   subBlogWeekly: "Blog Weekly",
   subCnCommunity: "Chinese Community",
+  subCnTech: "Chinese Tech",
   subOverseasCommunity: "Overseas Community",
   subFinanceNews: "Finance News",
   subFinanceCommunity: "Community",
@@ -93,6 +99,8 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   emptySource: "No content from this source today.",
   emptyCategory: "No content in this category today.",
   emptyGroup: "No data for this group today.",
+  timeToday: "Today",
+  timePast7: "Past 7d",
   footer:
     "Content sourced from original publishers; this site provides summary and backlinks only.",
   summaryLabelNews: "Summary",
@@ -160,6 +168,7 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
   tech: STR.catTech,
   finance: STR.catFinance,
   politics: STR.catPolitics,
+  'gd-ipo': STR.catGdIpo,
 };
 
 /**
@@ -172,13 +181,13 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // Locale filtering at registry level decides which actually appears:
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
-  tech: ["trending-papers", "x-viral", "ai-news"], 
+  tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
   finance: ["news"],
-  'gd-ipo': ["news"], 
+  'gd-ipo': ["szse", "bse", "sse", "hkex", "em-ipo-tutoring", "foreign"],
   politics: ["world"],
 };
 
-const TECH_MAIN_SUBS = new Set(["github-trending", "trending-papers", "x-viral", "ai-news"]);
+const TECH_MAIN_SUBS = new Set(["github-trending", "trending-papers", "x-viral", "ai-news", "cn-tech"]);
 const TECH_COMMUNITY_SUBS = new Set(["cn-community", "overseas-community"]);
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
@@ -187,10 +196,18 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "cn-community": STR.subCnCommunity,
   "overseas-community": STR.subOverseasCommunity,
   "ai-news": STR.subAiNews,
+  "cn-tech": STR.subCnTech,
   "x-viral": STR.subXViral,
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
   world: STR.subWorld,
+  // 广东地区IPO 的 6 个二级标签
+  szse: "深交",
+  bse: "北交",
+  sse: "上交",
+  hkex: "港交",
+  "em-ipo-tutoring": "东方财富IPO辅导",
+  foreign: "国外",
 };
 
 /**
@@ -242,6 +259,7 @@ function displayLimitFor(
  */
 export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   "tech:ai-news": 15,
+  "tech:cn-tech": 15,
   "finance:news": 12,
   "politics:world": 15,
 };
@@ -274,28 +292,13 @@ export function groupRaw(
   articles: ArticleInput[],
   registry: SourceDef[],
 ): RawByCategory {
-   // 调试：统计各分类文章数量
-  const catCount: Record<string, number> = {};
-  for (const a of articles) {
-    catCount[a.category] = (catCount[a.category] || 0) + 1;
-  }
-  // console.log('[groupRaw] 文章分类统计:', JSON.stringify(catCount));
-  // console.log('[groupRaw] registry 中的 sourceId 列表:', registry.map(s => s.id));
-  // console.log('[groupRaw] registry 中是否有 gd-local-scraper:', registry.some(s => s.id === 'gd-local-scraper'));
-  
-  const subcatOf = new Map<string, string | undefined>();
+   const subcatOf = new Map<string, string | undefined>();
   for (const s of registry) subcatOf.set(s.id, s.subcategory);
-  // Drop articles from sources that have since been disabled — important
-  // when scripts/render.ts re-renders against a stale sidecar that still
-  // contains the disabled sources' fetched data.
-  // 改为
-  const allSourceIds = new Set(loadAllSources().map((s) => s.id));
-  // const enabledIds = new Set(
-  //   registry.filter((s) => s.enabled !== false).map((s) => s.id),
-  // );
-  // 但我们需要保留所有源，不管是否启用，以便 gd-local-scraper 的数据能通过
-  // 所以最好直接用 allSourceIds
-  const enabledIds = allSourceIds;
+  // Keep articles from *every* registered source id — including disabled ones
+  // like gd-local-scraper. When scripts/render.ts re-renders against a stale
+  // sidecar, that file still holds the disabled source's fetched data; we must
+  // not silently drop it. (We deliberately do NOT filter by `enabled !== false`.)
+  const knownSourceIds = new Set(loadAllSources().map((s) => s.id));
 
   // console.log('[groupRaw] enabledIds 包含的 sourceId 列表:', Array.from(enabledIds));
   // console.log('[groupRaw] gd-local-scraper 是否在 enabledIds 中:', enabledIds.has('gd-local-scraper'));
@@ -323,20 +326,7 @@ export function groupRaw(
   }
 
   for (const a of articles) {
-    // ⭐ 日志3：遍历 articles 时
-    //  if (a.category === 'gd-ipo') {
-    //   console.log(`[groupRaw] 处理 gd-ipo 数据: sourceId=${a.sourceId}, title=${a.title?.slice(0, 30)}`);
-    //   console.log(`[groupRaw]   - enabledIds.has(a.sourceId): ${enabledIds.has(a.sourceId)}`);
-    // }
-
-    // if (!enabledIds.has(a.sourceId)) {
-    //   if (a.category === 'gd-ipo') {
-    //     console.log(`[groupRaw] ❌ gd-ipo 数据被过滤: sourceId=${a.sourceId} 不在 enabledIds 中`);
-    //   }
-    //   continue;
-    // }
-    // 日志3：结束
-    if (!enabledIds.has(a.sourceId)) continue;
+    if (!knownSourceIds.has(a.sourceId)) continue;
     if (a.category === "politics" && isSportsArticle(a.title)) continue;
     if (
       (a.sourceId === "v2ex-hot" || a.sourceId === "linuxdo") &&
@@ -441,7 +431,15 @@ export function groupRaw(
       for (const [id, b] of buckets[cat].entries()) {
         if (subcatOf.get(id) === subId) sources.push(toSourceGroup(id, b, limit));
       }
-      if (sources.length === 0) continue;
+      // 广东地区IPO 的 6 个二级标签（深交/北交/上交/港交/辅导/国外）始终渲染，
+      // 即使当天为空也保留标签 + “暂无内容”占位，保证结构稳定可见。
+      if (sources.length === 0) {
+        if (cat === 'gd-ipo') {
+          subs.push({ id: subId, name: SUBCATEGORY_LABELS[subId] ?? subId, sources: [] });
+          continue;
+        }
+        continue;
+      }
       subs.push({
         id: subId,
         name: SUBCATEGORY_LABELS[subId] ?? subId,
@@ -450,23 +448,20 @@ export function groupRaw(
     }
     out[cat] = subs;
   }
-  console.log('[groupRaw] 进入兜底检查, buckets[gd-ipo] size:', buckets['gd-ipo']?.size, 'out[gd-ipo] length:', out['gd-ipo']?.length);
-  // ⭐ 兜底方案：如果 gd-ipo 有数据但 out['gd-ipo'] 为空，强制扁平渲染
-  if (buckets['gd-ipo'] && buckets['gd-ipo'].size > 0) {
-    const existing = out['gd-ipo'] || [];
-    if (existing.length === 0) {
-      const flatSources: SourceGroup[] = [];
-      for (const [id, b] of buckets['gd-ipo'].entries()) {
-        flatSources.push(toSourceGroup(id, b, undefined));
-      }
-      if (flatSources.length > 0) {
-        out['gd-ipo'] = [{
-          id: 'all',
-          name: '广东地区IPO',
-          sources: sortByRegistry(flatSources),
-        }];
-        console.log(`[groupRaw] ✅ gd-ipo 强制渲染 ${flatSources.reduce((sum, s) => sum + s.items.length, 0)} 条数据`);
-      }
+  // Safety net: if gd-ipo has data but the subcategory split above produced
+  // an empty panel (e.g. a future source whose subcategory isn't in
+  // SUBCATEGORY_ORDER), force a flat render so the data is never lost.
+  if (buckets['gd-ipo'] && buckets['gd-ipo'].size > 0 && (out['gd-ipo'] || []).length === 0) {
+    const flatSources: SourceGroup[] = [];
+    for (const [id, b] of buckets['gd-ipo'].entries()) {
+      flatSources.push(toSourceGroup(id, b, undefined));
+    }
+    if (flatSources.length > 0) {
+      out['gd-ipo'] = [{
+        id: 'all',
+        name: CATEGORY_LABELS['gd-ipo'],
+        sources: sortByRegistry(flatSources),
+      }];
     }
   }
   return out;
@@ -555,11 +550,68 @@ function renderSourceTabs(
     .join("")}</nav>`;
 }
 
+/**
+ * Keep only the articles of each source that match the time window.
+ * `todayOnly=true` → fetched in the current run (`fetchedToday`);
+ * `todayOnly=false` → carried from the rolling 7-day history.
+ */
+function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[] {
+  return sources.map((s) => ({
+    ...s,
+    items: s.items.filter((a) =>
+      todayOnly ? a.fetchedToday === true : a.fetchedToday !== true,
+    ),
+  }));
+}
+
+function countItems(sources: SourceGroup[]): number {
+  return sources.reduce((n, s) => n + s.items.length, 0);
+}
+
+function renderSourcesBlock(
+  category: Category,
+  subId: string,
+  sources: SourceGroup[],
+): string {
+  if (sources.length === 0) {
+    return `<p class="empty">${STR.emptySource}</p>`;
+  }
+  return `${renderSourceTabs(category, subId, sources)}
+  <div class="source-contents">
+    ${sources.map((s, i) => renderSourceContent(category, subId, s, i === 0)).join("\n")}
+  </div>`;
+}
+
 function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
+  const todaySrc = filterByTime(sub.sources, true);
+  const pastSrc = filterByTime(sub.sources, false);
+  const todayCount = countItems(todaySrc);
+  const pastCount = countItems(pastSrc);
+  // 空 sub（如 gd-ipo 的占位标签）：两个时间面板都显示空，但标签结构保留。
+  if (sub.sources.length === 0) {
+    return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">0</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
+      <div class="time-content" data-time-content="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
+    </div>
+  </div>`;
+  }
   return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
-    ${renderSourceTabs(category, sub.id, sub.sources)}
-    <div class="source-contents">
-      ${sub.sources.map((s, i) => renderSourceContent(category, sub.id, s, i === 0)).join("\n")}
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">${todayCount}</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">${pastCount}</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
+        ${renderSourcesBlock(category, sub.id, todaySrc)}
+      </div>
+      <div class="time-content" data-time-content="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
+        ${renderSourcesBlock(category, sub.id, pastSrc)}
+      </div>
     </div>
   </div>`;
 }
@@ -595,12 +647,10 @@ export function renderHtml(
 ): string {
   const trading = report.trading;
 
-  // Split tech raw subgroups: "tech" L1 panel (github-trending + ai-news)
-  // vs. "community" L1 panel (cn-community). Keeps the registry simple
-  // (V2EX/LinuxDo still live under category=tech) while exposing the
-  // forums as their own top-level tab per UX preference.
+  // "tech" L1 panel shows the main subs; the community sub-sources
+  // (V2EX / LinuxDo) are not in this fork's default source config, so they
+  // are filtered out and the tech panel renders only the configured subs.
   const techMainSubs = raw.tech.filter((s) => TECH_MAIN_SUBS.has(s.id));
-  const techCommunitySubs = raw.tech.filter((s) => TECH_COMMUNITY_SUBS.has(s.id));
 
   const sumItems = (subs: SubGroup[]) =>
     subs.reduce(
@@ -909,6 +959,38 @@ export function renderHtml(
   }
   .sub-content { display: none; }
   .sub-content.active { display: block; }
+
+  /* ===== time split (当天 / 过去7天) — sits inside each L2 sub-content ===== */
+  .time-tabs {
+    display: flex;
+    gap: 0.35rem;
+    margin: 0 0 0.9rem;
+  }
+  .time-tab {
+    background: var(--card);
+    border: 1px solid transparent;
+    padding: 0.32rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--fg-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .time-tab:hover { border-color: var(--muted); color: var(--fg); }
+  .time-tab.active {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+  }
+  .time-tab .count {
+    font-size: 0.68rem;
+    opacity: 0.75;
+    margin-left: 0.35rem;
+  }
+  .time-content { display: none; }
+  .time-content.active { display: block; }
 
   /* ===== L3 source-tabs ===== */
   .source-tabs {
@@ -1311,6 +1393,21 @@ export function renderHtml(
       });
     });
   });
+  // Time split (当天 / 过去7天) — scoped to the parent .sub-content so it
+  // doesn't interfere with sibling L2 tabs sharing the same data-cat.
+  document.querySelectorAll('.time-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var subContent = btn.closest('.sub-content');
+      if (!subContent) return;
+      var time = btn.dataset.time;
+      subContent.querySelectorAll('.time-tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      subContent.querySelectorAll('.time-content').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.timeContent === time);
+      });
+    });
+  });
   document.querySelectorAll('.source-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var subContent = btn.closest('.sub-content');
@@ -1583,6 +1680,12 @@ export function renderMarkdown(report: DailyReport, date: string): string {
     renderSectionMarkdown(
       CATEGORY_DIGEST_LABELS.politics,
       report.politics_briefs,
+    ),
+  );
+  blocks.push(
+    renderSectionMarkdown(
+      CATEGORY_DIGEST_LABELS['gd-ipo'],
+      report.gd_ipo_briefs,
     ),
   );
   if (report.editor_note) {

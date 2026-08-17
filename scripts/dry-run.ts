@@ -7,6 +7,7 @@ import { sources, loadAllSources } from "../lib/sources/registry";
 import { fetchSource } from "../lib/sources/dispatch";
 import type { ArticleInput } from "../lib/ai/pipeline";
 import { groupRaw, renderHtml } from "../lib/output/render";
+import { loadHistory, buildRolling, saveHistory } from "../lib/output/history";
 import { todayKey } from "../lib/utils";
 
 const OUTPUT_DIR = "daily_reports";
@@ -70,9 +71,10 @@ async function main() {
       for (const item of items) {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
+        const srcId = item.sourceId || 'gd-local-scraper';
         articles.push({
-          sourceId: 'gd-local-scraper',
-          source: '广东本地爬虫',
+          sourceId: srcId,
+          source: item.source || '广东本地爬虫',
           title: item.title || '无标题',
           url: item.url || '',
           excerpt: item.excerpt || '',
@@ -84,7 +86,8 @@ async function main() {
       }
       console.log(`  ✅ 加载爬虫数据 ${count} 条（跳过 ${items.length - count} 条重复）`);
     } catch (err) {
-      console.warn(`  ⚠️ 加载爬虫数据失败: ${err.message}`);
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`  ⚠️ 加载爬虫数据失败: ${msg}`);
     }
   } else {
     console.log(`  ℹ️ 爬虫数据文件不存在: ${dataPath}`);
@@ -103,7 +106,14 @@ async function main() {
     }
   }
 
-  console.log(`\n📊 总文章数: ${articles.length}`);
+  // 合并滚动 7 天历史（窗口按信息发生时间 publishedAt 计）：今日抓取 + 历史缓存（按 fetchedToday 打标），
+  // 使渲染同时拥有「当天」与「过去7天」两个时间标签。
+  const history = loadHistory();
+  const nowIso = new Date().toISOString();
+  const rolling = buildRolling(articles, history);
+  // dry-run 无 AI：仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
+  saveHistory(articles, history, nowIso);
+  console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去7天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);
 
   // 统计各分类数量
   const catCount: Record<string, number> = {};
@@ -114,10 +124,10 @@ async function main() {
 
   // ----- 渲染 HTML（无 AI）-----
   console.log(`\n🎨 渲染 HTML 报告 (${date})...`);
-  const raw = groupRaw(articles, sources);
+  const raw = groupRaw(rolling, sources);
   
   // 生成空报告（不含 AI 摘要）
-  const report = generateEmptyReport(articles);
+  const report = generateEmptyReport(rolling);
   
   const html = renderHtml(report, raw, date);
 

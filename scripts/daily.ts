@@ -4,10 +4,12 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { sources, REPORT_LOCALE } from "../lib/sources/registry";
+import type { Category } from "../lib/sources/types";
 import { fetchSource } from "../lib/sources/dispatch";
 import {
-  generateDailyReport,
   type ArticleInput,
+  type BriefItem,
+  type DailyReport,
 } from "../lib/ai/pipeline";
 import { getModelTag, validateBackendCredentials } from "../lib/ai/llm";
 import {
@@ -20,8 +22,11 @@ import {
   groupRaw,
   isSportsArticle,
   MERGED_SUBGROUP_LIMITS,
+  MERGE_PER_SOURCE_CAP,
+  SOURCE_DISPLAY_LIMITS,
   renderHtml,
   renderMarkdown,
+  type RawByCategory,
 } from "../lib/output/render";
 import {
   loadHistory,
@@ -79,7 +84,10 @@ async function fetchAll(): Promise<ArticleInput[]> {
 }
 
 async function enrichGhTrending(articles: ArticleInput[]): Promise<void> {
-  const gh = articles.filter((a) => a.sourceId === "github-trending");
+  // Only the final displayed slice — matches SOURCE_DISPLAY_LIMITS["tech:github-trending"].
+  const gh = articles
+    .filter((a) => a.sourceId === "github-trending")
+    .slice(0, SOURCE_DISPLAY_LIMITS["tech:github-trending"] ?? 20);
   if (gh.length === 0) return;
   const pending = applyCache(gh);
   if (pending.length === 0) {
@@ -130,7 +138,7 @@ async function enrichAiNews(articles: ArticleInput[]): Promise<void> {
 async function enrichXViral(articles: ArticleInput[]): Promise<void> {
   const xPosts = articles
     .filter((a) => a.sourceId === "attentionvc-ai")
-    .slice(0, 20);
+    .slice(0, SOURCE_DISPLAY_LIMITS["tech:x-viral"] ?? 5);
   if (xPosts.length === 0) return;
   const pending = applyCache(xPosts);
   if (pending.length === 0) {
@@ -166,7 +174,7 @@ async function enrichXViral(articles: ArticleInput[]): Promise<void> {
 async function enrichTrendingPapers(articles: ArticleInput[]): Promise<void> {
   const papers = articles
     .filter((a) => a.sourceId === "huggingface-papers")
-    .slice(0, 20);
+    .slice(0, SOURCE_DISPLAY_LIMITS["tech:trending-papers"] ?? 5);
   if (papers.length === 0) return;
   const pending = applyCache(papers);
   if (pending.length === 0) {
@@ -211,17 +219,27 @@ async function enrichMergedSubgroup(
       s.subcategory === subcategory &&
       s.enabled !== false,
   );
-  const enabledIds = new Set(subSources.map((s) => s.id));
   const sameLocaleIds = new Set(
     subSources.filter((s) => (s.lang ?? "en") === REPORT_LOCALE).map((s) => s.id),
   );
   const limit = MERGED_SUBGROUP_LIMITS[`${category}:${subcategory}`] ?? 12;
-  // Top-N respects all enabled sources (so we don't reshape the merged
-  // timeline). Enrichment only targets items NOT already in the target
-  // language within that slice.
-  const top = articles
-    .filter((a) => enabledIds.has(a.sourceId))
-    .filter((a) => category !== "politics" || !isSportsArticle(a.title))
+  const perCap = MERGE_PER_SOURCE_CAP[`${category}:${subcategory}`];
+  // Mirror render.ts groupRaw EXACTLY: cap each source to perCap (so one
+  // fresh source can't flood the whole merged timeline), concat, then take
+  // the top-N by date. This keeps AI enrichment scoped to the FINAL displayed
+  // items only — no LLM spend on items the reader will never see.
+  const perSourceItems: ArticleInput[] = [];
+  for (const s of subSources) {
+    const srcItems = articles
+      .filter((a) => a.sourceId === s.id)
+      .filter((a) => category !== "politics" || !isSportsArticle(a.title))
+      .sort(
+        (a, b) =>
+          (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
+      );
+    perSourceItems.push(...(perCap ? srcItems.slice(0, perCap) : srcItems));
+  }
+  const top = perSourceItems
     .sort(
       (a, b) =>
         (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
@@ -286,6 +304,39 @@ async function runTrading(): Promise<TradingSection | null> {
     crypto_fear_greed: cryptoFearGreed ?? undefined,
     crypto_global: cryptoGlobal ?? undefined,
     generated_at: new Date().toISOString(),
+  };
+}
+
+/**
+ * Cheap, AI-free DailyReport builder used once the per-item summaries are
+ * attached (and the market/trading section, if any, is ready).
+ *
+ * This REPLACES the old `generateDailyReport` cross-category LLM digest:
+ * we no longer spend a large Sonnet call re-synthesizing items that were
+ * already summarized one-by-one. The digest now just mirrors the FINAL
+ * displayed sets (grouped by category) using each article's own summary /
+ * excerpt, so the markdown export stays useful at zero extra token cost.
+ * (The HTML site never rendered the digest anyway.)
+ */
+function buildReportFromRaw(raw: RawByCategory): DailyReport {
+  const flatten = (cat: Category): ArticleInput[] =>
+    (raw[cat] ?? []).flatMap((sg) => sg.sources.flatMap((s) => s.items));
+  const toBrief = (a: ArticleInput): BriefItem => ({
+    title: a.title,
+    url: a.url,
+    source: a.source,
+    summary: a.summary || a.excerpt || "",
+    importance: 1,
+  });
+  return {
+    hero_headline: "",
+    daily_overview: "",
+    tech_briefs: flatten("tech").slice(0, 5).map(toBrief),
+    finance_briefs: flatten("finance").slice(0, 5).map(toBrief),
+    politics_briefs: flatten("politics").slice(0, 3).map(toBrief),
+    gd_ipo_briefs: flatten("gd-ipo").slice(0, 20).map(toBrief),
+    editor_note: "",
+    keywords: [],
   };
 }
 
@@ -377,12 +428,6 @@ async function main() {
     console.warn(`[daily] trading section failed: ${msg}`);
   }
 
-  console.log(`[daily] generating digest with ${getModelTag()}…`);
-  const t0 = Date.now();
-  const { report } = await generateDailyReport(articles);
-  if (trading) report.trading = trading;
-  console.log(`[daily] digest ready in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
-
   // 回写历史缓存（含今日 AI 摘要），并构建「当天 + 过去30天」滚动列表用于渲染。
   const nowIso = new Date().toISOString();
   history = saveHistory(articles, history, nowIso);
@@ -391,10 +436,15 @@ async function main() {
     `[daily] 历史缓存已更新: ${Object.keys(history).length} 条（含今日 ${articles.length} 条）；渲染滚动列表 ${rolling.length} 条`,
   );
 
+  // 组装最终报告：仅用「最终展示数据」的摘要（不调用 AI）。
+  // 旧逻辑会再发一次大 LLM 请求做跨分类摘要（generateDailyReport），现已移除以省钱。
+  const raw = groupRaw(rolling, sources);
+  const report = buildReportFromRaw(raw);
+  if (trading) report.trading = trading;
+
   const dateDir = path.join(OUTPUT_DIR, date);
   fs.mkdirSync(dateDir, { recursive: true });
   const base = path.join(dateDir, date);
-  const raw = groupRaw(rolling, sources);
   fs.writeFileSync(`${base}.json`, JSON.stringify(report, null, 2), "utf8");
   // Sidecar with the rolling article list (today + past-30d) + LLM-attached
   // summary, so scripts/render.ts can rebuild HTML/MD for UI iteration

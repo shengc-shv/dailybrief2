@@ -231,11 +231,12 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
  * comfortable scroll instead of 25-30 items. Merged subgroups (blog-weekly,
  * finance:news, politics:world) ignore this — they use MERGED_SUBGROUP_LIMITS.
  */
-const SOURCE_DISPLAY_LIMITS: Record<string, number> = {
+export const SOURCE_DISPLAY_LIMITS: Record<string, number> = {
   "tech:github-trending": 20,
   "tech:cn-community": 10,
-  "tech:x-viral": 20,
-  "tech:trending-papers": 20,
+  // 热门论文 / X 推文：单源子标签，每源≤5（保留抓取端热度/点赞排序，不切合并流）
+  "tech:x-viral": 5,
+  "tech:trending-papers": 5,
 };
 
 /**
@@ -271,20 +272,27 @@ function displayLimitFor(
  * Exported so daily.ts can read the cap to keep enrichment in sync.
  */
 export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
-  "tech:ai-news": 15,
-  "tech:cn-tech": 15,
-  "finance:news": 12,
-  "finance:cn-finance": 18,
+  // 技术动态 / 财经要点 合并流：每数据源≤5、子标签整体≤10
+  // （省钱 + 避免单一源霸屏）。典型子标签：AI媒体 / 国内技术 / 国内财经 / 国际财经。
+  "tech:ai-news": 10,
+  "tech:cn-tech": 10,
+  "finance:news": 10,
+  "finance:cn-finance": 10,
+  // 时政不在本次范围，保留原整体上限
   "politics:world": 15,
 };
 
 /**
  * 合并流中单源最多贡献的条数。避免某一源条目过多、按时间降序时把同子标签下
- * 其他源整屏挤出（例如国内财经若某源日期较新、12 条上限会被它独占）。
+ * 其他源整屏挤出（例如国内财经若某源日期较新、10 条上限会被它独占）。
+ * 技术动态 / 财经要点 合并子标签统一为 5（典型：AI媒体 / 国内技术 / 国内财经 / 国际财经）。
  * 缺省不限制（undefined）即沿用旧行为。
  */
-const MERGE_PER_SOURCE_CAP: Record<string, number> = {
-  "finance:cn-finance": 6,
+export const MERGE_PER_SOURCE_CAP: Record<string, number> = {
+  "tech:ai-news": 5,
+  "tech:cn-tech": 5,
+  "finance:news": 5,
+  "finance:cn-finance": 5,
 };
 
 /**

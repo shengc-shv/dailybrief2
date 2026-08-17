@@ -274,8 +274,17 @@ export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   "tech:ai-news": 15,
   "tech:cn-tech": 15,
   "finance:news": 12,
-  "finance:cn-finance": 12,
+  "finance:cn-finance": 18,
   "politics:world": 15,
+};
+
+/**
+ * 合并流中单源最多贡献的条数。避免某一源条目过多、按时间降序时把同子标签下
+ * 其他源整屏挤出（例如国内财经若某源日期较新、12 条上限会被它独占）。
+ * 缺省不限制（undefined）即沿用旧行为。
+ */
+const MERGE_PER_SOURCE_CAP: Record<string, number> = {
+  "finance:cn-finance": 6,
 };
 
 /**
@@ -519,8 +528,11 @@ export function groupRaw(
         // time-sorted SourceGroup. Articles keep their `source` field so
         // the renderer can label them.
         const flat: ArticleInput[] = [];
+        const perCap = MERGE_PER_SOURCE_CAP[`${cat}:${subId}`];
         for (const [id, b] of buckets[cat].entries()) {
-          if (subcatOf.get(id) === subId) flat.push(...b.items);
+          if (subcatOf.get(id) === subId) {
+            flat.push(...(perCap ? b.items.slice(0, perCap) : b.items));
+          }
         }
         if (flat.length === 0) continue;
         flat.sort(

@@ -265,17 +265,17 @@
     "note": "国内权威的软件开发/架构/工程实践媒体，已验证 RSS 可用（约 20 条/次）。"
   },
   {
-    "id": "ruanyifeng",
-    "name": "阮一峰的网络日志",
+    "id": "qbitai",
+    "name": "量子位",
     "type": "rss",
-    "url": "https://ruanyifeng.com/blog/atom.xml",
+    "url": "https://www.qbitai.com/feed",
     "category": "tech",
     "subcategory": "cn-tech",
     "enabled": true,
     "locales": ["zh"],
     "lang": "zh",
     "useCurl": true,
-    "note": "业界高度认可的中文技术开发/教程博客（Atom 订阅）。"
+    "note": "国内权威 AI/前沿科技媒体，已验证 RSS 可用（约 10 条/次）。"
   },
   {
     "id": "sspai",

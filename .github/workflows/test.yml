@@ -43,7 +43,7 @@ jobs:
           path: daily_reports/
 
       # 回写滚动 30 天文章历史（当天/过去30天 的数据源）。每次 test 运行都更新
-      # lastSeenAt，故通常会有 diff；仅在有变化时提交。日常发布时请复制本步骤到 daily.yml。
+      # lastSeenAt，故通常会有 diff；仅在有变化时提交。本步骤已复制进 daily.yml。
       - name: Commit rolling history (article-history.json)
         run: |
           git config user.name "github-actions[bot]"

@@ -39,7 +39,6 @@ async function fetchAll(): Promise<ArticleInput[]> {
     try {
       const items = await fetchSource(source);
       console.log(`  ${source.id.padEnd(20)} ${items.length}`);
-      console.log(`[daily] 调试: 第一条数据 category = ${articles[articles.length - 1]?.category}`);
       articles.push(...items.map((it) => ({ ...it, source: source.name })));
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -259,7 +258,6 @@ async function main() {
         // 跳过已存在的（按 URL 去重）
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
-        console.log(`[daily] 爬虫数据第一条 category: ${articles[articles.length - 1]?.category}`);
         articles.push({
           sourceId: 'gd-local-scraper',
           source: '广东本地爬虫',
@@ -268,15 +266,14 @@ async function main() {
           excerpt: item.excerpt || '',
           publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
           category: 'gd-ipo',
-          subcategory: 'news',
           summary: item.summary || '',
         });
         count++;
       }
       console.log(`[daily] ✅ 加载爬虫数据 ${count} 条（跳过 ${items.length - count} 条重复）`);
-      console.log(`[daily] 爬虫数据第一条 category: ${articles[articles.length - 1]?.category}`);
     } catch (err) {
-      console.warn(`[daily] ⚠️ 加载爬虫数据失败: ${err.message}`);
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`[daily] ⚠️ 加载爬虫数据失败: ${msg}`);
     }
   } else {
     console.log(`[daily] ℹ️ 爬虫数据文件不存在: ${dataPath}`);

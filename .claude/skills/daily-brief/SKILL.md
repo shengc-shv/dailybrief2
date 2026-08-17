@@ -5,9 +5,11 @@ description: Operational knowledge for the daily-brief digest pipeline (this pro
 
 # daily-brief — Operational Skill
 
-This project generates a single-page HTML daily digest covering tech / finance / politics / market data / community discussion. The pipeline runs locally via the OS scheduler (Windows Task Scheduler / macOS launchd / Linux cron, default 08:00 local time) and emits `daily_reports/<YYYY-MM-DD>/<YYYY-MM-DD>.html` + sidecar files (each date gets its own subdir). The date label uses the system local timezone by default — set `REPORT_TZ` (e.g. `Asia/Shanghai`, `UTC`) in `.env.local` to override.
+This project generates a single-page HTML daily digest covering tech / trading (market data) / finance / gd-ipo (Guangdong IPO). The pipeline runs locally via the OS scheduler (Windows Task Scheduler / macOS launchd / Linux cron, default 08:00 local time) and emits `daily_reports/<YYYY-MM-DD>/<YYYY-MM-DD>.html` + sidecar files (each date gets its own subdir). The date label uses the system local timezone by default — set `REPORT_TZ` (e.g. `Asia/Shanghai`, `UTC`) in `.env.local` to override.
 
 Detailed architecture lives in code; this skill is a cheat sheet for **operating** and **diagnosing**, not a re-explanation of the system.
+
+> **Fork scope:** this repo is a fork of [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief). The default `sources.config.json` is curated to Chinese/Finance-focused tech + finance + a `gd-ipo` (广东地区IPO) category; upstream English-community sources (GitHub Trending / Hacker News / V2EX / LinuxDo) are absent, so the `politics` and `community` L1 tabs are not enabled by default. A-share / HK IPO crawlers under `scripts/crawlers/` feed the `gd-ipo` tab via `data/crawled-articles.json`.
 
 ## Project root assumption
 
@@ -61,7 +63,7 @@ The config file is written by `node scripts/install.mjs --global`. If it's missi
 
 ## How LLM enrichment works (mental model)
 
-- **Each merged L2 subcategory gets a Sonnet pass**: GH-trending (per-source), finance:news, politics:world, tech:ai-news, tech:x-viral.
+- **Each merged L2 subcategory gets a Sonnet pass**: tech:ai-news, tech:x-viral, finance:news. (`politics:world` exists upstream but has no enabled source in this fork; `GH-trending` is upstream-only and absent here.)
 - Each pass = **one batched Sonnet call** for all items in that subgroup. Don't iterate per-item.
 - Sources with `lang: "zh"` in registry **skip** enrichment (already Chinese).
 - Failures are non-fatal: skipped articles just render without `summary`.
@@ -139,27 +141,29 @@ Sources live in [`sources.config.json`](sources.config.json) at the project root
 
 ## Render layout (current, may evolve)
 
-L1 tabs in order: `tech / trading / politics / finance / community`
+L1 tabs in order: `tech / trading / finance / gd-ipo`
+
+> Fork scope: the `politics` and `community` L1 panels from upstream are NOT in
+> this fork — the default `sources.config.json` enables no politics/community
+> sources (upstream English-community sources GitHub Trending / Hacker News /
+> V2EX / LinuxDo are absent). Add sources under those categories to re-enable
+> the tabs.
 
 ```
 技术动态 (tech)
-  L2: GitHub Trending  (per-source, cap 20)
-  L2: X 推文           (single source attentionvc-ai, cap 20, preserve fetch order)
-  L2: AI 媒体          (merged 7 RSS sources, cap 15, summary)
+  L2: Hugging Face Papers  (single source huggingface-papers, cap 20)
+  L2: X 推文               (single source attentionvc-ai, cap 20, preserve fetch order)
+  L2: AI 媒体              (merged RSS sources, cap 15, summary)
 
 市场行情 (trading)
   asset-group tabs: macro / 美股 / 加密 / 中港 / 商品外汇
 
-时政观察 (politics:world)
-  merged single timeline, cap 15, summary, sports filtered
-
 财经要点 (finance:news)
   merged single timeline, cap 12, summary
 
-社区讨论 (community)
-  Source tabs: V2EX / LinuxDo (cap 10 each)
-  Note: cn-community is registered under category=tech but rendered as its
-  own L1 panel — see TECH_MAIN_SUBS vs TECH_COMMUNITY_SUBS in render.ts
+广东地区IPO (gd-ipo)
+  Single merged timeline (flat, no L2 tabs) of A-share / HK IPO items from
+  crunchbase-news + crawler output (scripts/crawlers/ → data/crawled-articles.json)
 ```
 
 ## Scheduler integration (cross-platform)

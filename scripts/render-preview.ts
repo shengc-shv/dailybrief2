@@ -40,13 +40,20 @@ function main() {
         ? new Date(e.lastSeenAt)
         : null;
     let fetchedToday: boolean;
-    if (!ref) {
-      fetchedToday = false; // 既无发生时间也无分析时间，归入过去（兜底）
+    if (e.category === "gd-ipo") {
+      // 广东地区IPO：按信息发生时间(publishedAt)拆"当天 / 过去7天"，与正式 daily 一致。
+      if (!ref) {
+        fetchedToday = false; // 既无发生时间也无分析时间，归入过去（兜底）
+      } else {
+        const ageDays = Math.floor((repDayStart - startOfDay(ref)) / DAY);
+        if (ageDays <= 0) fetchedToday = true; // 今天或未来（时区误差）
+        else if (ageDays >= 1 && ageDays <= 7) fetchedToday = false; // 过去7天
+        else continue; // 超出 7 天窗口
+      }
     } else {
-      const ageDays = Math.floor((repDayStart - startOfDay(ref)) / DAY);
-      if (ageDays <= 0) fetchedToday = true; // 今天或未来（时区误差）
-      else if (ageDays >= 1 && ageDays <= 7) fetchedToday = false; // 过去7天
-      else continue; // 超出 7 天窗口
+      // 技术动态 / 财经要点 / 时政：预览模拟"当日完整抓取"，全部计入"当天"，
+      // 对应正式 daily 中本运行新抓取的当日热门条目（不暴露历史库存）。
+      fetchedToday = true;
     }
     if (e.summary) withSummary++;
     articles.push({

@@ -70,9 +70,10 @@ async function main() {
       for (const item of items) {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
+        const srcId = item.sourceId || 'gd-local-scraper';
         articles.push({
-          sourceId: 'gd-local-scraper',
-          source: '广东本地爬虫',
+          sourceId: srcId,
+          source: item.source || '广东本地爬虫',
           title: item.title || '无标题',
           url: item.url || '',
           excerpt: item.excerpt || '',

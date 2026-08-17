@@ -191,15 +191,55 @@
     "locales": ["zh"]
   },
   {
-  "id": "gd-local-scraper",
-  "name": "广东本地企业动态",
-  "type": "api",
-  "url": "file://./data/crawled-articles.json",
-  "category": "gd-ipo",
-  "subcategory": "news",
-  "enabled": false,
-  "locales": ["zh"]
-},
+    "id": "gd-szse",
+    "name": "深交所IPO",
+    "type": "api",
+    "url": "internal://crawler",
+    "category": "gd-ipo",
+    "subcategory": "szse",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-sse",
+    "name": "上交所IPO",
+    "type": "api",
+    "url": "internal://crawler",
+    "category": "gd-ipo",
+    "subcategory": "sse",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-bse",
+    "name": "北交所IPO",
+    "type": "api",
+    "url": "internal://crawler",
+    "category": "gd-ipo",
+    "subcategory": "bse",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-hkex",
+    "name": "港交所IPO",
+    "type": "api",
+    "url": "internal://crawler",
+    "category": "gd-ipo",
+    "subcategory": "hkex",
+    "enabled": false,
+    "locales": ["zh"]
+  },
+  {
+    "id": "gd-em-ipo",
+    "name": "东方财富IPO辅导",
+    "type": "api",
+    "url": "internal://crawler",
+    "category": "gd-ipo",
+    "subcategory": "em-ipo-tutoring",
+    "enabled": false,
+    "locales": ["zh"]
+  },
   {
     "id": "simonwillison",
     "name": "Simon Willison's Weblog",
@@ -250,9 +290,42 @@
     "type": "rss",
     "url": "https://news.crunchbase.com/feed/",
     "category": "gd-ipo",
-    "subcategory": "news",
+    "subcategory": "foreign",
     "enabled": true,
     "locales": ["zh", "en"],
-    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁（每小时）。"
+    "note": "全球私募市场/融资轮次/IPO 与上市动态报道，更新频繁。"
+  },
+  {
+    "id": "techcrunch",
+    "name": "TechCrunch",
+    "type": "rss",
+    "url": "https://techcrunch.com/feed/",
+    "category": "gd-ipo",
+    "subcategory": "foreign",
+    "enabled": true,
+    "locales": ["zh", "en"],
+    "note": "全球科技创业/融资/IPO 动态，更新高频。"
+  },
+  {
+    "id": "eu-startups",
+    "name": "EU-Startups",
+    "type": "rss",
+    "url": "https://www.eu-startups.com/feed/",
+    "category": "gd-ipo",
+    "subcategory": "foreign",
+    "enabled": true,
+    "locales": ["zh", "en"],
+    "note": "欧洲创业公司融资/IPO 动态。"
+  },
+  {
+    "id": "strictlyvc",
+    "name": "StrictlyVC",
+    "type": "rss",
+    "url": "https://strictlyvc.com/feed/",
+    "category": "gd-ipo",
+    "subcategory": "foreign",
+    "enabled": true,
+    "locales": ["en"],
+    "note": "美国 VC/融资轮次观察，偏一级市场。"
   }
 ]

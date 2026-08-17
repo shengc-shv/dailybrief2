@@ -99,8 +99,8 @@ export class BSEAPICrawler extends BaseCrawler {
       }
       console.log(`[${this.name}] 接口共返回 ${flat.length} 条公告`);
 
-      const thirtyDaysAgo = new Date();
-      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      const sevenDaysAgo = new Date();
+      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
       const seen = new Set();   // 按股票代码去重（每家公司只保留第一条命中公告）
       let provinceChecks = 0;
@@ -126,7 +126,7 @@ export class BSEAPICrawler extends BaseCrawler {
         const pubDate = (item.publishDate || '').match(/(\d{4}-\d{2}-\d{2})/)?.[1]
           || (item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '')
           || new Date().toISOString().slice(0, 10);
-        if (new Date(pubDate) < thirtyDaysAgo) continue;
+        if (new Date(pubDate) < sevenDaysAgo) continue;
 
         seen.add(stockCode);
 
@@ -136,7 +136,7 @@ export class BSEAPICrawler extends BaseCrawler {
           ? `https://www.bse.cn${item.destFilePath}`
           : '';
 
-        articles.push({ title, url: detailUrl, excerpt, publishedAt: pubDate });
+        articles.push({ title, url: detailUrl, excerpt, publishedAt: pubDate, sourceId: 'gd-bse' });
       }
 
       console.log(`[${this.name}] IPO 命中 ${provinceChecks} 家，其中广东企业 ${articles.length} 家`);

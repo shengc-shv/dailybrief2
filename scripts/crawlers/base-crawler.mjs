@@ -125,6 +125,8 @@ export class BaseCrawler {
       excerpt: item.excerpt || '',
       publishedAt: item.publishedAt || new Date().toISOString(),
       source: this.name,
+      // 子类可给每条结果带上 sourceId，daily.ts 据此路由到对应二级标签
+      ...(item.sourceId ? { sourceId: item.sourceId } : {}),
     }));
   }
 }

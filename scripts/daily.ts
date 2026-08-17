@@ -258,9 +258,12 @@ async function main() {
         // 跳过已存在的（按 URL 去重）
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
+        // 每条爬虫结果自带 sourceId（gd-szse/gd-sse/gd-bse/gd-hkex/gd-em-ipo 等），
+        // 据此路由到广东地区IPO下的对应二级标签；缺失时回退到历史兜底 id。
+        const srcId = item.sourceId || 'gd-local-scraper';
         articles.push({
-          sourceId: 'gd-local-scraper',
-          source: '广东本地爬虫',
+          sourceId: srcId,
+          source: item.source || '广东本地爬虫',
           title: item.title || '无标题',
           url: item.url || '',
           excerpt: item.excerpt || '',

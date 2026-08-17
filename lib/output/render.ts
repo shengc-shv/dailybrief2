@@ -177,7 +177,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // overseas-community (Hacker News / r/stocks).
   tech: ["trending-papers", "x-viral", "ai-news"], 
   finance: ["news"],
-  'gd-ipo': ["news"], 
+  'gd-ipo': ["szse", "bse", "sse", "hkex", "em-ipo-tutoring", "foreign"],
   politics: ["world"],
 };
 
@@ -194,6 +194,13 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
   world: STR.subWorld,
+  // 广东地区IPO 的 6 个二级标签
+  szse: "深交",
+  bse: "北交",
+  sse: "上交",
+  hkex: "港交",
+  "em-ipo-tutoring": "东方财富IPO辅导",
+  foreign: "国外",
 };
 
 /**

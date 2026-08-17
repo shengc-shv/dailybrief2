@@ -71,8 +71,18 @@ export class TonghuashunIPOCrawler extends BaseCrawler {
 
   async parseArticle(html, url) {
     const articles = [];
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+    // 按板块把每条预披露路由到对应交易所二级标签
+    const boardToSource = (board) => {
+      const b = (board || '').trim();
+      if (b.includes('创业') || b.includes('深')) return 'gd-szse';
+      if (b.includes('科创') || b.includes('沪')) return 'gd-sse';
+      if (b.includes('北交')) return 'gd-bse';
+      if (b.includes('主板')) return 'gd-sse'; // 纯"主板"无深沪提示时默认沪市
+      return 'gd-szse';
+    };
 
     const regionKeywords = [
       '广东', '广州', '深圳', '东莞', '佛山', '珠海', '中山', '惠州',
@@ -134,9 +144,9 @@ export class TonghuashunIPOCrawler extends BaseCrawler {
           pubDate = new Date().toISOString().slice(0, 10);
         }
 
-        // 日期过滤（暂时注释掉，先验证编码）
+        // 日期过滤
          const itemDate = new Date(pubDate);
-         if (itemDate < thirtyDaysAgo) continue;
+         if (itemDate < sevenDaysAgo) continue;
 
         let title = `${stockName}`;
         if (board) title += ` [${board}]`;
@@ -161,6 +171,7 @@ export class TonghuashunIPOCrawler extends BaseCrawler {
           url: detailUrl,
           excerpt,
           publishedAt: pubDate,
+          sourceId: boardToSource(board),
         });
       }
 

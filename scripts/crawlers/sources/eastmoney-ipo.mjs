@@ -34,9 +34,9 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
 
   async parseArticle(responseText, url) {
     const articles = [];
-    // 计算 30 天前的时间戳
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    // 计算 7 天前的时间戳
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
     // 地区关键词（广东及主要城市）
     const regionKeywords = [
@@ -69,9 +69,9 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
         let pubDate = (recordDate || '').match(/(\d{4}-\d{2}-\d{2})/)?.[1] ||
           new Date().toISOString().slice(0, 10);
 
-        // 过滤 30 天前的数据
+        // 过滤 7 天前的数据
         const itemDate = new Date(pubDate);
-        if (itemDate < thirtyDaysAgo) {
+        if (itemDate < sevenDaysAgo) {
           continue;
         }
 
@@ -105,10 +105,11 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
           url: detailUrl,
           excerpt,
           publishedAt: pubDate,
+          sourceId: 'gd-em-ipo',
         });
       }
 
-      console.log(`[${this.name}] 匹配到 ${articles.length} 家广东辅导企业（最近30天）`);
+      console.log(`[${this.name}] 匹配到 ${articles.length} 家广东辅导企业（最近7天）`);
 
     } catch (err) {
       console.error(`[${this.name}] 解析API失败:`, err.message);

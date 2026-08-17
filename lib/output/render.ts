@@ -41,7 +41,8 @@ const TEXTS_ZH = {
   subCnCommunity: "中文社区",
   subCnTech: "国内技术",
   subOverseasCommunity: "海外社区",
-  subFinanceNews: "财经新闻",
+  subFinanceNews: "国际财经",
+  subFinanceCn: "国内财经",
   subFinanceCommunity: "社区讨论",
   subWorld: "国际要闻",
   subOverseasNews: "海外科技",
@@ -193,7 +194,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
-  finance: ["news"],
+  finance: ["cn-finance", "news"],
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
   politics: ["world"],
 };
@@ -211,6 +212,7 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "x-viral": STR.subXViral,
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
+  "cn-finance": STR.subFinanceCn,
   world: STR.subWorld,
   // 广东地区IPO 的 6 个二级标签（地域→市场 分发；预备上市统一进 IPO辅导）
   szse: "深交所",
@@ -272,6 +274,7 @@ export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   "tech:ai-news": 15,
   "tech:cn-tech": 15,
   "finance:news": 12,
+  "finance:cn-finance": 12,
   "politics:world": 15,
 };
 
@@ -417,10 +420,10 @@ export function groupRaw(
     }
   }
 
-  // 广东公司但非IPO类（财报/分红/解禁等）→ 并入财经要点「news」合并流
+  // 广东公司但非IPO类（财报/分红/解禁等）→ 并入财经要点「国内财经」合并流
   if (financeExtra.length > 0) {
     const sid = "_gd_finance";
-    subcatOf.set(sid, "news");
+    subcatOf.set(sid, "cn-finance");
     const b =
       buckets["finance"].get(sid) ??
       ({ sourceName: "广东公司公告", items: [] } as Bucket);

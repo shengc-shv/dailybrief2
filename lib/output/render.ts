@@ -47,7 +47,7 @@ const TEXTS_ZH = {
   emptyCategory: "该分类今日无内容。",
   emptyGroup: "该组今日无数据。",
   timeToday: "当天",
-  timePast30: "过去30天",
+  timePast7: "过去7天",
   footer: "内容均来自原媒体，本站仅作摘要整理与回链。",
   summaryLabelNews: "中文摘要",
   summaryLabelIntro: "中文介绍",
@@ -100,7 +100,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   emptyCategory: "No content in this category today.",
   emptyGroup: "No data for this group today.",
   timeToday: "Today",
-  timePast30: "Past 30d",
+  timePast7: "Past 7d",
   footer:
     "Content sourced from original publishers; this site provides summary and backlinks only.",
   summaryLabelNews: "Summary",
@@ -553,7 +553,7 @@ function renderSourceTabs(
 /**
  * Keep only the articles of each source that match the time window.
  * `todayOnly=true` → fetched in the current run (`fetchedToday`);
- * `todayOnly=false` → carried from the rolling 30-day history.
+ * `todayOnly=false` → carried from the rolling 7-day history.
  */
 function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[] {
   return sources.map((s) => ({
@@ -592,7 +592,7 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
     return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">0</span></button>
     </nav>
     <div class="time-contents">
       <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}"><p class="empty">${STR.emptySource}</p></div>
@@ -603,7 +603,7 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
   return `<div class="sub-content${isActive ? " active" : ""}" data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}">
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timeToday}<span class="count">${todayCount}</span></button>
-      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast30}<span class="count">${pastCount}</span></button>
+      <button class="time-tab" data-time="past" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">${STR.timePast7}<span class="count">${pastCount}</span></button>
     </nav>
     <div class="time-contents">
       <div class="time-content active" data-time-content="today" data-cat="${category}" data-sub="${escapeHtml(sub.id)}">
@@ -960,7 +960,7 @@ export function renderHtml(
   .sub-content { display: none; }
   .sub-content.active { display: block; }
 
-  /* ===== time split (当天 / 过去30天) — sits inside each L2 sub-content ===== */
+  /* ===== time split (当天 / 过去7天) — sits inside each L2 sub-content ===== */
   .time-tabs {
     display: flex;
     gap: 0.35rem;
@@ -1393,7 +1393,7 @@ export function renderHtml(
       });
     });
   });
-  // Time split (当天 / 过去30天) — scoped to the parent .sub-content so it
+  // Time split (当天 / 过去7天) — scoped to the parent .sub-content so it
   // doesn't interfere with sibling L2 tabs sharing the same data-cat.
   document.querySelectorAll('.time-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {

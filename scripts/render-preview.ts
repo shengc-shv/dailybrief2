@@ -22,11 +22,32 @@ function main() {
   const history = loadHistory();
   const today = date; // "2026-08-17"
 
-  // 1) 由本地历史构建文章列表；当天/过去30天 按 lastSeenAt 是否属于今天区分。
+  // 1) 由本地历史构建文章列表，按"信息发生时间(publishedAt)"拆分时间标签进行预览：
+  //    "当天" = 发生于今天；"过去7天" = 发生于最近 7 天（不含今天）。
+  //    无 publishedAt 时回退 lastSeenAt（分析时间）兜底。仅保留窗口内条目。
+  //    注：正式 daily 流程中 "当天"=本运行新抓取(fetchedToday)，"过去7天"=按发生时间回滚的存量；
+  //        此处为静态快照预览，改用发生时间拆分以直观展示两个标签。
+  const DAY = 86_400_000;
+  const repDayStart = new Date(today + "T00:00:00Z").getTime();
+  const startOfDay = (d: Date) =>
+    new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())).getTime();
   const articles: ArticleInput[] = [];
   let withSummary = 0;
   for (const e of Object.values(history)) {
-    const fetchedToday = !!e.lastSeenAt && e.lastSeenAt.startsWith(today);
+    const ref = e.publishedAt
+      ? new Date(e.publishedAt)
+      : e.lastSeenAt
+        ? new Date(e.lastSeenAt)
+        : null;
+    let fetchedToday: boolean;
+    if (!ref) {
+      fetchedToday = false; // 既无发生时间也无分析时间，归入过去（兜底）
+    } else {
+      const ageDays = Math.floor((repDayStart - startOfDay(ref)) / DAY);
+      if (ageDays <= 0) fetchedToday = true; // 今天或未来（时区误差）
+      else if (ageDays >= 1 && ageDays <= 7) fetchedToday = false; // 过去7天
+      else continue; // 超出 7 天窗口
+    }
     if (e.summary) withSummary++;
     articles.push({
       sourceId: e.sourceId,
@@ -44,7 +65,7 @@ function main() {
     `📊 本地历史 ${Object.keys(history).length} 条 ｜ 其中含 AI 摘要 ${withSummary} 条 ｜ 渲染文章 ${articles.length} 条`,
   );
 
-  // 2) 复用项目分组逻辑（含 当天/过去30天 时间拆分、L2/L3 标签）。
+  // 2) 复用项目分组逻辑（含 当天/过去7天 时间拆分、L2/L3 标签）。
   const raw = groupRaw(articles, loadAllSources());
 
   // 3) 由预加载摘要构建 digest（按分类聚合，按 importance 排序取 top-N）。

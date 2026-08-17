@@ -1,10 +1,10 @@
 /**
- * Rolling 30-day article history + AI-summary cache.
+ * Rolling 7-day article history + AI-summary cache.
  *
  * Single source of truth on disk (`data/article-history.json`) that the
  * report entrypoints (daily.ts / dry-run.ts) use for two purposes:
  *
- *  1. **"过去30天" tab** — every article ever seen in the last 30 days is
+ *  1. **"过去7天" tab** — every article published in the last 7 days is
  *     kept here, so the renderer can show a rolling backlog alongside the
  *     freshly-fetched "当天" items.
  *  2. **AI 解读去重** — when an article's URL already has a `summary` in the
@@ -22,7 +22,7 @@ import type { Category } from "../sources/types";
 import { loadAllSources } from "../sources/registry";
 
 const HISTORY_PATH = path.resolve(process.cwd(), "data/article-history.json");
-const HISTORY_DAYS = 30;
+const HISTORY_DAYS = 7;
 const MAX_AGE_MS = HISTORY_DAYS * 86_400_000;
 
 export interface HistoryEntry {
@@ -39,7 +39,7 @@ export interface HistoryEntry {
   summary?: string;
   /** ISO — first time we saw this URL. */
   firstSeenAt: string;
-  /** ISO — most recent run that carried this URL. Used for 30-day pruning. */
+  /** ISO — most recent run that carried this URL. Used for 7-day pruning by occurrence time. */
   lastSeenAt: string;
 }
 
@@ -64,18 +64,27 @@ export function loadHistory(): HistoryStore {
   return {};
 }
 
-function isFresh(iso: string | undefined): boolean {
-  if (!iso) return false;
-  const t = Date.parse(iso);
-  if (Number.isNaN(t)) return false;
-  return Date.now() - t <= MAX_AGE_MS;
+/**
+ * Whether a history entry still belongs in the rolling window.
+ *
+ * The window is measured by the article's **occurrence time** (`publishedAt`),
+ * NOT the analysis time (`lastSeenAt`). An item is "fresh" if its publish date
+ * is within the last HISTORY_DAYS. Items with no publish date (e.g. some
+ * crawled datasets) fall back to `lastSeenAt` so they aren't silently dropped.
+ */
+function isFreshEntry(e: HistoryEntry): boolean {
+  const agePub = e.publishedAt ? Date.now() - Date.parse(e.publishedAt) : null;
+  const ageSeen = e.lastSeenAt ? Date.now() - Date.parse(e.lastSeenAt) : null;
+  if (agePub !== null && !Number.isNaN(agePub)) return agePub <= MAX_AGE_MS;
+  if (ageSeen !== null && !Number.isNaN(ageSeen)) return ageSeen <= MAX_AGE_MS;
+  return false;
 }
 
-/** Drop entries whose lastSeenAt is older than HISTORY_DAYS (in place-safe copy). */
+/** Drop entries outside the rolling window — measured by occurrence time (publishedAt). */
 export function pruneHistory(store: HistoryStore): HistoryStore {
   const out: HistoryStore = {};
   for (const [url, e] of Object.entries(store)) {
-    if (isFresh(e.lastSeenAt)) out[url] = e;
+    if (isFreshEntry(e)) out[url] = e;
   }
   return out;
 }
@@ -98,7 +107,7 @@ function entryToArticle(e: HistoryEntry, fetchedToday: boolean): ArticleInput {
  * Merge today's freshly-fetched articles with the rolling history into a
  * single list, tagging each with `fetchedToday`. Today's items win on URL
  * collision (so an updated title/excerpt/summary for a recurring URL shows
- * under "当天"). History entries outside the 30-day window are dropped.
+ * under "当天"). History entries outside the 7-day (by occurrence time) window are dropped.
  */
 export function buildRolling(
   today: ArticleInput[],
@@ -106,7 +115,7 @@ export function buildRolling(
 ): ArticleInput[] {
   const map = new Map<string, ArticleInput>();
   for (const e of Object.values(history)) {
-    if (!isFresh(e.lastSeenAt)) continue;
+    if (!isFreshEntry(e)) continue;
     map.set(e.url, entryToArticle(e, false));
   }
   for (const a of today) {

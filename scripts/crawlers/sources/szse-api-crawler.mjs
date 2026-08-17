@@ -1,103 +1,41 @@
 import { BaseCrawler } from '../base-crawler.mjs';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import { isGuangdong } from '../province-resolver.mjs';
 
-const execAsync = promisify(exec);
 const SZSE_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+
+// IPO / 发行上市 相关关键词（标题命中即视为 IPO 动态）
+const IPO_KEYWORDS = [
+  '发行', '上市', '招股', '公开发行', 'IPO',
+  '注册', '受理', '问询', '上会', '过会', '注册生效',
+  '首次公开发行', '申购', '中签', '路演', '询价',
+  '辅导备案', '辅导验收',
+];
 
 export class SZSEAPICrawler extends BaseCrawler {
   constructor() {
     super({
       name: '深交所IPO公告',
-      keywords: ['广东', '广州', '深圳', '东莞', '佛山', '珠海', '中山', '惠州',
-                 '江门', '汕头', '湛江', '肇庆', '梅州', '汕尾', '河源', '阳江',
-                 '清远', '潮州', '揭阳', '云浮'],
+      keywords: [],        // 地区过滤交给省份解析器，父类不再按关键词过滤
       timeout: 30000,
+      // 深交所接口对云端 IP 偶尔连接层抖动，给足重试（与 SSE 保持一致）
+      retries: 3,
     });
-    this.stockCodeWhitelist = [];
-    this.categoryWhitelist = ['0102'];
-    this.ipoKeywords = ['发行', '上市', '招股', '公开发行', 'IPO'];
-    this.pages = 1; // 只抓1页，减少超时风险
   }
 
   getUrls() {
-    const urls = [];
-    const pages = Math.max(1, Number(this.pages) || 1);
-    for (let p = 1; p <= pages; p++) {
-      urls.push({
-        url: `https://www.szse.cn/api/disc/announcement/detailinfo?random=${Math.random()}&pageSize=50&pageNum=${p}&plateCode=szse`,
-        method: 'GET',
-        headers: {
-          'Referer': 'https://www.szse.cn/disclosure/listed/notice/index.html',
-          'User-Agent': SZSE_UA,
-          'Accept': 'application/json, text/plain, */*',
-          'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-          'Cache-Control': 'no-cache',
-        },
-      });
-    }
-    return urls;
-  }
-
-  // 使用 curl 替代 fetch，并添加详细调试
-  async run() {
-    console.log(`[${this.name}] 开始抓取...`);
-    const items = await this.getUrls();
-    let total = 0;
-
-    for (const item of items) {
-      const targetUrl = typeof item === 'string' ? item : item.url;
-      const headers = item.headers || { 'User-Agent': this.userAgent };
-
-      try {
-        // 构建 curl 命令
-        const headerArgs = [];
-        for (const [key, value] of Object.entries(headers)) {
-          headerArgs.push(`-H "${key}: ${value}"`);
-        }
-
-        // 添加 -k 忽略 SSL，-v 输出详细信息
-        const curlCmd = `curl -s -L -k -v --max-time 30 ${headerArgs.join(' ')} "${targetUrl}"`;
-        console.log(`[${this.name}] 执行: ${curlCmd}`);
-
-        const { stdout, stderr } = await execAsync(curlCmd);
-
-        // 打印详细的 stderr（包含连接过程）
-        if (stderr) {
-          console.log(`[${this.name}] curl 详细信息:\n${stderr}`);
-        }
-
-        const trimmed = stdout.trim();
-        if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) {
-          console.warn(`[${this.name}] 返回非 JSON 数据（前200字符）: ${trimmed.slice(0, 200)}`);
-          continue;
-        }
-
-        // 解析数据
-        const articles = await this.parseArticle(trimmed, targetUrl);
-
-        // 应用关键词过滤（基类已有，但这里再过滤一次）
-        const filtered = articles.filter(a =>
-          this.keywords.some(kw =>
-            (a.title || '').includes(kw) || (a.excerpt || '').includes(kw)
-          )
-        );
-
-        this.results.push(...filtered);
-        total += filtered.length;
-        console.log(`[${this.name}] 从 ${targetUrl} 抓取 ${filtered.length} 条（共 ${articles.length} 条原始）`);
-      } catch (err) {
-        console.error(`[${this.name}] ${targetUrl} 抓取失败: ${err.message}`);
-        if (err.stderr) console.error(`[${this.name}] stderr:`, err.stderr);
-        if (err.stdout) console.error(`[${this.name}] stdout:`, err.stdout.slice(0, 500));
-      }
-
-      await new Promise(r => setTimeout(r, 1500 + Math.random() * 2000));
-    }
-
-    console.log(`[${this.name}] 完成，共 ${this.results.length} 条`);
-    return this.results;
+    // 深交所全量披露列表接口（GET 即可，返回 JSON）
+    return [{
+      url: `https://www.szse.cn/api/disc/announcement/detailinfo?random=${Math.random()}&pageSize=50&pageNum=1&plateCode=szse`,
+      method: 'GET',
+      headers: {
+        'Referer': 'https://www.szse.cn/disclosure/listed/notice/index.html',
+        'User-Agent': SZSE_UA,
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Cache-Control': 'no-cache',
+      },
+    }];
   }
 
   async parseArticle(responseText, url) {
@@ -110,6 +48,7 @@ export class SZSEAPICrawler extends BaseCrawler {
         return articles;
       }
 
+      // 展平所有公告
       const flat = [];
       for (const g of groups) {
         for (const a of (g.announList || [])) {
@@ -118,32 +57,39 @@ export class SZSEAPICrawler extends BaseCrawler {
       }
       console.log(`[${this.name}] 接口共返回 ${flat.length} 条公告`);
 
-      const seen = new Set();
+      // 计算 30 天前
+      const thirtyDaysAgo = new Date();
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+      const seen = new Set();   // 按股票代码去重（每家公司只保留第一条命中公告）
+      let provinceChecks = 0;
+
       for (const item of flat) {
         const stockName = item.secName || '';
         const stockCode = item.secCode || '';
         const titleText = item.title || '';
-        const bigCategoryId = String(item.bigCategoryId || '');
-        const bigCategoryName = item.bigCategoryName || '';
 
-        // 广东企业过滤（公司名或代码白名单）
-        const isGuangdong = this.keywords.some(kw => stockName.includes(kw))
-          || (Array.isArray(this.stockCodeWhitelist) && this.stockCodeWhitelist.includes(stockCode));
-        if (!isGuangdong) continue;
+        // 同公司多条公告只处理一次（避免同一企业刷屏）
+        if (seen.has(stockCode)) continue;
 
-        // IPO 主题过滤
-        const inWhitelist = Array.isArray(this.stockCodeWhitelist) && this.stockCodeWhitelist.includes(stockCode);
-        const catHit = (this.categoryWhitelist || []).some(c => bigCategoryId.startsWith(c));
-        const kwHit = (this.ipoKeywords || []).some(k => titleText.includes(k));
-        if (!inWhitelist && !catHit && !kwHit) continue;
+        // 1) 先按 IPO 关键词做廉价本地过滤（大幅减少后续的省份解析请求）
+        const isIpo = IPO_KEYWORDS.some(k => titleText.includes(k));
+        if (!isIpo) continue;
 
-        const key = `${stockCode}_${titleText}`;
-        if (seen.has(key)) continue;
-        seen.add(key);
+        // 2) 再按股票代码解析注册省份，判断是否为广东企业
+        provinceChecks++;
+        const guangdong = await isGuangdong(stockCode, 'SZ');
+        if (!guangdong) continue;
 
-        const pubDate = (item.publishTime || '').slice(0, 10) || new Date().toISOString().slice(0, 10);
+        // 解析日期
+        const pubDate = (item.publishTime || '').slice(0, 10)
+          || new Date().toISOString().slice(0, 10);
+        if (new Date(pubDate) < thirtyDaysAgo) continue;
+
+        seen.add(stockCode);
+
         const title = `${stockName} (${stockCode})`;
-        const excerpt = `深交所公告 | ${titleText} | ${bigCategoryName || ''} | 日期: ${pubDate}`;
+        const excerpt = `深交所公告 | ${titleText} | 日期: ${pubDate}`;
         const detailUrl = item.attachPath
           ? `https://disc.static.szse.cn${item.attachPath}`
           : '';
@@ -151,7 +97,7 @@ export class SZSEAPICrawler extends BaseCrawler {
         articles.push({ title, url: detailUrl, excerpt, publishedAt: pubDate });
       }
 
-      console.log(`[${this.name}] 匹配到 ${articles.length} 条广东企业IPO动态`);
+      console.log(`[${this.name}] IPO 命中 ${provinceChecks} 家，其中广东企业 ${articles.length} 家`);
       return articles;
     } catch (err) {
       console.error(`[${this.name}] 解析失败:`, err.message);

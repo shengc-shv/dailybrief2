@@ -2,9 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { HKEXCrawler } from './sources/hkex-ipo.mjs';  // 只导入港交所
 import { SSEAPICrawler } from './sources/sse-api.mjs';
+import { SZSEAPICrawler } from './sources/szse-api-crawler.mjs';
+import { BSEAPICrawler } from './sources/bse-api.mjs';
 import { EastMoneyIPOCrawler } from './sources/eastmoney-ipo.mjs';
 import { TonghuashunIPOCrawler } from './sources/tonghuashun-ipo.mjs';
-//import { BSEAPICrawler } from './sources/bse-api.mjs';
 import { CNInfoCrawler } from './sources/cninfo-crawler.mjs';
 const OUTPUT_PATH = path.resolve(process.cwd(), 'data/crawled-articles.json');
 
@@ -14,11 +15,11 @@ async function main() {
   const crawlers = [
     new HKEXCrawler(),
     new SSEAPICrawler(),
+    new SZSEAPICrawler(),
+    new BSEAPICrawler(),
     new EastMoneyIPOCrawler(),
     new TonghuashunIPOCrawler(),
-    //new BSEAPICrawler(),
     new CNInfoCrawler(),
-    // 后续可继续添加: new SSEIPOCrawler(), new SZSEIPOCrawler() ...
   ];
 
   const allResults = [];

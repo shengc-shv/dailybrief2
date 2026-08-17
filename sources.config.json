@@ -251,6 +251,45 @@
     "locales": ["zh", "en"],
     "note": "独立开发者视角的 AI 工具评测与 LLM 进展，更新极高频。"
   },
+  {
+    "id": "infoq-cn",
+    "name": "InfoQ 中国",
+    "type": "rss",
+    "url": "https://www.infoq.cn/feed",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "enabled": true,
+    "locales": ["zh"],
+    "lang": "zh",
+    "useCurl": true,
+    "note": "国内权威的软件开发/架构/工程实践媒体，已验证 RSS 可用（约 20 条/次）。"
+  },
+  {
+    "id": "ruanyifeng",
+    "name": "阮一峰的网络日志",
+    "type": "rss",
+    "url": "https://ruanyifeng.com/blog/atom.xml",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "enabled": true,
+    "locales": ["zh"],
+    "lang": "zh",
+    "useCurl": true,
+    "note": "业界高度认可的中文技术开发/教程博客（Atom 订阅）。"
+  },
+  {
+    "id": "sspai",
+    "name": "少数派",
+    "type": "rss",
+    "url": "https://sspai.com/feed",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "enabled": true,
+    "locales": ["zh"],
+    "lang": "zh",
+    "useCurl": true,
+    "note": "数字工具/效率/软件评测类中文社区媒体，已验证 RSS 可用。"
+  },
    {
     "id": "guardian-business",
     "name": "The Guardian Business",

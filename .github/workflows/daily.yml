@@ -136,13 +136,11 @@ jobs:
                 earliest_hour=$h_trim
               fi
             done
-            # Tolerate 1h early: if BJ 07:XX is the only trigger before BJ
-            # 08:00 gets swallowed, we'd rather fire slightly early than
-            # not at all. earliest_hour=0 edge case: don't go negative.
+            # No early tolerance: catch up only once we're inside the target
+            # hour window (e.g. BJ 08:37 fires if the BJ 08:07 trigger was
+            # swallowed or its build failed). earliest_hour=0 edge case:
+            # threshold stays 0, no negative hours.
             catchup_threshold=$earliest_hour
-            if [ "$earliest_hour" -gt 0 ]; then
-              catchup_threshold=$((earliest_hour - 1))
-            fi
             if [ "$NOW_HOUR" -ge "$catchup_threshold" ]; then
               TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
               CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
@@ -161,8 +159,23 @@ jobs:
           fi
 
           if [ "$hour_match" = "true" ] && [ "$day_match" = "true" ]; then
-            echo "✓ Match — proceeding to build"
-            echo "should-run=true" >> "$GITHUB_OUTPUT"
+            # Same-hour window has two cron triggers (:07 and :37), so both
+            # would match the same REPORT_HOUR. Build at most once per day —
+            # if today's report already exists on gh-pages, skip.
+            TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
+            CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "$CHECK_URL" || echo "000")
+            if [ "$HTTP_CODE" = "404" ]; then
+              echo "✓ Match — proceeding to build"
+              echo "should-run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "Same-hour match but today's report already exists (HTTP $HTTP_CODE) — skipping duplicate build"
+              echo "should-run=false" >> "$GITHUB_OUTPUT"
+            fi
           elif [ "$catchup_match" = "true" ]; then
             echo "✓ Catchup — proceeding to build"
             echo "should-run=true" >> "$GITHUB_OUTPUT"
@@ -176,7 +189,7 @@ jobs:
     needs: gate
     if: needs.gate.outputs.should-run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -200,7 +213,15 @@ jobs:
             git --work-tree=daily_reports checkout origin/gh-pages -- . || true
             # Drop the index/archive — build-site regenerates them
             rm -f daily_reports/index.html daily_reports/archive.html
-            echo "Restored $(ls -1d daily_reports/20*/ 2>/dev/null | wc -l) prior report dirs"
+            restored=$(ls -1d daily_reports/20*/ 2>/dev/null | wc -l | tr -d ' ')
+            echo "Restored ${restored} prior report dirs"
+            # Guard against accidentally wiping published history: publish
+            # uses keep_files:false, so if restore produced nothing the push
+            # would delete every historical report. Abort instead.
+            if [ "${restored}" -eq 0 ]; then
+              echo "::error::gh-pages restore produced no report dirs — aborting to avoid wiping published history"
+              exit 1
+            fi
           else
             echo "gh-pages doesn't exist yet — first run"
           fi

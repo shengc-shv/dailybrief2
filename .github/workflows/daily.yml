@@ -254,7 +254,7 @@ jobs:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           WEB_MODE: 'true'
-        run: npm run daily
+        run: npm dry-run
 
       - name: Build static site (index + archive)
         run: npm run build-site

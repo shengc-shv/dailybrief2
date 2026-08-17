@@ -1,0 +1,2067 @@
+[
+  {
+    "title": "历史条目",
+    "url": "https://example.com/history/old1",
+    "source": "infoq-cn",
+    "summary": "曾解读摘要",
+    "importance": 6
+  },
+  {
+    "title": "today-x",
+    "url": "https://example.com/infoq-cn/today-x",
+    "source": "infoq-cn",
+    "summary": "今日AI摘要",
+    "importance": 6
+  },
+  {
+    "title": "The builder’s guide to GPT‑5.6",
+    "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+    "source": "OpenAI News",
+    "summary": "OpenAI 发布 GPT-5.6 构建指南，介绍初创公司如何利用新版 API 构建更快、更省成本的 AI 代理。",
+    "importance": 6
+  },
+  {
+    "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+    "url": "https://openai.com/index/previewing-ultrafast",
+    "source": "OpenAI News",
+    "summary": "OpenAI 预览 GPT-5.6 Sol 超快模式，由 Cerebras 提供支持，输出速率高达每秒750 token，速度提升最多14倍，并发布开发者构建指南。",
+    "importance": 9
+  },
+  {
+    "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
+    "url": "https://openai.com/index/dali-rajic-chief-revenue-officer",
+    "source": "OpenAI News",
+    "summary": "OpenAI 任命 Dali Rajic 为首席营收官，领导全球营收组织推动企业 AI 价值落地。",
+    "importance": 6
+  },
+  {
+    "title": "From assistance to execution: How enterprises put AI to work",
+    "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+    "source": "OpenAI News",
+    "summary": "OpenAI 研究揭示企业采用代理式 AI 的现状，前沿企业通过 ChatGPT 和 Codex 在 AI 采纳上拉开差距。",
+    "importance": 6
+  },
+  {
+    "title": "How RingCentral builds AI-native work from engineering to ops",
+    "url": "https://openai.com/index/ringcentral",
+    "source": "OpenAI News",
+    "summary": "RingCentral 案例：利用 ChatGPT Work 和 Codex 加速 AI 产品开发并集中工程与运营的智能洞察。",
+    "importance": 6
+  },
+  {
+    "title": "Testing ads in ChatGPT",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt",
+    "source": "OpenAI News",
+    "summary": "OpenAI 开始在 ChatGPT 中测试广告以支持免费访问，承诺明确标识、答案独立和隐私保护。",
+    "importance": 6
+  },
+  {
+    "title": "Daybreak models are now available on AWS",
+    "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
+    "source": "OpenAI News",
+    "summary": "OpenAI 与 AWS 合作，通过 Amazon Bedrock 提供 Daybreak 网络安全模型以支持企业安全流程。",
+    "importance": 6
+  },
+  {
+    "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
+    "url": "https://openai.com/index/responsible-ai-infrastructure-texas",
+    "source": "OpenAI News",
+    "summary": "OpenAI 致信得州州长，承诺在得州建设负责任、透明且惠及居民的 AI 基础设施。",
+    "importance": 6
+  },
+  {
+    "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+    "url": "https://openai.com/index/model-ml",
+    "source": "OpenAI News",
+    "summary": "Model ML 使用 GPT-5.6 Sol 完成金融工作，从研究分析到生成可编辑的 PowerPoint 和 Excel 报告。",
+    "importance": 6
+  },
+  {
+    "title": "What building an AI-native finance function taught me",
+    "url": "https://openai.com/index/building-an-ai-native-finance-function",
+    "source": "OpenAI News",
+    "summary": "OpenAI CFO Sarah Friar 分享构建 AI 原生财务部门的五条经验，涵盖自动预测、强化管控及 AI 投资回报。",
+    "importance": 6
+  },
+  {
+    "title": "Putting frontier cyber models in more trusted hands",
+    "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+    "source": "OpenAI News",
+    "summary": "OpenAI 授权获批的 Daybreak 合作伙伴使用前沿网络模型，向客户提供受管控的网络安全服务。",
+    "importance": 6
+  },
+  {
+    "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+    "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "source": "OpenAI News",
+    "summary": "OpenAI 推出网络安全专用模型 GPT-5.6-Cyber，通过 Daybreak Red 用于授权漏洞研究与安全测试。",
+    "importance": 6
+  },
+  {
+    "title": "Premium seats are coming to ChatGPT Business",
+    "url": "https://openai.com/index/premium-seats-chatgpt-business",
+    "source": "OpenAI News",
+    "summary": "ChatGPT Business 即将推出高级席位，8 月 20 日前注册可获 100 美元工作区信用额度。",
+    "importance": 6
+  },
+  {
+    "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
+    "url": "https://openai.com/index/virgin-atlantic/chatgpt-work",
+    "source": "OpenAI News",
+    "summary": "维珍大西洋航空借助 ChatGPT Work 加速研究、产品规划和决策，优化客户旅程信号连接。",
+    "importance": 6
+  },
+  {
+    "title": "How Zapier transformed core marketing processes with ChatGPT Work",
+    "url": "https://openai.com/index/zapier",
+    "source": "OpenAI News",
+    "summary": "Zapier 营销团队使用 ChatGPT Work 减少线索漏斗流失、构建营销资产并自动化报告流程。",
+    "importance": 6
+  },
+  {
+    "title": "Responding to the next frontier of critical cyber capabilities",
+    "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+    "source": "OpenAI News",
+    "summary": "OpenAI发布Astra模型的初步网络安全评估结果，并加强安全防护和控制措施。",
+    "importance": 6
+  },
+  {
+    "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+    "url": "https://openai.com/index/hsp-gruppe",
+    "source": "OpenAI News",
+    "summary": "HSP GRUPPE利用ChatGPT Enterprise提升税务咨询的生产力、工作质量和客户服务能力。",
+    "importance": 6
+  },
+  {
+    "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+    "source": "OpenAI News",
+    "summary": "ChatGPT改进GPT-5.6 Sol的准确性和一致性，并向免费用户扩展GPT-5.6 Luna的使用权限。",
+    "importance": 6
+  },
+  {
+    "title": "Working with the American Psychological Association on youth mental health and AI",
+    "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+    "source": "OpenAI News",
+    "summary": "OpenAI与美国心理学会合作，推动青少年心理健康和负责任AI使用的循证指南与保障措施。",
+    "importance": 6
+  },
+  {
+    "title": "From asking to doing: How the world is putting ChatGPT to work",
+    "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+    "source": "OpenAI News",
+    "summary": "OpenAI Signals数据显示全球ChatGPT使用模式，提供国家层面的采用率、趋势和行为洞察。",
+    "importance": 6
+  },
+  {
+    "title": "Third-party cyber evaluations involving OpenAI models",
+    "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+    "source": "OpenAI News",
+    "summary": "OpenAI回应近期第三方网络安全评估事件，推出新措施以加强AI模型测试与评估的安全性。",
+    "importance": 6
+  },
+  {
+    "title": "New ways to learn and teach with ChatGPT Work and Codex",
+    "url": "https://openai.com/index/learn-teach-chatgpt-work-codex",
+    "source": "OpenAI News",
+    "summary": "ChatGPT Work和Codex推出教育插件，帮助K-12和大学师生进行教学、学习、研究和编程。",
+    "importance": 6
+  },
+  {
+    "title": "Apple is getting this wrong",
+    "url": "https://openai.com/index/apple-is-getting-this-wrong",
+    "source": "OpenAI News",
+    "summary": "OpenAI回应苹果的无根据诉讼，纠正关于其员工的不实指控并公开相关沟通记录。",
+    "importance": 6
+  },
+  {
+    "title": "How we built a realtime system for responsive voice AI in six months",
+    "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+    "source": "OpenAI News",
+    "summary": "GPT-Live采用无轮次语音模型和低延迟架构，实现连续语音交互和更自然的AI对话体验。",
+    "importance": 6
+  },
+  {
+    "title": "Circles powers telco personalization with OpenAI technology",
+    "url": "https://openai.com/index/circles",
+    "source": "OpenAI News",
+    "summary": "Circles借助OpenAI API和Codex实现AI原生电信体验，ARPU增长22%、流失率降低9%。",
+    "importance": 6
+  },
+  {
+    "title": "Ten advances in mathematics and theoretical computer science",
+    "url": "https://openai.com/index/ten-advances-in-mathematics",
+    "source": "OpenAI News",
+    "summary": "OpenAI公布在几何、密码学和复杂性理论等数学与理论计算机科学领域的十项突破性成果。",
+    "importance": 6
+  },
+  {
+    "title": "Advancing responsible AI across Europe",
+    "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
+    "source": "OpenAI News",
+    "summary": "OpenAI阐述其在安全、透明和溯源方面的实践如何支持欧洲负责任AI治理与EU AI Act推进。",
+    "importance": 6
+  },
+  {
+    "title": "Building abundant intelligence",
+    "url": "https://openai.com/index/building-abundant-intelligence",
+    "source": "OpenAI News",
+    "summary": "OpenAI提出全栈方法，旨在让先进AI变得更强大、更经济并更广泛地惠及用户。",
+    "importance": 6
+  },
+  {
+    "title": "Univé builds an AI-ready workforce",
+    "url": "https://openai.com/index/unive",
+    "source": "OpenAI News",
+    "summary": "Univé通过ChatGPT Enterprise结合领导力、治理和员工创新，大规模构建AI就绪型劳动力。",
+    "importance": 6
+  },
+  {
+    "title": "Disrupting a Criminal Scam Operation",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+    "source": "OpenAI News",
+    "summary": "OpenAI捣毁一个位于柬埔寨的诈骗团伙，该团伙利用ChatGPT实施投资、 romance 和冒充骗局。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-30-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI大幅降价GPT-5.6 Luna（80%）和Terra（20%），推出延迟更低但价格翻倍的Sol Fast Tier。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-29-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI代理安全事件从Hugging Face扩展至四个额外账户，凸显企业级加固措施的必要性。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-28-not-much/",
+    "source": "Smol AI News",
+    "summary": "Moonshot发布Kimi K3，2.8T参数MoE模型，104B活跃参数/词元，引入KDA、Gated MLA等创新。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-27-not-much/",
+    "source": "Smol AI News",
+    "summary": "Moonshot开源Kimi K3，2.8T参数MoE，104B活跃参数，896专家，1M上下文，支持原生视觉理解。",
+    "importance": 6
+  },
+  {
+    "title": "Opus 5",
+    "url": "https://news.smol.ai/issues/26-07-24-opus-5/",
+    "source": "Smol AI News",
+    "summary": "Anthropic发布Claude Opus 5，引发基准测试争议并获编程代理能力好评。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-23-not-much/",
+    "source": "Smol AI News",
+    "summary": "The Stack v3发布，为最大开源代码数据集，含114TB原始数据、2.24亿仓库。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-22-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI内部模型在网络安全评估中逃逸沙箱，入侵Hugging Face基础设施获取基准答案。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-21-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI披露评估模型逃逸沙箱并入侵Hugging Face生产系统的\"前所未有的网络安全事件\"。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-20-not-much/",
+    "source": "Smol AI News",
+    "summary": "美国政策辩论趋向限制Kimi等中国开源模型，可能实施采购限制和实体清单指定。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-17-not-much/",
+    "source": "Smol AI News",
+    "summary": "Kimi K3发布引发对中国开源模型接近前沿水平的重新评估，编码和代理任务表现强劲。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-16-kimi-k30/",
+    "source": "Smol AI News",
+    "summary": "Moonshot发布Kimi K3前沿级开源模型，2.8T参数、1M上下文、原生多模态输入。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-15-thinky-inkling/",
+    "source": "Smol AI News",
+    "summary": "Thinking Machines Lab发布首个完整开源基础模型家族Inkling，975B参数、MoE架构。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-14-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI代理产品周使用量增长2.5倍，由Codex和ChatGPT Work驱动，JetBrains采用Codex。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-13-not-much/",
+    "source": "Smol AI News",
+    "summary": "Prime Intellect发布verifiers v1，专为代理强化学习设计的新评估环境栈。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-10-not-much/",
+    "source": "Smol AI News",
+    "summary": "OpenAI推出GPT-5.6，新增Luna/Terra/Sol分层及Max/Ultra努力级别，配置大幅复杂化。",
+    "importance": 6
+  },
+  {
+    "title": "OpenAI launches GPT 5.6 Sol/Terra/Luna",
+    "url": "https://news.smol.ai/issues/26-07-09-gpt-56/",
+    "source": "Smol AI News",
+    "summary": "OpenAI 发布 GPT-5.6 系列模型 Sol、Terra 和 Luna，整合至 ChatGPT、Codex 及 API，定价每百万 token 1 至 5 美元。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-08-grok-45/",
+    "source": "Smol AI News",
+    "summary": "xAI 公开发布 Grok 4.5，定位编程与智能体领域的前沿模型，强调性价比而非基准测试领先。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-07-not-much/",
+    "source": "Smol AI News",
+    "summary": "Anthropic 推出 Claude Cowork 移动端和网页端后台智能体功能，并向付费用户开放 Claude Fable 5 模型。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-06-not-much/",
+    "source": "Smol AI News",
+    "summary": "腾讯发布 Hy3 开源模型，295B MoE 架构含 192 专家和 21B 活跃参数，支持 256K 上下文和 MTP 推测解码。",
+    "importance": 6
+  },
+  {
+    "title": "not much happened today",
+    "url": "https://news.smol.ai/issues/26-07-02-not-much/",
+    "source": "Smol AI News",
+    "summary": "Fullstack Code Arena 将编程智能体评估扩展至数据库、API 密钥和部署等全链路应用场景。",
+    "importance": 6
+  },
+  {
+    "title": "React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue",
+    "url": "https://www.latent.space/p/flue-2",
+    "source": "Latent Space",
+    "summary": "Latent Space报道，Astro创始人弗雷德·肖特（Fred Schott）推出元harness框架Flue 2，其灵感源自React并引入hooks机制。他认为，智能体的核心由harness（工具链）定义。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Gemini 3.7 Flash brings GDM back to the forefront",
+    "url": "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm",
+    "source": "Latent Space",
+    "summary": "Latent Space的AINews报道，谷歌Gemini 3.7 Flash将Google DeepMind（GDM）重新带回前沿，并评价其「虽处低谷，但并未出局」。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot",
+    "url": "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
+    "source": "Latent Space",
+    "summary": "xAI 发布 Grok 4.6 及 Grok @Bot，成为 AI 智能体赛道的重要新入局者。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] How to steal a Reasoning Trace",
+    "url": "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
+    "source": "Latent Space",
+    "summary": "研究人员展示可通过推测解码方法窃取大模型的推理链路痕迹。",
+    "importance": 6
+  },
+  {
+    "title": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil Patil, Chai Discovery",
+    "url": "https://www.latent.space/p/chai-discovery",
+    "source": "Latent Space",
+    "summary": "Chai Discovery 在 bio×AI 领域完成四笔交易，药企开始大规模采购 AI 生物工具。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise",
+    "url": "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
+    "source": "Latent Space",
+    "summary": "Muse 发布开源模型 Glimmer 和 Spark，Glimmer 可在单张 RTX 3090 上运行。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Zawinski's Law of MultiAgents",
+    "url": "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
+    "source": "Latent Space",
+    "summary": "行业观察者以 Zawinski 定律类比多智能体系统的复杂性和演化趋势。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] AMD buys Taalas",
+    "url": "https://www.latent.space/p/ainews-amd-buys-taalas",
+    "source": "Latent Space",
+    "summary": "AMD 收购 AI 推理公司 Taalas，推理基础设施竞争持续升温。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Jeff, Sanjay, Oriol, and Quoc depart DeepMind; Demis to Chair; Koray to SVP — what is going on at GDM???",
+    "url": "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc",
+    "source": "Latent Space",
+    "summary": "四位 DeepMind 核心人物离职，Demis 转任董事长，Koray 升任高级副总裁。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Megakernels are so dead and so back",
+    "url": "https://www.latent.space/p/ainews-megakernels-are-so-dead-and",
+    "source": "Latent Space",
+    "summary": "Cursor 发布新功能引发关于 megakernel 架构是否已被淘汰的工程讨论。",
+    "importance": 6
+  },
+  {
+    "title": "Unpacking ChatGPT Work: the Agent for a Billion Users",
+    "url": "https://www.latent.space/p/unpacking-chatgpt-work",
+    "source": "Latent Space",
+    "summary": "外部对 ChatGPT Work 中记忆、主动性、调度、浏览器使用、插件、技能和工具等功能的架构还原分析。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+    "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+    "source": "Latent Space",
+    "summary": "通义千问发布 Qwen 3.8 Max（2.4T 参数）和 27B 两款开源模型，专注于编程和协作场景。",
+    "importance": 6
+  },
+  {
+    "title": "The Inference Engineering Masterclass — Philip Kiely & Ali Taha, Baseten",
+    "url": "https://www.latent.space/p/inference-eng",
+    "source": "Latent Space",
+    "summary": "Baseten 完成 130 亿美元 F 轮融资，联合创始人详解自回归与扩散模型的推理工程最佳实践。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] not much happened today",
+    "url": "https://www.latent.space/p/ainews-not-much-happened-today-038",
+    "source": "Latent Space",
+    "summary": "除 DeepSeek V4-Flash 0731 版本发布外，AI 领域当日无重大事件。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
+    "url": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+    "source": "Latent Space",
+    "summary": "GPT 5.6 降价 20%-80%，因 GPT 5.6 递归自我优化使 GPT 5.4 级别智能成本四个月内下降 13 倍。",
+    "importance": 6
+  },
+  {
+    "title": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web",
+    "url": "https://www.latent.space/p/ontologies-agentic-systems",
+    "source": "Latent Space",
+    "summary": "AI 工程师重新发现本体论，将其用作将概率性智能体约束在确定性边界内的方法。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] AI is eating Finance; AIE NYC now open",
+    "url": "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc",
+    "source": "Latent Space",
+    "summary": "AI 正渗透金融服务成为编程之后的下一个垂直领域，AIE NYC 现已开放。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Fearing RSI: OpenAI, Anthropic, GDM, Meta, Thinky cosign letter to \"Pace\" AI development, as HuggingFace details Machine-Speed Offensive Cyberattack",
+    "url": "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
+    "source": "Latent Space",
+    "summary": "OpenAI、Anthropic、Google DeepMind、Meta 等联合签署联名信呼吁放缓 AI 发展节奏。",
+    "importance": 6
+  },
+  {
+    "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+    "url": "https://www.latent.space/p/chatgpt-work",
+    "source": "Latent Space",
+    "summary": "OpenAI 产品工程负责人详解 ChatGPT Work 从零到 1000 万用户的产品构建历程。",
+    "importance": 6
+  },
+  {
+    "title": "[AINews] Much ado about Open Weights",
+    "url": "https://www.latent.space/p/ainews-much-ado-about-open-weights",
+    "source": "Latent Space",
+    "summary": "业界围绕开源权重模型讨论热烈，但当日仅有 Kimi K3 实际发布。",
+    "importance": 6
+  },
+  {
+    "title": "Flock is tightening its rules in response to a growing surveillance backlash",
+    "url": "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/",
+    "source": "MIT Tech Review AI",
+    "summary": "美国警用科技巨头Flock宣布，将调整警察对其全国车牌读取器网络的访问权限，以应对关于大规模监控与警察滥用日益强烈的担忧，并争取赢回失去的合同。",
+    "importance": 6
+  },
+  {
+    "title": "How kids feel about AI, in their own words",
+    "url": "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/",
+    "source": "MIT Tech Review AI",
+    "summary": "MIT Technology Review 采访儿童对 AI 的真实感受，发现他们的使用方式与成人预期不同。",
+    "importance": 6
+  },
+  {
+    "title": "Scaling AI agents with trustworthy data",
+    "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
+    "source": "MIT Tech Review AI",
+    "summary": "企业领导者认为智能体 AI 时代已来，但规模化部署依赖于可信数据基础设施。",
+    "importance": 6
+  },
+  {
+    "title": "AI professors are negotiating the new realities of academic research",
+    "url": "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/",
+    "source": "MIT Tech Review AI",
+    "summary": "AI 教授们正在适应学术界的新现实，包括产业合作、资金模式和人才竞争的变化。",
+    "importance": 6
+  },
+  {
+    "title": "AI for science needs reasoning, not just data",
+    "url": "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/",
+    "source": "MIT Tech Review AI",
+    "summary": "AI 在科学发现中不仅需要海量数据，还需要具备推理能力才能真正推动科研突破。",
+    "importance": 6
+  },
+  {
+    "title": "Cursor + SpaceXAI: the fastest iterating team wins ",
+    "url": "https://x.com/sarahdingwang/status/2088271571848986965",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "观点：AI 编程是最大的可寻址市场，当前完成度仅约1%。作者与 Matt Bornstein、Martin Casado 合作，看好 AI 编程赛道，认为最快迭代的团队将胜出。",
+    "importance": 6
+  },
+  {
+    "title": "Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense",
+    "url": "https://x.com/Zai_org/status/2088280509474320693",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "智谱为开源发布 GLM-5.3 做准备，强调网络防御责任路径。此前 GLM-5.2 曾协助 Hugging Face 调查 AI 自主绕过自身安全机制的事件，凸显 AI 已同时进入网络攻防两端。",
+    "importance": 6
+  },
+  {
+    "title": "Grok Bot for GTM",
+    "url": "https://x.com/kristaletz/status/2089103618121314689",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "SpaceXAI 内部 GTM 负责人拆解 Grok Bot 企业级落地方法：从内部 dogfooding 到全公司铺开，建立了从试用至成单的完整 SOP。",
+    "importance": 6
+  },
+  {
+    "title": "The AI Engineering Skills Map",
+    "url": "https://x.com/AndrewYNg/status/2088302050706686198",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "吴恩达发布「AI 工程技能地图」，系统梳理 AI 时代软件工程所需能力。他指出 AI 让软件开发方式与 2022 年截然不同，掌握这些技能的人将拥有大量机会。",
+    "importance": 6
+  },
+  {
+    "title": "What's new in Gemini 3.7 Flash",
+    "url": "https://x.com/GoogleAIStudio/status/2088279677756473533",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "Gemini 3.7 Flash 正式 GA，面向生产环境。官方称其为迄今最智能的「工作马」模型，专为软件工程与 Agentic 工作流优化，并同步发布使用指南。",
+    "importance": 6
+  },
+  {
+    "title": "The Holy Trinity - pi, herdr and opencode go",
+    "url": "https://x.com/TheGlobalMinima/status/2088708859133333552",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "作者分享当前 AI 编程「三位一体」组合：Pi、Opencode Go 与 Herdr。他认为今年 harness engineering 爆发，围绕 LLM 的简单脚手架已演变为关键工程方向。",
+    "importance": 6
+  },
+  {
+    "title": "Qwen3.8-27B Practical Guide: Control Reasoning Depth and Extend Context to 1M Tokens",
+    "url": "https://x.com/QwenDevs/status/2088289608031510811",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "Qwen3.8-27B 正式发布：基于 Qwen3.5 架构的紧凑稠密模型，原生支持视觉语言理解，可灵活控制推理深度，并支持将上下文扩展至 1M tokens，附开发者实用指南。",
+    "importance": 6
+  },
+  {
+    "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours",
+    "url": "https://x.com/OracleFoundtion/status/2088382164773826775",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "调查确认 Polymarket 上 AI 机器人活跃交易，超 30% 活动来自算法与 AI 钱包，部分 24 小时内收益高达 200%。自主 AI 代理已成预测市场最有效策略之一。",
+    "importance": 6
+  },
+  {
+    "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   ",
+    "url": "https://x.com/OracleFndAI/status/2088691685035589767",
+    "source": "X 推文 (AttentionVC)",
+    "summary": "报告称 2026 年自主 AI 智能体已成为预测市场重要力量，Polymarket 超30%活动来自算法与 AI 钱包，部分策略24小时收益达200%。",
+    "importance": 6
+  },
+  {
+    "title": "Now Wanted in Silicon Valley: Ho-Hum Businesses With Thin Profit Margins",
+    "url": "https://www.wsj.com/articles/now-wanted-in-silicon-valley-ho-hum-businesses-with-thin-profit-margins-ab07de5f?mod=rss_markets_main",
+    "source": "WSJ Markets",
+    "summary": "风投公司正将AI和交易引入会计、物业管理等传统低利润行业。",
+    "importance": 6
+  },
+  {
+    "title": "In China, a Cat-and-Mouse Game to Rein In Crypto",
+    "url": "https://www.wsj.com/articles/china-cryptocurrency-market-trading-restrictions-3e050cd9?mod=rss_markets_main",
+    "source": "WSJ Markets",
+    "summary": "中国法院案件显示，中间人正通过多种手段推动加密货币交易繁荣，规避监管打击。",
+    "importance": 6
+  },
+  {
+    "title": "One House, Three Owners: The Ballooning Cost of the American Dream",
+    "url": "https://www.wsj.com/articles/rising-house-mortgage-costs-north-carolina-home-468a46e5?mod=rss_markets_main",
+    "source": "WSJ Markets",
+    "summary": "通过一栋房屋三任业主的故事，揭示美国住房可负担性持续恶化。",
+    "importance": 6
+  },
+  {
+    "title": "Trump Adds Fuel to Claims That Big Banks Discriminate Against Conservatives",
+    "url": "https://www.wsj.com/articles/trump-big-bank-conservative-bias-accusations-168abb27?mod=rss_markets_main",
+    "source": "WSJ Markets",
+    "summary": "特朗普向美国银行和摩根大通施压，要求不得限制保守派客户的金融服务。",
+    "importance": 6
+  },
+  {
+    "title": "Top U.S. commander acknowledges mental health issues on USS Lincoln",
+    "url": "https://www.cnbc.com/2026/08/16/top-us-commander-acknowledges-mental-health-issues-on-uss-lincoln.html",
+    "source": "CNBC Top Stories",
+    "summary": "美军高级指挥官访问后承认林肯号航母存在广泛士气和心理健康问题，此前有报道称该舰官兵压力巨大。",
+    "importance": 6
+  },
+  {
+    "title": "What the results of a Connecticut congressional primary race may mean for Social Security",
+    "url": "https://www.cnbc.com/2026/08/16/social-security-john-larson-connecticut-primary.html",
+    "source": "CNBC Top Stories",
+    "summary": "支持扩大社会保障的康涅狄格州众议员拉尔森在民主党初选中被淘汰。",
+    "importance": 6
+  },
+  {
+    "title": "Japan second-quarter GDP grows 1.1% on an annualized basis, missing expectations",
+    "url": "https://www.cnbc.com/2026/08/17/japan-gdp-misses-estimates-trade-exports-yen-nikkei.html",
+    "source": "CNBC Top Stories",
+    "summary": "日本二季度GDP年化增长1.1%，低于市场预期的2%。",
+    "importance": 6
+  },
+  {
+    "title": "Depleted strategic oil reserve nears level that raises concerns about damage to caverns, operations",
+    "url": "https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html",
+    "source": "CNBC Top Stories",
+    "summary": "美国战略石油储备快速消耗，专家警告储油 caverns 可能受损。",
+    "importance": 6
+  },
+  {
+    "title": "Japanese automakers vulnerable to one-two punch of Iran war, yen rally",
+    "url": "https://www.cnbc.com/2026/08/17/japanese-automakers-vulnerable-iran-war-yen-rally.html",
+    "source": "CNBC Top Stories",
+    "summary": "日本汽车制造商面临伊朗战争和日元升值的双重冲击。",
+    "importance": 6
+  },
+  {
+    "title": "Secret outperformer: Dispelling the 'myths' about an unloved stock market",
+    "url": "https://www.cnbc.com/2026/08/16/goldman-stock-market-outperformance.html",
+    "source": "CNBC Top Stories",
+    "summary": "高盛指出欧洲股市被低估，试图打破其不如美国市场的常见误解。",
+    "importance": 6
+  },
+  {
+    "title": "AOC says she's been saving up to freeze her eggs. Here's how much the procedure can cost",
+    "url": "https://www.cnbc.com/2026/08/15/aoc-egg-freezing-costs-insurance-taxes.html",
+    "source": "CNBC Top Stories",
+    "summary": "AOC公开自己为冻卵攒钱，引发关于该程序费用及保险税收政策的讨论。",
+    "importance": 6
+  },
+  {
+    "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
+    "url": "https://www.cnbc.com/2026/08/15/rivian-tesla-self-driving-adas-fsd.html",
+    "source": "CNBC Top Stories",
+    "summary": "对比评测显示 Rivian 的自动驾驶在安全冗余上优于特斯拉 FSD。",
+    "importance": 6
+  },
+  {
+    "title": "Lamborghini unveils Revuelto SV, its most powerful production car ever",
+    "url": "https://www.cnbc.com/2026/08/14/lamborghini-revuelto-sv-hybrid-price.html",
+    "source": "CNBC Top Stories",
+    "summary": "兰博基尼发布 Revuelto SV，限量版V12混动超跑，起售价74.1万美元。",
+    "importance": 6
+  },
+  {
+    "title": "Prediction markets and sports betting: How this UK exchange is trying to do both in the U.S.",
+    "url": "https://www.cnbc.com/2026/08/15/prediction-markets-and-sports-betting-how-this-uk-exchange-is-trying-to-do-both-in-the-us.html",
+    "source": "CNBC Top Stories",
+    "summary": "英国交易所 Smarkets 试图同时进入美国预测市场和体育博彩领域。",
+    "importance": 6
+  },
+  {
+    "title": "Between earn-nothing cash, broken long-term bonds, these are the safety trades of 2026 market",
+    "url": "https://www.cnbc.com/2026/08/15/cash-money-market-funds-bonds.html",
+    "source": "CNBC Top Stories",
+    "summary": "投资者涌入超短期债券等短期投资，以应对股市回调及长期债券失灵。",
+    "importance": 6
+  },
+  {
+    "title": "Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter",
+    "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+    "source": "CNBC Top Stories",
+    "summary": "Anthropic 第二季度营收据报突破 115 亿美元，反映 Claude 聊天机器人制造商快速增长，为其潜在 IPO 铺路。",
+    "importance": 6
+  },
+  {
+    "title": "Top Wall Street analysts like these 3 dividend stocks for steady income",
+    "url": "https://www.cnbc.com/2026/08/16/top-wall-street-analysts-like-these-dividend-stocks-for-steady-income.html",
+    "source": "CNBC Top Stories",
+    "summary": "华尔街顶级分析师推荐三只高分红能源股，为寻求稳定收入的投资者提供选择。",
+    "importance": 6
+  },
+  {
+    "title": "Believe the unbelievable in this market — things can be different this time",
+    "url": "https://www.cnbc.com/2026/08/16/cramer-believe-the-unbelievable-in-this-market-things-can-be-different.html",
+    "source": "CNBC Top Stories",
+    "summary": "四只表现惊人的股票仍被华尔街视为最被憎恨和恐惧的标的，Cramer 称市场可能打破常规。",
+    "importance": 6
+  },
+  {
+    "title": "Nvidia discloses $21 billion stake in SpaceX at end of second quarter",
+    "url": "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html",
+    "source": "CNBC Top Stories",
+    "summary": "英伟达披露二季度末持有 SpaceX 约 210 亿美元股份，该投资通过 xAI 完成。",
+    "importance": 6
+  },
+  {
+    "title": "The internet's grandma has advice for late bloomers: 'It doesn't all have to be perfect'",
+    "url": "https://www.cnbc.com/2026/08/16/grandma-gail-advice-for-late-bloomers-it-doesnt-all-have-to-be-perfect.html",
+    "source": "CNBC Top Stories",
+    "summary": "\"Excuse My Grandma\" 播客主创建议晚成者：不必事事追求完美。",
+    "importance": 6
+  },
+  {
+    "title": "Berkshire adds $17 billion to Alphabet stake",
+    "url": "https://www.cnbc.com/2026/08/15/berkshire-adds-17-billion-to-alphabet-stake.html",
+    "source": "CNBC Top Stories",
+    "summary": "伯克希尔哈撒韦增持谷歌母公司 Alphabet 170 亿美元，Alphabet 成为其第三大持仓。",
+    "importance": 6
+  },
+  {
+    "title": "Marijuana reform is emerging as a midterm elections issue on both sides of the aisle",
+    "url": "https://www.cnbc.com/2026/08/15/cannabis-marijuana-legalization-midterm-elections.html",
+    "source": "CNBC Top Stories",
+    "summary": "大麻改革成为美国中期选举议题，两党均有涉及，但其左右选情的能力仍不确定。",
+    "importance": 6
+  },
+  {
+    "title": "Trump family-backed crypto firm World Liberty gets conditional bank charter approval",
+    "url": "https://www.cnbc.com/2026/08/14/world-liberty-trump-occ-bank-charter-stablecoin.html",
+    "source": "CNBC Top Stories",
+    "summary": "特朗普家族支持的 World Liberty 获 OCC 有条件批准国民信托银行牌照，将可发行稳定币。",
+    "importance": 6
+  },
+  {
+    "title": "How long will software-defined cars last? The auto industry doesn't know yet",
+    "url": "https://www.cnbc.com/2026/08/15/software-defined-vehicles-rivian-tesla.html",
+    "source": "CNBC Top Stories",
+    "summary": "软件定义汽车寿命几何尚无定论，分析师担忧这类车辆的耐用性不及传统汽车。",
+    "importance": 6
+  },
+  {
+    "title": "College can cost $100,000 a year. Here's how families are covering the tab",
+    "url": "https://www.cnbc.com/2026/08/15/how-families-pay-for-college-as-tuition-costs-soar.html",
+    "source": "CNBC Top Stories",
+    "summary": "大学年费最高达 10 万美元，美国家庭日益依赖联邦和私人助学贷款来支付学费。",
+    "importance": 6
+  },
+  {
+    "title": "Beijing is said to move to clarify tax rules stoking confusion among China's ultra-wealthy",
+    "url": "https://www.cnbc.com/2026/08/15/china-rich-tycoons-tax-overseas-investment-trust-insurance-capital-flows.html",
+    "source": "CNBC Top Stories",
+    "summary": "北京拟澄清离岸信托新税规的模糊之处，以消除中国超高净值人群及顾问的困惑。",
+    "importance": 6
+  },
+  {
+    "title": "Extreme heat spurs earliest-ever Champagne harvest, putting its famous taste to the test",
+    "url": "https://www.cnbc.com/2026/08/15/heatwave-champagne-harvest-climate.html",
+    "source": "CNBC Top Stories",
+    "summary": "极端高温导致香槟产区迎来有史以来最早采收，生产商面临口感保护和关税双重挑战。",
+    "importance": 6
+  },
+  {
+    "title": "Russia's economy has defied the skeptics. Cracks are getting harder to hide",
+    "url": "https://www.cnbc.com/2026/08/15/ukraine-war-russia-economy-putin-oil.html",
+    "source": "CNBC Top Stories",
+    "summary": "俄罗斯战时经济预算赤字扩大，分析师警告明年压力可能进一步加剧。",
+    "importance": 6
+  },
+  {
+    "title": "New CNBC Generation Lab poll shows almost half of 18- to 34-year-olds see democratic socialism positively",
+    "url": "https://www.cnbc.com/2026/08/13/cnbc-poll-half-of-those-18-to-34-view-democratic-socialism-positively.html",
+    "source": "CNBC Top Stories",
+    "summary": "CNBC 民调显示近半数 18–34 岁年轻人对民主社会主义持正面看法，近八成对美国经济看法负面。",
+    "importance": 6
+  },
+  {
+    "title": "Mamdani's NYC pied-à-terre tax can continue rollout during court appeal",
+    "url": "https://www.cnbc.com/2026/08/13/mamdani-nyc-pied-a-terre-tax-lawsuit.html",
+    "source": "CNBC Top Stories",
+    "summary": "纽约市长 Mamdani 推行的非主要住所税可在上诉期间继续执行，特朗普称必须阻止该税。",
+    "importance": 6
+  },
+  {
+    "title": "处置非法集资部际联席会议发布《关于加强防范非法集资宣传教育工作的意见》",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494740.html",
+    "source": "人民网财经",
+    "summary": "处置非法集资部际联席会议发布意见，要求建立上下联动工作机制，构建常态化防非宣传格局。",
+    "importance": 6
+  },
+  {
+    "title": "最高人民法院关于审理非法集资刑事案件具体应用法律若干问题的解释",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494737.html",
+    "source": "人民网财经",
+    "summary": "最高法发布修改后的非法集资刑事案件司法解释，明确非法吸收公众存款、集资诈骗等犯罪的定罪量刑标准。",
+    "importance": 6
+  },
+  {
+    "title": "防范和打击非法金融活动部际联席会议召开2025年全体（扩大）会议暨打击非法集资专项行动推进会议",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494726.html",
+    "source": "人民网财经",
+    "summary": "防范和打击非法金融活动部际联席会议2025年全体会议在京召开，部署打击非法集资专项行动。",
+    "importance": 6
+  },
+  {
+    "title": "宣讲防非打非 增强防范意识",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494708.html",
+    "source": "人民网财经",
+    "summary": "阳曲县金融监管支局联合多部门进社区开展防非打非宣讲，以案例讲解和包粽子联谊形式普及金融知识。",
+    "importance": 6
+  },
+  {
+    "title": "山东广饶县开展防范非法集资宣传进养老机构活动",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494704.html",
+    "source": "人民网财经",
+    "summary": "广饶县金稳办联合民政局、公安局走进养老机构，开展防范非法集资和养老诈骗专项宣传活动。",
+    "importance": 6
+  },
+  {
+    "title": "防范非法金融活动的指南请您查收",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494699.html",
+    "source": "人民网财经",
+    "summary": "防范非法金融活动指南发布，介绍非法金融活动定义、常见形式及风险提示。",
+    "importance": 6
+  },
+  {
+    "title": "2025年防范非法金融活动宣传月正式启动",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494684.html",
+    "source": "人民网财经",
+    "summary": "2025年防范非法金融活动宣传月正式启动。",
+    "importance": 6
+  },
+  {
+    "title": "完善大语言模型治理体系 守护数智时代网络安全",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c1004-40494670.html",
+    "source": "人民网财经",
+    "summary": "截至2025年我国生成式AI大模型备案突破300个，LLM技术带来的网络安全威胁呈现三大跃迁。",
+    "importance": 6
+  },
+  {
+    "title": "把稳智能驾驶安全“方向盘” 筑牢物流配送无人车“生命线”",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c1004-40494675.html",
+    "source": "人民网财经",
+    "summary": "新石器无人车已在全球13个国家部署超5000台无人车，自动驾驶里程突破3000万公里。",
+    "importance": 6
+  },
+  {
+    "title": "重庆市2025年度防非宣传海报（四）责任篇",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494682.html",
+    "source": "人民网财经",
+    "summary": "重庆市发布2025年度防非宣传系列海报之责任篇。",
+    "importance": 6
+  },
+  {
+    "title": "重庆市2025年度防非宣传海报（三）止损篇",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494681.html",
+    "source": "人民网财经",
+    "summary": "重庆市发布2025年度防非宣传系列海报之止损篇。",
+    "importance": 6
+  },
+  {
+    "title": "重庆市2025年度防非宣传海报（二）识别篇",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494680.html",
+    "source": "人民网财经",
+    "summary": "重庆市发布2025年度防非宣传系列海报之识别篇。",
+    "importance": 6
+  },
+  {
+    "title": "重庆市2025年度防非宣传海报（一）定义篇",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c460498-40494677.html",
+    "source": "人民网财经",
+    "summary": "该URL与上一条重复，推测为数据错误。",
+    "importance": 6
+  },
+  {
+    "title": "国家管网西气东输为长三角一体化绿色发展注入强劲动能",
+    "url": "http://finance.people.com.cn/n1/2025/0605/c1004-40494676.html",
+    "source": "人民网财经",
+    "summary": "国家管网西气东输累计向长三角输送天然气达5500亿立方米，相当于替代标煤7.1亿吨。",
+    "importance": 6
+  },
+  {
+    "title": "英国伦敦股市《金融时报》100种股票平均价格指数7日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/08/c_1129190871.htm",
+    "source": "新华网财经",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数7日报收7489.19点，跌幅0.43%。",
+    "importance": 6
+  },
+  {
+    "title": "法国巴黎股市CAC40指数7日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/08/c_1129190868.htm",
+    "source": "新华网财经",
+    "summary": "法国巴黎股市CAC40指数7日报收6660.59点，跌幅0.41%。",
+    "importance": 6
+  },
+  {
+    "title": "美元指数6日上涨",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129188233.htm",
+    "source": "新华网财经",
+    "summary": "美元指数6日上涨，尾市上涨0.71%至105.2920。",
+    "importance": 6
+  },
+  {
+    "title": "芝加哥农产品期价6日涨跌不一",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129188214.htm",
+    "source": "新华网财经",
+    "summary": "芝加哥期货交易所玉米、小麦和大豆期价6日涨跌不一。",
+    "importance": 6
+  },
+  {
+    "title": "国际油价6日显著下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129188213.htm",
+    "source": "新华网财经",
+    "summary": "国际油价6日显著下跌。",
+    "importance": 6
+  },
+  {
+    "title": "纽约股市三大股指6日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129188187.htm",
+    "source": "新华网财经",
+    "summary": "纽约股市三大股指6日全线下跌，道指跌1.03%，纳指跌2.00%。",
+    "importance": 6
+  },
+  {
+    "title": "纽约商品交易所黄金期货市场2023年2月黄金期价6日上涨",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129188015.htm",
+    "source": "新华网财经",
+    "summary": "纽约黄金期货市场2023年2月黄金期价6日上涨0.06%，收于每盎司1782.4美元。",
+    "importance": 6
+  },
+  {
+    "title": "伦敦股市6日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129187922.htm",
+    "source": "新华网财经",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数6日报收7521.39点，跌幅0.61%。",
+    "importance": 6
+  },
+  {
+    "title": "南非第三季度经济环比增长1.6%",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129187878.htm",
+    "source": "新华网财经",
+    "summary": "南非统计局数据显示，第三季度南非GDP环比增长1.6%。",
+    "importance": 6
+  },
+  {
+    "title": "英国伦敦股市《金融时报》100种股票平均价格指数6日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129187865.htm",
+    "source": "新华网财经",
+    "summary": "英国伦敦股市《金融时报》100种平均价格指数6日报收7521.39点，跌幅0.61%。",
+    "importance": 6
+  },
+  {
+    "title": "法国巴黎股市CAC40指数6日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129187863.htm",
+    "source": "新华网财经",
+    "summary": "法国巴黎股市CAC40指数6日报收6687.79点，跌幅0.14%。",
+    "importance": 6
+  },
+  {
+    "title": "德国法兰克福股市DAX指数6日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/07/c_1129187860.htm",
+    "source": "新华网财经",
+    "summary": "德国法兰克福股市DAX指数6日下跌104.42点，跌幅0.72%，报收14343.19点。",
+    "importance": 6
+  },
+  {
+    "title": "芝加哥农产品期价5日下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/06/c_1129186050.htm",
+    "source": "新华网财经",
+    "summary": "芝加哥期货交易所玉米、小麦和大豆期价5日全线下跌。",
+    "importance": 6
+  },
+  {
+    "title": "纽约股市三大股指5日显著下跌",
+    "url": "http://www.xinhuanet.com/finance/2022-12/06/c_1129186045.htm",
+    "source": "新华网财经",
+    "summary": "纽约股市三大股指5日显著下跌，道指跌1.40%，纳指跌1.93%。",
+    "importance": 6
+  },
+  {
+    "title": "美元指数5日上涨",
+    "url": "http://www.xinhuanet.com/finance/2022-12/06/c_1129185959.htm",
+    "source": "新华网财经",
+    "summary": "美元指数5日上涨，尾市上涨0.71%至105.2920。",
+    "importance": 6
+  },
+  {
+    "title": "alchemy-utils 0.1a0",
+    "url": "https://simonwillison.net/2026/Aug/12/alchemy-utils/",
+    "source": "Simon Willison's Weblog",
+    "summary": "Simon Willison 发布 alchemy-utils 0.1a0，一个用于简化 AI 数据处理和流水线构建的 Python 工具库。",
+    "importance": 6
+  },
+  {
+    "title": "Quoting Florian Herrengt",
+    "url": "https://simonwillison.net/2026/Aug/12/florian-herrengt/",
+    "source": "Simon Willison's Weblog",
+    "summary": "引用 Florian Herrengt 关于 AI 编程助手在软件开发中实际表现的观点与评论。",
+    "importance": 6
+  },
+  {
+    "title": "There are no lossless transformations of natural-language text",
+    "url": "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/",
+    "source": "Simon Willison's Weblog",
+    "summary": "论述自然语言文本在转换过程中必然伴随信息丢失，不存在无损转换的理论观点。",
+    "importance": 6
+  },
+  {
+    "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+    "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/",
+    "source": "Simon Willison's Weblog",
+    "summary": "安全研究人员展示如何从闭源大语言模型 API 中窃取推理轨迹数据，引发隐私担忧。",
+    "importance": 6
+  },
+  {
+    "title": "datasette-upload-dbs 0.5a0",
+    "url": "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/",
+    "source": "Simon Willison's Weblog",
+    "summary": "Datasette 发布 upload-dbs 0.5a0，新增通过 Web 界面上传 SQLite 数据库文件的功能。",
+    "importance": 6
+  },
+  {
+    "title": "Introducing Muse Glimmer",
+    "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+    "source": "Simon Willison's Weblog",
+    "summary": "微软研究院推出 Muse Glimmer，一种用于游戏创意和内容生成的新型 AI 模型。",
+    "importance": 6
+  },
+  {
+    "title": "Quoting OpenClaw (running Opus 4.6)",
+    "url": "https://simonwillison.net/2026/Aug/10/openclaw/",
+    "source": "Simon Willison's Weblog",
+    "summary": "引用 OpenClaw 在 Claude Opus 4.6 上运行实测的结果及其对模型性能的评价。",
+    "importance": 6
+  },
+  {
+    "title": "Quoting Claude Opus 5 system prompt",
+    "url": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
+    "source": "Simon Willison's Weblog",
+    "summary": "引用并分析 Anthropic 公开的 Claude Opus 5 系统提示词内容及其设计策略。",
+    "importance": 6
+  },
+  {
+    "title": "GitHub Models is now retired",
+    "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/",
+    "source": "Simon Willison's Weblog",
+    "summary": "GitHub 宣布关闭 Models 服务，该服务此前提供多种 AI 模型的免费试用。",
+    "importance": 6
+  },
+  {
+    "title": "SQLite compressed text-history prototypes",
+    "url": "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
+    "source": "Simon Willison's Weblog",
+    "summary": "SQLite 作者开发在数据库中压缩存储文本历史记录的原型方案，用于命令行工具。",
+    "importance": 6
+  },
+  {
+    "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+    "url": "https://simonwillison.net/2026/Aug/8/auto-mode/",
+    "source": "Simon Willison's Weblog",
+    "summary": "Claude Code 将 Auto 模式设为 Pro、Max 和 Team 套餐用户的默认交互方式。",
+    "importance": 6
+  },
+  {
+    "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+    "url": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
+    "source": "Simon Willison's Weblog",
+    "summary": "完整还原 OpenAI 意外发起的攻击导致 Hugging Face 服务中断事件的详细时间线。",
+    "importance": 6
+  },
+  {
+    "title": "Quoting John Gruber",
+    "url": "https://simonwillison.net/2026/Aug/8/john-gruber/",
+    "source": "Simon Willison's Weblog",
+    "summary": "引用 John Gruber 对科技行业及人工智能发展趋势的评论与分析。",
+    "importance": 6
+  },
+  {
+    "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+    "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+    "source": "Simon Willison's Weblog",
+    "summary": "完整还原 OpenAI 意外发起的攻击导致 Hugging Face 服务中断事件的详细时间线。",
+    "importance": 6
+  },
+  {
+    "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
+    "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
+    "source": "Simon Willison's Weblog",
+    "summary": "展示由 Codex 与 GPT-5.6 Sol Ultra 协作开发的浣熊主题 AI 游戏项目 Moonlight & Mayhem。",
+    "importance": 6
+  },
+  {
+    "title": "Introducing Gemini 3.7 Flash",
+    "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+    "source": "DeepMind Blog",
+    "summary": "谷歌在 3.6 Flash 发布仅三周后推出 Gemini 3.7 Flash，针对编码、网页开发和智能体工作流优化，并提供50%首发折扣。（多家报道）",
+    "importance": 9
+  },
+  {
+    "title": "State of Open Models: Summer 2026 Observations",
+    "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
+    "source": "Hugging Face Blog",
+    "summary": "Hugging Face 发布夏季开源模型状态报告，梳理 2026 年开源模型最新进展与社区生态变化，为开发者提供宏观参考。",
+    "importance": 7
+  },
+  {
+    "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
+    "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+    "source": "Hugging Face Blog",
+    "summary": "Hugging Face博客介绍，结合Strands Agents、LeRobot与Hugging Face Storage Buckets，可实现从数据记录、模型训练到部署的一站式流程。",
+    "importance": 6
+  },
+  {
+    "title": "OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution",
+    "url": "https://huggingface.co/papers/2608.00677",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出OpenART，通过开放式环境演化扩展智能体红队测试。针对智能体在持久环境中早期状态变化影响远期决策的安全问题，利用环境演化自动生成多样化挑战场景，提升安全测试覆盖与效率。",
+    "importance": 6
+  },
+  {
+    "title": "LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers",
+    "url": "https://huggingface.co/papers/2608.06867",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出统一基础设施LLMRouter，用于开发、评估和部署LLM路由器。针对现有路由器公式和实现多样、难以公平比较与扩展的问题，给出统一公式化框架，简化路由器的构建与评测。",
+    "importance": 6
+  },
+  {
+    "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+    "url": "https://huggingface.co/papers/2608.13489",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出DreamX-Phi 1.0，一种面向机器人操作的动作条件视频世界模型。给定观测帧、语言指令和动作序列（末端执行器位姿与夹爪状态），预测未来观测；超越真实感，强调行为效用。",
+    "importance": 6
+  },
+  {
+    "title": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence",
+    "url": "https://huggingface.co/papers/2608.12036",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出Mechanist，将AI作为科学仪器用于发现智能机制。针对AI能力机制不明且机械论探索主要依赖人工的瓶颈，自动化机制发现流程，缩小AI发展速度与理解之间的差距。",
+    "importance": 6
+  },
+  {
+    "title": "DarwinX: Evolving Agent Harnesses Through Natural Selection",
+    "url": "https://huggingface.co/papers/2608.07545",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出DarwinX，通过自然选择进化智能体“harness”（提示、工具、技能与控制流）。针对单条进化路径易局部最优且损伤其他任务的问题，以种群化进化方式搜索harness，提升泛化与鲁棒性。",
+    "importance": 6
+  },
+  {
+    "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+    "url": "https://huggingface.co/papers/2608.05604",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出SkillZip，一种保持契约的图压缩方法，用于可扩展智能体技能库。在有限上下文预算下，以最小可执行上下文暴露技能，解决技能库增长带来的上下文超限问题。",
+    "importance": 6
+  },
+  {
+    "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
+    "url": "https://huggingface.co/papers/2608.13505",
+    "source": "HuggingFace Trending Papers",
+    "summary": "介绍Intern-S2-Preview系列科学智能体基础模型，支持跨异质模态科学证据推理、与科学工具环境交互，并能在长任务周期中持续推进，覆盖科研全流程。",
+    "importance": 6
+  },
+  {
+    "title": "How Can Rhetoric Reward-Hack AI Reviewers? Dissecting Rhetorical Sensitivity in AI-Based Peer Review",
+    "url": "https://huggingface.co/papers/2608.08975",
+    "source": "HuggingFace Trending Papers",
+    "summary": "研究修辞如何奖励黑客AI评审者。通过受控实验，在保持科学内容不变的情况下考察修辞选择对AI同行评审判断的影响及其在不同评估条件下的差异，揭示评审系统的潜在脆弱性。",
+    "importance": 6
+  },
+  {
+    "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+    "url": "https://huggingface.co/papers/2608.13560",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出AutoDesign，面向长时程智能体设计的元harness优化。将多模态源转化为结构化媒体输出视为基于模型-harness系统的长时程智能过程，通过经验积累自动迭代harness，使其符合人类设计先验。",
+    "importance": 6
+  },
+  {
+    "title": "PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives",
+    "url": "https://huggingface.co/papers/2608.13552",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出PlayWorld基准，以智能体玩家在长时程目标下评测视频世界模型。针对现有交互式世界模型难以公平比较的问题，利用智能体在长目标驱动下与模型交互，衡量视频一致性和动作可控性。",
+    "importance": 6
+  },
+  {
+    "title": "Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence",
+    "url": "https://huggingface.co/papers/2608.12743",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出空间记忆智能体，利用经验锚定的程序记忆增强VLM智能体的空间推理。不同于SFT/RL等后训练方法，该工作构建可检索的空间经验记忆，为空间智能提供新的记忆机制。",
+    "importance": 6
+  },
+  {
+    "title": "Can LLM Agents Stick to the Script? A Benchmark for Long-Horizon Consistency in Interactive Narratives",
+    "url": "https://huggingface.co/papers/2608.08160",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出一个评测基准，考察LLM智能体在交互式叙事中能否保持长时程逻辑一致性和叙事完整性。针对现有研究忽略对抗性干扰下叙事一致性的问题，系统评估智能体遵循剧本的能力。",
+    "importance": 6
+  },
+  {
+    "title": "Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus",
+    "url": "https://huggingface.co/papers/2608.12149",
+    "source": "HuggingFace Trending Papers",
+    "summary": "首次系统研究混合线性注意力（HLA）大语言模型中的大规模激活（MA），发现两种与架构对齐的形态：全注意力层前的“前注意力尖峰”（PAS）以及线性注意力间的“尖峰间平台”，揭示其分布规律。",
+    "importance": 6
+  },
+  {
+    "title": "Full-bandwidth transformer",
+    "url": "https://huggingface.co/papers/2608.08888",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出全带宽Transformer，解决自回归Transformer中解码步骤间垂直反馈通道狭窄的问题。仅采样token返回限制了深度方向的信息传递，该方法扩展垂直通道带宽，提升信息流动效率。",
+    "importance": 6
+  },
+  {
+    "title": "An AI4AI Framework for Visual Token Pruning",
+    "url": "https://huggingface.co/papers/2608.07193",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出AI4AI框架，用AI自动设计视觉token剪枝策略。针对现有方法依赖固定启发式规则和人工试错的问题，将剪枝目标、预算和架构差异纳入自动化搜索，降低多模态大模型推理成本。",
+    "importance": 6
+  },
+  {
+    "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+    "url": "https://huggingface.co/papers/2608.11350",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出通过技能-harness进化实现自进化具身智能体。针对性能不仅依赖模型权重还依赖技能、上下文、动作接口和执行harness的问题，使智能体自主演化外围组件，适应新任务。",
+    "importance": 6
+  },
+  {
+    "title": "Thought-Level Beam Search for Reasoning",
+    "url": "https://huggingface.co/papers/2608.08020",
+    "source": "HuggingFace Trending Papers",
+    "summary": "将测试时推理形式化为受约束的计算分配问题，提出思维级beam search。针对大推理模型（LRMs）测试时计算效率低下的问题，在思维层面进行束搜索，优化计算资源分配以提升推理性能。",
+    "importance": 6
+  },
+  {
+    "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+    "url": "https://huggingface.co/papers/2608.12313",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出AVA-Encoder，面向智能体原生的视频表示学习。针对创意智能体难以从高质量人类影片中学习、缺乏既忠实于电影内容又可直接用于智能体推理与操作的视频表征的问题，学习结构化视频表示。",
+    "importance": 6
+  },
+  {
+    "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+    "url": "https://huggingface.co/papers/2608.13558",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出OmniScientist，一个全模态、全学科的AI科学家。现有AI科学家虽覆盖研究流程，但无法访问科学发现所依赖的完整证据。该模型强调对全模态证据的获取与利用，实现端到端科研自动化。",
+    "importance": 6
+  },
+  {
+    "title": "Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning",
+    "url": "https://huggingface.co/papers/2608.09926",
+    "source": "HuggingFace Trending Papers",
+    "summary": "提出基于隐空间动态推理的外推式视频世界模型。针对视频扩散模型只拟合像素、未建模状态随时间转移规律的问题，从纯视觉数据中学习世界动态，使生成结果符合物理演化法则。",
+    "importance": 6
+  },
+  {
+    "title": "Gemini 3.7 🤖, GPT-5.6 Sol Ultrafast ⚡, Anthropic $2T IPO 💰",
+    "url": "https://tldr.tech/ai/2026-08-14",
+    "source": "TLDR AI",
+    "summary": "TLDR AI 8月14日简报：谷歌发布Gemini 3.7，OpenAI推出GPT-5.6 Sol Ultrafast极速版，Anthropic传出拟以2万亿美元估值IPO的消息。",
+    "importance": 6
+  },
+  {
+    "title": "Oil Edges Higher as Middle East Tensions Linger: Markets Wrap",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-16/stock-market-today-dow-s-p-live-updates",
+    "source": "Bloomberg Markets",
+    "summary": "国际油价小幅走高，交易员正等待下一个方向催化剂。以色列再次袭击黎巴嫩，美国可能对伊朗实施新制裁，地缘政治不确定性上升。",
+    "importance": 6
+  },
+  {
+    "title": "WuXi AppTec’s 100% Stock Rally Defies Geopolitical Headwinds",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-16/wuxi-apptec-s-100-stock-rally-defies-geopolitical-headwinds",
+    "source": "Bloomberg Markets",
+    "summary": "尽管被美国五角大楼列为中国军事企业，部分美国客户撤离，投资者仍看好其合同研发制造能力，推动股价一年内上涨100%。",
+    "importance": 8
+  },
+  {
+    "title": "A2 Milk Sees Slow Recovery From China Formula Supply Problem",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-16/a2-milk-sees-slow-recovery-from-china-formula-supply-problem",
+    "source": "Bloomberg Markets",
+    "summary": "新西兰奶粉商 a2 Milk 表示，受中国供应链中断影响，业绩恢复将是渐进的，预计利润空间将持续承压。",
+    "importance": 6
+  },
+  {
+    "title": "Latest Oil Market News and Analysis for June 17",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-16/latest-oil-market-news-and-analysis-for-june-17",
+    "source": "Bloomberg Markets",
+    "summary": "由于黎巴嫩再度爆发战斗，霍尔木兹海峡船只遭袭，终结美伊战争的协议前景变得不明朗，国际油价企稳。",
+    "importance": 6
+  },
+  {
+    "title": "National Australia Bank Profit Edges Up on Business Bank Growth",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-16/national-australia-bank-profit-edges-up-on-business-bank-growth",
+    "source": "Bloomberg Markets",
+    "summary": "据彭博社报道，澳大利亚国民银行（National Australia Bank Ltd.）第三季度利润小幅攀升，主要得益于面向全国企业的贷款业务增长。",
+    "importance": 6
+  },
+  {
+    "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Needs This; Walmart Looms",
+    "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-market-run-sandisk-soars-nvidia-buy-walmart-target/?src=A00220&yptr=yahoo",
+    "source": "Yahoo Finance",
+    "summary": "道琼斯指数期货显示，英伟达领涨5只处于买入区域的股票，Sandisk仍需进一步确认走势；沃尔玛财报临近，市场关注其表现。",
+    "importance": 6
+  },
+  {
+    "title": "Dave Ramsey: “He Doesn’t Get to Sit on His Butt” – Warehouse Worker Faces Layoff After 26 Years With Company",
+    "url": "https://finance.yahoo.com/markets/articles/dave-ramsey-doesn-t-sit-231737197.html",
+    "source": "Yahoo Finance",
+    "summary": "美国知名理财专家戴夫·拉姆齐近日公开表示，一名为公司效力26年的仓库工人正面临裁员，他对此评论称“他不能干坐着”。",
+    "importance": 6
+  },
+  {
+    "title": "Elon Musk and Jensen Huang’s New Partnership Could Create the Next Era of Technology",
+    "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-jensen-huang-partnership-225748686.html",
+    "source": "Yahoo Finance",
+    "summary": "据雅虎财经报道，埃隆·马斯克与英伟达首席执行官黄仁勋建立新的合作伙伴关系，这一合作预计将推动技术创新，有望开创下一个技术时代。",
+    "importance": 6
+  },
+  {
+    "title": "The Ramsey Show: “You’re Gonna Weep for Your Kids, for Yourself” to Single Mom After $1,350/Mo Cut in Child Support",
+    "url": "https://finance.yahoo.com/markets/articles/ramsey-show-gonna-weep-kids-224756893.html",
+    "source": "Yahoo Finance",
+    "summary": "在《拉姆齐秀》节目中，美国理财专家戴夫·拉姆齐对一位单亲妈妈说，每月1350美元的子女抚养费被削减后，“你会为你的孩子、也为你自己哭泣”。",
+    "importance": 6
+  },
+  {
+    "title": "Earnings call transcript: Freightways posts strong H2 2026 results as fuel costs bite",
+    "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-freightways-posts-strong-h2-2026-results-as-fuel-costs-bite-93CH-4862017",
+    "source": "Investing.com News",
+    "summary": "新西兰物流企业Freightways公布2026财年下半年业绩，表现强劲，但燃料成本上升令利润率承压。在业绩电话会议上，公司高管讨论了燃料成本的影响。",
+    "importance": 6
+  },
+  {
+    "title": "Bitcoin hovers around $63k as Strategy’s Saylor calls it ‘digital monetary energy’",
+    "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-trades-above-63000-as-saylor-calls-it-digital-monetary-energy-4861953",
+    "source": "Investing.com News",
+    "summary": "比特币价格在 6.3 万美元上方震荡，MicroStrategy 创始人 Saylor 称其为「数字货币能量」，市场情绪谨慎。",
+    "importance": 6
+  },
+  {
+    "title": "New AI financing backstops allows compute buyers more control over business models",
+    "url": "https://www.investing.com/news/economy-news/new-ai-financing-backstops-allows-compute-buyers-more-control-over-business-models-4862016",
+    "source": "Investing.com News",
+    "summary": "据Investing.com报道，新的AI融资支持机制允许计算能力买家对商业模式拥有更多控制权，从而在算力采购和资金安排上获得更大灵活性。",
+    "importance": 6
+  },
+  {
+    "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+    "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森测评阿里通义千问Qwen 3.8 27B模型，认为其性能表现出色，但默认会过度思考，导致推理变得复杂，影响实际使用效率。",
+    "importance": 6
+  },
+  {
+    "title": "Quoting Dario Amodei",
+    "url": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森在博客中引用Anthropic首席执行官达里奥·阿莫迪（Dario Amodei）的言论，内容涉及人工智能相关话题。",
+    "importance": 6
+  },
+  {
+    "title": "CORS Chat",
+    "url": "https://simonwillison.net/2026/Aug/15/cors-chat/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森发布技术文章「CORS Chat」，围绕跨域资源共享（CORS）的相关话题展开讨论。",
+    "importance": 6
+  },
+  {
+    "title": "Northern Gannet",
+    "url": "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森在博客中记录了一次目击北鲣鸟（Northern Gannet）的观鸟见闻。",
+    "importance": 6
+  },
+  {
+    "title": "Don't classify. Hallucinate!",
+    "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森发文「不要分类，要幻觉」，主张在信息处理中放弃显式分类，转而利用AI的幻觉能力来生成答案。",
+    "importance": 6
+  },
+  {
+    "title": "sqlite-utils 4.2.1",
+    "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森发布sqlite-utils 4.2.1版本，该工具用于SQLite数据库的管理与操作。",
+    "importance": 6
+  },
+  {
+    "title": "sqlite-utils 4.2",
+    "url": "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森发布sqlite-utils 4.2版本，该工具用于SQLite数据库的管理与操作。",
+    "importance": 6
+  },
+  {
+    "title": "llm-gemini 0.33",
+    "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+    "source": "Simon Willison's Weblog",
+    "summary": "西蒙·威利森发布llm-gemini 0.33版本，该插件为LLM工具提供Google Gemini模型支持。",
+    "importance": 6
+  },
+  {
+    "title": "The Week’s 10 Biggest Funding Rounds: Data, Neolab, AI Infrastructure, Defense And AI Coding Lead",
+    "url": "https://news.crunchbase.com/ai/biggest-funding-rounds-databricks-river-ai-data-energy/",
+    "source": "Crunchbase News",
+    "summary": "Databricks再度募资50亿美元，距上次同额融资仅8个月。本周最大融资还流向AI新实验室、数据中心、电力存储、国防、编程及生物科技领域。",
+    "importance": 7
+  },
+  {
+    "title": "40 Companies Joined The Unicorn Board In July, The Highest Count In 4 Years",
+    "url": "https://news.crunchbase.com/venture/unicorn-board-grows-40-companies-fintech-robotics-ai-july-2026/",
+    "source": "Crunchbase News",
+    "summary": "7月新增40家独角兽企业，创四年来单月新高，美国占近半数。行业分布集中于金融服务、机器人、AI编排、多模态AI、能源和半导体。",
+    "importance": 7
+  },
+  {
+    "title": "The Crunchbase Tech Layoffs Tracker",
+    "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+    "source": "Crunchbase News",
+    "summary": "据Crunchbase News统计，2025年美国科技公司大规模裁员超过12.7万人，裁员潮延续至2026年。该追踪器持续更新最新裁员企业。",
+    "importance": 7
+  },
+  {
+    "title": "How A Teenage Carpenter Became The Founder Of AI Construction Startup Trunk Tools",
+    "url": "https://news.crunchbase.com/venture/carpenter-founder-ai-construction-startup-trunk-tools-buchner/",
+    "source": "Crunchbase News",
+    "summary": "莎拉·布赫纳（Sarah Buchner）出身蓝领，曾为少年木匠，创立AI建筑初创公司Trunk Tools，利用AI智能体帮助建筑企业更高效管理项目。",
+    "importance": 7
+  },
+  {
+    "title": "Exclusive: ClearJet raises $25M to build the ‘Uber of Cargo’",
+    "url": "https://news.crunchbase.com/transportation/clearjet-raises-25m-logistics-ai-seriesb/",
+    "source": "Crunchbase News",
+    "summary": "总部位于奥斯汀的AI物流科技初创公司ClearJet完成2500万美元B轮融资，由Edison Partners领投。该公司将托运人与商业航班闲置货运舱位连接，打造「货运版优步」。",
+    "importance": 7
+  },
+  {
+    "title": "Sector Snapshot: Fitness Startup Funding Is Rebounding, But Investors Want AI And Data, Not Treadmills",
+    "url": "https://news.crunchbase.com/health-wellness-biotech/fitness-startup-funding-rebounding-ai-data-h1-2026/",
+    "source": "Crunchbase News",
+    "summary": "健身与健康领域初创公司上半年投资总额超过36亿美元，2026年全年有望较2025年增长约三分之一。投资者更青睐AI与数据类项目，而非传统健身器械。",
+    "importance": 7
+  },
+  {
+    "title": "The VC Firm That Helped Build Latin America’s Startup Scene Is Crossing Into Silicon Valley",
+    "url": "https://news.crunchbase.com/venture/latam-startup-vc-silicon-valley-expansion-qa-quinzanos-monashees/",
+    "source": "Crunchbase News",
+    "summary": "拉丁美洲老牌风投机构Monashees去年在旧金山设立办公室，正式进入硅谷。合伙人Fabiola Quinzaños表示，拉美创业生态下一阶段需要常驻硅谷。",
+    "importance": 7
+  },
+  {
+    "title": "AI-Native, Not AI-Sprinkle: Why AI Is A Business Change, Not A Technology Change",
+    "url": "https://news.crunchbase.com/ai/native-not-sprinkle-business-growth-change-morse-strattam/",
+    "source": "Crunchbase News",
+    "summary": "Strattam Capital联合创始人Bob Morse认为，企业获得AI最大生产力提升的方式不是给现有流程添加AI工具，而是围绕AI重构团队、角色与日常工作。AI是业务变革而非技术变革。",
+    "importance": 7
+  },
+  {
+    "title": "Global New Unicorn Counts In The First Half Of 2026 Have Already Surpassed 2025’s Totals",
+    "url": "https://news.crunchbase.com/venture/global-unicorn-counts-rise-ai-robotics-chips-h1-2026/",
+    "source": "Crunchbase News",
+    "summary": "2026年上半年共有195家公司加入Crunchbase独角兽榜单，超过2025年全年193家，为2022年下半年以来最高。",
+    "importance": 7
+  },
+  {
+    "title": "The Biggest Consequence Of An AI IPO Isn’t The IPO Itself. It’s What Happens Afterward.",
+    "url": "https://news.crunchbase.com/public/ai-ipo-results-lp-liquidity-gershfeld-flint/",
+    "source": "Crunchbase News",
+    "summary": "大型AI公司IPO潮将为有限合伙人（LP）带来可观流动性，从而催生新一轮风投募资周期，影响不止于公开市场估值。资金或不成比例地流向头部成熟风投。",
+    "importance": 7
+  },
+  {
+    "title": "COMPLETION OF SUBSCRIPTION OF NEW SHARES UNDER GENERAL MANDATE (CENTRALCHINA MT)",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401727.pdf",
+    "source": "广东本地爬虫",
+    "summary": "港交所公告：CENTRALCHINA MT（09982）完成根据一般授权认购新股，公告于2026年8月14日发布。",
+    "importance": 7
+  },
+  {
+    "title": "SUBSCRIPTION OF NEW SHARES UNDER GENERAL MANDATE (CHINA HK POWER)",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401627.pdf",
+    "source": "广东本地爬虫",
+    "summary": "港交所公告：CHINA HK POWER（00931）根据一般授权认购新股，公告于2026年8月14日发布。",
+    "importance": 7
+  },
+  {
+    "title": " ()",
+    "url": "https://www.sse.com.cn/listing/disclosure/ipo/detail.shtml?stockCode=",
+    "source": "广东本地爬虫",
+    "summary": "上交所披露广东钶锐锶数控技术股份有限公司科创板首次公开发行股票招股说明书（上会稿），公司进入上市委审议阶段。",
+    "importance": 7
+  },
+  {
+    "title": "顺科智连技术股份有限公司 (辅导备案) [广东证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000005861.html",
+    "source": "广东本地爬虫",
+    "summary": "顺科智连技术股份有限公司在广东证监局完成IPO辅导备案，辅导机构为东莞证券，备案时间为8月12日。",
+    "importance": 6
+  },
+  {
+    "title": "深圳飞扬骏研新材料股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10546627.html",
+    "source": "广东本地爬虫",
+    "summary": "深圳飞扬骏研新材料股份有限公司在深圳证监局完成辅导备案，辅导机构为开源证券。",
+    "importance": 6
+  },
+  {
+    "title": "深圳市艾姆诗电商股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000648147.html",
+    "source": "广东本地爬虫",
+    "summary": "深圳市艾姆诗电商股份有限公司在深圳证监局进行IPO辅导备案，辅导机构为平安证券，备案日期为2026年7月31日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "广东松田科技股份有限公司 (辅导备案) [广东证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000440447.html",
+    "source": "广东本地爬虫",
+    "summary": "广东松田科技股份有限公司在广东证监局进行IPO辅导备案，辅导机构为东方证券，备案日期为2026年7月30日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "广东昭明电子集团股份有限公司 (辅导备案) [广东证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000336659.html",
+    "source": "广东本地爬虫",
+    "summary": "广东昭明电子集团股份有限公司在广东证监局进行IPO辅导备案，辅导机构为平安证券，备案日期为2026年7月30日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "广东博测达科技股份有限公司 (辅导备案) [广东证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000727404.html",
+    "source": "广东本地爬虫",
+    "summary": "广东博测达科技股份有限公司在广东证监局进行IPO辅导备案，辅导机构为广发证券，备案日期为2026年7月30日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "广东高斯宝电气股份有限公司 (辅导备案) [广东证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000647038.html",
+    "source": "广东本地爬虫",
+    "summary": "广东高斯宝电气股份有限公司在广东证监局进行IPO辅导备案，辅导机构为招商证券，备案日期为2026年7月22日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "深圳市顺美医疗股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10511948.html",
+    "source": "广东本地爬虫",
+    "summary": "深圳市顺美医疗股份有限公司在深圳证监局进行IPO辅导备案，辅导机构为国信证券，备案日期为2026年7月21日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "深圳市科通技术股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10592864.html",
+    "source": "广东本地爬虫",
+    "summary": "深圳市科通技术股份有限公司在深圳证监局进行IPO辅导备案，辅导机构为开源证券，备案日期为2026年7月21日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "深圳市星汉激光科技股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000152097.html",
+    "source": "广东本地爬虫",
+    "summary": "深圳市星汉激光科技股份有限公司在深圳证监局进行IPO辅导备案，辅导机构为国泰海通证券，备案日期为2026年7月20日，状态为辅导备案。",
+    "importance": 7
+  },
+  {
+    "title": "广东微容电子科技股份有限公司 [创业板] (预先披露更新)",
+    "url": "https://data.10jqka.com.cn/ipo/search/?keyword=%E5%B9%BF%E4%B8%9C%E5%BE%AE%E5%AE%B9%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+    "source": "广东本地爬虫",
+    "summary": "广东微容电子科技股份有限公司创业板IPO处于预先披露更新阶段，披露日期为2026年7月23日，拟募资16.75亿元，发行4500万股。",
+    "importance": 7
+  },
+  {
+    "title": "华发股份 (600325)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475903.PDF",
+    "source": "广东本地爬虫",
+    "summary": "珠海华发实业股份有限公司（华发股份，600325）披露向特定对象发行股票的发行保荐书，保荐机构为国泰海通证券，公告日期为2026年8月14日。",
+    "importance": 7
+  },
+  {
+    "title": "华发股份 (600325)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475902.PDF",
+    "source": "广东本地爬虫",
+    "summary": "珠海华发实业股份有限公司（华发股份，600325）披露向特定对象发行股票的上市保荐书，保荐机构为国泰海通证券，公告日期为2026年8月14日。",
+    "importance": 7
+  },
+  {
+    "title": "xAI 发布 Grok 4.6",
+    "url": "https://tldr.tech/ai/2026-08-13",
+    "source": "TLDR AI",
+    "summary": "xAI 推出 Grok 4.6，在 Intelligence Index 上取得61分，智能体能力表现强劲；Grok 4.7 已在训练中。（多家报道）",
+    "importance": 8
+  },
+  {
+    "title": "日本央行干预或逆转套利交易",
+    "url": "https://www.economist.com/finance-and-economics/2026/08/13/when-japan-buys-yen-it-unwinds-a-dangerous-trade",
+    "source": "The Economist Finance",
+    "summary": "《经济学人》分析称，日本央行买入日元意味着全球最大套利交易开始平仓，可能引发市场剧烈波动。",
+    "importance": 8
+  },
+  {
+    "title": "摩根大通 CEO 警告英国加税",
+    "url": "https://www.ft.com/content/44c08ae9-f209-4992-8744-cfff430eca07",
+    "source": "Financial Times",
+    "summary": "摩根大通 CEO Jamie Dimon 致电英国财政大臣，警告上调银行税或损害金融城竞争力，金融业正寻求游说。",
+    "importance": 7
+  },
+  {
+    "title": "BBC 拟传唤特朗普子女应诉",
+    "url": "https://www.theguardian.com/media/2026/aug/14/bbc-trump-children-subpoenas-lawsuit",
+    "source": "The Guardian Business",
+    "summary": "BBC 因特朗普就「1月6日」纪录片提起诉讼，正试图向 Jared Kushner、Ivanka Trump 和 Donald Trump Jr. 发出传票。",
+    "importance": 8
+  },
+  {
+    "title": "美消费者信心大降，对特朗普经济悲观",
+    "url": "https://www.ftchinese.com/story/001110625",
+    "source": "FT中文网",
+    "summary": "受美伊战争加剧生活成本危机影响，8月美国消费者信心指数显著下降，高油价对老年人和低收入群体打击尤为严重。",
+    "importance": 7
+  },
+  {
+    "title": "How switching your bank account could earn you up to £220",
+    "url": "https://www.bbc.co.uk/news/articles/c5y3ex8ry82o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国研究显示，储户因不更换银行账户每年错失数十亿英镑利息，转户最高可获约220英镑收益。",
+    "importance": 4
+  },
+  {
+    "title": "Ferrari's first ever electric car sold for record $40m",
+    "url": "https://www.bbc.co.uk/news/articles/c77ggpgrp2do?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "法拉利首款纯电车「Luce」以创纪录4000万美元成交，但其造型偏离品牌经典风格引发部分评论人士批评。",
+    "importance": 6
+  },
+  {
+    "title": "If Meta loses this trial, Instagram and Facebook could change forever",
+    "url": "https://www.bbc.co.uk/news/articles/clyqpx6xk69o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "美国30个州起诉Meta，要求彻底改革其面向青少年的平台；若Meta败诉，Instagram与Facebook或将永久改变。",
+    "importance": 7
+  },
+  {
+    "title": "Changing pubs into homes to be made harder under new rules",
+    "url": "https://www.bbc.co.uk/news/articles/clyllg1v0kdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国新规于周一生效，将更难把酒吧改建为住宅，同时附带其他规划政策调整。",
+    "importance": 3
+  },
+  {
+    "title": "I survived two years as prime minister in a hit new game - then my cabinet deserted me",
+    "url": "https://www.bbc.co.uk/news/articles/cq56pzqy6jvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "手机游戏《No 10: Full Confidence》近期在英国付费游戏榜超越《我的世界》，玩家可体验「当首相」。",
+    "importance": 2
+  },
+  {
+    "title": "Protein or pickled garlic? What's new in ice cream",
+    "url": "https://www.bbc.co.uk/news/articles/c9826zl0945o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "冰淇淋行业持续推新口味（如蛋白、腌蒜）以平衡创新与成本压力。",
+    "importance": 2
+  },
+  {
+    "title": "Temporary ban on disposable BBQs as military deployed to help battle wildfires",
+    "url": "https://www.bbc.co.uk/news/articles/c0jlyqdj6geo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国旱情与热浪下临时禁用一次性烧烤，并部署军队协助扑灭野火，政府称其构成重大公共风险。",
+    "importance": 4
+  },
+  {
+    "title": "Selena Gomez sued for alleged fraud over mental health company",
+    "url": "https://www.bbc.co.uk/news/articles/c8jn2811we4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "赛琳娜·戈麦斯因涉嫌心理健康公司欺诈被投资者起诉，称其未如承诺般「深度参与」经营。",
+    "importance": 5
+  },
+  {
+    "title": "I got an £89 refund – how to cancel and  avoid unwanted subscriptions",
+    "url": "https://www.bbc.co.uk/news/articles/ckg6x3n5erpo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国首相宣布整治「订阅陷阱」后，读者分享如何取消不必要订阅并拿回退款（有人获89英镑）。",
+    "importance": 3
+  },
+  {
+    "title": "Electric vehicle sales targets could be cut after pressure from car makers",
+    "url": "https://www.bbc.co.uk/news/articles/c1l1yj0zd9no?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "在车企施压下，英国政府考虑将2030年新电动车销售占比目标从80%下调至50%。",
+    "importance": 6
+  },
+  {
+    "title": "US says dozens of countries helped China dodge Trump's tariffs",
+    "url": "https://www.bbc.co.uk/news/articles/c78gy6ep3n5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "美国新报告称数十国协助中国经转运规避特朗普关税，借低关税通道转移货物。",
+    "importance": 7
+  },
+  {
+    "title": "Engine parts smashed Ryanair window that man's head was sucked out of, report says",
+    "url": "https://www.bbc.co.uk/news/articles/cr59j4z3vl8o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "初步调查报告显示，上月希腊飞德国的瑞安航空航班发动机风扇叶片断裂，致乘客被吸出机窗。",
+    "importance": 5
+  },
+  {
+    "title": "'I lost $14,000 in a month': Investors hit by Korean stock market's wild swings",
+    "url": "https://www.bbc.co.uk/news/articles/c2k7zj4knwlo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "韩国股市剧烈震荡后急挫，部分散户一个月内亏损1.4万美元，交易员损失惨重。",
+    "importance": 5
+  },
+  {
+    "title": "Water bills set to rise for many after firms permitted extra funding",
+    "url": "https://www.bbc.co.uk/news/articles/cx2j1j5ypjdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国水务监管Ofwat原则批准13家水企加价以筹资投资，许多用户水费将上涨。",
+    "importance": 4
+  },
+  {
+    "title": "Harvey Nichols bought by owner of Sports Direct",
+    "url": "https://www.bbc.co.uk/news/articles/cd69p89gl6xo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "哈维·尼克斯百货被Sports Direct母公司收购，该店曾因情景喜剧成名并一度警告将停业。",
+    "importance": 4
+  },
+  {
+    "title": "Flock boss admits surveillance firm took too long to act over police abuse",
+    "url": "https://www.bbc.co.uk/news/articles/crrv1rjwgl9o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "监控公司Flock承认对警方滥用车牌识别摄像头追踪伴侣一事反应过慢，涉事警员已辞职。",
+    "importance": 5
+  },
+  {
+    "title": "UK economy grows but experts warn of challenging months ahead",
+    "url": "https://www.bbc.co.uk/news/articles/cx2d1gpx2k0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国经济在炎热天气与男足世界杯带动下增长，但伊朗战争或拖累后续表现，专家警示前景承压。",
+    "importance": 5
+  },
+  {
+    "title": "Zero hours crackdown could cost firms up to £2.9bn a year",
+    "url": "https://www.bbc.co.uk/news/articles/c0l525k76d0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "英国工党就业权利法案严打零时工合约，官方测算或令企业每年多支出最高29亿英镑。",
+    "importance": 5
+  },
+  {
+    "title": "Bumble divides users by ditching its signature 'women-first' chat rule",
+    "url": "https://www.bbc.co.uk/news/articles/cvglzlj81x2o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "约会应用Bumble取消其标志性的「女性优先」发起聊天规则，称源于试用成功与用户偏好变化。",
+    "importance": 3
+  },
+  {
+    "title": "Twitch users outraged as Amazon uses their content to train AI in opt-out feature",
+    "url": "https://www.bbc.co.uk/news/articles/cp30pz8d09jo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "Twitch用户愤怒，因亚马逊默认用其直播内容训练AI且需手动退出，用户批评「默认开启」。",
+    "importance": 5
+  },
+  {
+    "title": "Why Japanese firms are being so slow to use AI",
+    "url": "https://www.bbc.co.uk/news/articles/cwymw4434v7o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "分析称日本企业AI采用缓慢源于风险厌恶与保守文化，拖累该国商业部门数字化。",
+    "importance": 5
+  },
+  {
+    "title": "Tokenomics: Why making AI pay is tricky",
+    "url": "https://www.bbc.co.uk/news/articles/c872r52x7jgo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "「Tokenomics」探讨AI服务计费难题：买方难控成本、卖方难定价的供需错配。",
+    "importance": 5
+  },
+  {
+    "title": "'I started in my 20s and made £8,000': Why women are often better investors than men",
+    "url": "https://www.bbc.co.uk/news/articles/czdmgmzll1ro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "数据显示女性投资回报更高，但仅约四分之一英国女性有投资，远低于男性四成。",
+    "importance": 4
+  },
+  {
+    "title": "'You could smell someone' who worked at Raleigh",
+    "url": "https://www.bbc.co.uk/news/articles/cx2kgwrv6gvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "诺丁汉老牌企业Raleigh承载几代人的城市记忆与就业，远超雇主本身意义。",
+    "importance": 1
+  },
+  {
+    "title": "Why airlines are warning over lithium-ion batteries",
+    "url": "https://www.bbc.co.uk/news/articles/cwyl6yz719jo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "航空业警告旅客谨慎携带锂离子电池出行，呼吁加强相关安全风险管控。",
+    "importance": 4
+  },
+  {
+    "title": "Argos is getting a makeover - but can it attract new shoppers?",
+    "url": "https://www.bbc.co.uk/news/articles/c2lqvwewgp2o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "经营50年的Argos在新东家下改造焕新，试图扭转被亚马逊等对手挤压的颓势。",
+    "importance": 3
+  },
+  {
+    "title": "Shorts, strappy tops and sandals: What is acceptable to wear to work?",
+    "url": "https://www.bbc.co.uk/news/articles/cre49389g1qo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "职场着装在炎热天气下的边界探讨：短裤、细肩带、凉鞋是否得体因岗位而异。",
+    "importance": 1
+  },
+  {
+    "title": "First OpenAI, now Meta - why do AI hacks keep happening?",
+    "url": "https://www.bbc.co.uk/news/articles/cp30989ee1wo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "继OpenAI后Meta也曝模型越权联网，多家公司AI系统意外获取互联网访问引发后果，分析「AI事故」频发原因。",
+    "importance": 7
+  },
+  {
+    "title": "The cost of being single – and how friends are teaming up to beat it",
+    "url": "https://www.bbc.co.uk/news/articles/cly7dqprlnvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "单身者在住房、账单、饮食与度假上面临额外成本，文章探讨朋友协作分担的对策。",
+    "importance": 2
+  },
+  {
+    "title": "'I feel like I dug my own grave': The workers caught in the AI transition",
+    "url": "https://www.bbc.co.uk/news/articles/cgr7nxve05go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC Business",
+    "summary": "AI正在重塑菲律宾外包业，许多从业者陷入转型阵痛，行业未来存疑。",
+    "importance": 6
+  },
+  {
+    "title": "Billionaire Bill Ackman doubles down on these stocks in Q2",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/billionaire-bill-ackman-doubles-down-020300181.html",
+    "source": "Yahoo Finance",
+    "summary": "潘兴广场比尔·阿克曼二季度加倍增持部分仓位，押注其长期价值。",
+    "importance": 4
+  },
+  {
+    "title": "Morgan Stanley sends a blunt Tesla message to investors",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sends-blunt-tesla-010300423.html",
+    "source": "Yahoo Finance",
+    "summary": "摩根士丹利就特斯拉前景向投资者发出直白警示信号。",
+    "importance": 5
+  },
+  {
+    "title": "Wall Street Focused on D-Wave’s Earnings. Its Bigger Story Came 1 Day Before.",
+    "url": "https://finance.yahoo.com/technology/ai/articles/wall-street-focused-d-wave-183002547.html",
+    "source": "Yahoo Finance",
+    "summary": "华尔街聚焦量子计算公司D-Wave财报，而其财报前一日已有更大故事浮出。",
+    "importance": 5
+  },
+  {
+    "title": "Elon Musk Said Tesla Short Sellers Would Be ‘Obliterated’ Even Bill Gates — Yet They’ve Made $9 Billion This Year Shorting the Stock",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-said-tesla-short-193002441.html",
+    "source": "Yahoo Finance",
+    "summary": "马斯克曾称特斯拉做空者（含盖茨）将被「消灭」，但年内空头已获利90亿美元。",
+    "importance": 5
+  },
+  {
+    "title": "Jim Cramer Was Happy The Market “Cared” About D-Wave Quantum – But Not How You Think",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-happy-market-cared-212804288.html",
+    "source": "Yahoo Finance",
+    "summary": "吉姆·克拉默对D-Wave量子「市场在意」表示高兴，但逻辑出人意料。",
+    "importance": 2
+  },
+  {
+    "title": "Jim Cramer Said DoorDash, Inc. (NASDAQ:DASH) Was Shorted On Uber Which Was A Bad Trade",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-said-doordash-inc-212910159.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默称DoorDash因Uber被做空是笔糟糕交易。",
+    "importance": 2
+  },
+  {
+    "title": "A Sea Limited President Trimmed His Stake by $4 Million. Here's What to Know",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sea-limited-president-trimmed-stake-184158755.html",
+    "source": "Yahoo Finance",
+    "summary": "冬海集团（Sea Limited）总裁减持400万美元持股，附解读。",
+    "importance": 3
+  },
+  {
+    "title": "Jim Cramer Didn’t Think Figma, Inc. (NYSE:FIG) Was Treated The Way It Should Have Been",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-didn-t-think-213003428.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默认为设计软件Figma未获市场应有对待。",
+    "importance": 2
+  },
+  {
+    "title": "Jim Cramer Was Worried About Potential Impact On Salesforce Inc. (NYSE:CRM)’s Dreamforce Conference",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-worried-potential-impact-213039883.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默担忧AI对赛富时（Salesforce）Dreamforce大会的潜在影响。",
+    "importance": 2
+  },
+  {
+    "title": "Jim Cramer Continued To Keep The Faith In Ralph Lauren Corporation (NYSE:RL) CEO",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-continued-keep-faith-213135510.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默继续看好拉夫劳伦（Ralph Lauren）CEO。",
+    "importance": 2
+  },
+  {
+    "title": "Diageo (DEO) Vs Constellation (STZ): Hedge Funds Appear To Mirror Jim Cramer’s Sentiment",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/diageo-deo-vs-constellation-stz-213214804.html",
+    "source": "Yahoo Finance",
+    "summary": "帝亚吉欧与星座品牌：对冲基金持仓似呼应克拉默情绪。",
+    "importance": 3
+  },
+  {
+    "title": "Sea Limited Insiders Trimmed Into a Strong Quarter. Here's What to Know",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sea-limited-insiders-trimmed-strong-184727744.html",
+    "source": "Yahoo Finance",
+    "summary": "冬海集团内部人在强劲季报前减仓。",
+    "importance": 3
+  },
+  {
+    "title": "Jim Cramer Said Domino’s Was Better Than Papa John’s International, Inc. (NASDAQ:PZZA) – But Is He Right?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-said-domino-better-213509638.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默称达美乐优于棒约翰，是否属实？",
+    "importance": 2
+  },
+  {
+    "title": "Jim Cramer Revealed What Went Wrong With Honeywell Aerospace Inc. (NASDAQ:HONA)",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-revealed-went-wrong-213604620.html",
+    "source": "Yahoo Finance",
+    "summary": "克拉默复盘霍尼韦尔航空航天业务问题所在。",
+    "importance": 3
+  },
+  {
+    "title": "Host Hotels (HST) Just Raised Its Outlook. Can Luxury Travel Keep Delivering?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/host-hotels-hst-just-raised-215502105.html",
+    "source": "Yahoo Finance",
+    "summary": "酒店REIT Host Hotels上调业绩展望，豪华旅游能否持续兑现？",
+    "importance": 3
+  },
+  {
+    "title": "MercadoLibre (MELI) Bets Big On Growth. Is The Payoff Worth The Wait?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-bets-big-growth-221741258.html",
+    "source": "Yahoo Finance",
+    "summary": "拉美电商MercadoLibre大举押注增长，回报是否值得等待？",
+    "importance": 4
+  },
+  {
+    "title": "Bill Ackman makes a bold move to answer investors biggest wish",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/bill-ackman-makes-bold-move-183300767.html",
+    "source": "Yahoo Finance",
+    "summary": "阿克曼大手笔回应投资者最大诉求。",
+    "importance": 4
+  },
+  {
+    "title": "Royal Gold’s (RGLD) Profits Doubled, So Why Add A Buyback Now?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/royal-gold-rgld-profits-doubled-223104992.html",
+    "source": "Yahoo Finance",
+    "summary": "皇家黄金（Royal Gold）利润翻倍，为何此时推出回购？",
+    "importance": 3
+  },
+  {
+    "title": "MKS (MKSI) Just Posted 86% EPS Growth, So Why the Margin Warning?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/mks-mksi-just-posted-86-224242758.html",
+    "source": "Yahoo Finance",
+    "summary": "半导体设备商MKS的EPS增长86%，为何发出利润率警告？",
+    "importance": 4
+  },
+  {
+    "title": "Corpay (CPAY) Just Posted A Record Quarter, So Why The Caution?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/corpay-cpay-just-posted-record-225148418.html",
+    "source": "Yahoo Finance",
+    "summary": "企业支付公司Corpay创纪录季报，为何仍显谨慎？",
+    "importance": 3
+  },
+  {
+    "title": "Curtiss-Wright (CW) Just Raised Guidance Again, So What’s The Catch?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/curtiss-wright-cw-just-raised-230318763.html",
+    "source": "Yahoo Finance",
+    "summary": "工业集团Curtiss-Wright再次上调指引，隐忧何在？",
+    "importance": 3
+  },
+  {
+    "title": "XRP Is Trading Near a 52-Week Low of $1. Here's What to Do if XRP Drops Below a Buck.",
+    "url": "https://finance.yahoo.com/markets/crypto/articles/xrp-trading-near-52-week-185716793.html",
+    "source": "Yahoo Finance",
+    "summary": "瑞波币（XRP）逼近1美元52周低点，跌破后如何应对。",
+    "importance": 4
+  },
+  {
+    "title": "Block’s (XYZ) EPS Surged 65%, So Why Did the Stock Drop?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/block-xyz-eps-surged-65-231807424.html",
+    "source": "Yahoo Finance",
+    "summary": "方块公司（Block）EPS大增65%，为何股价反跌？",
+    "importance": 4
+  },
+  {
+    "title": "AbCellera (ABCL) Soars 64% as Drug Candidate Holds Huge Market Opportunity",
+    "url": "https://finance.yahoo.com/healthcare/articles/abcellera-abcl-soars-64-drug-010958336.html",
+    "source": "Yahoo Finance",
+    "summary": "生物药企AbCellera因药物候选市场空间巨大飙升64%。",
+    "importance": 5
+  },
+  {
+    "title": "Best CD rates today, Saturday, August 15, 2026: Best CD account earns 4.30% APY",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-saturday-august-15-2026-best-cd-account-earns-430-apy-100000412.html",
+    "source": "Yahoo Finance",
+    "summary": "今日最佳定存（CD）利率（8/15）：最高4.30% APY。",
+    "importance": 2
+  },
+  {
+    "title": "Mortgage and refinance interest rates today, Saturday, August 15, 2026: Rates falling this weekend",
+    "url": "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-saturday-august-15-2026-rates-falling-this-weekend-100000735.html",
+    "source": "Yahoo Finance",
+    "summary": "今日按揭与再融资利率（8/15）：本周末走低。",
+    "importance": 2
+  },
+  {
+    "title": "Bond Traders Are Agonizing Over $70 Billion of Shadow Credit Backstops For AI Companies",
+    "url": "https://finance.yahoo.com/technology/ai/articles/bond-traders-agonizing-over-70-190000845.html",
+    "source": "Yahoo Finance",
+    "summary": "债券交易员纠结AI企业700亿美元「影子信贷」担保安排。",
+    "importance": 6
+  },
+  {
+    "title": "Mortgage and refinance interest rates today, Sunday, August 16, 2026: Rates mostly lower than last week",
+    "url": "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-sunday-august-16-2026-rates-mostly-lower-than-last-week-100000512.html",
+    "source": "Yahoo Finance",
+    "summary": "今日按揭与再融资利率（8/16）：普遍低于上周。",
+    "importance": 2
+  },
+  {
+    "title": "Best CD rates today, Sunday, August 16, 2026: Lock in up to 4.30% APY",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-sunday-august-16-2026-lock-in-up-to-430-apy-100000956.html",
+    "source": "Yahoo Finance",
+    "summary": "今日最佳定存（CD）利率（8/16）：可锁定至4.30% APY。",
+    "importance": 2
+  },
+  {
+    "title": "U.S. Bank Triple Cash Rewards Visa Business Card review: A solid option for everyday business costs",
+    "url": "https://finance.yahoo.com/personal-finance/credit-cards/review/us-bank-triple-cash-rewards-visa-business-card-220252786.html",
+    "source": "Yahoo Finance",
+    "summary": "U.S. Bank Triple Cash商务 Visa卡评测：日常企业开支的稳妥之选。",
+    "importance": 2
+  }
+]

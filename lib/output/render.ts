@@ -201,7 +201,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
   finance: ["cn-finance", "news"],
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
-  ipo: ["sse", "szse", "bse", "ipo-media"],
+  ipo: ["sse", "szse", "bse"],
   politics: ["world"],
 };
 
@@ -227,8 +227,6 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   hkex: "港交所",
   "ipo-tutoring": "IPO辅导",
   overseas: "境外",
-  // 全国IPO/新股 的媒体补充源
-  "ipo-media": "IPO媒体",
 };
 
 /**
@@ -497,9 +495,9 @@ export function groupRaw(
       b.items.push(a);
       continue;
     }
-    // 全国IPO/新股：按 sourceId → registry subcategory 归桶（sse/szse/ipo-media）
+    // 全国IPO/新股：按 sourceId → registry subcategory 归桶（sse/szse/bse 交易所权威源）
     if (a.category === "ipo") {
-      const sub = subcatOf.get(a.sourceId) ?? "ipo-media";
+      const sub = subcatOf.get(a.sourceId) ?? "sse";
       let b = ipoSubs.get(sub);
       if (!b) {
         b = { sourceName: SUBCATEGORY_LABELS[sub] ?? sub, items: [] };

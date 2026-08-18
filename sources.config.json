@@ -417,7 +417,7 @@
     "type": "rss",
     "url": "https://www.federalreserve.gov/feeds/press_all.xml",
     "category": "finance",
-    "subcategory": "macro",
+    "subcategory": "news",
     "enabled": true,
     "locales": [
       "zh",

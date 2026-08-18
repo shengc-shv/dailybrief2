@@ -53,12 +53,22 @@ jobs:
 
       # 抓取全部信息源（RSS/API/新浪/央视等，非 OFFLINE）+ 渲染验证。
       # dry-run 无 AI 调用（不生成/不消费 LLM）；仅更新 lastSeenAt 写回历史。
+      # 同时导出 data/fetched-articles.json（信息源抓取结果）供上传。
       - name: Fetch sources and render (no AI)
         env:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           WEB_MODE: 'true'
         run: npm run dry-run
+
+      # 信息源抓取结果数据包（dry-run 导出），供本地「预 AI 分析加载」任务拉回比对
+      # （识别信息源新增条目，不只爬虫数据）。
+      - name: Upload fetched sources as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fetched-data
+          path: data/fetched-articles.json
+          retention-days: 30
 
       # 回写滚动 30 天文章历史（当天/过去30天 的数据源）。每次 test 运行都更新
       # lastSeenAt，故通常会有 diff；仅在有变化时提交。本步骤已复制进 daily.yml。

@@ -72,7 +72,7 @@ async function main() {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
         const srcId = item.sourceId || 'gd-local-scraper';
-        // 与 daily.ts 一致：region=gz(招行广州分行辖区) → 广州商机·企业融资；gd(非广州)/nation/无 → 参考区 全国IPO
+        // 与 daily.ts 一致：region=gz(招行广州分行辖区) → 广州商机·广州IPO相关；gd(非广州)/nation/无 → 参考区 全国IPO
         const category = item.region === 'gz' ? 'gz' : 'ipo';
         const finalSrcId = category === 'gz' ? srcId.replace(/^gd-/, 'gz-') : srcId;
         articles.push({

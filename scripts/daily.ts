@@ -366,11 +366,11 @@ async function main() {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
         // 每条爬虫结果自带 sourceId（gd-szse/gd-sse/gd-bse/gd-hkex/gd-em-ipo 等）。
-        // 按 region 三分：gz(招行广州分行辖区=市区/南沙/湛江/清远) → 广州商机·企业融资，
+        // 按 region 三分：gz(招行广州分行辖区=市区/南沙/湛江/清远) → 广州商机·广州IPO相关，
         // gd(广东非广州) / nation(全国) / 无标记 → 参考区 全国IPO/新股。
         const srcId = item.sourceId || 'gd-local-scraper';
         const region = item.region === 'gz' ? 'gz' : 'ipo';
-        // 广州辖区条目的 sourceId 改 gz- 前缀（gd-sse→gz-sse），供注册表 subcatOf 路由到「企业融资」
+        // 广州辖区条目的 sourceId 改 gz- 前缀（gd-sse→gz-sse），供注册表 subcatOf 路由到「广州IPO相关」
         const finalSrcId = region === 'gz' ? srcId.replace(/^gd-/, 'gz-') : srcId;
         articles.push({
           sourceId: finalSrcId,

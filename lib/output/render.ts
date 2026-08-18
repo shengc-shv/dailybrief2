@@ -206,7 +206,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
   // 参考区·全国IPO/新股：全部交易所+辅导（非广州辖区的广东企业也归此）
   ipo: ["sse", "szse", "bse", "hkex", "ipo-tutoring", "overseas"],
-  // 广州商机：按分行零售业务线组织（财富/个贷/客群/私行/企业融资）
+  // 广州商机：按分行零售业务线组织（财富/个贷/客群/私行/广州IPO相关）
   gz: ["gz-wealth", "gz-credit", "gz-customer", "gz-private", "gz-ipo"],
   politics: ["world"],
 };
@@ -240,7 +240,7 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "gz-credit": "个人信贷",
   "gz-customer": "零售客群",
   "gz-private": "私行业务",
-  "gz-ipo": "企业融资",
+  "gz-ipo": "广州IPO相关",
 };
 
 /**

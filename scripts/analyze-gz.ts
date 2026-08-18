@@ -126,9 +126,18 @@ async function main() {
   });
 
   const items = [
-    ...gz.map((x: any) => ({ url: x.url, title: x.title, source: x.source || "广州政府", srcId: x.sourceId })),
-    ...govcn.map((x: any) => ({ url: x.url, title: x.title, source: "中国政府网", srcId: x.sourceId })),
-    ...ipo.map((x: any) => ({ url: x.url, title: x.title, source: x.source || "交易所", srcId: x.sourceId })),
+    ...gz.map((x: any) => ({
+      url: x.url, title: x.title, source: x.source || "广州政府", srcId: x.sourceId,
+      category: x.category || "gz", publishedAt: x.publishedAt || undefined,
+    })),
+    ...govcn.map((x: any) => ({
+      url: x.url, title: x.title, source: "中国政府网", srcId: x.sourceId,
+      category: "finance", publishedAt: x.publishedAt ? x.publishedAt.toISOString() : undefined,
+    })),
+    ...ipo.map((x: any) => ({
+      url: x.url, title: x.title, source: x.source || "交易所", srcId: x.sourceId,
+      category: x.region === "gz" ? "gz" : "ipo", publishedAt: x.publishedAt || undefined,
+    })),
   ].filter((x: any) => x.url && x.title);
 
   console.log(`共 ${items.length} 条待分析（gz ${gz.length} + govcn ${govcn.length} + ipo ${ipo.length}）`);
@@ -168,24 +177,38 @@ async function main() {
   }
   console.log("相关条目子标签分布:", JSON.stringify(bySub, null, 2));
 
-  // ---- 4. merge 进历史库 ----
+  // ---- 4. 全量写进历史库（按 HistoryEntry 完整格式：已有则更新，缺失则新增）----
   if (process.argv.includes("--write-history")) {
     const histPath = "data/article-history.json";
     const hist = JSON.parse(fs.readFileSync(histPath, "utf8"));
     const now = new Date().toISOString();
-    let updated = 0;
+    const metaByUrl = new Map(items.map((it: any) => [it.url, it]));
+    let updated = 0, created = 0;
     for (const [url, a] of Object.entries(analysis)) {
-      const key = Object.keys(hist).find((k) => k === url);
-      if (key) {
-        const e = hist[key];
-        e.subcategory = a.subcategory || e.subcategory; // AI 条目级分类（覆盖注册表源级）
-        e.ai_relevant = a.relevant;
-        if (a.summary && a.summary.length > 10) e.summary = a.summary;
-        updated++;
-      }
+      const meta = metaByUrl.get(url);
+      if (!meta) continue;
+      const prev = hist[url];
+      hist[url] = {
+        title: prev?.title ?? meta.title,
+        url,
+        sourceId: prev?.sourceId ?? meta.srcId ?? "gz-local",
+        source: prev?.source ?? meta.source ?? "广州商机",
+        category: (prev?.category ?? meta.category ?? "gz") as any,
+        // 条目级 AI/启发式分类（覆盖注册表源级）；无关条目也保留分类供过滤
+        subcategory: a.subcategory || prev?.subcategory,
+        excerpt: prev?.excerpt ?? "",
+        publishedAt: prev?.publishedAt ?? meta.publishedAt,
+        // 银行视角摘要（LLM 模式产出；启发式模式为空则不覆盖既有摘要）
+        summary: a.summary && a.summary.length > 10 ? a.summary : prev?.summary,
+        ai_relevant: a.relevant,
+        firstSeenAt: prev?.firstSeenAt ?? now,
+        lastSeenAt: now,
+      };
+      if (prev) updated++;
+      else created++;
     }
     fs.writeFileSync(histPath, JSON.stringify(hist, null, 2), "utf8");
-    console.log(`\n📚 历史库已更新：${updated} 条（data/article-history.json）`);
+    console.log(`\n📚 历史库全量写入完成：新增 ${created} 条，更新 ${updated} 条（data/article-history.json，共 ${Object.keys(hist).length} 条）`);
   } else {
     console.log("\n（未写历史库；如需写入加 --write-history）");
   }

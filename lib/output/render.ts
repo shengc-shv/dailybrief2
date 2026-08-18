@@ -29,7 +29,7 @@ import { classifyGdIpo, type GdIssuerRegistry } from "../classify/gdIpo";
 const TEXTS_ZH = {
   siteTitle: "每日简报",
   catTech: "技术动态",
-  catFinance: "财经要点",
+  catFinance: "宏观政策",
   catPolitics: "时政观察",
   catTrading: "市场行情",
   catGdIpo: "广东地区IPO",
@@ -225,7 +225,7 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
   "cn-finance": STR.subFinanceCn,
-  "cn-policy": "国内政策",
+  "cn-policy": "国家政策",
   "gz-policy": "广州政策",
   world: STR.subWorld,
   // 广东地区IPO 的 6 个二级标签（地域→市场 分发；预备上市统一进 IPO辅导）
@@ -252,7 +252,7 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
  * finance:news, politics:world) ignore this — they use MERGED_SUBGROUP_LIMITS.
  */
 export const SOURCE_DISPLAY_LIMITS: Record<string, number> = {
-  "tech:github-trending": 20,
+  "tech:github-trending": 10,
   "tech:cn-community": 10,
   // 热门论文 / X 推文：单源子标签，每源≤5（保留抓取端热度/点赞排序，不切合并流）
   "tech:x-viral": 5,

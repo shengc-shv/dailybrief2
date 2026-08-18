@@ -411,7 +411,7 @@
     "publishedAt": "2026-08-17T02:21:02.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "日本二季度GDP年化增长1.1%，低于市场预期的2%。"
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。"
   },
   "https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html": {
     "title": "Depleted strategic oil reserve nears level that raises concerns about damage to caverns, operations",
@@ -424,7 +424,7 @@
     "publishedAt": "2026-08-15T14:19:35.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "美国战略石油储备快速消耗，专家警告储油 caverns 可能受损。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.cnbc.com/2026/08/17/japanese-automakers-vulnerable-iran-war-yen-rally.html": {
     "title": "Japanese automakers vulnerable to one-two punch of Iran war, yen rally",
@@ -435,7 +435,7 @@
     "subcategory": "news",
     "excerpt": "Japanese automakers vulnerable to one-two punch of Iran war, yen rally",
     "publishedAt": "2026-08-17T05:18:44.000Z",
-    "summary": "日本汽车制造商面临伊朗战争和日元升值的双重冲击。",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -463,7 +463,8 @@
     "publishedAt": "2026-08-15T14:35:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "AOC公开自己为冻卵攒钱，引发关于该程序费用及保险税收政策的讨论。"
+    "summary": "AOC公开自己为冻卵攒钱，引发关于该程序费用及保险税收政策的讨论。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/rivian-tesla-self-driving-adas-fsd.html": {
     "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
@@ -476,7 +477,8 @@
     "publishedAt": "2026-08-17T19:14:03.000Z",
     "summary": "对比评测显示 Rivian 的自动驾驶在安全冗余上优于特斯拉 FSD。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/14/lamborghini-revuelto-sv-hybrid-price.html": {
     "title": "Lamborghini unveils Revuelto SV, its most powerful production car ever",
@@ -489,7 +491,8 @@
     "publishedAt": "2026-08-16T17:08:04.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "兰博基尼发布 Revuelto SV，限量版V12混动超跑，起售价74.1万美元。"
+    "summary": "兰博基尼发布 Revuelto SV，限量版V12混动超跑，起售价74.1万美元。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/prediction-markets-and-sports-betting-how-this-uk-exchange-is-trying-to-do-both-in-the-us.html": {
     "title": "Prediction markets and sports betting: How this UK exchange is trying to do both in the U.S.",
@@ -502,7 +505,8 @@
     "publishedAt": "2026-08-15T14:46:43.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "英国交易所 Smarkets 试图同时进入美国预测市场和体育博彩领域。"
+    "summary": "英国交易所 Smarkets 试图同时进入美国预测市场和体育博彩领域。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/cash-money-market-funds-bonds.html": {
     "title": "Between earn-nothing cash, broken long-term bonds, these are the safety trades of 2026 market",
@@ -567,7 +571,7 @@
     "publishedAt": "2026-08-14T21:45:19.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "英伟达披露二季度末持有 SpaceX 约 210 亿美元股份，该投资通过 xAI 完成。"
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.cnbc.com/2026/08/16/grandma-gail-advice-for-late-bloomers-it-doesnt-all-have-to-be-perfect.html": {
     "title": "The internet's grandma has advice for late bloomers: 'It doesn't all have to be perfect'",
@@ -580,7 +584,8 @@
     "publishedAt": "2026-08-16T14:30:01.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "\"Excuse My Grandma\" 播客主创建议晚成者：不必事事追求完美。"
+    "summary": "\"Excuse My Grandma\" 播客主创建议晚成者：不必事事追求完美。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/berkshire-adds-17-billion-to-alphabet-stake.html": {
     "title": "Berkshire adds $17 billion to Alphabet stake",
@@ -606,7 +611,8 @@
     "publishedAt": "2026-08-15T17:35:09.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "大麻改革成为美国中期选举议题，两党均有涉及，但其左右选情的能力仍不确定。"
+    "summary": "大麻改革成为美国中期选举议题，两党均有涉及，但其左右选情的能力仍不确定。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/14/world-liberty-trump-occ-bank-charter-stablecoin.html": {
     "title": "Trump family-backed crypto firm World Liberty gets conditional bank charter approval",
@@ -619,7 +625,8 @@
     "publishedAt": "2026-08-14T23:41:50.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "特朗普家族支持的 World Liberty 获 OCC 有条件批准国民信托银行牌照，将可发行稳定币。"
+    "summary": "特朗普家族支持的 World Liberty 获 OCC 有条件批准国民信托银行牌照，将可发行稳定币。",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/software-defined-vehicles-rivian-tesla.html": {
     "title": "How long will software-defined cars last? The auto industry doesn't know yet",
@@ -658,7 +665,7 @@
     "publishedAt": "2026-08-15T06:11:11.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "北京拟澄清离岸信托新税规的模糊之处，以消除中国超高净值人群及顾问的困惑。"
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.cnbc.com/2026/08/15/heatwave-champagne-harvest-climate.html": {
     "title": "Extreme heat spurs earliest-ever Champagne harvest, putting its famous taste to the test",
@@ -722,7 +729,8 @@
     "excerpt": "OpenAI's C-suite turnover gives investors another reason for concern as the company pushes toward a mammoth IPO.",
     "publishedAt": "2026-08-14T19:07:11.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.cnbc.com/2026/08/14/luigi-mangione-pleads-guilty-brian-thompson-killing.html": {
     "title": "Luigi Mangione pleads guilty in federal case related to UnitedHealthcare CEO killing",
@@ -734,7 +742,8 @@
     "excerpt": "Mangione's lawyers argue his federal plea bars his prosecution for murder in state court for Brian Thompson's slaying due to New York's double jeopardy law",
     "publishedAt": "2026-08-14T19:50:11.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/14/trump-ballroom-supreme-court-white-house.html": {
     "title": "Trump asks Supreme Court to let White House ballroom construction continue",
@@ -746,7 +755,8 @@
     "excerpt": "President Donald Trump tore down the White House East Wing to make way for the ballroom project.",
     "publishedAt": "2026-08-14T19:10:18.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T09:31:59.195Z"
+    "lastSeenAt": "2026-08-17T09:31:59.195Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.cnbc.com/2026/08/14/ai-infrastructure-debt-leverage-risks.html": {
     "title": "AI’s infrastructure boom is getting more leveraged — and harder to track",
@@ -1803,7 +1813,8 @@
     "excerpt": "Federal Reserve Board issues enforcement action with former employee of Regions Bank",
     "publishedAt": "2026-08-13T15:00:00.000Z",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://news.crunchbase.com/health-wellness-biotech/fitness-startup-funding-rebounding-ai-data-h1-2026/": {
     "title": "Sector Snapshot: Fitness Startup Funding Is Rebounding, But Investors Want AI And Data, Not Treadmills",
@@ -2336,7 +2347,7 @@
     "publishedAt": "2026-08-16T22:14:58.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "国际油价小幅走高，交易员正等待下一个方向催化剂。以色列再次袭击黎巴嫩，美国可能对伊朗实施新制裁，地缘政治不确定性上升。"
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bloomberg.com/news/live-blog/2026-08-17/ftse-100-live-pound-bonds-fed-dollar-gold-trump-iran-oil-prices-ai-stocks-what-s-moving-uk-markets-right-now-markets-today-mswtbjt5": {
     "title": "FTSE 100 Live: Futures Rise as Stocks Globally Rally",
@@ -2348,7 +2359,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T05:48:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/maniatis-oman-spill-cleanup-may-cost-usd-200-500m-video": {
     "title": "Maniatis: Oman Spill Cleanup May Cost USD 200-500M",
@@ -2372,7 +2384,8 @@
     "excerpt": "Shorter-tenor India bond yields surged after the central bank said it will close a special dollar deposit window for overseas residents a month earlier than scheduled.",
     "publishedAt": "2026-08-17T04:55:42.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/japan-s-bond-yields-climb-on-boj-hike-bets-fiscal-concerns": {
     "title": "Japan 10-Year Yield Rises to Highest Since 1996 on BOJ Hike Bets",
@@ -2384,7 +2397,8 @@
     "excerpt": "Japan’s bonds fell on fiscal concerns and growing speculation that the Bank of Japan may raise interest rates in the coming months, pushing the 10-year yield to the highest since 1996.",
     "publishedAt": "2026-08-17T03:10:44.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/uae-s-l-imad-offers-to-delist-ad-ports-at-8-66-billion-value": {
     "title": "L’imad’s Ports Deal Signals Abu Dhabi Wealth Fund’s Growing Role",
@@ -2421,7 +2435,7 @@
     "publishedAt": "2026-08-16T22:46:56.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "新西兰奶粉商 a2 Milk 表示，受中国供应链中断影响，业绩恢复将是渐进的，预计利润空间将持续承压。"
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/copper-heads-toward-record-high-on-lme-as-supply-tensions-build": {
     "title": "Copper Squeeze Builds in London as Futures Advance Toward Record",
@@ -2433,7 +2447,8 @@
     "excerpt": "Copper advanced toward a record, with a key spread in London widening to extreme levels in a sign of competition for prompt supply.",
     "publishedAt": "2026-08-17T01:45:04.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:01:57.951Z"
+    "lastSeenAt": "2026-08-17T10:01:57.951Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/the-asia-trade-8-17-2026-video": {
     "title": "Israel Strikes Lebanon as US Prepares Fresh Iran Sanctions | The Asia Trade 8/17/2026",
@@ -2458,7 +2473,7 @@
     "publishedAt": "2026-08-16T22:02:21.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "由于黎巴嫩再度爆发战斗，霍尔木兹海峡船只遭袭，终结美伊战争的协议前景变得不明朗，国际油价企稳。"
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/limx-on-china-s-robotics-development-video": {
     "title": "LimX on China's Robotics Development",
@@ -2470,7 +2485,8 @@
     "excerpt": "Jesse Liu, CFO at Chinese robotics firm LimX Dynamics, says China' robotics industry is working toward bridging itself with frontier findings in academia. But he tells \"Bloomberg: The China Show\" that LimX has demonstrated \"exponential potential\" for scaling up. (Source: Bloomberg)",
     "publishedAt": "2026-08-17T05:08:30.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/south-africa-to-finalize-rules-for-9-3-trillion-otc-derivatives-market-by-2028": {
     "title": "South Africa to Finalize Rules for $9.3 Trillion OTC Derivatives Market by 2028",
@@ -2494,7 +2510,8 @@
     "excerpt": "Sri Lankan inflation will likely slow back toward the central bank’s target over the second half of this year and into next year, central bank Governor Nandalal Weerasinghe tells Bloomberg Television in Sydney. He adds that changes to oil prices remain a risk factor in projections. (Source: Bloomber",
     "publishedAt": "2026-08-17T04:52:16.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/sembcorp-said-to-plan-filing-for-500-million-ipo-of-india-unit": {
     "title": "Sembcorp Said to Plan Filing for $500 Million IPO of India Unit",
@@ -2506,7 +2523,8 @@
     "excerpt": "Singapore-based Sembcorp Industries Ltd. is preparing to file for an initial public offering of its Indian unit, Sembcorp Green Infra Ltd., that could raise as much as $500 million, according to people familiar with the matter.",
     "publishedAt": "2026-08-17T04:41:08.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-16/malaysia-s-dap-hands-anwar-reprieve-with-vote-to-stay-in-cabinet": {
     "title": "Anwar Avoids Coalition Turmoil as Key Party Stays in Cabinet",
@@ -2518,7 +2536,8 @@
     "excerpt": "Malaysia’s Prime Minister Anwar Ibrahim won a rare political reprieve over the weekend, after a string of electoral setbacks and turmoil within his own party, as the biggest component of his ruling coalition voted to stay in cabinet.",
     "publishedAt": "2026-08-16T09:28:24.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/first-gen-falls-by-record-19-after-parent-rejected-kkr-offer": {
     "title": "Philippines’ First Gen Slumps After Parent Rejects KKR Offer",
@@ -2554,7 +2573,8 @@
     "excerpt": "Chinese President Xi Jinping invoked the legacy of his predecessor Jiang Zemin to advance his own economic and global policy agenda, warning of “high winds and rough waters” as China faces slowing growth and rising tensions abroad.",
     "publishedAt": "2026-08-17T02:31:35.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/goldman-says-markets-too-hawkish-on-betting-fed-will-hike-rates": {
     "title": "Goldman Says Markets Too Hawkish on Betting Fed Will Hike Rates",
@@ -2566,7 +2586,8 @@
     "excerpt": "Market bets on Federal Reserve interest-rate hikes are still too aggressive given that inflation in the world’s biggest economy is cooling, according to Goldman Sachs Group Inc.",
     "publishedAt": "2026-08-17T04:02:23.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.ft.com/content/719c8108-f4ae-466b-80f4-96f26558d642?syn-25a6b1a6=1": {
     "title": "Higgsfield valued at $5.4bn as Goldman and Intel back AI video start-up",
@@ -2578,7 +2599,8 @@
     "excerpt": "Company founded by former Snap executive Alex Mashrabov targets marketing content for businesses",
     "publishedAt": "2026-08-17T04:00:27.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/67acde0d-4154-4332-b33b-2d03d3a86007?syn-25a6b1a6=1": {
     "title": "Private credit under strain as troubled loans swell",
@@ -2590,7 +2612,8 @@
     "excerpt": "FT analysis shows signals of stress in the market are back to levels last seen in 2017",
     "publishedAt": "2026-08-17T04:00:27.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.ft.com/content/2fb7f9b7-58dc-4909-94fa-8e753b7be47d?syn-25a6b1a6=1": {
     "title": "War and climate change drive surge in global shipping costs",
@@ -2614,7 +2637,8 @@
     "excerpt": "Prime minister expected to approve development of controversial Rosebank and Jackdaw projects",
     "publishedAt": "2026-08-17T04:00:20.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/982229c8-a116-4679-8b4b-627df069ce66?syn-25a6b1a6=1": {
     "title": "The economics of Europe’s drought",
@@ -2626,7 +2650,8 @@
     "excerpt": "Rivers are at all-time lows and water is scarce. Transport, energy and big tech are affected",
     "publishedAt": "2026-08-17T04:00:20.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ft.com/content/ec594b62-1453-4044-9a0b-129ecdf86150?syn-25a6b1a6=1": {
     "title": "Air conditioning becomes ‘must-have’ for overheated London office workers",
@@ -2638,7 +2663,8 @@
     "excerpt": "Cooling rises up the list of sought-after features in constrained high-quality commercial real estate market",
     "publishedAt": "2026-08-17T04:00:20.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.ft.com/content/ff2186b0-be40-4b8e-8b5c-80ece92a30b2?syn-25a6b1a6=1": {
     "title": "The wrong lessons are being drawn over worries on public equities",
@@ -2674,7 +2700,8 @@
     "excerpt": "Iberian neighbours afflicted by vast property shortages due to immigration, bureaucracy and high construction costs",
     "publishedAt": "2026-08-17T04:00:10.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ft.com/content/ac79a102-1620-48bf-a36b-416aac25de1d?syn-25a6b1a6=1": {
     "title": "The new AI super-rich are reshaping the market for jets, yachts and cars",
@@ -2686,7 +2713,8 @@
     "excerpt": "Those making fortunes in Silicon Valley are ditching the champagne for premium water while splashing their bitcoin",
     "publishedAt": "2026-08-17T04:00:09.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ft.com/content/3ffa645f-9e28-40ee-a9d7-cea7148544d1?syn-25a6b1a6=1": {
     "title": "The art of the goodbye message",
@@ -2722,7 +2750,8 @@
     "excerpt": "Countries adopting Chinese models will also absorb Chinese standards and governance",
     "publishedAt": "2026-08-17T01:00:05.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.ft.com/content/78774f5b-058e-4731-99a2-cc2710a457e5?syn-25a6b1a6=1": {
     "title": "India’s sweltering nights expose power crunch",
@@ -2734,7 +2763,8 @@
     "excerpt": "Rise in evening temperatures and air conditioning demand leaves gap in renewable energy supply",
     "publishedAt": "2026-08-17T00:00:05.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.ft.com/content/3aa706c2-50bb-4187-a053-c09e3c063d72": {
     "title": "China’s energy strategy vindicated by Iran war",
@@ -2746,7 +2776,8 @@
     "excerpt": "Playbook is likely to be adopted by other countries, shaping markets",
     "publishedAt": "2026-08-16T23:01:05.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "ai_relevant": false
   },
   "https://www.ft.com/content/44c08ae9-f209-4992-8744-cfff430eca07?syn-25a6b1a6=1": {
     "title": "Jamie Dimon warns UK chancellor against higher bank taxes",
@@ -2758,7 +2789,8 @@
     "excerpt": "JPMorgan chief’s call to John Healey is part of lobbying by financial services sector ahead of October Budget",
     "publishedAt": "2026-08-16T19:00:04.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.ft.com/content/d3e785fd-fbda-41d8-9c07-5275ad30fce6?syn-25a6b1a6=1": {
     "title": "Rayner reforms planning to protect England’s pubs and boost housebuilding",
@@ -2770,7 +2802,8 @@
     "excerpt": "Ministers to encourage property developments close to train, tram and underground stations",
     "publishedAt": "2026-08-16T16:35:53.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "ai_relevant": false
   },
   "https://www.ft.com/content/c2ee0910-ee7d-4a36-bf5e-697c7ade93a2": {
     "title": "Don’t dismiss the mini-middle powers",
@@ -2794,7 +2827,8 @@
     "excerpt": "Party’s Treasury spokesperson Robert Jenrick says current welfare system is ‘a strange perversion of compassion’",
     "publishedAt": "2026-08-17T11:15:33.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.ft.com/content/8791db73-09d0-4fe9-a11e-1a9e0ce48739": {
     "title": "Ralph Lauren is winning the workwear wars as America returns to the office",
@@ -2830,7 +2864,8 @@
     "excerpt": "FT analysis finds 60 largest planned facilities could emit equivalent of 27 coal plants or 24mn cars per year",
     "publishedAt": "2026-08-16T10:00:02.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ft.com/content/729477cd-3551-4345-8c7c-33603b293556?syn-25a6b1a6=1": {
     "title": "Harvey Nicks deal hints at department stores’ hidden potential",
@@ -2854,7 +2889,8 @@
     "excerpt": "Shortage of Group III base oils prompts auto manufacturers to turn to new blends",
     "publishedAt": "2026-08-16T04:00:11.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/1419012f-feca-4efd-a817-dc0392cd76e3?syn-25a6b1a6=1": {
     "title": "European companies count the costs and gains of extreme heat",
@@ -2866,7 +2902,8 @@
     "excerpt": "Businesses flagged effects of extreme heat, drought and wildfires on a record share of earnings calls in recent weeks",
     "publishedAt": "2026-08-16T04:00:11.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.bbc.co.uk/news/articles/c5y3ex8ry82o?at_medium=RSS&at_campaign=rss": {
     "title": "How switching your bank account could earn you up to £220",
@@ -2877,7 +2914,7 @@
     "subcategory": "news",
     "excerpt": "New research suggests staying put is costing British savers billions in missed interest every year.",
     "publishedAt": "2026-08-16T23:14:47.000Z",
-    "summary": "英国研究显示，储户因不更换银行账户每年错失数十亿英镑利息，转户最高可获约220英镑收益。",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -2892,7 +2929,8 @@
     "publishedAt": "2026-08-17T02:22:04.000Z",
     "summary": "法拉利首款纯电车「Luce」以创纪录4000万美元成交，但其造型偏离品牌经典风格引发部分评论人士批评。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.bbc.co.uk/news/articles/clyqpx6xk69o?at_medium=RSS&at_campaign=rss": {
     "title": "Instagram and Facebook could change forever if Meta loses child privacy trial",
@@ -2905,7 +2943,8 @@
     "publishedAt": "2026-08-17T05:00:25.000Z",
     "summary": "美国30个州起诉Meta，要求彻底改革其面向青少年的平台；若Meta败诉，Instagram与Facebook或将永久改变。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.bbc.co.uk/news/articles/clyllg1v0kdo?at_medium=RSS&at_campaign=rss": {
     "title": "Changing pubs into homes to be made harder under new rules",
@@ -2918,7 +2957,8 @@
     "publishedAt": "2026-08-17T07:04:21.000Z",
     "summary": "英国新规于周一生效，将更难把酒吧改建为住宅，同时附带其他规划政策调整。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.bbc.co.uk/news/articles/cq56pzqy6jvo?at_medium=RSS&at_campaign=rss": {
     "title": "I survived two years as prime minister in a hit new game - then my cabinet deserted me",
@@ -3007,7 +3047,7 @@
     "subcategory": "news",
     "excerpt": "A new US report said China had moved goods through nations with lower tariffs to dodge higher levies.",
     "publishedAt": "2026-08-14T08:39:46.000Z",
-    "summary": "美国新报告称数十国协助中国经转运规避特朗普关税，借低关税通道转移货物。",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -3085,7 +3125,7 @@
     "subcategory": "news",
     "excerpt": "Hot weather and the men's football World Cup boosted the economy but the Iran war may weigh on growth",
     "publishedAt": "2026-08-13T10:17:56.000Z",
-    "summary": "英国经济在炎热天气与男足世界杯带动下增长，但伊朗战争或拖累后续表现，专家警示前景承压。",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -3124,7 +3164,7 @@
     "subcategory": "news",
     "excerpt": "Users of the popular streaming platform criticised allowing Amazon to use their data by dafault.",
     "publishedAt": "2026-08-13T10:39:02.000Z",
-    "summary": "Twitch用户愤怒，因亚马逊默认用其直播内容训练AI且需手动退出，用户批评「默认开启」。",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T00:28:10.237Z"
   },
@@ -3137,7 +3177,7 @@
     "subcategory": "news",
     "excerpt": "Japanese risk aversion and conservatism blamed for slow AI take-up by the country's business sector.",
     "publishedAt": "2026-08-12T23:00:47.000Z",
-    "summary": "分析称日本企业AI采用缓慢源于风险厌恶与保守文化，拖累该国商业部门数字化。",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -3150,7 +3190,7 @@
     "subcategory": "news",
     "excerpt": "Buyers of AI services are struggling to control costs and sellers are not sure how much to charge.",
     "publishedAt": "2026-08-11T23:03:52.000Z",
-    "summary": "「Tokenomics」探讨AI服务计费难题：买方难控成本、卖方难定价的供需错配。",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -3163,7 +3203,7 @@
     "subcategory": "news",
     "excerpt": "The world’s biggest carry trader begins to exit its position",
     "publishedAt": "2026-08-13T08:49:36.000Z",
-    "summary": "《经济学人》分析称，日本央行买入日元意味着全球最大套利交易开始平仓，可能引发市场剧烈波动。",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -3177,7 +3217,8 @@
     "excerpt": "Firms tasked with defusing credit crises are getting into trouble",
     "publishedAt": "2026-08-13T08:37:46.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.economist.com/finance-and-economics/2026/08/13/can-singapore-ever-build-a-proper-stock-market": {
     "title": "Can Singapore ever build a proper stock market?",
@@ -3265,7 +3306,7 @@
     "publishedAt": "2026-08-15T19:30:02.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "马斯克曾称特斯拉做空者（含盖茨）将被「消灭」，但年内空头已获利90亿美元。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-happy-market-cared-212804288.html": {
     "title": "Jim Cramer Was Happy The Market “Cared” About D-Wave Quantum – But Not How You Think",
@@ -3447,7 +3488,7 @@
     "publishedAt": "2026-08-15T22:31:04.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "皇家黄金（Royal Gold）利润翻倍，为何此时推出回购？"
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/mks-mksi-just-posted-86-224242758.html": {
     "title": "MKS (MKSI) Just Posted 86% EPS Growth, So Why the Margin Warning?",
@@ -3538,7 +3579,7 @@
     "publishedAt": "2026-08-15T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "今日最佳定存（CD）利率（8/15）：最高4.30% APY。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-saturday-august-15-2026-rates-falling-this-weekend-100000735.html": {
     "title": "Mortgage and refinance interest rates today, Saturday, August 15, 2026: Rates falling this weekend",
@@ -3551,7 +3592,7 @@
     "publishedAt": "2026-08-15T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "今日按揭与再融资利率（8/15）：本周末走低。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/technology/ai/articles/bond-traders-agonizing-over-70-190000845.html": {
     "title": "Bond Traders Are Agonizing Over $70 Billion of Shadow Credit Backstops For AI Companies",
@@ -3564,7 +3605,7 @@
     "publishedAt": "2026-08-15T19:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "债券交易员纠结AI企业700亿美元「影子信贷」担保安排。"
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-sunday-august-16-2026-rates-mostly-lower-than-last-week-100000512.html": {
     "title": "Mortgage and refinance interest rates today, Sunday, August 16, 2026: Rates mostly lower than last week",
@@ -3577,7 +3618,7 @@
     "publishedAt": "2026-08-16T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "今日按揭与再融资利率（8/16）：普遍低于上周。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-sunday-august-16-2026-lock-in-up-to-430-apy-100000956.html": {
     "title": "Best CD rates today, Sunday, August 16, 2026: Lock in up to 4.30% APY",
@@ -3590,7 +3631,7 @@
     "publishedAt": "2026-08-16T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "今日最佳定存（CD）利率（8/16）：可锁定至4.30% APY。"
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/credit-cards/review/us-bank-triple-cash-rewards-visa-business-card-220252786.html": {
     "title": "U.S. Bank Triple Cash Rewards Visa Business Card review: A solid option for everyday business costs",
@@ -3603,7 +3644,7 @@
     "publishedAt": "2026-08-14T22:02:52.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "U.S. Bank Triple Cash商务 Visa卡评测：日常企业开支的稳妥之选。"
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.investing.com/news/commodities-news/gold-rises-near-4400-as-fed-minutes-oil-risks-shape-rate-outlook-4862058": {
     "title": "Gold edges higher near $4,400 as softer dollar offsets Middle East inflation risks",
@@ -3615,7 +3656,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T05:48:33.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/company-news/gic-re-q1-fy27-slides-combined-ratio-improves-profitability-prioritized-93CH-4862156": {
     "title": "GIC Re Q1 FY27 slides: combined ratio improves, profitability prioritized",
@@ -3663,7 +3705,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T05:42:49.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/stock-market-news/why-is-alibaba-stock-climbing-today-93CH-4862153": {
     "title": "Why is Alibaba stock climbing today?",
@@ -3687,7 +3730,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T05:42:33.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z"
+    "lastSeenAt": "2026-08-17T06:00:27.278Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.investing.com/news/company-news/sampo-buys-back-121m-worth-of-shares-in-week-33-93CH-4862152": {
     "title": "Sampo buys back €12.1M worth of shares in week 33",
@@ -3746,7 +3790,7 @@
     "subcategory": "news",
     "excerpt": "Network wants to serve Jared Kushner, Ivanka Trump and Donald Trump Jr after president sues over January 6 documentary The BBC is trying to subpoena Donald Trump’s children as it builds its defense against the president’s defamation lawsuit centered on a documentary on the January 6 insurrection. In",
     "publishedAt": "2026-08-14T21:05:47.000Z",
-    "summary": "BBC 因特朗普就「1月6日」纪录片提起诉讼，正试图向 Jared Kushner、Ivanka Trump 和 Donald Trump Jr. 发出传票。",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T06:34:21.349Z"
   },
@@ -3772,7 +3816,8 @@
     "excerpt": "Critic of Consumer Financial Protection Bureau leadership was put under investigation and suspended from job The Trump administration has been accused of “bullying and intimidation” after a labor union leader and critic was put under investigation and suspended from his job at the Consumer Financial",
     "publishedAt": "2026-08-13T10:00:55.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.theguardian.com/media/2026/aug/13/forbes-editor-fired": {
     "title": "Top Forbes editor reportedly fired after receiving $6m from business associate",
@@ -3832,7 +3877,8 @@
     "excerpt": "Suit alleges subscription offer aims to sell privileged access to information generated in president’s official capacity Donald Trump has been sued after a subscription service charging up to $100,000 a month for early access to his posts on his Truth Social platform sparked allegations of corruptio",
     "publishedAt": "2026-08-12T17:30:21.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.theguardian.com/business/2026/aug/15/trump-big-beautiful-bill-millionaires": {
     "title": "Donald Trump doesn’t just love billionaires, he loves multimillionaires too",
@@ -3844,7 +3890,8 @@
     "excerpt": "US tax policy deprives the government of revenue and overwhelmingly serves the interests of the rich After the House passed its version of Donald Trump’s One Big Beautiful Bill Act (OBBBA) last year – the one that paired a $5tn-plus tax cut with $1tn-plus of cuts from food stamps and Medicaid – the ",
     "publishedAt": "2026-08-15T10:00:54.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.theguardian.com/commentisfree/2026/aug/12/the-guardian-view-on-japans-yen-trump-wants-to-keep-the-easy-money-machine-running": {
     "title": "The Guardian view on Japan’s yen: Trump wants to keep the easy-money machine running | Editorial",
@@ -3856,7 +3903,8 @@
     "excerpt": "A cheap currency helps finance the US tech boom. Washington is intervening because allies matter only when they are useful Japan’s yen has slid back towards 160 to the dollar, despite last month’s extraordinary US-Japanese intervention. Traders are betting that its role as a cheap funding pipeline f",
     "publishedAt": "2026-08-12T17:39:46.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。"
   },
   "https://www.theguardian.com/world/2026/aug/12/live-facial-recognition-cameras-oxford-street": {
     "title": "Live facial recognition cameras to be used on UK’s busiest shopping street",
@@ -3880,7 +3928,8 @@
     "excerpt": "US envoy had claimed Americans could be extracting crude by as early as next year Greenland authorities have forced a US oil company connected to Donald Trump to postpone drilling wells in the Arctic territory, defying claims by the US president’s envoy that Americans could be extracting crude by ne",
     "publishedAt": "2026-08-12T18:00:41.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.theguardian.com/business/2026/aug/11/delivery-drivers-to-be-paid-minimum-3130-an-hour-across-australia-in-world-leading-decision": {
     "title": "Delivery drivers to be paid minimum $31.30 an hour across Australia in ‘world-leading’ decision",
@@ -3904,7 +3953,8 @@
     "excerpt": "Rooms in Icelandic capital Reykjavík cost double usual rate and Spain also enjoying strong bookings Europe’s total solar eclipse: the best place to see it Hotel prices have surged in key European cities as hundreds of thousands of tourists flock to see the first total eclipse visible from the contin",
     "publishedAt": "2026-08-11T10:50:12.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ftchinese.com/story/001110627": {
     "title": "莫迪承诺为印度青年提供免费辅导和AI培训",
@@ -3965,7 +4015,8 @@
     "excerpt": "美国顶尖人工智能实验室正通过发布更便宜的模型或者降价，以力争留住客户，不过最优秀模型的价格仍“保持平稳或上涨”。",
     "publishedAt": "2026-08-13T16:00:00.000Z",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ftchinese.com/story/001110615": {
     "title": "京东股价下跌10%",
@@ -4151,7 +4202,8 @@
     "excerpt": "The dollar fell to its weakest level in three months as investors scaled back expectations for further Federal Reserve interest-rate increases following a run of softer US economic data.",
     "publishedAt": "2026-08-17T09:20:21.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/china-s-xi-touts-military-economic-agenda-at-key-event-video": {
     "title": "China's Xi Touts Military, Economic Agenda at Key Event",
@@ -4163,7 +4215,8 @@
     "excerpt": "Here are scenes from Chinese President Xi Jinping's speech at an event marking the centenary of Jiang Zemin’s birth. (Source: Bloomberg)",
     "publishedAt": "2026-08-17T07:14:39.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-16/wuxi-apptec-s-100-stock-rally-defies-geopolitical-headwinds": {
     "title": "‘Too Big to Ban’ WuXi AppTec Gains 100% on GLP-1 Chokehold",
@@ -4175,7 +4228,8 @@
     "excerpt": "The Pentagon’s designation of WuXi AppTec Co. as a Chinese military company may have prompted some US clients to pull back, but investors are still piling into the stock betting the firm will remain central to the global supply of obesity, cancer and other drugs.",
     "publishedAt": "2026-08-16T23:00:00.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/china-reserve-gauge-hits-12-year-high-smoothing-yuan-rise": {
     "title": "China Reserve Gauge Hits 12-Year High, Smoothing Yuan Rise",
@@ -4187,7 +4241,8 @@
     "excerpt": "China’s key gauge of reserve assets saw its biggest quarterly rise in more than 12 years as authorities absorbed heavy foreign currency inflows, a move that helps smooth the pace of the yuan’s gains, according to analysts.",
     "publishedAt": "2026-08-17T08:31:04.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/argenx-soars-on-latest-trial-success-for-autoimmune-drug-vyvgart": {
     "title": "Argenx Soars on Latest Trial Success for Autoimmune Drug Vyvgart",
@@ -4211,7 +4266,8 @@
     "excerpt": "Is Washington still asleep at the wheel?",
     "publishedAt": "2026-08-17T08:00:01.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bloomberg.com/news/audio/2026-08-17/odd-lots-openai-hugging-face-and-the-ai-danger-podcast": {
     "title": "Odd Lots: OpenAI, Hugging Face and the AI Danger (Podcast)",
@@ -4223,7 +4279,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T08:00:00.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-16/traders-get-pickier-after-big-run-in-886-billion-em-debt-market": {
     "title": "Traders Get Pickier in Emerging-Market Inflation-Linked Debt",
@@ -4259,7 +4316,8 @@
     "excerpt": "China’s economy got off to a sluggish start in the second half, reviving pressure on policymakers to act in support of growth as industrial output, consumption and investment all fared worse than expected. Bloomberg's Rebecca Choong Wilkins reports. (Source: Bloomberg)",
     "publishedAt": "2026-08-17T07:42:27.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/indian-lenders-set-record-with-8-billion-in-dollar-bond-sales": {
     "title": "Indian Lenders’ Dollar Bond Sales Hit Record Near $9 Billion",
@@ -4271,7 +4329,8 @@
     "excerpt": "Indian financial institutions have sold a record of almost $9 billion in dollar bonds this year, as lenders rush to capitalize on a central bank facility that lowers hedging costs on overseas borrowings.",
     "publishedAt": "2026-08-17T06:26:04.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/it-s-not-looking-great-for-the-dollar-3-minutes-mliv-video": {
     "title": "It's Not Looking Great for The Dollar: 3-Minutes MLIV",
@@ -4307,7 +4366,8 @@
     "excerpt": "China’s new-home prices fell at a faster pace in July, denting optimism that the prolonged property downturn may be nearing a bottom.",
     "publishedAt": "2026-08-17T07:09:00.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:01:57.951Z"
+    "lastSeenAt": "2026-08-17T10:01:57.951Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/yahua-s-zimbabwe-lithium-sulfate-plant-to-come-online-next-year": {
     "title": "Yahua’s Zimbabwe Lithium-Sulfate Plant to Come Online Next Year",
@@ -4331,7 +4391,8 @@
     "excerpt": "India is set to soon announce a high-powered committee to recommend how the banking sector should evolve to support the country’s transformation into a developed economy within the next two decades, the finance minister said Monday.",
     "publishedAt": "2026-08-17T06:44:20.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:01:57.951Z"
+    "lastSeenAt": "2026-08-17T10:01:57.951Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-16/gold-steady-near-4-400-as-traders-weigh-us-data-and-rate-path": {
     "title": "Gold Rises to Near $4,400 as Weak Retail Data Weighs on Dollar",
@@ -4343,7 +4404,8 @@
     "excerpt": "Gold extended a two-week advance as weaker US retail sales data weighed on the US dollar, making bullion cheaper for most buyers.",
     "publishedAt": "2026-08-16T23:36:14.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/09a8a200-e572-486e-9bff-1f57933aebfc?syn-25a6b1a6=1": {
     "title": "China investment slump deepens as economy shows signs of weakness",
@@ -4355,7 +4417,8 @@
     "excerpt": "Industrial output growth slows and retail sales nearly flat as policymakers face calls to step up support",
     "publishedAt": "2026-08-17T08:51:14.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.ft.com/content/340bf9e7-0e67-4d19-b671-3dc8186efb99": {
     "title": "A leaderboard of the biggest trading losses of all time",
@@ -4403,7 +4466,8 @@
     "excerpt": "Matt Arnold says he was asked to leave the store after being wrongly flagged as a shoplifter.",
     "publishedAt": "2026-08-17T04:57:21.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bbc.co.uk/news/articles/c8xnwqe00v1o?at_medium=RSS&at_campaign=rss": {
     "title": "India built the world's biggest digital payments miracle. Now comes the bill",
@@ -4415,7 +4479,8 @@
     "excerpt": "India's UPI may finally face merchant fees, raising questions over who pays and whether users will resist.",
     "publishedAt": "2026-08-16T23:26:30.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.cnbc.com/2026/08/17/us-iran-war-trump-hormuz.html": {
     "title": "Trump won't extend Iran ceasefire, threatens to 'bomb' Oman if it 'gets in the way'",
@@ -4427,7 +4492,8 @@
     "excerpt": "Shipping traffic in the Strait of Hormuz sank to a new low as a ceasefire between the U.S. and Iran is set to expire on Monday with no deal in sight.",
     "publishedAt": "2026-08-17T19:24:32.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.cnbc.com/2026/08/17/ferrari-luce-electric-car-autos.html": {
     "title": "Ferrari Luce: Polarizing EV becomes a $40 million collector’s item",
@@ -4439,7 +4505,8 @@
     "excerpt": "The auction of the Luce comes nearly three months after Ferrari unveiled its first fully electric car, which was priced at 550,000 euros (roughly $640,000).",
     "publishedAt": "2026-08-17T06:52:23.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/17/china-economy-sales-investment-july-.html": {
     "title": "China's economy slows further in July as retail sales barely grow, investment slump steepens",
@@ -4451,7 +4518,8 @@
     "excerpt": "The data is reinforcing concerns about the health of the world's second-largest economy, which has grappled with a deepening supply-demand imbalance.",
     "publishedAt": "2026-08-17T08:26:04.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "ai_relevant": false
   },
   "https://finance.yahoo.com/markets/currencies/articles/yen-edges-traders-push-back-004148952.html": {
     "title": "Dollar falls to lowest since early June as rate hike bets fade",
@@ -4463,7 +4531,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:07:38.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/energy/articles/indian-oil-giant-secures-u-075000286.html": {
     "title": "Indian Oil Giant Secures U.S. License to Return to Venezuela",
@@ -4475,7 +4544,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T07:50:00.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/markets/commodities/articles/asian-shares-mark-time-gulf-011925462.html": {
     "title": "Shares rise, dollar slips as markets pare Fed rate risks",
@@ -4487,7 +4557,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T07:29:25.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://finance.yahoo.com/technology/articles/alibaba-sell-lingxi-games-more-061745401.html": {
     "title": "Alibaba to sell Lingxi Games in more than $2 billion deal, source says",
@@ -4499,7 +4570,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T06:28:17.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/historic-retailer-gets-lifeline-warning-220700487.html": {
     "title": "Historic retailer gets lifeline after warning it could collapse",
@@ -4583,7 +4655,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T15:16:10.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mostly-higher-while-051542671.html": {
     "title": "World shares are mixed and Brent crude is higher after worries over stagflation pull US stocks lower",
@@ -4607,7 +4680,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T05:01:29.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-market-run-sandisk-soars-nvidia-buy-walmart-target/?src=A00220&yptr=yahoo": {
     "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Nears Key Level; Walmart Looms",
@@ -4619,7 +4693,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T03:06:02.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/technology/articles/cardbox-packaging-boosts-postpress-capacity-091358733.html": {
     "title": "Cardbox Packaging boosts postpress capacity with MK Duopress Power",
@@ -4739,7 +4814,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:06:49.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T09:31:59.195Z"
+    "lastSeenAt": "2026-08-17T09:31:59.195Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/transcripts/earnings-call-transcript-san-miguel-h1-2026-core-profit-rises-as-stock-slips-93CH-4862404": {
     "title": "Earnings call transcript: San Miguel H1 2026 core profit rises as stock slips",
@@ -4763,7 +4839,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:06:36.000Z",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-17T09:31:59.195Z"
+    "lastSeenAt": "2026-08-17T09:31:59.195Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.investing.com/news/cryptocurrency-news/bitcoin-steadies-at-635k-iran-tensions-us-regulations-in-focus-4862213": {
     "title": "Bitcoin up slightly at $63.4k; Iran tensions, U.S. regulations in focus",
@@ -5051,7 +5128,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:26:00.000Z",
     "firstSeenAt": "2026-08-17T09:50:46.142Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/forex-news/asia-fx-ticks-up-on-reduced-fed-hike-bets-yen-gains-despite-weak-japan-gdp-4862111": {
     "title": "Dollar slips to June lows as cool U.S. data fuel 70% Fed pause probability",
@@ -5063,7 +5141,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:31:39.000Z",
     "firstSeenAt": "2026-08-17T09:50:46.142Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.investing.com/news/insider-trading-news/ufp-technologies-vp-jason-holt-sells-348700-in-company-stock-93CH-4862429": {
     "title": "UFP Technologies VP Jason Holt sells $348,700 in company stock",
@@ -5123,7 +5202,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:23:29.000Z",
     "firstSeenAt": "2026-08-17T09:50:46.142Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.investing.com/news/stock-market-news/bernstein-china-ess-shipments-surpass-100gwh-in-june-for-first-time-93CH-4862423": {
     "title": "Bernstein: China ESS shipments surpass 100GWh in June for first time",
@@ -5135,7 +5215,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:20:46.000Z",
     "firstSeenAt": "2026-08-17T09:50:46.142Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.investing.com/news/analyst-ratings/citizens-reiterates-alphabet-stock-rating-on-youtube-platform-strength-93CH-4862422": {
     "title": "Citizens reiterates Alphabet stock rating on YouTube platform strength",
@@ -5147,7 +5228,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:18:47.000Z",
     "firstSeenAt": "2026-08-17T09:50:46.142Z",
-    "lastSeenAt": "2026-08-17T09:50:46.142Z"
+    "lastSeenAt": "2026-08-17T09:50:46.142Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.investing.com/news/transcripts/earnings-call-transcript-jollibee-posts-q2-2026-beat-as-margins-rebound-93CH-4862421": {
     "title": "Earnings call transcript: Jollibee posts Q2 2026 beat as margins rebound",
@@ -5219,7 +5301,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-rates-today-monday-august-17-2026-purchase-rates-currently-lower-than-refi-rates-100000908.html": {
     "title": "Mortgage and refinance rates today, Monday, August 17, 2026: Purchase rates currently lower than refi rates",
@@ -5231,7 +5314,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/banking/article/best-cd-rates-today-monday-august-17-2026-lock-in-up-to-430-apy-100000753.html": {
     "title": "Best CD rates today, Monday, August 17, 2026: Lock in up to 4.30% APY",
@@ -5243,7 +5327,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/personal-finance/banking/article/best-high-yield-savings-interest-rates-today-monday-august-17-2026-earn-up-to-415-apy-100000771.html": {
     "title": "Best high-yield savings interest rates today, Monday, August 17, 2026: Earn up to 4.15% APY",
@@ -5255,7 +5340,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:00:00.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.investing.com/news/analyst-ratings/presidents-capital-management-reiterates-sea-stock-rating-on-strong-shopee-growth-93CH-4862448": {
     "title": "Presidents Capital Management reiterates Sea stock rating on strong Shopee growth",
@@ -5267,7 +5353,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:50:52.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.investing.com/news/economy-news/japans-economy-grows-slower-than-expected-in-apriljune-4862030": {
     "title": "Japan Q2 growth misses forecasts on weaker spending, investment",
@@ -5279,7 +5366,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:48:29.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。"
   },
   "https://www.investing.com/news/commodities-news/oil-prices-edge-lower-after-strong-week-iran-jitters-persist-4862062": {
     "title": "Oil prices tick higher after strong week as Iran jitters persist",
@@ -5291,7 +5379,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:44:35.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/stock-market-news/bofa-says-used-equipment-values-remain-stable-in-july-93CH-4862442": {
     "title": "BofA says used equipment values remain stable in July",
@@ -5351,7 +5440,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:35:40.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/stock-market-news/bofa-launches-ai-tracker-as-claude-leads-intelligence-rankings-93CH-4862432": {
     "title": "BofA launches AI tracker as Claude leads intelligence rankings",
@@ -5363,7 +5453,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T09:33:25.000Z",
     "firstSeenAt": "2026-08-17T10:01:57.951Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z"
+    "lastSeenAt": "2026-08-17T10:10:54.912Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/company-news/mitie-group-appoints-andrew-davies-as-nonexecutive-director-93CH-4862431": {
     "title": "Mitie Group appoints Andrew Davies as non-executive director",
@@ -5399,7 +5490,8 @@
     "excerpt": "As investors debate whether and when the Federal Reserve will raise interest rates, market expectations for further tightening are building around the world — and spelling trouble for bonds.",
     "publishedAt": "2026-08-16T12:00:00.000Z",
     "firstSeenAt": "2026-08-17T10:10:54.912Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/sri-lanka-sec-state-firms-to-list-via-holding-company-video": {
     "title": "Sri Lanka SEC: State Firms to List Via Holding Company",
@@ -5435,7 +5527,8 @@
     "excerpt": "Corporate offerings reach almost $1.5 trillion year to date, up 36% from a year earlier.",
     "publishedAt": "2026-08-17T10:19:01.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/the-pulse-8-17-2026-video": {
     "title": "China's Economic Woes Mount as Growth Weakens Across the Board | The Pulse 8/17/2026",
@@ -5447,7 +5540,8 @@
     "excerpt": "\"The Pulse With Francine Lacqua\" is all about conversations with high profile guests in the beating heart of global business, economics, finance and politics. Based in London, we go wherever the story is, bringing you exclusive interviews and market-moving scoops. Today's guests: Michael Metcalfe, S",
     "publishedAt": "2026-08-17T10:03:04.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.cnbc.com/2026/08/17/santoli-earnings-bonanza-that-lifted-market-to-record-may-not-be-all-that-it-appears-to-be.html": {
     "title": "Santoli: Earnings bonanza that lifted market to record may not be all that it appears to be",
@@ -5555,7 +5649,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:38:45.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/stock-market-news/why-is-mercury-systems-stock-rising-over-10-today-93CH-4862550": {
     "title": "Why is Mercury Systems stock rising over 10% today?",
@@ -5591,7 +5686,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:30:06.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.investing.com/news/stock-market-news/wells-fargo-sees-dollar-store-earnings-ahead-with-varied-outlooks-93CH-4862540": {
     "title": "Wells Fargo sees dollar store earnings ahead with varied outlooks",
@@ -5615,7 +5711,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:27:07.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.investing.com/news/analyst-ratings/bmo-resumes-global-net-lease-stock-coverage-with-outperform-rating-93CH-4862536": {
     "title": "BMO resumes Global Net Lease stock coverage with outperform rating",
@@ -5639,7 +5736,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T10:24:50.000Z",
     "firstSeenAt": "2026-08-17T10:56:25.847Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z"
+    "lastSeenAt": "2026-08-17T10:56:25.847Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.investing.com/news/stock-market-news/apple-to-change-app-data-consent-rules-german-regulator-says-4862535": {
     "title": "Apple to change app data consent rules, German regulator says",
@@ -5917,7 +6015,8 @@
     "excerpt": "Treasuries extended recent declines and Asian bonds followed as concerns over US government spending and a flood of long-dated debt weighed on sentiment, while higher oil prices stoked fears of inflation. Stocks and equity futures both fell.",
     "publishedAt": "2026-08-17T22:07:13.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/gold-holds-two-day-gain-on-reduced-rate-hike-expectations": {
     "title": "Gold Steadies Near $4,400 on Reduced Expectations for Rate Hike",
@@ -5928,7 +6027,7 @@
     "subcategory": "news",
     "excerpt": "Gold steadied near $4,400 an ounce as reduced prospects for an interest-rate hike by the Federal Reserve weighed on the US dollar, making bullion cheaper for most buyers.",
     "publishedAt": "2026-08-17T23:20:40.000Z",
-    "summary": "由于市场对美联储加息的预期降温，美元汇率承压，黄金价格连续第二个交易日上涨。美元走弱使金条对大多数买家而言更加便宜。",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
     "lastSeenAt": "2026-08-18T04:12:19.018Z"
   },
@@ -5942,7 +6041,8 @@
     "excerpt": "Hong Kong’s move to cut taxes for hedge funds has set off a frenzied wave of maneuvering across the city’s financial sector, with investment banks fearing an exodus of prop traders and one fund even considering rebranding a receptionist as an investor relations official to make the most of the poten",
     "publishedAt": "2026-08-17T23:00:00.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/latest-oil-market-news-and-analysis-for-aug-18": {
     "title": "Latest Oil Market News and Analysis for Aug. 18",
@@ -5954,7 +6054,8 @@
     "excerpt": "Oil gained as prospects for a near-term resolution of the US-Iran war receded, with a fresh vessel attack reported in the Strait of Hormuz.",
     "publishedAt": "2026-08-17T22:01:31.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/petrobras-mulls-improving-braskem-credit-terms-amid-debt-talks": {
     "title": "Petrobras Mulls Improving Braskem Credit Terms Amid Debt Talks",
@@ -5966,7 +6067,8 @@
     "excerpt": "Brazil’s Petrobras is weighing whether to grant improved payment terms to Braskem on some contracts as the petrochemical producer races against the clock to find a solution for its debt woes ahead of an August 24 deadline to avoid filing for bankruptcy protection, according to people familiar with t",
     "publishedAt": "2026-08-17T22:35:41.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/trump-likes-the-idea-of-declaring-hormuz-a-territory-video": {
     "title": "US-Iran Prospects Dim as Trump Seems in No Hurry to Reach Deal",
@@ -5978,7 +6080,8 @@
     "excerpt": "The war between the US and Iran has slowed down, as peace prospects dim with President Trump in no hurry to reach a peace deal. The apparent slowdown of actions comes as the President insists the US is controlling the Strait of Hormuz, as major US defense firms race to make cheaper missiles to bolst",
     "publishedAt": "2026-08-17T22:00:16.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/bolivia-hikes-diesel-prices-for-big-buyers-to-tame-supply-shock": {
     "title": "Bolivia Ups Diesel Costs for Big Buyers to Tame Supply Shock",
@@ -6062,7 +6165,8 @@
     "excerpt": "Bloomberg Intelligence's Neil Sipes joins Scarlet Fu and James Seyffart on \"ETF IQ.\" Goldman Sachs will pay as much as $2.25 billion to buy Neos Investments, expanding its asset manager’s reach in the actively managed ETF market. (Source: Bloomberg)",
     "publishedAt": "2026-08-17T20:33:49.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/casas-bahia-files-for-bankruptcy-on-high-rates-tight-credit": {
     "title": "Casas Bahia Files for Bankruptcy on High Rates, Tight Credit",
@@ -6074,7 +6178,8 @@
     "excerpt": "Grupo Casas Bahia SA filed for bankruptcy protection in Sao Paulo, after an out-of-court debt restructuring with its main creditors proved insufficient to resolve its financial troubles.",
     "publishedAt": "2026-08-17T14:57:22.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/saylor-s-strategy-sells-more-stock-to-repurchase-preferred": {
     "title": "Saylor’s Strategy Sells More Stock to Repurchase Preferred",
@@ -6086,7 +6191,8 @@
     "excerpt": "Michael Saylor continues to run his Bitcoin accumulation flywheel in reverse.",
     "publishedAt": "2026-08-17T13:38:23.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/stocks-slip-as-oil-treasury-yields-rise-closing-bell-video": {
     "title": "Stocks Slip as Oil and Treasury Yields Rise | Closing Bell",
@@ -6098,7 +6204,8 @@
     "excerpt": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Scarlet Fu, Isabelle Lee, Carol Massar and Joe Deaux. (Source: Bloomberg)",
     "publishedAt": "2026-08-17T20:27:01.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/bloomberg-businessweek-daily-8-17-2026-video": {
     "title": "Anthropic Revenue Boom Boosts AI Stocks | Bloomberg Businessweek Daily 8/17/2026",
@@ -6110,7 +6217,8 @@
     "excerpt": "Bloomberg Intelligence's Global Head of Technology Research Mandeep Singh reacts to Anthropic's revenue report, and news Alphabet is seeking billions in its debut bond offering in Australia. Then, Citi Wealth's Olaolu Aganga joins to discuss AI exposure to investment portfolios, and other AI-related",
     "publishedAt": "2026-08-17T20:24:47.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-17/we-were-day-one-buyers-of-spacex-cassidy-video": {
     "title": "We Were 'Day One Buyers' Of SpaceX: Cassidy",
@@ -6146,7 +6254,8 @@
     "excerpt": "Chipmaker also invests $1.5bn into energy company founded as part of SoftBank Group",
     "publishedAt": "2026-08-17T22:36:04.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ft.com/content/3cef717f-c231-420f-8405-0b2f9c416914?syn-25a6b1a6=1": {
     "title": "Ferrari’s first EV auctioned off for record $40mn",
@@ -6158,7 +6267,8 @@
     "excerpt": "Luce is most expensive new car to go under the hammer despite design backlash",
     "publishedAt": "2026-08-17T18:51:07.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.ft.com/content/fc94e1f6-3f22-4fb9-b4a5-682c425e4d49?syn-25a6b1a6=1": {
     "title": "The UK is going the wrong way about protecting pubs",
@@ -6170,7 +6280,8 @@
     "excerpt": "Government measures do little to support bars’ underlying business case",
     "publishedAt": "2026-08-17T18:03:35.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.ft.com/content/61b8162e-6c50-4775-8bb5-fff1259a9cf3?syn-25a6b1a6=1": {
     "title": "ExxonMobil advances Mozambique gas project despite terrorist threat",
@@ -6254,7 +6365,8 @@
     "excerpt": "Deal marks largest contract awarded to Big Four firms in at least a decade",
     "publishedAt": "2026-08-17T12:42:27.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.ft.com/content/35be5ef3-4ea3-444d-b509-2fb00a9940c9?syn-25a6b1a6=1": {
     "title": "Barclays shakes up investment bank less than three years since last overhaul",
@@ -6266,7 +6378,8 @@
     "excerpt": "Mike Joo hired from Bank of America to lead division in latest reshuffle",
     "publishedAt": "2026-08-17T12:40:17.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.ft.com/content/83d287ed-43e2-466d-9490-06879efb04fc?syn-25a6b1a6=1": {
     "title": "Trump’s war on customs fraud will be costly and difficult",
@@ -6278,7 +6391,8 @@
     "excerpt": "The US administration has incentivised the tariff cheating, mislabelling and misvaluation it complains about",
     "publishedAt": "2026-08-17T11:31:10.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.ft.com/content/b07952da-9e06-4269-9b6c-c4dccbf5d087": {
     "title": "How online fandom shaped our world",
@@ -6302,7 +6416,8 @@
     "excerpt": "Regulatory clearance brings competition on rail services to the continent a step closer",
     "publishedAt": "2026-08-17T10:17:49.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ft.com/content/adeca274-67a3-4ee8-94f1-f43e4f28be97?syn-25a6b1a6=1": {
     "title": "Meta and BlackRock’s $14bn data centre exposes lenders to insurance gap",
@@ -6314,7 +6429,8 @@
     "excerpt": "Investors in gigawatt-scale campuses face billions in underinsured risks as insurers balk at cost of full coverage",
     "publishedAt": "2026-08-17T10:00:10.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bbc.co.uk/news/articles/c934xy32919o?at_medium=RSS&at_campaign=rss": {
     "title": "To joke or not to joke?: How to write a good out-of-office message",
@@ -6387,7 +6503,8 @@
     "excerpt": "Treasury yields were higher as traders awaited the latest FOMC minutes due later this week.",
     "publishedAt": "2026-08-17T20:04:53.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.cnbc.com/2026/08/17/jeanie-buss-opposes-sale-family-stake.html": {
     "title": "Lakers governor Jeanie Buss says siblings cannot sell family’s stake to Bob Iger, Joshua Kushner",
@@ -6448,7 +6565,8 @@
     "excerpt": "Anthropic's revenue run rate is up about sevenfold from a year earlier.",
     "publishedAt": "2026-08-17T22:55:31.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.cnbc.com/2026/08/17/disney-parks-strategy-superfans-mazloum.html": {
     "title": "Disney's new parks boss outlines investment strategy, with superfans at the fore",
@@ -6460,7 +6578,8 @@
     "excerpt": "Disney Experiences chief Thomas Mazloum is focused on balancing the needs of its most ardent parkgoers with its less frequent visitors.",
     "publishedAt": "2026-08-17T20:23:22.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.cnbc.com/2026/08/17/cramer-buy-soaring-memory-stocks.html": {
     "title": "Jim Cramer says it’s not too late to own any one of these 4 soaring memory stocks",
@@ -6496,7 +6615,7 @@
     "subcategory": "news",
     "excerpt": "The U.S. can outspend China in financing artificial intelligence development, but is that the only factor that matters?",
     "publishedAt": "2026-08-17T23:00:01.000Z",
-    "summary": "CNBC《中国连线》新闻简报探讨中美人工智能竞赛的关键：美国在人工智能研发融资方面可以比中国投入更多资金，但这是否就是决定胜负的唯一因素？",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -6510,7 +6629,8 @@
     "excerpt": "Technology giants are shelling out billions to scale capacity to meet massive data center demand.",
     "publishedAt": "2026-08-17T21:22:37.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.cnbc.com/2026/08/17/bernie-sanders-social-security-garnishment-student-loans.html": {
     "title": "Sanders proposes bill to stop Social Security benefit garnishment for unpaid student loans",
@@ -6534,7 +6654,8 @@
     "excerpt": "President Trump was held civilly liable in the case by a New York federal jury for defaming and sexually abusing the writer E. Jean Carroll.",
     "publishedAt": "2026-08-17T16:01:46.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://www.cnbc.com/2026/08/17/refiner-stocks-are-on-a-nearly-unprecedented-run-history-says-it-could-end-soon.html": {
     "title": "Refiner stocks are on a nearly unprecedented run. History says it could end soon",
@@ -6570,7 +6691,8 @@
     "excerpt": "Recent SEC instructions on data center bonds appear applicable to the recent Nvidia financing move, lawyers say.",
     "publishedAt": "2026-08-17T16:08:53.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.cnbc.com/2026/08/17/synchrony-openai-chatgpt-shopping.html": {
     "title": "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
@@ -6582,7 +6704,8 @@
     "excerpt": "Maran Nalluswami, Synchrony's chief strategy officer, told CNBC it will probably take six to 12 months to get payments fully integrated into ChatGPT.",
     "publishedAt": "2026-08-17T18:32:54.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.cnbc.com/2026/08/17/stock-market-volatility-vix-wall-street.html": {
     "title": "'Don't get too comfortable': Wall Street’s ‘fear gauge’ hits 2026 low — here's why it's unlikely to last",
@@ -6618,7 +6741,8 @@
     "excerpt": "Brockman told CNBC he doesn't think the wave of recent departures at OpenAI are 'actually that atypical.'",
     "publishedAt": "2026-08-17T16:36:20.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.cnbc.com/2026/08/17/tv-media-insiders-predictions.html": {
     "title": "What will TV look like in three years? Media insiders share their predictions",
@@ -6642,7 +6766,8 @@
     "excerpt": "Peter Thiel’s hedge fund disclosed a $76 million stake in Argentine oil producer Vista Energy, sending its shares higher in premarket trading.",
     "publishedAt": "2026-08-17T13:02:32.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/warren-buffetts-berkshire-raises-stake-214700937.html": {
     "title": "Warren Buffett's Berkshire raises stake in world's largest airline",
@@ -6666,7 +6791,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T15:30:02.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/home-depot-ceo-takes-medical-153002568.html": {
     "title": "Home Depot CEO Takes Medical Leave. What This Means for HD Stock Ahead of Earnings.",
@@ -6750,7 +6876,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T16:04:49.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/checked-vigs-top-holdings-theyre-152000890.html": {
     "title": "I Checked VIG's Top Holdings. They're Not What You'd Expect From a Dividend ETF.",
@@ -6858,7 +6985,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T17:00:02.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-tells-caller-average-135105596.html": {
     "title": "Jim Cramer Tells Caller to Average Down on Netflix (NFLX)",
@@ -6882,7 +7010,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T15:34:00.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-17T23:46:53.827Z"
+    "lastSeenAt": "2026-08-17T23:46:53.827Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/wendy-jumps-report-nelson-peltz-134908532.html": {
     "title": "Wendy’s Jumps on Report That Nelson Peltz Wants to Take His Old Company Private",
@@ -6906,7 +7035,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:45:01.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/netflix-stock-cheap-more-70-173002732.html": {
     "title": "Netflix Stock Is Cheap and It Has More Than 70% Upside Potential Here",
@@ -6978,7 +7108,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:00:00.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://finance.yahoo.com/small-business/articles/tori-dunlaps-her-first-100k-183000556.html": {
     "title": "Tori Dunlap's Her First $100K made Inc. 5000 after growing it from a blog to a multi-million dollar business",
@@ -7050,7 +7181,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T23:16:50.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-17T23:46:53.827Z"
+    "lastSeenAt": "2026-08-17T23:46:53.827Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/insider-trading-news/kontoor-brands-ceo-scott-baxter-sells-153m-in-stock-93CH-4864099": {
     "title": "Kontoor Brands CEO Scott Baxter sells $15.3m in stock",
@@ -7171,7 +7303,8 @@
     "excerpt": "Vegetable and grain growers call for urgent action, warning of ‘catastrophic’ harvests due to continent-wide drought Successive intense heatwaves and an increasingly severe, continent-wide drought have left many of Europe’s farmers in an “unprecedented” crisis, with vegetable and grain growers in pa",
     "publishedAt": "2026-08-17T16:01:47.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.theguardian.com/business/2026/aug/17/china-economy-slowdown-signs-extending": {
     "title": "China’s economy showing signs that slowdown may be extending",
@@ -7183,7 +7316,8 @@
     "excerpt": "Industrial output and retail sales slump in July after one of the country’s weakest quarterly growth rates ever China’s economy is showing signs of extending a slowdown with a slump in industrial output and retail sales in July, adding to pressure on Beijing to intervene with measures to support act",
     "publishedAt": "2026-08-17T15:36:25.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.theguardian.com/technology/2026/aug/17/are-microsofts-ai-plans-being-held-back-by-a-shortage-of-chips": {
     "title": "Are Microsoft’s AI plans being held back by a shortage of chips?",
@@ -7195,7 +7329,8 @@
     "excerpt": "Guardian investigation finds apparent discrepancy between what tech company has said about its AI capacity – and the number of advanced chips it has in operation The chips are quite small and some can be held in the palm of a hand. They are fundamental to the development of artificial intelligence m",
     "publishedAt": "2026-08-17T04:00:46.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.theguardian.com/technology/2026/aug/17/raul-torrez-new-mexico-meta-social-media-safety-laws": {
     "title": "New Mexico’s attorney general pushes new social media safety laws after $900m court victory over Meta",
@@ -7219,7 +7354,8 @@
     "excerpt": "China has established the first scheduled transit through the northern sea route, but questions remain over the environmental and political risks When Marco Rubio suggested that the world should look to new shipping lanes to bypass the logjammed strait of Hormuz, it’s unlikely he had the Arctic’s no",
     "publishedAt": "2026-08-17T00:09:23.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.theguardian.com/australia-news/2026/aug/17/fbi-investigation-china-alleged-espionage-fake-websites-defence-intelligence-australia": {
     "title": "A fake website and a deluge of CVs: the Australian firm embroiled in an FBI probe into alleged Chinese espionage",
@@ -7231,7 +7367,8 @@
     "excerpt": "Exclusive: Fake consultancy impersonating Brisbane firm online is one of 13 websites seized by the US Department of Justice Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast When the first emails arrived, they were easily dismissed as ",
     "publishedAt": "2026-08-16T15:00:30.000Z",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.theguardian.com/world/2026/aug/15/met-police-apologises-exposing-email-addresses-mohamed-al-fayed-victims": {
     "title": "Met apologises for exposing 143 email addresses of Mohamed Al Fayed victims",
@@ -7255,7 +7392,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T12:55:00.000Z",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/greg-abel-starts-spending-berkshire-125459967.html": {
     "title": "Greg Abel Starts Spending: Berkshire’s Cash Hoard Finally Gets Put to Work",
@@ -7303,7 +7441,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T12:30:00.000Z",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://finance.yahoo.com/markets/article/20-reasons-why-wendys-may-be-doomed-123000752.html": {
     "title": "20 reasons why Wendy's may be doomed",
@@ -7327,7 +7466,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T12:47:56.000Z",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "ai_relevant": false
   },
   "https://finance.yahoo.com/markets/stocks/articles/walmart-keeps-raising-payout-no-125900240.html": {
     "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
@@ -7363,7 +7503,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:00:00.000Z",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/insider-trading-news/brinker-svp-daniel-fuller-sells-14m-in-company-eat-shares-93CH-4864125": {
     "title": "Brinker SVP Daniel Fuller sells $1.4m in company (EAT) shares",
@@ -7476,7 +7617,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T00:08:01.000Z",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-18T00:28:10.237Z"
+    "lastSeenAt": "2026-08-18T00:28:10.237Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/": {
     "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
@@ -7525,7 +7667,8 @@
     "excerpt": "South Korean government bonds are set to rally as the central bank will likely defy market forecasts by slowing the pace of interest rate hikes as inflation pressures ease, according to M&G Investments.",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.ft.com/content/e432e2a8-70ff-4181-9b38-b7b180d6bb34?syn-25a6b1a6=1": {
     "title": "Copper overtakes iron ore in annual profits at world’s biggest miner",
@@ -7537,7 +7680,8 @@
     "excerpt": "Annual earnings surge to $33bn, driven by booming demand for data centres and energy networks",
     "publishedAt": "2026-08-18T01:04:42.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bbc.co.uk/news/articles/crl7600rpnko?at_medium=RSS&at_campaign=rss": {
     "title": "US-Canada trade talks 'intense' as new tariff deadline looms",
@@ -7561,7 +7705,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:27:26.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/technology/ai/articles/spacex-planning-spend-500-billion-133155872.html": {
     "title": "SpaceX is Planning to Spend Up to $500 Billion on Data Centers. Here’s Why Elon Musk is Pushing All-In",
@@ -7597,7 +7742,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:37:00.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-raises-p-500-target-134100944.html": {
     "title": "JPMorgan Raises S&P 500 Target to 8,000 as Earnings and AI Growth Strengthen Outlook",
@@ -7609,7 +7755,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T13:41:00.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/wall-street-thinks-monolithic-power-183002705.html": {
     "title": "Wall Street Thinks Monolithic Power Is a Buy. Here’s Why It Might Be Right.",
@@ -7645,7 +7792,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T00:46:50.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/insider-trading-news/rackspace-technology-director-scott-anthony-sells-207554-in-shares-93CH-4864144": {
     "title": "Rackspace Technology director Scott Anthony sells $207,554 in shares",
@@ -7693,7 +7841,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T00:42:31.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。"
   },
   "https://www.investing.com/news/economy-news/australia-consumer-sentiment-brightens-in-august-as-rates-held-4864140": {
     "title": "Australia consumer sentiment brightens in August as rates held",
@@ -7705,7 +7854,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T00:36:42.000Z",
     "firstSeenAt": "2026-08-18T01:06:55.720Z",
-    "lastSeenAt": "2026-08-18T01:06:55.720Z"
+    "lastSeenAt": "2026-08-18T01:06:55.720Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.investing.com/news/stock-market-news/citadel-securities-urges-sec-to-reconsider-proposal-to-scrap-key-stocktrading-rule-4864139": {
     "title": "Citadel Securities urges SEC to reconsider proposal to scrap key stock-trading rule",
@@ -7861,7 +8011,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T19:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/real-estate/articles/drake-told-23-old-streamer-191500099.html": {
     "title": "Drake told a 23-year-old streamer he'd 'love to' buy her mom a house after picking her on dating show. Who pays the tax?",
@@ -7885,7 +8036,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T01:33:51.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.investing.com/news/insider-trading-news/isq-global-fund-ii-gp-kinetik-holdings-director-sells-189m-shares-93CH-4864181": {
     "title": "Isq global fund II GP, Kinetik Holdings director, sells $18.9m shares",
@@ -7945,7 +8097,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T01:30:39.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/company-news/smart-parking-fy26-slides-revenue-surges-63-organic-growth-leads-93CH-4864176": {
     "title": "Smart Parking FY26 slides: revenue surges 63%, organic growth leads",
@@ -8004,7 +8157,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswmx7445985.shtml": {
     "title": "青花郎涨至707元 站稳700元关口扩大战果",
@@ -8015,7 +8169,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswna3496516.shtml": {
     "title": "习酒君品上涨4元 三连涨平近一个月最高纪录",
@@ -8026,7 +8181,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswne0267872.shtml": {
     "title": "古井贡古20跌5元 二连跌价格中枢温和下移",
@@ -8037,7 +8193,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/relnews/2026-08-18/doc-ininswne0269417.shtml": {
     "title": "频准激光上市首日开盘涨488%，中一签浮盈超45万",
@@ -8048,7 +8205,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "http://finance.sina.com.cn/zl/china/2026-08-18/zl-ininswmu8719179.shtml": {
     "title": "余敬中：恒科指变阵触发港股硬科技“破壁”时刻",
@@ -8059,7 +8217,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "港股硬科技崛起：科技主题投资机会，财富客户权益配置参考。"
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswmx7440020.shtml": {
     "title": "洋河梦之蓝M6+跌4元 四连阳强势宣告结束",
@@ -8070,7 +8229,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswne0263367.shtml": {
     "title": "国窖1573下跌3元 自月高点连续回调",
@@ -8081,7 +8241,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-18/doc-ininswmx7437540.shtml": {
     "title": "华住集团-S早盘高开逾11% 二季度业绩稳健增长公司上调全年指引",
@@ -8092,7 +8253,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "华住二季度业绩高增：消费服务景气，相关企业及从业客群是代发/经营贷机会。"
   },
   "https://finance.sina.cn/stock/dpps/2026-08-18/detail-ininswmu8710820.d.html": {
     "title": "A股年内最贵新股来了！频准激光高开488% 单签赚超45万创历史记录",
@@ -8103,7 +8265,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswmx7436884.shtml": {
     "title": "青花汾20逆势走高 再创近一个月新高",
@@ -8114,7 +8277,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-18/doc-ininswmu8707862.shtml": {
     "title": "周生生早盘高开逾11% 预计上半年盈利约21亿至22亿港元",
@@ -8125,7 +8289,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "周生生盈利预喜：黄金珠宝消费旺盛，贵金属销售与消费金融联动机会。"
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswne0261045.shtml": {
     "title": "五粮液1618跌3元 进一步脱离月高点",
@@ -8136,7 +8301,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswna3487288.shtml": {
     "title": "五粮液普五八代跌2元 自近期高点小幅回落",
@@ -8147,7 +8313,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswna3487031.shtml": {
     "title": "精品茅台下跌4元 持续高位修整",
@@ -8158,7 +8325,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "http://finance.sina.com.cn/zl/china/2026-08-18/zl-ininswna3487371.shtml": {
     "title": "孚宝智能科技董事长贾国强：AI产品规模化出海的堵点与破局",
@@ -8169,7 +8337,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "AI产品出海观察：科技企业出海融资与外汇服务机会。"
   },
   "https://finance.sina.cn/stock/dpps/2026-08-18/detail-ininswmx7433346.d.html": {
     "title": "开盘：三大指数集体低开 工业金属板块跌幅居前",
@@ -8180,7 +8349,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "A股低开工业金属走弱：市场情绪偏谨慎，权益类产品销售节奏宜稳健。"
   },
   "https://finance.sina.com.cn/roll/2026-08-18/doc-ininswmx7434964.shtml": {
     "title": "金价升破4430美元，机构称还能涨超60%",
@@ -8191,7 +8361,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "金价突破4430美元：避险与通胀配置需求强劲，是贵金属/黄金积存业务营销窗口。"
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswne0258842.shtml": {
     "title": "飞天茅台下跌2元 延续高位振荡行情",
@@ -8202,7 +8373,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/chanjing/jync/zxxx/2026-08-18/doc-ininswmu8704013.shtml": {
     "title": "青花汾20青花郎逆势走高 茅台五粮液等高端名酒多数回调",
@@ -8213,7 +8385,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/fund/etf/2026-08-18/doc-ininswmu8703044.shtml": {
     "title": "【早盘三分钟】8月18日华宝基金ETF早知道",
@@ -8224,7 +8397,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-18/doc-ininswmx7430217.shtml": {
     "title": "快讯：恒指低开0.33% 科指跌0.28% 科网股低迷 黄金股普涨 光通信板块高开",
@@ -8235,7 +8409,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "港股低开黄金股涨：市场避险情绪，财富客户配置建议向黄金/固收倾斜。"
   },
   "https://finance.sina.com.cn/money/fund/etf/2026-08-18/doc-ininswmx7430078.shtml": {
     "title": "光模块科普③ | 一个视频看懂“易、中、天”产业链分工",
@@ -8246,7 +8421,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "光模块产业链：科技产业科普，对公科技金融方向参考。"
   },
   "https://finance.sina.com.cn/money/fund/etf/2026-08-18/doc-ininswne0254595.shtml": {
     "title": "华宝基金红利风向标 | 指数继续回暖，港股红利攻守兼备",
@@ -8257,7 +8433,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "港股红利策略受关注：红利/高股息是稳健型财富客户配置方向。"
   },
   "https://finance.sina.com.cn/money/forex/rmb/2026-08-18/doc-ininswna3481834.shtml": {
     "title": "人民币兑美元中间价报6.7905，下调32点",
@@ -8268,7 +8445,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T01:43:25.793Z"
+    "lastSeenAt": "2026-08-18T01:43:25.793Z",
+    "summary": "人民币中间价下调：汇率波动影响外币理财与结售汇客户，需提示汇率风险与配置策略。"
   },
   "https://finance.cctv.com/2026/08/17/ARTISxbju4BE6p380FCRWIKV260817.shtml": {
     "title": "贷款“降速提质” 居民存款仍在搬家",
@@ -8279,7 +8457,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "7月信贷降速、存款搬家：居民资金向理财/基金等转移，是财富管理业务与存款稳定性管理的双重信号。"
   },
   "https://finance.cctv.com/2026/08/17/ARTIarhQTXkmFpjnQDr53Yhc260817.shtml": {
     "title": "多家银行竞推“算力贷” “算力证明信用”能走多远",
@@ -8290,7 +8469,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "银行竞推算力贷：以算力资产增信服务AI企业，是科技金融创新点，可关注对公联动与风险模型。"
   },
   "https://finance.cctv.com/2026/08/15/ARTIYzQv9BfiH4jNQzd3EPcO260815.shtml": {
     "title": "营收注水、减值随意、研发乱账……证监会年报监管报告点名八大乱象",
@@ -8301,7 +8481,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-15T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "证监会年报监管点名财务乱象：银行业尽调/审计需强化财务真实性识别，防范信贷风险。"
   },
   "https://finance.cctv.com/2026/08/15/ARTIa1JF4316YbK3zaPScPWB260815.shtml": {
     "title": "7月金融数据出炉：信贷结构持续优化、债券与股票融资占比继续提升",
@@ -8312,7 +8493,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-15T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "7月金融数据：信贷结构优化、直接融资占比提升，反映实体经济融资渠道变化，影响银行信贷投放策略。"
   },
   "https://finance.cctv.com/2026/08/17/ARTIBh4TVwyPeBpvVSYaCsKf260817.shtml": {
     "title": "电商“AB货”，乱象背后是行业内卷",
@@ -8323,7 +8505,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "电商AB货乱象：商户经营规范性风险，收单/商户贷风控提示。"
   },
   "https://finance.cctv.com/2026/08/17/ARTIDWryZZNhnlHcGThzUgPT260817.shtml": {
     "title": "吉利汽车上半年营收1736亿元，核心归母净利润劲增46%",
@@ -8334,7 +8517,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "吉利半年报营收利润双增：汽车产业链景气，相关企业客群是代发与供应链金融机会。"
   },
   "https://finance.cctv.com/2026/08/15/ARTIWSyuF3EPCP3Wc0CqXeSE260815.shtml": {
     "title": "银行业从严监管“穿透到人” 今年以来共罚款12.19亿元禁业178人",
@@ -8345,7 +8529,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-15T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "银行业严监管穿透到人：合规红线收紧，分行需强化员工行为管理与消保合规。"
   },
   "https://finance.cctv.com/2026/08/15/ARTI6RI9PFvauc6vBPAJahYn260815.shtml": {
     "title": "落实防范打击非法金融要求 多地监管优化治理机制",
@@ -8356,7 +8541,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-15T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "打击非法金融：消保与合规治理，分行需配合开展风险排查。"
   },
   "https://finance.cctv.com/2026/08/13/ARTIlPfzZyxJ1n3EuvvV21RX260813.shtml": {
     "title": "5年期存款利率逆势上升！发生了什么？",
@@ -8367,7 +8553,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-13T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "5年期存款利率逆势上行：负债成本承压，关注存款定价竞争与理财替代效应。"
   },
   "https://finance.cctv.com/2026/08/17/ARTIWJrHKIaQPZz7PWhHw4Hk260817.shtml": {
     "title": "我国保险资金运用余额首次突破40万亿元",
@@ -8378,7 +8565,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "保险资金运用余额破40万亿：险资配置需求旺盛，是银保/代销业务与高净值客群联动机会。"
   },
   "https://finance.cctv.com/2026/08/13/ARTIdLCk9yglPW0uJKTL5ekR260813.shtml": {
     "title": "北京保险业全面规范短期健康险互联网宣传与销售",
@@ -8389,7 +8577,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-13T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "监管规范短期健康险互联网销售：代销合规要求提升，保险产品准入与销售话术需同步调整。"
   },
   "https://finance.cctv.com/2026/08/12/ARTIVUracpMjjXEU4VUPBEu1260812.shtml": {
     "title": "金融监管总局：保险业快速应对台风“白海豚”已赔付3409万元",
@@ -8400,7 +8589,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-12T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "保险业快速理赔台风灾害：灾害理赔案例可作风险教育与保险销售切入点。"
   },
   "https://finance.cctv.com/2026/08/13/ARTIoX3Nf1s7W9q1I3vMUGNE260813.shtml": {
     "title": "组合拳出击，叫停“速成车”",
@@ -8411,7 +8601,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-13T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "整治速成车乱象：行业规范治理，相关产业信贷审慎。"
   },
   "https://finance.cctv.com/2026/08/15/ARTIv3tr8IEVOnYY0lmOVVZm260815.shtml": {
     "title": "Token能贷款了！AI产业迎来全新融资标尺",
@@ -8422,7 +8613,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-15T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业数据资产融资新标尺：数据资产质押/评估是未来信贷创新方向，宜提前研究。"
   },
   "https://finance.cctv.com/2026/08/12/ARTIGUdmuBalTdAlx3jyxkur260812.shtml": {
     "title": "电脑价格7月涨幅超17%，专家称最快明年下半年缓解压力",
@@ -8433,7 +8625,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-12T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "电脑等电子产品涨价：短期通胀信号，关注消费类信贷需求与通胀预期管理。"
   },
   "https://huggingface.co/papers/2608.15265": {
     "title": "VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?",
@@ -8615,7 +8808,7 @@
     "subcategory": "news",
     "excerpt": "Net sales of foreign exchange by Chinese companies fell to a eight-month low in July, suggesting a key source of support for the yuan is fading.",
     "publishedAt": "2026-08-18T03:48:01.000Z",
-    "summary": "中国企业在7月的外汇净销售额降至八个月低点，表明人民币汇率此前的一个重要支撑因素正在减弱，未来人民币走势或受影响。",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T04:12:19.018Z"
   },
@@ -8652,7 +8845,7 @@
     "subcategory": "news",
     "excerpt": "Japan’s five-year government bond auction Tuesday saw the strongest demand since June 2025, as a global rout in long-term debt spurred demand for shorter maturities.",
     "publishedAt": "2026-08-18T03:40:20.000Z",
-    "summary": "日本周二（8月18日）拍卖的五年期国债吸引力为2025年6月以来最强，收益率处于较高水平成为支撑买盘的主要因素。",
+    "summary": "日本经济/日元动态：全球资金流向与套息交易风险，影响跨境资产配置。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -8665,7 +8858,7 @@
     "subcategory": "news",
     "excerpt": "China's iron ore demand remains steady, supported by manufacturing activity, according to BHP CEO Brandon Craig. He also says stronger Indian demand for metallurgical coal should support the market. He spoke with Haidi Stoud-Watts on Insight with Haslinda Amin. (Source: Bloomberg)",
     "publishedAt": "2026-08-18T03:39:05.000Z",
-    "summary": "必和必拓（BHP）CEO Brandon Craig表示，中国铁矿石需求在制造业活动支撑下保持稳定，同时印度对冶金煤的强劲需求也将对市场形成支撑。",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T04:12:19.018Z"
   },
@@ -8678,7 +8871,7 @@
     "subcategory": "news",
     "excerpt": "Caught off-guard by India’s decision to close early a special window to draw foreign-currency deposits, traders are now paring bets on gains in the rupee and short-term bonds.",
     "publishedAt": "2026-08-18T03:32:55.000Z",
-    "summary": "印度决定提前结束一个用于吸收外币存款的特殊窗口，交易员措手不及，因此正在削减对卢比和短期债券上涨的押注。",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z"
   },
@@ -8692,7 +8885,8 @@
     "excerpt": "Copper was headed for another day of turbulent trading after a key indicator of short-term supply tightness on the London Metal Exchange spiked.",
     "publishedAt": "2026-08-18T02:43:45.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.bloomberg.com/news/newsletters/2026-08-18/indian-ipos-shine-bright-even-as-nifty-loses-momentum": {
     "title": "Indian IPOs Shine Bright Even as Nifty Loses Momentum",
@@ -8704,7 +8898,8 @@
     "excerpt": "The primary market is picking up pace, with eight of the past 10 IPOs seeing strong investor demand.",
     "publishedAt": "2026-08-18T02:36:23.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/saudis-offer-oil-from-near-oman-in-possible-sign-of-shuttling": {
     "title": "Saudis Offer Oil Near Oman in Possible Sign of Shuttling",
@@ -8716,7 +8911,8 @@
     "excerpt": "Saudi Arabia is offering to sell oil from off the coast of Oman, a sign that the kingdom may be following the United Arab Emirates in shuttling more barrels through the Strait of Hormuz.",
     "publishedAt": "2026-08-17T13:38:50.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/9eae7b4f-23fe-47f4-9a95-51f6b401c9e6?syn-25a6b1a6=1": {
     "title": "How a pesky Jordan copycat dribbled around Nike in China",
@@ -8728,7 +8924,8 @@
     "excerpt": "Qiaodan has gone from a minor irritant to a sophisticated operator nibbling away at Nike in its biggest overseas market",
     "publishedAt": "2026-08-18T02:56:59.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.ft.com/content/f9319eaf-7a5e-4260-9ca0-35bfe32060e1?syn-25a6b1a6=1": {
     "title": "Can Tata Sons untangle its many knots?",
@@ -8765,7 +8962,8 @@
     "excerpt": "The collaboration, which is in its early stages, is a step toward enabling Synchrony customers to have smoother online shopping experiences.",
     "publishedAt": "2026-08-18T02:48:33.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/buy-meta-platforms-stock-below-164000665.html": {
     "title": "Should You Buy Meta Platforms Stock Below $600 Before Mark Zuckerberg Unveils Its AI Cloud Business? Here's My Honest Take",
@@ -8777,7 +8975,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T16:40:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/investing-500-month-3-etfs-163720672.html": {
     "title": "Investing $500 a Month Into These 3 ETFs Could Retire You a Millionaire",
@@ -8825,7 +9024,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T19:31:30.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/technology/ai/articles/google-googl-latest-ai-model-194743447.html": {
     "title": "Google’s (GOOGL) Latest AI Model Arrives Amid A Bigger Balancing Act",
@@ -8837,7 +9037,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T19:47:43.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/stellantis-stla-big-turnaround-bet-200858626.html": {
     "title": "Stellantis’ (STLA) Big Turnaround Bet Hits A North American Snag",
@@ -8861,7 +9062,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T20:23:14.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/planet-fitness-director-spinelli-buys-165500960.html": {
     "title": "Planet Fitness Director Spinelli Buys 10,000 Shares for $492,800 -- Should Investors Buy Too?",
@@ -8885,7 +9087,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-16T23:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/technology/articles/workday-51-billion-takeover-talks-163300274.html": {
     "title": "Workday’s $51 billion takeover talks could reset the software trade",
@@ -8909,7 +9112,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T13:47:55.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-monday-august-17-2026-buoyed-by-softer-economic-data-while-industrial-outlook-remains-uncertain-135247624.html": {
     "title": "Silver prices today, Monday, August 17, 2026: Buoyed by softer economic data, while industrial outlook remains uncertain",
@@ -8957,7 +9161,7 @@
     "subcategory": "news",
     "excerpt": "",
     "publishedAt": "2026-08-18T04:00:27.000Z",
-    "summary": "新加坡大华银行（UOB）任命Tan Choon Hin担任新设立的东盟及大中华区主管，该职位将负责统筹相关区域业务，反映大华银行加强对这两个市场的布局。",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T04:12:19.018Z"
   },
@@ -8997,7 +9201,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T03:30:29.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/transcripts/earnings-call-transcript-cochlear-lifts-cash-flow-stock-rises-after-h2-2026-93CH-4864242": {
     "title": "Earnings call transcript: Cochlear lifts cash flow, stock rises after H2 2026",
@@ -9021,7 +9226,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T03:16:21.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.investing.com/news/stock-market-news/bhp-copper-overtakes-iron-ore-as-primary-profit-driver-heres-what-it-means-93CH-4864240": {
     "title": "BHP: copper overtakes iron ore as primary profit driver, here’s what it means",
@@ -9033,7 +9239,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T03:14:16.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T04:12:19.018Z"
+    "lastSeenAt": "2026-08-18T04:12:19.018Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.investing.com/news/stock-market-news/why-is-bhp-stock-surging-today-93CH-4864239": {
     "title": "Why is BHP stock surging today?",
@@ -9068,7 +9275,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "乘用车出口高增84.6%：汽车出海产业链景气，相关企业融资与供应链金融机会。"
   },
   "https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintaty3439445.shtml": {
     "title": "57岁黄建军空降接任申万宏源总经理，能否突破发展瓶颈？",
@@ -9079,7 +9287,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "券商高管变动：券商经营调整，代销渠道合作策略可跟踪。"
   },
   "https://finance.sina.com.cn/roll/2026-08-18/doc-inintaty3432576.shtml": {
     "title": "铜市供需持续失衡，LME库存单月骤降32%，矿业股迎来新一轮上行机遇",
@@ -9090,7 +9299,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "铜市供需失衡：大宗商品价格上行，相关产业链企业融资与商品类产品机会。"
   },
   "http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaua0195723.shtml": {
     "title": "顾雷：数智赋能地方金融 严守监管合规底线",
@@ -9101,7 +9311,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "数智赋能地方金融：银行数字化风控与合规建设是信息技术部关注方向。"
   },
   "http://finance.sina.com.cn/zl/bank/2026-08-18/zl-inintaua0194250.shtml": {
     "title": "连平：金融服务实体经济方式正在发生深刻转变",
@@ -9112,7 +9323,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "金融服务实体经济方式转变：信贷投向与综合金融服务模式需向产业/科创倾斜。"
   },
   "http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaua0192788.shtml": {
     "title": "付一夫：县域消费再度迎来政策东风",
@@ -9124,7 +9336,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
     "lastSeenAt": "2026-08-18T06:50:00.680Z",
-    "summary": "广州消费市场数据：消费复苏节奏影响零售客户资金活跃度与信贷需求，可用于消费贷/分期/收单业务研判。"
+    "summary": "县域消费政策利好：下沉市场客群是消费贷/信用卡/收单的新增长点。"
   },
   "http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaty3418930.shtml": {
     "title": "罗志恒：如何理解“供强需弱”的深层逻辑？——7月经济运行观察",
@@ -9135,7 +9347,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "供强需弱宏观分析：需求端偏弱提示零售信贷与消费刺激的空间与策略。"
   },
   "https://finance.sina.com.cn/roll/2026-08-18/doc-inintatv7365252.shtml": {
     "title": "观星程|车能融合下，充电产业如何突破低效竞争困局？",
@@ -9146,7 +9359,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "充电产业竞争：新能源基础设施企业融资需求，对公业务参考。"
   },
   "https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintatv7365988.shtml": {
     "title": "上半年亏损超6亿，芯原股份亟待百亿AI订单扭转局面",
@@ -9157,7 +9371,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "芯原股份亏损承压：半导体企业现金流压力，科创企业信贷风险需关注。"
   },
   "https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintaty3401274.shtml": {
     "title": "招商蛇口浙江公司负责人赵海峰被调查，涉嫌商务饭局中侵犯女性",
@@ -9168,7 +9383,8 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "招商系高管被查：企业合规与声誉事件，涉事企业关联业务宜审慎。"
   },
   "https://finance.sina.com.cn/roll/2026-08-18/doc-inintaty3394507.shtml": {
     "title": "暑运首月运营稳健 海航控股53.6亿美元购机开启新一轮成长周期",
@@ -9707,7 +9923,8 @@
     "excerpt": "Mexico’s Braskem Idesa SAPI, a joint venture between Brazil’s Braskem SA and the conglomerate of Mexican tycoon Carlos Slim, has filed for bankruptcy protection as mounting financial strain and a worsening liquidity crunch weigh on the company.",
     "publishedAt": "2026-08-18T06:19:28.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-18/bridgewater-china-withstands-july-rout-that-left-quants-reeling": {
     "title": "Bridgewater China Withstands July Rout That Left Quants Reeling",
@@ -9719,7 +9936,8 @@
     "excerpt": "Macro hedge funds in China including Bridgewater Associates LP’s local unit emerged from the July selloff bruised but not defeated, holding on to their annual gains after a wild stock market selloff that pushed other funds into the red.",
     "publishedAt": "2026-08-18T06:11:06.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-17/mcx-plans-india-coal-mineral-exchanges-to-boost-price-discovery": {
     "title": "MCX Plans India Coal, Ore Exchanges to Boost Price Discovery",
@@ -9731,7 +9949,8 @@
     "excerpt": "Multi Commodity Exchange of India Ltd. plans to invest as much as 2 billion rupees ($21 million) to start coal and minerals trading platforms as the government opens up the sectors to improve price discovery and transparency in the domestic market.",
     "publishedAt": "2026-08-17T10:37:04.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-18/insight-with-haslinda-amin-8-18-2026-video": {
     "title": "AI Boom, Debt Surge Fuel Long Bond Pain | Insight with Haslinda Amin 8/18/2026",
@@ -9743,7 +9962,8 @@
     "excerpt": "Insight with Haslinda Amin, a daily news program featuring in-depth, high-profile interviews and analysis to give viewers the complete picture on the stories that matter. The show features prominent leaders spanning the worlds of business, finance, politics and culture. (Source: Bloomberg)",
     "publishedAt": "2026-08-18T06:01:48.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.bloomberg.com/news/live-blog/2026-08-18/ftse-100-live-jobs-data-bonds-trump-iran-oil-prices-hormuz-ai-stocks-pound-what-s-moving-uk-markets-right-now-markets-today-msy8oopb": {
     "title": "FTSE 100 Live: UK Payrolls Fall as Businesses Cite Cost Pressures",
@@ -9755,7 +9975,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T05:45:53.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.bloomberg.com/news/articles/2026-08-18/situational-awareness-sold-taiyo-yuden-shares-to-citadel-others-msy5e92j": {
     "title": "Situational Awareness Sold Taiyo Yuden Shares to Citadel",
@@ -9803,7 +10024,8 @@
     "excerpt": "National Stock Exchange of India Ltd., the operator of the world’s largest derivatives exchange by trading volume, is seeking a valuation of as much as 5.26 trillion rupees ($55 billion) in its planned initial public offering, according to people familiar with the matter.",
     "publishedAt": "2026-08-18T05:05:36.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "印度经济动态：新兴市场需求与供应链转移参考。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-18/zonszein-gaza-peace-plan-hinges-on-concessions-video": {
     "title": "Zonszein: Gaza Peace Plan Hinges on Concessions",
@@ -9839,7 +10061,8 @@
     "excerpt": "“Bloomberg: The China Show” is your definitive source for news and analysis on the world's second-biggest economy. From politics and policy to tech and trends, Yvonne Man and David Ingles give global investors unique insight, delivering in-depth discussions with the newsmakers who matter. (Source: B",
     "publishedAt": "2026-08-18T04:39:47.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.bloomberg.com/news/videos/2026-08-18/this-china-firm-runs-schools-teaching-robots-human-tasks-video": {
     "title": "This China Firm Runs a School Teaching Robots Human Tasks",
@@ -9851,7 +10074,8 @@
     "excerpt": "RealMan Robotics Director of Overseas Solutions Kenneth Ren discusses the company's school, where robots are taught human tasks. He speaks with David Ingles and Yvonne Man on \"Bloomberg: The China Show.\" (Source: Bloomberg)",
     "publishedAt": "2026-08-18T04:27:59.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.ft.com/content/8cafeb3f-f11b-41ba-a67c-61072823eeb4?syn-25a6b1a6=1": {
     "title": "FirstFT: Asian doubts over US resolve",
@@ -9899,7 +10123,8 @@
     "excerpt": "Urgent assessment comes after Donald Trump blocked foreign national access to Anthropic’s Fable 5",
     "publishedAt": "2026-08-18T04:00:23.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ft.com/content/03c8edc6-92ee-4eb9-a83a-441e839a6317?syn-25a6b1a6=1": {
     "title": "Burger King is taking a bite out of McDonald’s lunch",
@@ -9923,7 +10148,8 @@
     "excerpt": "Private equity-backed brands such as Cubitts, Ace & Tate and Jimmy Fairly compete for scale in financially alluring sector",
     "publishedAt": "2026-08-18T04:00:23.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.ft.com/content/cf29e18e-c4d8-4a27-b7c7-3cf56d6eccf2?syn-25a6b1a6=1": {
     "title": "Can canned cocktails revive the booze business?",
@@ -9947,7 +10173,8 @@
     "excerpt": "Recent cyber attacks reflect what the technology was trained to do but safeguards are falling short",
     "publishedAt": "2026-08-18T04:00:14.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.ft.com/content/7b319af2-ed25-4d0b-8754-a613a8ab19e8?syn-25a6b1a6=1": {
     "title": "Counterfeiting claims threaten to take the shine off Shein",
@@ -9983,7 +10210,8 @@
     "excerpt": "North African country has continent’s largest proven reserves but lacks capital",
     "publishedAt": "2026-08-18T04:00:14.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。"
   },
   "https://www.ft.com/content/a2f0e0f8-9350-4124-af77-62219e77e777?syn-25a6b1a6=1": {
     "title": "Short sellers reap $2bn profit as modular nuclear reactor stocks tumble",
@@ -10007,7 +10235,8 @@
     "excerpt": "The threat of violence loomed over European business leaders in the 1970s and 1980s — and today’s CEOs must learn to live with it again",
     "publishedAt": "2026-08-18T04:00:14.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ft.com/content/9d8f4215-4d19-43df-ab81-b9f8adb057c8?syn-25a6b1a6=1": {
     "title": "Airlines in ‘stand-off’ over price cuts as jet fuel costs ease",
@@ -10031,7 +10260,8 @@
     "excerpt": "Government says higher mandatory discounts for insurers will save €12bn by 2030",
     "publishedAt": "2026-08-18T04:00:05.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.ft.com/content/4deb626f-df26-4ea3-a654-540855fef0b0?syn-25a6b1a6=1": {
     "title": "Spend more on vet services to curb pandemic threat, says animal health body",
@@ -10067,7 +10297,8 @@
     "excerpt": "Firms avoid new equity investments as Beijing tightens scrutiny of foreign capital in sensitive sectors",
     "publishedAt": "2026-08-18T04:00:05.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
   },
   "https://www.ft.com/content/96878d74-1eed-4bb8-844c-e917d5f3dec1?syn-25a6b1a6=1": {
     "title": "Airlines in stand-off over cutting ticket prices",
@@ -10127,7 +10358,8 @@
     "excerpt": "The yield on the 30-year U.S. Treasury has surged to its highest level in 19 years, and some strategists see scope for the move to go further.",
     "publishedAt": "2026-08-18T06:11:52.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.cnbc.com/2026/08/18/trump-south-korea-military-exercises-iran-north-korea.html": {
     "title": "South Korea must brace for ‘worst-case scenario,’ President Lee says, as Trump cuts military drills",
@@ -10139,7 +10371,8 @@
     "excerpt": "The annual exercises, are defensive and not intended to attack North Korea or raise tensions on the peninsula, Lee said.",
     "publishedAt": "2026-08-18T05:16:51.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "https://finance.yahoo.com/markets/stocks/articles/5-star-analyst-sets-alarming-030700322.html": {
     "title": "5-star analyst sets alarming SpaceX stock price target",
@@ -10247,7 +10480,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-17T18:40:35.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://finance.yahoo.com/personal-finance/investing/article/centralized-vs-decentralized-exchanges-191328712.html": {
     "title": "Centralized vs. decentralized exchanges: What's the difference?",
@@ -10319,7 +10553,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T06:13:18.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.investing.com/news/company-news/bhp-reports-124-billion-in-government-payments-for-fiscal-2026-93CH-4864299": {
     "title": "BHP reports $12.4 billion in government payments for fiscal 2026",
@@ -10343,7 +10578,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T06:30:42.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.investing.com/news/stock-market-news/mexicos-braskem-idesa-files-for-bankruptcy-in-us-to-reduce-debt-4864296": {
     "title": "Mexico’s Braskem Idesa files for bankruptcy in US to reduce debt",
@@ -10355,7 +10591,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T06:06:31.000Z",
     "firstSeenAt": "2026-08-18T06:34:21.349Z",
-    "lastSeenAt": "2026-08-18T06:34:21.349Z"
+    "lastSeenAt": "2026-08-18T06:34:21.349Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.investing.com/news/insider-trading-news/cue-biopharma-legal-chief-sells-265627-in-common-stock-93CH-4864295": {
     "title": "Cue Biopharma legal chief sells $265,627 in common stock",
@@ -11403,7 +11640,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T06:38:08.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.investing.com/news/economic-indicators/battered-by-war-irans-rulers-wary-of-more-economic-pain-and-unrest-if-us-tightens-pressure-4863667": {
     "title": "Battered by war, Iran’s rulers wary of more economic pain and unrest if US tightens pressure",
@@ -11439,7 +11677,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T06:35:15.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美联储/美债动态：全球利率与美元走势影响国内资产配置与外币理财策略。"
   },
   "https://www.investing.com/news/company-news/seraphim-space-invests-30m-in-satellite-bluetooth-firm-hubble-93CH-4864354": {
     "title": "Seraphim Space invests $30m in satellite Bluetooth firm Hubble",
@@ -11552,7 +11791,8 @@
     "excerpt": "Unemployment rate remained at 4.9% in the three months to the end of June, ONS figures show Wage growth in the UK slowed in June as workers come under pressure from a renewed cost of living squeeze amid the economic impact from the Iran war, official figures show. Figures from the Office for Nationa",
     "publishedAt": "2026-08-18T06:34:20.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.theguardian.com/inequality/2026/aug/18/economists-andy-burnham-uk-un-initiative-global-international-panel-inequality": {
     "title": "Top economists urge Burnham to sign UK up to UN initiative on global inequality",
@@ -11564,7 +11804,8 @@
     "excerpt": "Open letter signed by 40 academics including Nobel winner Joseph Stiglitz and Kate Pickett, co-author of The Spirit Level Forty prominent progressive academics are urging Andy Burnham’s government to join a new global push to tackle inequality. The experts include Nobel winner Joseph Stiglitz, Unive",
     "publishedAt": "2026-08-18T04:00:15.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.theguardian.com/business/2026/aug/18/homes-great-britain-sell-mortgage-deal-buyers-iran-war": {
     "title": "Half of homes in Great Britain taking longer to sell than last year amid mortgage volatility",
@@ -11576,7 +11817,8 @@
     "excerpt": "Many buyers wait in hope of better deal, although there are hotspots in Scotland and northern England Half of homes in Great Britain are taking longer to sell than last year as volatile conditions in the mortgage market amid the Iran war prompt buyers to “wait and see” if they can get a better deal,",
     "publishedAt": "2026-08-18T05:00:15.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.theguardian.com/business/2026/aug/17/virgin-trains-services-to-europe-eurostar": {
     "title": "Virgin Trains a step closer to running services to Europe in blow to Eurostar",
@@ -11588,7 +11830,8 @@
     "excerpt": "Operator granted UK track access for as many as 20 daily return trains to Paris, Brussels and Amsterdam from 2030 Business live – latest updates Virgin Trains has been granted track access by the rail regulator to enable it to run services between London and Paris, Brussels and Amsterdam from 2030, ",
     "publishedAt": "2026-08-17T16:41:07.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.theguardian.com/business/2026/aug/17/massive-attack-paris-paloma-musicians-burnham-rosebank-north-sea-drilling": {
     "title": "Thom Yorke, Romy and Brian Eno among 200 musicians urging PM to reject new North Sea drilling",
@@ -11612,7 +11855,8 @@
     "excerpt": "Supermarket chain says ‘human error’, not its Facewatch technology, to blame for ejecting a customer Sainsbury’s has paused the use of AI face scanning in one of its stores after a customer was wrongly identified as a shoplifter and ejected from the shop. “I was embarrassed, mortified even, and felt",
     "publishedAt": "2026-08-17T13:21:25.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
   },
   "https://www.theguardian.com/business/2026/aug/17/jp-morgan-boss-jamie-dimon-warns-uk-chancellor-windfall-tax-banks": {
     "title": "JP Morgan boss Jamie Dimon warns UK chancellor not to hike taxes on banks",
@@ -11624,7 +11868,8 @@
     "excerpt": "Billionaire CEO of world’s biggest bank says any windfall tax on sector’s bumper profits could harm jobs in City Business live – latest updates Jamie Dimon, the boss of the US bank JP Morgan, has urged John Healey not to use his first budget as chancellor to increase taxes on banks’ bumper profits. ",
     "publishedAt": "2026-08-17T12:26:33.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
   },
   "https://www.theguardian.com/society/2026/aug/17/ministers-drop-plan-to-relax-affordable-housing-rules-after-rural-homes-backlash": {
     "title": "Ministers drop plan to relax affordable housing rules after negative response",
@@ -11648,7 +11893,8 @@
     "excerpt": "The Federal Reserve, the ECB and the Bank of England appear unclear on how to tackle inflation amid the Iran war New UK cost of living crisis looms as rising energy bills lift inflation As the Middle East crisis drags on into its sixth month, central banks sit in a tricky position. Oil prices remain",
     "publishedAt": "2026-08-16T14:00:27.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.theguardian.com/commentisfree/2026/aug/16/the-guardian-view-on-the-changed-world-of-job-interviews-missing-the-human-factor": {
     "title": "The Guardian view on the changed world of job interviews: missing the human factor | Editorial",
@@ -11696,7 +11942,8 @@
     "excerpt": "Weaker growth, rising energy costs and persistent inflation mean Britain could face tougher times in the autumn UK economic growth slows down Business live – latest updates In the spring the International Monetary Fund warned Britain faced the heaviest economic blow from the Iran war among the world",
     "publishedAt": "2026-08-13T10:26:46.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.theguardian.com/commentisfree/2026/aug/16/andy-burnham-climate-crisis-britain-workers-heatstroke": {
     "title": "Andy Burnham has barely acknowledged the climate crisis. If only Britain’s workers had that luxury | John Harris",
@@ -11708,7 +11955,8 @@
     "excerpt": "Nurses collapsing, builders with heatstroke, bus drivers in cabs that reach 44C. The new PM wanted to spend the summer talking about the cost of living – he should change his plans I don’t think I have ever written before about a British strike directly related to the climate emergency. But that’s e",
     "publishedAt": "2026-08-16T11:33:42.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.theguardian.com/business/nils-pratley-on-finance/2026/aug/13/energy-nationalism-interconnectors-next-power-": {
     "title": "Energy nationalism and interconnectors: the next power threat? | Nils Pratley",
@@ -11732,7 +11980,8 @@
     "excerpt": "Andrei Klepach of VEB said Russia’s economy was falling behind China, US and ‘in some respects Ukraine’ Europe live – latest updates The chief economist at Russia’s second-largest bank has been fired after a series of critical comments about the state of the economy, including warnings that Moscow w",
     "publishedAt": "2026-08-17T10:29:58.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.theguardian.com/business/2026/aug/17/newly-listed-asking-prices-kensington-chelsea-london-uk-lowball-offers": {
     "title": "Asking prices for newly listed homes in UK’s richest borough fall by £100k in one month",
@@ -11756,7 +12005,8 @@
     "excerpt": "Industry tracker finds ‘exceptionally warm weather’ has helped boost job listings in hospitality and tourism sector The summer job has staged a comeback this year thanks to the hot weather and a packed calendar of events such as the men’s football World Cup, new UK figures show. Recent months have s",
     "publishedAt": "2026-08-16T23:01:38.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "英国/欧洲市场动态：全球市场情绪参考。"
   },
   "https://www.theguardian.com/business/2026/aug/16/water-companies-england-and-wales-explore-surge-pricing-bills-drought": {
     "title": "Water companies in England and Wales explore ‘surge pricing’ during drought",
@@ -11804,7 +12054,8 @@
     "excerpt": "Low river levels have stalled German freight traffic and forced closure of nuclear plants in France Across Europe this scorching summer, workers have struggled in the heat as wildfires raged and critical infrastructure was shut down. Here we look at the impact of the heatwaves on several major econo",
     "publishedAt": "2026-08-16T08:00:19.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.theguardian.com/business/2026/aug/15/scotland-visitors-tourists-europe-heat-north-america-tartan-army": {
     "title": "‘I don’t even drink whisky’: Scotland reels in visitors as much of Europe swelters",
@@ -11816,7 +12067,8 @@
     "excerpt": "More direct flights from North America and, say tourism chiefs, Highland warriors and Tartan Army have helped For the tourist industry, 2026 has been a rocky year, with war, EU border delays, climate and economic woes gnawing away at holiday plans. But while much of Britain is feeling the loss of vi",
     "publishedAt": "2026-08-15T09:00:52.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "欧洲经济动态：全球需求与贸易环境参考，间接影响出口链企业信贷。"
   },
   "https://www.theguardian.com/business/2026/aug/15/john-lewis-boss-peter-ruis-department-store-chain": {
     "title": "‘Strategic change and grasping nettles’: where now for John Lewis as boss exits?",
@@ -11828,7 +12080,8 @@
     "excerpt": "Peter Ruis appeared ‘to be doing a good job in difficult circumstances’ at department store chain, says analyst “Going up?” After a tough week for department stores it feels as if that sales aspiration is as dated as the singsong phrase in the opening credits of Are You Being Served? Simpsons of Pic",
     "publishedAt": "2026-08-15T14:00:01.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
   "https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making": {
     "title": "‘I see the incredible promise’: on set of an AI film shoot as new studios embrace controversial tech",
@@ -11840,7 +12093,8 @@
     "excerpt": "Amid fears for jobs, some film-makers say AI could enable them to bypass studio giants and take more creative risks Near the collonaded entrance to Sony Pictures’ historic Culver City film studio, a tech-powered rival has sprung up this summer. The artists at Promise, a new studio feeding off the po",
     "publishedAt": "2026-08-16T12:00:25.000Z",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-18T06:50:00.680Z"
+    "lastSeenAt": "2026-08-18T06:50:00.680Z",
+    "ai_relevant": false
   },
   "https://www.theguardian.com/uk-news/2026/aug/16/whitstable-plans-to-expand-oyster-shack-kent-coast-opposition": {
     "title": "‘Why did it become personal?’: furore over plans to expand Kent oyster shack",

@@ -166,8 +166,13 @@ async function main() {
     }
     console.log(`  ℹ️ OFFLINE：历史缓存中「当天(lastSeenAt=${today})」标记 ${marked} 条`);
   }
-  // dry-run 无 AI：仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
-  saveHistory(articles, history, nowIso);
+  // 非 OFFLINE：dry-run 无 AI，仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
+  // OFFLINE 为纯渲染验证：只读历史缓存，绝不写回（避免空 articles 触发 prune 裁剪历史）。
+  if (!isOffline) {
+    saveHistory(articles, history, nowIso);
+  } else {
+    console.log(`  ℹ️ OFFLINE：跳过 saveHistory（不修改历史缓存）`);
+  }
   console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去7天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);
 
   // 统计各分类数量

@@ -228,28 +228,32 @@
     ]
   },
   {
-    "id": "people-finance",
-    "name": "人民网财经",
-    "type": "rss",
-    "url": "http://www.people.com.cn/rss/finance.xml",
+    "id": "sina-finance",
+    "name": "新浪财经",
+    "type": "scrape",
+    "url": "https://finance.sina.com.cn/roll/index.shtml",
     "category": "finance",
     "subcategory": "cn-finance",
     "enabled": true,
+    "lang": "zh",
     "locales": [
       "zh"
-    ]
+    ],
+    "notes": "人民网财经 RSS 停滞于 2025-06，改用新浪财经滚动新闻页（服务端渲染，实时）"
   },
   {
-    "id": "xinhua-finance",
-    "name": "新华网财经",
-    "type": "rss",
-    "url": "http://www.xinhuanet.com/finance/news_finance.xml",
+    "id": "cctv-finance",
+    "name": "央视财经",
+    "type": "scrape",
+    "url": "https://finance.cctv.com/",
     "category": "finance",
     "subcategory": "cn-finance",
     "enabled": true,
+    "lang": "zh",
     "locales": [
       "zh"
-    ]
+    ],
+    "notes": "新华网财经 RSS(news_finance.xml)停滞于 2022-12、新华网主站为 SPA 无法静态抓取，改用央视财经首页（服务端渲染，实时）"
   },
   {
     "id": "cninfo",

@@ -126,12 +126,15 @@ export function buildRolling(
   }
   for (const a of today) {
     // Today's items win on URL collision, but keep the history's per-item
-    // AI classification (subcategory / relevance) when today's fetch didn't
-    // carry one — otherwise real-time fetches would wipe the analysis.
-    const h = map.get(a.url);
+    // AI analysis (subcategory / relevance / summary) when today's fetch
+    // didn't carry one — otherwise real-time fetches would wipe it.
+    // 注意：直接查 history 原对象（而非 map）——月度数据等 publishedAt 超 7 天
+    // 的条目会被 isFreshEntry 排除出 rolling map，但 AI 解读仍需继承。
+    const h = history[a.url];
     const merged = { ...a, fetchedToday: true };
     if (h?.subcategory && !merged.subcategory) merged.subcategory = h.subcategory;
     if (h?.relevant !== undefined && merged.relevant === undefined) merged.relevant = h.relevant;
+    if (h?.summary && !merged.summary) merged.summary = h.summary;
     map.set(a.url, merged);
   }
   return Array.from(map.values());

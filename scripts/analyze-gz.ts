@@ -30,7 +30,8 @@ const SYSTEM_PROMPT =
  */
 const HEURISTIC_RULES: Array<{ re: RegExp; relevant?: boolean; sub?: string }> = [
   // 1) 与银行业务无关的城市治理/行政事务（先判，命中即过滤）
-  { re: /历史建筑|门前三包|禁燃|黑烟|柴油货车|限行|交通管制|禁停|环境保护|生态|绿化|消防|防汛|水务|河道|畜牧|兽医|文物|非遗|民政|街道|居委会|司法厅|决定书|注销|律师|执业|行政许可|招聘|竞投|摆卖|摊位|路灯|景观照明|电费补贴|排污|噪声|征收|拆迁补偿|工伤|社保待遇|教师资格|学校|招生|考试|赛事|演出|博物馆|公园|厕所/, relevant: false },
+  // 注意：'民政' 会误匹配 '人民政府'（子串），必须用 '民政局' 等精确词
+  { re: /历史建筑|门前三包|禁燃|黑烟|柴油货车|限行|交通管制|禁停|环境保护|生态|绿化|消防|防汛|水务|河道|畜牧|兽医|文物|非遗|民政局|街道办|居委会|司法厅|决定书|注销|律师|执业|行政许可|招聘|竞投|摆卖|摊位|路灯|景观照明|电费补贴|排污|噪声|拆迁补偿|工伤|社保待遇|教师资格|招生|赛事|演出|博物馆|公园|厕所|殡葬|诊所备案|欠薪|养犬|渔港|见义勇为|储备土地|低保|入学|气瓶/, relevant: false },
   // 2) 企业融资（广州辖区 IPO/上市/辅导）
   { re: /IPO|上市|辅导备案|发行|招股|股份公司.*注册/, sub: "gz-ipo" },
   // 3) 财富管理
@@ -50,6 +51,10 @@ const HEURISTIC_RULES: Array<{ re: RegExp; relevant?: boolean; sub?: string }> =
 ];
 
 function classifyHeuristic(title: string, sourceId: string): { relevant: boolean; subcategory: string } {
+  // 国家级源（govcn）优先归 cn-policy，避免被南沙/广州的产业关键词误配
+  if (sourceId === "govcn-policy") {
+    return { relevant: true, subcategory: "cn-policy" };
+  }
   for (const r of HEURISTIC_RULES) {
     if (r.re.test(title)) {
       if (r.relevant === false) return { relevant: false, subcategory: "" };

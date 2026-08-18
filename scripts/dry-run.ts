@@ -127,17 +127,22 @@ async function main() {
     console.log(`  ℹ️ 广州商机数据文件不存在: ${gzPath}`);
   }
 
-  // 抓取所有 enabled 数据源
-  const enabled = sources.filter((s) => s.enabled !== false);
-  for (const source of enabled) {
-    try {
-      const items = await fetchSource(source);
-      console.log(`  ${source.id.padEnd(20)} ${items.length}`);
-      articles.push(...items.map((it) => ({ ...it, source: source.name })));
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
+  // 抓取所有 enabled 数据源（OFFLINE=true 时跳过：纯历史渲染，不访问网络）
+  const isOffline = process.env.OFFLINE === 'true';
+  if (!isOffline) {
+    const enabled = sources.filter((s) => s.enabled !== false);
+    for (const source of enabled) {
+      try {
+        const items = await fetchSource(source);
+        console.log(`  ${source.id.padEnd(20)} ${items.length}`);
+        articles.push(...items.map((it) => ({ ...it, source: source.name })));
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
+      }
     }
+  } else {
+    console.log(`  ℹ️ OFFLINE 模式：跳过全部网络抓取，仅用本地数据文件 + 历史缓存渲染`);
   }
 
   // 合并滚动 7 天历史（窗口按信息发生时间 publishedAt 计）：今日抓取 + 历史缓存（按 fetchedToday 打标），
@@ -145,6 +150,22 @@ async function main() {
   const history = loadHistory();
   const nowIso = new Date().toISOString();
   const rolling = buildRolling(articles, history);
+  if (isOffline) {
+    // 纯历史渲染无今日抓取：把历史缓存中「今天 lastSeenAt」的条目标记为当天（fetchedToday=true），
+    // 复刻线上「当天」视图（与 preview-local 的 isToday 逻辑一致）；其余保持历史。
+    const today = todayKey();
+    let marked = 0;
+    for (const a of rolling) {
+      if (a.fetchedToday !== true) {
+        const e = history[a.url];
+        if (e && typeof e.lastSeenAt === 'string' && e.lastSeenAt.startsWith(today)) {
+          a.fetchedToday = true;
+          marked++;
+        }
+      }
+    }
+    console.log(`  ℹ️ OFFLINE：历史缓存中「当天(lastSeenAt=${today})」标记 ${marked} 条`);
+  }
   // dry-run 无 AI：仅更新 lastSeenAt / 保留历史摘要，不覆盖已有摘要。
   saveHistory(articles, history, nowIso);
   console.log(`\n📊 总文章数(今日): ${articles.length} ｜ 滚动列表(含过去7天): ${rolling.length} ｜ 历史缓存: ${Object.keys(history).length} 条`);

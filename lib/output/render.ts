@@ -1233,6 +1233,17 @@ export function renderHtml(
     margin-left: 0.4rem;
     font-weight: 400;
   }
+  /* 科创动态（T3 降权）：tab 弱化折叠——小号、浅色、末尾竖线分隔 */
+  .tab.tab-fold {
+    font-size: 0.82rem;
+    color: var(--muted);
+    opacity: 0.72;
+    margin-left: 0.25rem;
+    border-left: 1px solid var(--rule);
+    padding-left: 1.1rem;
+    border-radius: 0;
+  }
+  .tab.tab-fold.active { opacity: 1; }
   .panel { display: none; }
   .panel.active { display: block; animation: fade 0.25s ease; }
   @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
@@ -1788,20 +1799,20 @@ export function renderHtml(
   </header>
 
   <nav class="tabs" role="tablist">
-    <button class="tab active" data-tab="tech">${CATEGORY_LABELS.tech}<span class="count">${counts.tech}</span></button>
+    <button class="tab active" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
     ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
-    <button class="tab" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
+    <button class="tab" data-tab="gz">${CATEGORY_LABELS['gz']}<span class="count">${counts['gz']}</span></button>
     <button class="tab" data-tab="gd-ipo">${CATEGORY_LABELS['gd-ipo']}<span class="count">${counts['gd-ipo']}</span></button>
     <button class="tab" data-tab="ipo">${CATEGORY_LABELS['ipo']}<span class="count">${counts['ipo']}</span></button>
-    <button class="tab" data-tab="gz">${CATEGORY_LABELS['gz']}<span class="count">${counts['gz']}</span></button>
+    <button class="tab tab-fold" data-tab="tech">${CATEGORY_LABELS.tech}<span class="count">${counts.tech}</span></button>
   </nav>
 
-  <section class="panel active" data-panel="tech">
-    ${renderRawCategoryPanel("tech", techMainSubs, date)}
+  <section class="panel active" data-panel="finance">
+    ${renderRawCategoryPanel("finance", raw.finance, date)}
   </section>
   ${trading ? `<section class="panel" data-panel="trading">${renderTradingPanel(trading)}</section>` : ""}
-  <section class="panel" data-panel="finance">
-    ${renderRawCategoryPanel("finance", raw.finance, date)}
+  <section class="panel" data-panel="gz">
+    ${renderRawCategoryPanel("gz", raw["gz"] || [], date)}
   </section>
   <section class="panel" data-panel="gd-ipo">
     ${renderRawCategoryPanel("gd-ipo", raw["gd-ipo"] || [], date)}
@@ -1809,8 +1820,8 @@ export function renderHtml(
   <section class="panel" data-panel="ipo">
     ${renderRawCategoryPanel("ipo", raw["ipo"] || [], date)}
   </section>
-  <section class="panel" data-panel="gz">
-    ${renderRawCategoryPanel("gz", raw["gz"] || [], date)}
+  <section class="panel" data-panel="tech">
+    ${renderRawCategoryPanel("tech", techMainSubs, date)}
   </section>
   
   

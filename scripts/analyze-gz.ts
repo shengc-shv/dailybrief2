@@ -4,6 +4,7 @@ import { runLlm } from "../lib/ai/llm";
 import { extractJson } from "../lib/ai/json-util";
 import { loadAllSources } from "../lib/sources/registry";
 import { fetchGovCnPolicy } from "../lib/sources/national-policy";
+import { fetchSinaMoney, fetch21jingjiFinance } from "../lib/sources/wealth-credit";
 
 /**
  * 广州商机 / 宏观政策 数据逐条 AI 分析
@@ -62,8 +63,11 @@ function classifyHeuristic(title: string, sourceId: string): { relevant: boolean
       return { relevant: true, subcategory: r.sub || "" };
     }
   }
-  // 完全未命中：政府源默认相关并归广州政策；其他源默认相关（源级兜底）
-  return { relevant: true, subcategory: sourceId === "gz-gov" ? "gz-policy" : "" };
+  // 完全未命中：政府源默认相关并归广州政策；财富/信贷源按源兜底；其他源默认相关（源级兜底）
+  if (sourceId === "gz-gov") return { relevant: true, subcategory: "gz-policy" };
+  if (sourceId === "sina-money") return { relevant: true, subcategory: "gz-wealth" };
+  if (sourceId === "21jingji-finance") return { relevant: true, subcategory: "gz-credit" };
+  return { relevant: true, subcategory: "" };
 }
 
 const ANALYSIS_RULES = `你是招商银行广州分行零售决策简报的编辑。系统面向分行信息技术部领导和分管零售的行领导，核心诉求：更快掌握宏观经济/政府政策/市场变化，挖掘更多客户、发现更多商机。
@@ -130,6 +134,9 @@ async function main() {
     console.warn("govcn 抓取失败:", e.message);
     return [];
   });
+  // 财富/信贷商机源（新浪理财保险 + 21财经金融）
+  const sinaMoney = await fetchSinaMoney("sina-money", 20).catch(() => []);
+  const jingji = await fetch21jingjiFinance("21jingji-finance", 20).catch(() => []);
 
   const regById = new Map(loadAllSources().map((s) => [s.id, s.category]));
   const items = [
@@ -141,6 +148,14 @@ async function main() {
     ...govcn.map((x: any) => ({
       url: x.url, title: x.title, source: "中国政府网", srcId: x.sourceId,
       category: "finance", publishedAt: x.publishedAt ? x.publishedAt.toISOString() : undefined,
+    })),
+    ...sinaMoney.map((x: any) => ({
+      url: x.url, title: x.title, source: "新浪理财保险", srcId: x.sourceId,
+      category: "gz", publishedAt: x.publishedAt ? x.publishedAt.toISOString() : undefined,
+    })),
+    ...jingji.map((x: any) => ({
+      url: x.url, title: x.title, source: "21财经", srcId: x.sourceId,
+      category: "gz", publishedAt: x.publishedAt ? x.publishedAt.toISOString() : undefined,
     })),
     ...ipo.map((x: any) => ({
       url: x.url, title: x.title, source: x.source || "交易所", srcId: x.sourceId,

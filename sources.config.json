@@ -275,6 +275,32 @@
     "notes": "国家级宏观政策权威源：国务院政策文件/批复/条例（服务端渲染列表，标题+日期+链接可稳定解析）。央行/金监总局/统计局官网为 JS/模板渲染不可静态抓，其权威动态由新浪/央视媒体解读在同子标签覆盖"
   },
   {
+    "id": "sina-money",
+    "name": "新浪财经·理财保险",
+    "type": "scrape",
+    "url": "https://finance.sina.com.cn/money/",
+    "category": "gz",
+    "enabled": true,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "财富管理商机源：新浪 money 频道，关键词过滤理财/保险/基金/黄金/存款/利率 → 广州商机·财富业务（gz-wealth），子标签由启发式/AI 路由"
+  },
+  {
+    "id": "21jingji-finance",
+    "name": "21世纪经济报道·金融",
+    "type": "scrape",
+    "url": "https://www.21jingji.com/channel/finance",
+    "category": "gz",
+    "enabled": true,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "个人信贷商机源：21财经金融频道，关键词过滤房贷/消费贷/普惠/信贷/金融监管 → 广州商机·个人信贷（gz-credit），子标签由启发式/AI 路由"
+  },
+  {
     "id": "cninfo",
     "name": "巨潮A股披露",
     "type": "api",

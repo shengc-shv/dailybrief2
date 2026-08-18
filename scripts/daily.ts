@@ -35,6 +35,7 @@ import {
   type HistoryStore,
 } from "../lib/output/history";
 import { analyzeWatchlist } from "../lib/trading/runner";
+import { classifyItemsWithLlm } from "../lib/ai/item-classifier";
 import { fetchCryptoFearGreed } from "../lib/trading/fear-greed";
 import { fetchCryptoGlobal } from "../lib/trading/coingecko";
 import { generateTradingCommentary } from "../lib/ai/trading-commentary";
@@ -484,6 +485,35 @@ async function main() {
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     console.warn(`[daily] trading section failed: ${msg}`);
+  }
+
+  // 条目级 LLM 分类：对新增条目（历史中无 ai_relevant 的）批量分类到业务线子标签 + 银行视角摘要。
+  // 失败（如 LLM 余额不足）→ 自动跳过，降级到启发式/注册表分类，绝不影响主流程。
+  const classifyPending = articles.filter((a) => {
+    const h = history[a.url];
+    return !h || h.ai_relevant === undefined;
+  });
+  if (classifyPending.length > 0) {
+    console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);
+    try {
+      const cls = await classifyItemsWithLlm(
+        classifyPending.map((a) => ({ url: a.url, title: a.title, source: a.source })),
+      );
+      let tagged = 0;
+      for (const a of classifyPending) {
+        const r = cls.get(a.url);
+        if (r) {
+          a.subcategory = r.subcategory || a.subcategory;
+          a.relevant = r.relevant;
+          if (r.summary && r.summary.length > 10) a.summary = r.summary;
+          tagged++;
+        }
+      }
+      console.log(`[daily] item classification done: ${tagged}/${classifyPending.length} tagged`);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn(`[daily] item classification skipped (${msg}) — falling back to heuristic/registry`);
+    }
   }
 
   // 回写历史缓存（含今日 AI 摘要），并构建「当天 + 过去30天」滚动列表用于渲染。

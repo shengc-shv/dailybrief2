@@ -170,6 +170,7 @@ const CATEGORY_LABELS: Record<Category, string> = {
   politics: STR.catPolitics,
   'gd-ipo': '广东地区IPO',
   ipo: STR.catIpo,
+  gz: '广州商机',
 };
 
 const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
@@ -178,6 +179,7 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
   politics: STR.catPolitics,
   'gd-ipo': STR.catGdIpo,
   ipo: STR.catIpo,
+  gz: '广州商机',
 };
 
 /**
@@ -186,7 +188,7 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
  *  - 广东地区IPO、全国IPO/新股：按信息发生时间 publishedAt 做 当天/过去7天 回溯。
  *  - 市场行情：在线生成的当日宏观数据，由独立 trading 面板渲染，不在此时间拆分体系内。
  */
-const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo", "ipo"]);
+const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo", "ipo", "gz"]);
 
 /**
  * L2 ordering per category. Categories not listed render flat (no L2 tabs).
@@ -202,6 +204,8 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   finance: ["cn-finance", "news"],
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
   ipo: ["sse", "szse", "bse"],
+  // 广州商机：子维度配置化，后续可在此加细分项（如 gz-ipo/gz-zhanjiang/gz-qingyuan）
+  gz: ["gz-retail", "gz-industry", "gz-nansha", "gz-ipo", "gz-zhanjiang", "gz-qingyuan"],
   politics: ["world"],
 };
 
@@ -227,6 +231,13 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   hkex: "港交所",
   "ipo-tutoring": "IPO辅导",
   overseas: "境外",
+  // 广州商机 子维度（配置化，可扩展）
+  "gz-retail": "零售客群",
+  "gz-industry": "产业招商",
+  "gz-nansha": "南沙",
+  "gz-ipo": "企业融资",
+  "gz-zhanjiang": "湛江",
+  "gz-qingyuan": "清远",
 };
 
 /**
@@ -432,6 +443,7 @@ export function groupRaw(
     politics: new Map(),
     'gd-ipo': new Map(),
     ipo: new Map(),
+    gz: new Map(),
   };
 
   // 广东地区IPO：文章级三道闸分类后，按 classifier 决定的子标签归桶
@@ -599,6 +611,7 @@ export function groupRaw(
   politics: [],
   'gd-ipo': [],
   ipo: [],
+  gz: [],
   };
   
   for (const cat of Object.keys(buckets) as Category[]) {
@@ -689,10 +702,10 @@ export function groupRaw(
       for (const [id, b] of buckets[cat].entries()) {
         if (subcatOf.get(id) === subId) sources.push(toSourceGroup(id, b, limit));
       }
-      // 广东地区IPO / 财经要点 的二级标签始终渲染，即使当天为空也保留
+      // 广东地区IPO / 财经要点 / 广州商机 的二级标签始终渲染，即使当天为空也保留
       // 标签 + “暂无内容”占位，保证结构稳定可见（不折叠成单子标签）。
       if (sources.length === 0) {
-        if (cat === 'gd-ipo' || cat === 'finance') {
+        if (cat === 'gd-ipo' || cat === 'finance' || cat === 'gz') {
           subs.push({ id: subId, name: SUBCATEGORY_LABELS[subId] ?? subId, sources: [] });
           continue;
         }
@@ -842,9 +855,11 @@ function tzDateStr(d: Date): string {
 }
 
 /**
- * 广东地区IPO 的「当天 / 过去7天」按信息发生时间 publishedAt（公告日期）拆分，
- * 而不是按抓取时间 fetchedToday —— 否则今天抓到的 8 月 12 日公告会被错放进
- * 「当天」。无 publishedAt 的条目回退到 fetchedToday 标志，避免丢失。
+ * 广东地区IPO / 全国IPO / 广州商机 的「当天 / 过去7天」按信息发生时间 publishedAt（发文/公告日期）拆分，
+ * 而不是按抓取时间 fetchedToday —— 否则今天抓到的 8 月 12 日公告（或 5 月的月度数据）会被错放进
+ * 「当天」。规则：
+ *  - 有 publishedAt：发文=今天 → 当天；今天之前（7天内及更早，均在滚动窗口内）→ 过去7天；
+ *  - 无 publishedAt：回退 fetchedToday（今天抓到 → 当天；历史缓存 → 过去7天），避免丢失。
  */
 function splitGdIpoByPublishedAt(
   sources: SourceGroup[],
@@ -864,8 +879,8 @@ function splitGdIpoByPublishedAt(
     for (const a of s.items) {
       const ds = a.publishedAt ? tzDateStr(a.publishedAt) : undefined;
       if (ds === dateStr) t.push(a);
-      else if (ds && ds >= pastStartStr && ds < dateStr) p.push(a);
-      else if (a.fetchedToday === true) t.push(a);
+      else if (ds && ds < dateStr) p.push(a);
+      else if (!ds && a.fetchedToday === true) t.push(a);
       else p.push(a);
     }
     if (t.length) today.push({ ...s, items: t });
@@ -1001,6 +1016,7 @@ export function renderHtml(
     finance: countItemsToday(raw.finance),
     'gd-ipo': sumItems(raw['gd-ipo'] || []),
     ipo: sumItems(raw['ipo'] || []),
+    gz: sumItems(raw['gz'] || []),
      politics: sumItems(raw.politics),
   };
 
@@ -1034,6 +1050,7 @@ export function renderHtml(
     --c-finance: #d97706;
     --c-gdipo: #e11d48;
     --c-ipo: #7c3aed;
+    --c-gz: #059669;
     --hero-grad-from: #f6f5f3;
     --hero-grad-to: #efedea;
     --r-sm: 0.5rem;
@@ -1067,6 +1084,7 @@ export function renderHtml(
       --c-finance: #fbbf24;
       --c-gdipo: #fb7185;
       --c-ipo: #a78bfa;
+      --c-gz: #34d399;
       --hero-grad-from: #15191f;
       --hero-grad-to: #0b0d11;
       --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -1128,11 +1146,13 @@ export function renderHtml(
   .panel[data-panel="finance"] { --cat: var(--c-finance); }
   .panel[data-panel="gd-ipo"] { --cat: var(--c-gdipo); }
   .panel[data-panel="ipo"] { --cat: var(--c-ipo); }
+  .panel[data-panel="gz"] { --cat: var(--c-gz); }
   .tab[data-tab="tech"] { --cat: var(--c-tech); }
   .tab[data-tab="trading"] { --cat: var(--c-trading); }
   .tab[data-tab="finance"] { --cat: var(--c-finance); }
   .tab[data-tab="gd-ipo"] { --cat: var(--c-gdipo); }
   .tab[data-tab="ipo"] { --cat: var(--c-ipo); }
+  .tab[data-tab="gz"] { --cat: var(--c-gz); }
 
   .hero-card {
     margin-top: 1.4rem;
@@ -1773,6 +1793,7 @@ export function renderHtml(
     <button class="tab" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
     <button class="tab" data-tab="gd-ipo">${CATEGORY_LABELS['gd-ipo']}<span class="count">${counts['gd-ipo']}</span></button>
     <button class="tab" data-tab="ipo">${CATEGORY_LABELS['ipo']}<span class="count">${counts['ipo']}</span></button>
+    <button class="tab" data-tab="gz">${CATEGORY_LABELS['gz']}<span class="count">${counts['gz']}</span></button>
   </nav>
 
   <section class="panel active" data-panel="tech">
@@ -1787,6 +1808,9 @@ export function renderHtml(
   </section>
   <section class="panel" data-panel="ipo">
     ${renderRawCategoryPanel("ipo", raw["ipo"] || [], date)}
+  </section>
+  <section class="panel" data-panel="gz">
+    ${renderRawCategoryPanel("gz", raw["gz"] || [], date)}
   </section>
   
   

@@ -473,5 +473,35 @@
     "id": "gd-bse",
     "name": "北交所IPO公告(历史兼容)",
     "subcategory": "bse"
+  },
+  {
+    "type": "scrape",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-gz.json",
+    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出（sourceId=gz-stats/gz-gov/gz-nansha），此条目仅用于 registry 识别（subcatOf 路由）与 knownSourceIds 防丢弃，不直接抓取",
+    "id": "gz-stats",
+    "name": "广州市统计局(爬虫产物)",
+    "subcategory": "gz-retail"
+  },
+  {
+    "type": "scrape",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-gz.json",
+    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出，仅用于 registry 识别",
+    "id": "gz-gov",
+    "name": "广州市政府(爬虫产物)",
+    "subcategory": "gz-industry"
+  },
+  {
+    "type": "scrape",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-gz.json",
+    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出，仅用于 registry 识别",
+    "id": "gz-nansha",
+    "name": "广州南沙区政府(爬虫产物)",
+    "subcategory": "gz-nansha"
   }
 ]

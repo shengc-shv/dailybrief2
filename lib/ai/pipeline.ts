@@ -51,6 +51,7 @@ const PER_CATEGORY_LIMIT: Record<Category, number> = {
   politics: 15,
   'gd-ipo': 20,   // <!-- 新增 -->
   ipo: 20,        // <!-- 新增 -->
+  gz: 20,         // 广州商机
 };
 
 const MAX_AGE_DAYS = 14;
@@ -207,6 +208,8 @@ export async function generateDailyReport(
     finance: [],
     politics: [],
     'gd-ipo': [],   // <!-- 新增 -->
+    ipo: [],
+    gz: [],
   };
   for (const a of articles) grouped[a.category].push(a);
 

@@ -389,6 +389,38 @@ async function main() {
   } else {
     console.log(`[daily] ℹ️ 爬虫数据文件不存在: ${dataPath}`);
   }
+
+  // 广州商机爬虫数据（统计局/市政府/南沙）。独立文件，由 scripts/crawlers/run-gz.mjs 产出。
+  // 注意：走「今日抓取」数组 → buildRolling 自动打 fetchedToday=true（当天）；
+  // 次日经 saveHistory 进入历史缓存后 fetchedToday 自动为 false（过去7天）。当天/历史严格区分。
+  const gzPath = path.resolve(process.cwd(), 'data/crawled-gz.json');
+  if (fs.existsSync(gzPath)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(gzPath, 'utf8'));
+      let count = 0;
+      for (const item of raw) {
+        const exists = articles.some(a => a.url === item.url);
+        if (exists) continue;
+        articles.push({
+          sourceId: item.sourceId || 'gz-local',
+          source: item.source || '广州商机',
+          title: item.title || '无标题',
+          url: item.url || '',
+          excerpt: item.excerpt || '',
+          publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
+          category: 'gz',
+          summary: item.summary || '',
+        });
+        count++;
+      }
+      console.log(`[daily] ✅ 加载广州商机数据 ${count} 条（跳过 ${raw.length - count} 条重复）`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`[daily] ⚠️ 加载广州商机数据失败: ${msg}`);
+    }
+  } else {
+    console.log(`[daily] ℹ️ 广州商机数据文件不存在: ${gzPath}`);
+  }
   if (articles.length === 0) {
     throw new Error("no articles fetched — aborting");
   }
@@ -417,6 +449,26 @@ async function main() {
       }
       console.log(
         `[daily] enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
+      );
+    }
+  }
+
+  // ===== 为广州商机数据生成中文摘要（复用历史缓存去重，成本≈0 当全部命中）=====
+  const gzArticles = articles.filter(a => a.category === 'gz');
+  if (gzArticles.length > 0) {
+    const pending = applyCache(gzArticles);
+    if (pending.length === 0) {
+      console.log(`[daily] enriching gz: ${gzArticles.length} 条全部命中历史缓存，跳过 LLM`);
+    } else {
+      console.log(`[daily] enriching ${pending.length}/${gzArticles.length} gz items with ${REPORT_LOCALE} summaries…`);
+      const t0 = Date.now();
+      const summaries = await enrichFinanceNewsSummaries(pending);
+      for (const a of pending) {
+        const s = summaries.get(a.url);
+        if (s) a.summary = s;
+      }
+      console.log(
+        `[daily] gz enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
       );
     }
   }

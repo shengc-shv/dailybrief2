@@ -95,6 +95,38 @@ async function main() {
     console.log(`  ℹ️ 爬虫数据文件不存在: ${dataPath}`);
   }
 
+  // ----- 加载广州商机爬虫数据（统计局/市政府/南沙）-----
+  // 走「今日抓取」数组：buildRolling 自动打 fetchedToday=true（当天）；
+  // 历史回写后次日 fetchedToday=false（过去7天），当天/历史严格区分。
+  const gzPath = path.resolve(process.cwd(), 'data/crawled-gz.json');
+  if (fs.existsSync(gzPath)) {
+    try {
+      const items = JSON.parse(fs.readFileSync(gzPath, 'utf8'));
+      let count = 0;
+      for (const item of items) {
+        const exists = articles.some(a => a.url === item.url);
+        if (exists) continue;
+        articles.push({
+          sourceId: item.sourceId || 'gz-local',
+          source: item.source || '广州商机',
+          title: item.title || '无标题',
+          url: item.url || '',
+          excerpt: item.excerpt || '',
+          publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
+          category: 'gz',
+          summary: item.summary || '',
+        });
+        count++;
+      }
+      console.log(`  ✅ 加载广州商机数据 ${count} 条（跳过 ${items.length - count} 条重复）`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`  ⚠️ 加载广州商机数据失败: ${msg}`);
+    }
+  } else {
+    console.log(`  ℹ️ 广州商机数据文件不存在: ${gzPath}`);
+  }
+
   // 抓取所有 enabled 数据源
   const enabled = sources.filter((s) => s.enabled !== false);
   for (const source of enabled) {

@@ -73,4 +73,11 @@ export interface RawArticle {
    * (shown under the "过去30天" tab). Never set by fetchers.
    */
   fetchedToday?: boolean;
+  /**
+   * Populated by render's cross-source story dedup: when several sources
+   * cover the same story inside a merged subgroup, the kept item lists the
+   * other source names here so the renderer can show "多家来源" (multi-source).
+   * Never set by fetchers.
+   */
+  alsoFrom?: string[];
 }

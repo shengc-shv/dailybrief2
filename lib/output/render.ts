@@ -96,6 +96,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   subCnTech: "Chinese Tech",
   subOverseasCommunity: "Overseas Community",
   subFinanceNews: "Finance News",
+  subFinanceCn: "Finance China",
   subFinanceCommunity: "Community",
   subWorld: "World News",
   subOverseasNews: "Overseas Tech",
@@ -258,6 +259,74 @@ function displayLimitFor(
 }
 
 /**
+ * Take the first `n` items of `list`, but always put today's freshly-fetched
+ * items first (preserving relative order inside each group). The renderer
+ * only shows `fetchedToday` items under "当天", so slicing a mixed rolling
+ * list naively lets older history entries crowd out today's items — e.g.
+ * trending papers whose history copy sorts before today's fetch, leaving
+ * the sub-tab empty.
+ */
+function takeFirstToday(list: ArticleInput[], n: number): ArticleInput[] {
+  if (list.length <= n) return list;
+  const today: ArticleInput[] = [];
+  const past: ArticleInput[] = [];
+  for (const a of list) (a.fetchedToday === true ? today : past).push(a);
+  return today.concat(past).slice(0, n);
+}
+
+/**
+ * Cheap local heuristic for cross-source story dedup (no LLM cost):
+ * normalize a title to lowercase alphanumeric tokens, then compare either
+ * by exact normalized equality or by token Jaccard similarity.
+ */
+function normalizeTitleForDedup(t: string): string {
+  return (t ?? "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function tokenJaccard(a: string[], b: string[]): number {
+  if (a.length === 0 || b.length === 0) return 0;
+  const setA = new Set(a);
+  const setB = new Set(b);
+  let inter = 0;
+  for (const t of setA) if (setB.has(t)) inter++;
+  const union = setA.size + setB.size - inter;
+  return union === 0 ? 0 : inter / union;
+}
+
+/**
+ * Collapse same-story items inside a merged subgroup. The kept item (first
+ * in list order) records the other sources in `alsoFrom` so the renderer can
+ * show "多家来源：…". Thresholds are conservative to avoid merging distinct
+ * stories that merely share keywords.
+ */
+function mergeSimilarStories(items: ArticleInput[]): ArticleInput[] {
+  const groups: { rep: ArticleInput }[] = [];
+  for (const a of items) {
+    const norm = normalizeTitleForDedup(a.title);
+    const tokens = norm.split(" ").filter(Boolean);
+    const target = groups.find((g) => {
+      const gNorm = normalizeTitleForDedup(g.rep.title);
+      if (gNorm === norm) return true;
+      if (tokens.length < 3) return false; // too short to risk a merge
+      return tokenJaccard(tokens, gNorm.split(" ").filter(Boolean)) >= 0.75;
+    });
+    if (!target) {
+      groups.push({ rep: a });
+      continue;
+    }
+    if (a.source && a.source !== target.rep.source) {
+      target.rep.alsoFrom = target.rep.alsoFrom ?? [];
+      if (!target.rep.alsoFrom.includes(a.source)) target.rep.alsoFrom.push(a.source);
+    }
+  }
+  return groups.map((g) => g.rep);
+}
+
+/**
  * Subcategories that should collapse their sources into a single flat
  * time-sorted list (no L3 source tabs), keyed by "category:subcategory".
  * Value = number of items kept after merging. Each rendered article
@@ -273,11 +342,12 @@ function displayLimitFor(
  */
 export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
   // 技术动态 / 财经要点 合并流：每数据源≤5、子标签整体≤10
-  // （省钱 + 避免单一源霸屏）。典型子标签：AI媒体 / 国内技术 / 国内财经 / 国际财经。
+  // （省钱 + 避免单一源霸屏）。典型子标签：AI媒体 / 国内技术 / 国际财经。
   "tech:ai-news": 10,
   "tech:cn-tech": 10,
   "finance:news": 10,
-  "finance:cn-finance": 10,
+  // 国内财经：上限 20，按接入的信息源平摊（见 groupRaw 的 cn-finance 逻辑）
+  "finance:cn-finance": 20,
   // 时政不在本次范围，保留原整体上限
   "politics:world": 15,
 };
@@ -285,14 +355,14 @@ export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
 /**
  * 合并流中单源最多贡献的条数。避免某一源条目过多、按时间降序时把同子标签下
  * 其他源整屏挤出（例如国内财经若某源日期较新、10 条上限会被它独占）。
- * 技术动态 / 财经要点 合并子标签统一为 5（典型：AI媒体 / 国内技术 / 国内财经 / 国际财经）。
+ * 技术动态 / 财经要点 合并子标签统一为 5（典型：AI媒体 / 国内技术 / 国际财经）。
+ * 国内财经（cn-finance）不在此表——它按「子标签上限 / 接入源数量」平摊（20/源数）。
  * 缺省不限制（undefined）即沿用旧行为。
  */
 export const MERGE_PER_SOURCE_CAP: Record<string, number> = {
   "tech:ai-news": 5,
   "tech:cn-tech": 5,
   "finance:news": 5,
-  "finance:cn-finance": 5,
 };
 
 /**
@@ -490,7 +560,7 @@ export function groupRaw(
     return {
       sourceId,
       sourceName: b.sourceName,
-      items: limit ? b.items.slice(0, limit) : b.items,
+      items: limit ? takeFirstToday(b.items, limit) : b.items,
     };
   }
 
@@ -536,10 +606,21 @@ export function groupRaw(
         // time-sorted SourceGroup. Articles keep their `source` field so
         // the renderer can label them.
         const flat: ArticleInput[] = [];
-        const perCap = MERGE_PER_SOURCE_CAP[`${cat}:${subId}`];
+        // Per-source cap: fixed for most merged subgroups; 国内财经 shares
+        // its subcategory limit evenly across the enabled sources.
+        let perCap = MERGE_PER_SOURCE_CAP[`${cat}:${subId}`];
+        if (perCap === undefined && subId === "cn-finance") {
+          const n = registry.filter(
+            (s) =>
+              s.category === cat &&
+              s.subcategory === subId &&
+              s.enabled !== false,
+          ).length;
+          if (n > 0) perCap = Math.ceil((mergeLimit ?? 20) / n);
+        }
         for (const [id, b] of buckets[cat].entries()) {
           if (subcatOf.get(id) === subId) {
-            flat.push(...(perCap ? b.items.slice(0, perCap) : b.items));
+            flat.push(...(perCap ? takeFirstToday(b.items, perCap) : b.items));
           }
         }
         if (flat.length === 0) continue;
@@ -547,6 +628,12 @@ export function groupRaw(
           (a, b) =>
             (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
         );
+        const top = takeFirstToday(flat, mergeLimit);
+        if (top.length === 0) continue;
+        // Cross-source story dedup: several sources may cover the same story.
+        // Collapse near-identical titles into one item and record the other
+        // sources on `alsoFrom` (cheap local heuristic — zero LLM calls).
+        const deduped = mergeSimilarStories(top);
         subs.push({
           id: subId,
           name: SUBCATEGORY_LABELS[subId] ?? subId,
@@ -554,7 +641,7 @@ export function groupRaw(
             {
               sourceId: "_merged",
               sourceName: SUBCATEGORY_LABELS[subId] ?? subId,
-              items: flat.slice(0, mergeLimit),
+              items: deduped,
               merged: true,
             },
           ],
@@ -644,7 +731,12 @@ function renderArticleHtml(a: ArticleInput, showSource = false): string {
   const meta = a.meta ? escapeHtml(a.meta) : "";
   const time = formatDate(a.publishedAt);
   const sourceLabel = showSource && a.source ? escapeHtml(a.source) : "";
-  const metaLine = [sourceLabel, time].filter(Boolean).join(" · ");
+  const alsoFrom = (a.alsoFrom ?? []).filter(Boolean);
+  const alsoLine =
+    alsoFrom.length > 0
+      ? `${escapeHtml("多家来源")}：${alsoFrom.map(escapeHtml).join("、")}`
+      : "";
+  const metaLine = [sourceLabel, time, alsoLine].filter(Boolean).join(" · ");
   // News-style summary label for finance/politics, project-intro style for GH/tech.
   const newsy = a.category === "finance" || a.category === "politics";
   const summaryLabel = newsy ? STR.summaryLabelNews : STR.summaryLabelIntro;
@@ -700,6 +792,53 @@ function filterByTime(sources: SourceGroup[], todayOnly: boolean): SourceGroup[]
   }));
 }
 
+let _tzFmt: Intl.DateTimeFormat | undefined;
+/** Report-timezone date string "YYYY-MM-DD" for a Date. */
+function tzDateStr(d: Date): string {
+  if (!_tzFmt) {
+    _tzFmt = new Intl.DateTimeFormat("en-CA", {
+      timeZone: getReportTz(),
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
+  return _tzFmt.format(d);
+}
+
+/**
+ * 广东地区IPO 的「当天 / 过去7天」按信息发生时间 publishedAt（公告日期）拆分，
+ * 而不是按抓取时间 fetchedToday —— 否则今天抓到的 8 月 12 日公告会被错放进
+ * 「当天」。无 publishedAt 的条目回退到 fetchedToday 标志，避免丢失。
+ */
+function splitGdIpoByPublishedAt(
+  sources: SourceGroup[],
+  dateStr: string,
+): { today: SourceGroup[]; past: SourceGroup[] } {
+  const pastStartMs = Date.UTC(
+    Number(dateStr.slice(0, 4)),
+    Number(dateStr.slice(5, 7)) - 1,
+    Number(dateStr.slice(8, 10)) - 7,
+  );
+  const pastStartStr = tzDateStr(new Date(pastStartMs));
+  const today: SourceGroup[] = [];
+  const past: SourceGroup[] = [];
+  for (const s of sources) {
+    const t: ArticleInput[] = [];
+    const p: ArticleInput[] = [];
+    for (const a of s.items) {
+      const ds = a.publishedAt ? tzDateStr(a.publishedAt) : undefined;
+      if (ds === dateStr) t.push(a);
+      else if (ds && ds >= pastStartStr && ds < dateStr) p.push(a);
+      else if (a.fetchedToday === true) t.push(a);
+      else p.push(a);
+    }
+    if (t.length) today.push({ ...s, items: t });
+    if (p.length) past.push({ ...s, items: p });
+  }
+  return { today, past };
+}
+
 function countItems(sources: SourceGroup[]): number {
   return sources.reduce((n, s) => n + s.items.length, 0);
 }
@@ -724,7 +863,7 @@ function renderSourcesBlock(
   </div>`;
 }
 
-function renderSubContent(category: Category, sub: SubGroup, isActive: boolean): string {
+function renderSubContent(category: Category, sub: SubGroup, isActive: boolean, date: string): string {
   const usesTimeSplit = TIME_SPLIT_CATEGORIES.has(category);
   const activeCls = isActive ? " active" : "";
   const subAttr = `data-sub-content="${escapeHtml(sub.id)}" data-cat="${category}"`;
@@ -757,9 +896,11 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
     </div>`;
   }
 
-  // 需要时间拆分（广东地区IPO）：当天 vs 过去7天。
-  const todaySrc = filterByTime(sub.sources, true);
-  const pastSrc = filterByTime(sub.sources, false);
+  // 需要时间拆分（广东地区IPO）：当天 vs 过去7天（按公告时间 publishedAt）。
+  const { today: todaySrc, past: pastSrc } = splitGdIpoByPublishedAt(
+    sub.sources,
+    date,
+  );
   const todayCount = countItems(todaySrc);
   const pastCount = countItems(pastSrc);
   return `<div class="sub-content${activeCls}" ${subAttr}>
@@ -781,12 +922,13 @@ function renderSubContent(category: Category, sub: SubGroup, isActive: boolean):
 function renderRawCategoryPanel(
   category: Category,
   subs: SubGroup[],
+  date: string,
 ): string {
   if (subs.length === 0) {
     return `<p class="empty">${STR.emptyCategory}</p>`;
   }
   if (subs.length === 1) {
-    return renderSubContent(category, subs[0], true);
+    return renderSubContent(category, subs[0], true, date);
   }
   const subTabs = subs
     .map((s, i) => {
@@ -795,7 +937,7 @@ function renderRawCategoryPanel(
     })
     .join("");
   const panels = subs
-    .map((s, i) => renderSubContent(category, s, i === 0))
+    .map((s, i) => renderSubContent(category, s, i === 0, date))
     .join("\n");
   return `<nav class="sub-tabs">${subTabs}</nav>\n<div class="sub-contents">${panels}</div>`;
 }
@@ -1511,14 +1653,14 @@ export function renderHtml(
   </nav>
 
   <section class="panel active" data-panel="tech">
-    ${renderRawCategoryPanel("tech", techMainSubs)}
+    ${renderRawCategoryPanel("tech", techMainSubs, date)}
   </section>
   ${trading ? `<section class="panel" data-panel="trading">${renderTradingPanel(trading)}</section>` : ""}
   <section class="panel" data-panel="finance">
-    ${renderRawCategoryPanel("finance", raw.finance)}
+    ${renderRawCategoryPanel("finance", raw.finance, date)}
   </section>
   <section class="panel" data-panel="gd-ipo">
-    ${renderRawCategoryPanel("gd-ipo", raw['gd-ipo'] || [])}
+    ${renderRawCategoryPanel("gd-ipo", raw["gd-ipo"] || [], date)}
   </section>
   
   

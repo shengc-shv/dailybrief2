@@ -420,12 +420,13 @@
     "type": "rss",
     "url": "https://www.ftchinese.com/rss/news",
     "category": "finance",
-    "subcategory": "cn-finance",
+    "subcategory": "news",
     "enabled": true,
     "locales": [
       "zh"
     ],
-    "note": "已验证可用。FT 中文版综合新闻，全球宏观+中国市场视角，中文语境下最值得加的金融源。"
+    "note": "已验证可用。FT 中文版综合新闻，全球宏观+中国市场视角。已按用户要求从「国内财经」移至「国际财经」。",
+    "lang": "zh"
   },
   {
     "id": "crunchbase-news",

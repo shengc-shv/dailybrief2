@@ -33,6 +33,7 @@ const TEXTS_ZH = {
   catPolitics: "时政观察",
   catTrading: "市场行情",
   catGdIpo: "广东地区IPO",
+  catIpo: "IPO/新股",
   catCommunity: "社区讨论",
   subAiNews: "AI 媒体",
   subTrendingPapers: "热门论文",
@@ -87,6 +88,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   catPolitics: "World",
   catTrading: "Markets",
   catGdIpo: "Guangdong IPO",
+  catIpo: "IPO / New Listings",
   catCommunity: "Community",
   subAiNews: "AI Media",
   subTrendingPapers: "Trending Papers",
@@ -167,6 +169,7 @@ const CATEGORY_LABELS: Record<Category, string> = {
   finance: STR.catFinance,
   politics: STR.catPolitics,
   'gd-ipo': '广东地区IPO',
+  ipo: STR.catIpo,
 };
 
 const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
@@ -174,15 +177,16 @@ const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
   finance: STR.catFinance,
   politics: STR.catPolitics,
   'gd-ipo': STR.catGdIpo,
+  ipo: STR.catIpo,
 };
 
 /**
  * 仅这些分类在 L2 子面板内展示"当天 / 过去7天"时间拆分。
  *  - 技术动态、财经要点：只看当天（热门），不暴露历史库存，故不渲染时间标签。
- *  - 广东地区IPO：只有它需要历史回溯（过去7天，按信息发生时间 publishedAt）。
+ *  - 广东地区IPO、全国IPO/新股：按信息发生时间 publishedAt 做 当天/过去7天 回溯。
  *  - 市场行情：在线生成的当日宏观数据，由独立 trading 面板渲染，不在此时间拆分体系内。
  */
-const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo"]);
+const TIME_SPLIT_CATEGORIES = new Set<Category>(["gd-ipo", "ipo"]);
 
 /**
  * L2 ordering per category. Categories not listed render flat (no L2 tabs).
@@ -197,6 +201,7 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
   finance: ["cn-finance", "news"],
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
+  ipo: ["sse", "szse", "bse", "ipo-media"],
   politics: ["world"],
 };
 
@@ -222,6 +227,8 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   hkex: "港交所",
   "ipo-tutoring": "IPO辅导",
   overseas: "境外",
+  // 全国IPO/新股 的媒体补充源
+  "ipo-media": "IPO媒体",
 };
 
 /**
@@ -426,11 +433,15 @@ export function groupRaw(
     finance: new Map(),
     politics: new Map(),
     'gd-ipo': new Map(),
+    ipo: new Map(),
   };
 
   // 广东地区IPO：文章级三道闸分类后，按 classifier 决定的子标签归桶
   // （一个源如巨潮可能同时含深/沪/京，不能再靠 sourceId 定 sub）。
   const gdSubs = new Map<string, Bucket>();
+  // 全国IPO/新股：crawler 已按 region 分流好（非广东沪深 + 媒体源），
+  // 直接按 registry 的 subcategory 归桶（sse/szse/ipo-media），不再过三道闸。
+  const ipoSubs = new Map<string, Bucket>();
   // 广东公司但非IPO类（财报/分红/解禁等）→ 转财经要点「news」合并流
   const financeExtra: ArticleInput[] = [];
   const gdIssuers = loadGdIssuers();
@@ -486,6 +497,17 @@ export function groupRaw(
       b.items.push(a);
       continue;
     }
+    // 全国IPO/新股：按 sourceId → registry subcategory 归桶（sse/szse/ipo-media）
+    if (a.category === "ipo") {
+      const sub = subcatOf.get(a.sourceId) ?? "ipo-media";
+      let b = ipoSubs.get(sub);
+      if (!b) {
+        b = { sourceName: SUBCATEGORY_LABELS[sub] ?? sub, items: [] };
+        ipoSubs.set(sub, b);
+      }
+      b.items.push(a);
+      continue;
+    }
     const map = buckets[a.category];
     let b = map.get(a.sourceId);
     if (!b) {
@@ -518,12 +540,13 @@ export function groupRaw(
     buckets["finance"].set(sid, b);
   }
 
-  // 广东地区IPO：按 classifier 结果（gdSubs）构建子标签，始终渲染全部 6 个
-  function buildGdIpoSubs(): SubGroup[] {
-    const order = SUBCATEGORY_ORDER["gd-ipo"];
+  // 按 SUBCATEGORY_ORDER 构建子标签，始终渲染全部二级标签（空则占位）。
+  // gd-ipo 用三道闸分类结果 gdSubs；全国 ipo 用 subcatOf 归桶结果 ipoSubs。
+  function buildOrderedSubs(subMap: Map<string, Bucket>, cat: Category): SubGroup[] {
+    const order = SUBCATEGORY_ORDER[cat] ?? [];
     const subs: SubGroup[] = [];
     for (const subId of order) {
-      const b = gdSubs.get(subId);
+      const b = subMap.get(subId);
       if (!b || b.items.length === 0) {
         subs.push({
           id: subId,
@@ -577,12 +600,17 @@ export function groupRaw(
   finance: [],
   politics: [],
   'gd-ipo': [],
+  ipo: [],
   };
   
   for (const cat of Object.keys(buckets) as Category[]) {
-    // 广东地区IPO 已由分类器文章级分发，单独构建
+    // 广东地区IPO / 全国IPO 已由各自分流逻辑（三道闸 / subcatOf）文章级分发，单独构建
     if (cat === "gd-ipo") {
-      out["gd-ipo"] = buildGdIpoSubs();
+      out["gd-ipo"] = buildOrderedSubs(gdSubs, "gd-ipo");
+      continue;
+    }
+    if (cat === "ipo") {
+      out["ipo"] = buildOrderedSubs(ipoSubs, "ipo");
       continue;
     }
     const order = SUBCATEGORY_ORDER[cat];
@@ -965,6 +993,7 @@ export function renderHtml(
     tech: countItemsToday(techMainSubs),
     finance: countItemsToday(raw.finance),
     'gd-ipo': sumItems(raw['gd-ipo'] || []),
+    ipo: sumItems(raw['ipo'] || []),
      politics: sumItems(raw.politics),
   };
 
@@ -1650,6 +1679,7 @@ export function renderHtml(
     ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
     <button class="tab" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
     <button class="tab" data-tab="gd-ipo">${CATEGORY_LABELS['gd-ipo']}<span class="count">${counts['gd-ipo']}</span></button>
+    <button class="tab" data-tab="ipo">${CATEGORY_LABELS['ipo']}<span class="count">${counts['ipo']}</span></button>
   </nav>
 
   <section class="panel active" data-panel="tech">
@@ -1661,6 +1691,9 @@ export function renderHtml(
   </section>
   <section class="panel" data-panel="gd-ipo">
     ${renderRawCategoryPanel("gd-ipo", raw["gd-ipo"] || [], date)}
+  </section>
+  <section class="panel" data-panel="ipo">
+    ${renderRawCategoryPanel("ipo", raw["ipo"] || [], date)}
   </section>
   
   

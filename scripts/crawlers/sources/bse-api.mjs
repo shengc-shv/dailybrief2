@@ -117,10 +117,9 @@ export class BSEAPICrawler extends BaseCrawler {
         const isIpo = IPO_KEYWORDS.some(k => titleText.includes(k));
         if (!isIpo) continue;
 
-        // 2) 按股票代码解析省份，判断是否为广东企业
+        // 2) 按股票代码解析省份，标记是否广东企业（不再丢弃非广东——全国进「全国IPO/新股」）
         provinceChecks++;
         const guangdong = await isGuangdong(stockCode, 'BJ');
-        if (!guangdong) continue;
 
         // 日期
         const pubDate = (item.publishDate || '').match(/(\d{4}-\d{2}-\d{2})/)?.[1]
@@ -136,7 +135,11 @@ export class BSEAPICrawler extends BaseCrawler {
           ? `https://www.bse.cn${item.destFilePath}`
           : '';
 
-        articles.push({ title, url: detailUrl, excerpt, publishedAt: pubDate, sourceId: 'gd-bse' });
+        articles.push({
+          title, url: detailUrl, excerpt, publishedAt: pubDate,
+          sourceId: 'gd-bse',
+          region: guangdong ? 'gd' : 'nation',
+        });
       }
 
       console.log(`[${this.name}] IPO 命中 ${provinceChecks} 家，其中广东企业 ${articles.length} 家`);

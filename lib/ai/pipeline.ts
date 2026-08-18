@@ -50,6 +50,7 @@ const PER_CATEGORY_LIMIT: Record<Category, number> = {
   finance: 20,
   politics: 15,
   'gd-ipo': 20,   // <!-- 新增 -->
+  ipo: 20,        // <!-- 新增 -->
 };
 
 const MAX_AGE_DAYS = 14;

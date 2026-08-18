@@ -334,7 +334,7 @@ function buildReportFromRaw(raw: RawByCategory): DailyReport {
     tech_briefs: flatten("tech").slice(0, 5).map(toBrief),
     finance_briefs: flatten("finance").slice(0, 5).map(toBrief),
     politics_briefs: flatten("politics").slice(0, 3).map(toBrief),
-    gd_ipo_briefs: flatten("gd-ipo").slice(0, 20).map(toBrief),
+    gd_ipo_briefs: [...flatten("gd-ipo"), ...flatten("ipo")].slice(0, 20).map(toBrief),
     editor_note: "",
     keywords: [],
   };
@@ -364,9 +364,11 @@ async function main() {
         // 跳过已存在的（按 URL 去重）
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
-        // 每条爬虫结果自带 sourceId（gd-szse/gd-sse/gd-bse/gd-hkex/gd-em-ipo 等），
-        // 据此路由到广东地区IPO下的对应二级标签；缺失时回退到历史兜底 id。
+        // 每条爬虫结果自带 sourceId（gd-szse/gd-sse/gd-bse/gd-hkex/gd-em-ipo 等）。
+        // 按 region 分流：广东企业 → 广东地区IPO；其余（全国/北交所/辅导等）→ 全国IPO/新股。
+        // 无 region 字段的旧数据（港交所等）默认留在广东地区IPO，保持历史行为。
         const srcId = item.sourceId || 'gd-local-scraper';
+        const region = item.region === 'nation' ? 'ipo' : 'gd-ipo';
         articles.push({
           sourceId: srcId,
           source: item.source || '广东本地爬虫',
@@ -374,7 +376,7 @@ async function main() {
           url: item.url || '',
           excerpt: item.excerpt || '',
           publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
-          category: 'gd-ipo',
+          category: region,
           summary: item.summary || '',
         });
         count++;
@@ -399,14 +401,14 @@ async function main() {
   await enrichAiNews(articles);
   await enrichXViral(articles);
   
-  // ===== 为 gd-ipo 数据生成中文摘要（复用历史缓存去重）=====
-  const gdIpoArticles = articles.filter(a => a.category === 'gd-ipo');
+  // ===== 为 gd-ipo / 全国ipo 数据生成中文摘要（复用历史缓存去重）=====
+  const gdIpoArticles = articles.filter(a => a.category === 'gd-ipo' || a.category === 'ipo');
   if (gdIpoArticles.length > 0) {
     const pending = applyCache(gdIpoArticles);
     if (pending.length === 0) {
-      console.log(`[daily] enriching gd-ipo: ${gdIpoArticles.length} 条全部命中历史缓存，跳过 LLM`);
+      console.log(`[daily] enriching gd-ipo+ipo: ${gdIpoArticles.length} 条全部命中历史缓存，跳过 LLM`);
     } else {
-      console.log(`[daily] enriching ${pending.length}/${gdIpoArticles.length} gd-ipo items with ${REPORT_LOCALE} summaries…`);
+      console.log(`[daily] enriching ${pending.length}/${gdIpoArticles.length} gd-ipo+ipo items with ${REPORT_LOCALE} summaries…`);
       const t0 = Date.now();
       const summaries = await enrichFinanceNewsSummaries(pending);
       for (const a of pending) {

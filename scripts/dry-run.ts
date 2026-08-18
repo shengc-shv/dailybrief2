@@ -17,7 +17,7 @@ function generateEmptyReport(articles: ArticleInput[]) {
   const techArticles = articles.filter(a => a.category === 'tech');
   const financeArticles = articles.filter(a => a.category === 'finance');
   const politicsArticles = articles.filter(a => a.category === 'politics');
-  const gdIpoArticles = articles.filter(a => a.category === 'gd-ipo');
+  const gdIpoArticles = articles.filter(a => a.category === 'gd-ipo' || a.category === 'ipo');
 
   return {
     hero_headline: "",
@@ -72,6 +72,8 @@ async function main() {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
         const srcId = item.sourceId || 'gd-local-scraper';
+        // 与 daily.ts 一致：region=nation 进「全国IPO/新股」，其余进「广东地区IPO」
+        const category = item.region === 'nation' ? 'ipo' : 'gd-ipo';
         articles.push({
           sourceId: srcId,
           source: item.source || '广东本地爬虫',
@@ -79,7 +81,7 @@ async function main() {
           url: item.url || '',
           excerpt: item.excerpt || '',
           publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
-          category: 'gd-ipo',
+          category,
           summary: item.summary || '',
         });
         count++;

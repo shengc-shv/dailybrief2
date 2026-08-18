@@ -6,11 +6,12 @@
     "url": "https://openai.com/news/rss.xml",
     "category": "tech",
     "subcategory": "ai-news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
-    ]
+    ],
+    "disabledReason": "停更于 2018-10（OpenAI 已废弃该 RSS），禁用"
   },
   {
     "id": "deepmind-blog",
@@ -78,11 +79,12 @@
     "url": "https://news.smol.ai/rss.xml",
     "category": "tech",
     "subcategory": "ai-news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
-    ]
+    ],
+    "disabledReason": "停更于 2024-07，禁用"
   },
   {
     "id": "latent-space",
@@ -143,11 +145,12 @@
     "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
     "category": "finance",
     "subcategory": "news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
-    ]
+    ],
+    "disabledReason": "停更于 2025-01（WSJ RSS 已废弃），禁用"
   },
   {
     "id": "ft-companies",
@@ -212,7 +215,8 @@
     "locales": [
       "zh",
       "en"
-    ]
+    ],
+    "disabledReason": "恢复：#45 CI 实测拉到 30 条（沙箱403仅为环境拦截，非源失效）"
   },
   {
     "id": "investing-news",
@@ -225,7 +229,8 @@
     "locales": [
       "zh",
       "en"
-    ]
+    ],
+    "disabledReason": "恢复：#45 CI 实测拉到 10 条（沙箱403仅为环境拦截，非源失效）"
   },
   {
     "id": "sina-finance",
@@ -262,11 +267,12 @@
     "url": "https://www.cninfo.com.cn/new/disclosure/stock",
     "category": "gd-ipo",
     "subcategory": "szse",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ],
-    "note": "深交所/上交所/北交所全披露平台。统一抓取后由分类器按『地域→类型→市场』分发到深/沪/京子标签；非IPO类（财报/分红/解禁）转财经要点。"
+    "note": "深交所/上交所/北交所全披露平台。统一抓取后由分类器按『地域→类型→市场』分发到深/沪/京子标签；非IPO类（财报/分红/解禁）转财经要点。",
+    "disabledReason": "空壳 live-API 源：未接爬虫、永远0条，Daily Brief #45 实测 FAILED 500，禁用"
   },
   {
     "id": "hkex-disclosure",
@@ -275,12 +281,13 @@
     "url": "https://www.hkexnews.hk/rss/listedco.xml",
     "category": "gd-ipo",
     "subcategory": "hkex",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
     ],
-    "note": "港交所公告，覆盖广东企业港股上市/辅导动态。"
+    "note": "港交所公告，覆盖广东企业港股上市/辅导动态。",
+    "disabledReason": "港交所披露易 RSS 地址失效(404)；港股 IPO 由爬虫 hkex-ipo.mjs 提供，此冗余 RSS 源禁用"
   },
   {
     "id": "gd-local-scraper",
@@ -444,6 +451,27 @@
       "zh",
       "en"
     ],
-    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；仅广东企业出海上市（境外子标签）才进广东IPO，其余丢弃。"
+    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；仅广东企业出海上市（境外子标签）才进广东IPO，其余丢弃。",
+    "disabledReason": "恢复：#45 CI 实测拉到 1 条（沙箱403仅为环境拦截，非源失效）"
+  },
+  {
+    "type": "api",
+    "category": "gd-ipo",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "爬虫兼容占位源：上交所/北交所IPO公告由 scripts/crawlers 产出（sourceId=gd-sse/gd-bse），此条目仅用于 registry 识别，不直接抓取",
+    "id": "gd-sse",
+    "name": "上交所IPO公告(历史兼容)",
+    "subcategory": "sse"
+  },
+  {
+    "type": "api",
+    "category": "gd-ipo",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "爬虫兼容占位源：上交所/北交所IPO公告由 scripts/crawlers 产出（sourceId=gd-sse/gd-bse），此条目仅用于 registry 识别，不直接抓取",
+    "id": "gd-bse",
+    "name": "北交所IPO公告(历史兼容)",
+    "subcategory": "bse"
   }
 ]

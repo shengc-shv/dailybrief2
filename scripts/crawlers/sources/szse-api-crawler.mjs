@@ -129,11 +129,11 @@ export class SZSEAPICrawler extends BaseCrawler {
         // searchkey 已召回 IPO 类，这里再兜一道关键词
         if (!title.includes(this.searchKey)) continue;
 
-        // 按股票代码解析省份，判断是否为广东企业（轻微限速避免 emweb 限流）
+        // 按股票代码解析省份，标记是否广东企业（轻微限速避免 emweb 限流）
+        // 注：不再丢弃非广东企业——广东的进「广东地区IPO」，其余进「全国IPO/新股」
         provinceChecks++;
         await new Promise((r) => setTimeout(r, 80));
         const guangdong = await isGuangdong(code, 'SZ');
-        if (!guangdong) continue;
 
         // 每家公司只保留一条
         if (seen.has(code)) continue;
@@ -148,6 +148,7 @@ export class SZSEAPICrawler extends BaseCrawler {
           excerpt: `深交所公告 | ${title} | 日期: ${pubDate}`,
           publishedAt: pubDate,
           sourceId: 'gd-szse',
+          region: guangdong ? 'gd' : 'nation',
         });
       }
 
@@ -159,7 +160,7 @@ export class SZSEAPICrawler extends BaseCrawler {
     }
 
     console.log(
-      `[${this.name}] 扫描 ${scanned} 条，IPO 命中 ${provinceChecks} 家，其中广东企业 ${articles.length} 家`,
+      `[${this.name}] 扫描 ${scanned} 条，IPO 命中 ${provinceChecks} 家，其中广东企业 ${articles.filter(a => a.region === 'gd').length} 家、全国共 ${articles.length} 家`,
     );
     this.results.push(...articles);
     console.log(`[${this.name}] 完成，共 ${this.results.length} 条`);

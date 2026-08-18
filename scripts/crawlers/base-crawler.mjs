@@ -127,6 +127,8 @@ export class BaseCrawler {
       source: this.name,
       // 子类可给每条结果带上 sourceId，daily.ts 据此路由到对应二级标签
       ...(item.sourceId ? { sourceId: item.sourceId } : {}),
+      // region: 'gd' 广东（进「广东地区IPO」）/ 'nation' 全国（进「全国IPO/新股」）
+      ...(item.region ? { region: item.region } : {}),
     }));
   }
 }

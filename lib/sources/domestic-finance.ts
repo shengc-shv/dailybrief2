@@ -25,7 +25,25 @@ function clean(s: string): string {
   return s.replace(/<[^>]+>/g, "").replace(/&[a-z]+;/gi, " ").replace(/\s+/g, " ").trim();
 }
 
-/** 新浪财经滚动新闻：<li><a href="...norm_detail?url=ENCODED">标题</a> */
+/**
+ * 新浪财经滚动新闻：<li><a href="...norm_detail?url=ENCODED">标题</a>
+ *
+ * 滚动页是「全市场混合流」，含大量个股涨跌/行情微观内容（/stock/ 占 ~99 条、
+ * /money/ 期货 ~26 条、/chanjing/ 白酒价格 ~12 条）。用户要求国内财经更宏观，
+ * 因此按解码后的真实 URL 子频道做白名单过滤：只保留经济/宏观/国际/专栏类，
+ * 丢弃纯个股行情、期货、商品报价等微观噪声。
+ */
+// 新浪文章 URL 子频道白名单（宏观/政策/经济/国际/评论）
+const SINA_MACRO_CHANNELS = new Set([
+  "jjxw", // 经济新闻
+  "roll", // 滚动（宏观混合：美债/金价/汇率）
+  "world", // 国际宏观
+  "zl", // 专栏评论
+  "wm", // 美股宏观综述
+  "headline", // 要闻摘要
+  "macro", // 宏观
+  "g", // 宏观
+]);
 export async function fetchSinaFinance(
   sourceId: string,
   limit = 25,
@@ -50,6 +68,10 @@ export async function fetchSinaFinance(
       continue;
     }
     if (!/20\d{2}-\d{2}-\d{2}/.test(url)) continue; // 只保留带日期的真实文章
+    // 子频道过滤：丢弃纯微观行情（/stock/ /money/ /chanjing/ /fund/ 等）
+    const ch = /finance\.sina\.com\.cn\/([a-z]+)\//.exec(url);
+    const channel = ch ? ch[1] : "other";
+    if (!SINA_MACRO_CHANNELS.has(channel)) continue;
     const d = /(\d{4})-(\d{2})-(\d{2})/.exec(url);
     const publishedAt = d
       ? new Date(`${d[1]}-${d[2]}-${d[3]}T08:00:00+08:00`)

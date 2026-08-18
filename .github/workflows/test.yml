@@ -24,12 +24,33 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Ensure data file exists
+      - name: Ensure data files exist
         run: |
           mkdir -p data
-          if [ ! -f data/crawled-articles.json ]; then
-            echo '[]' > data/crawled-articles.json
-          fi
+          for f in data/crawled-articles.json data/crawled-gz.json; do
+            if [ ! -f "$f" ]; then
+              echo '[]' > "$f"
+            fi
+          done
+
+      # 抓取最新爬虫数据包（交易所 IPO + 广州商机），上传为 crawler-data artifact，
+      # 供本地「预 AI 分析加载」任务拉回比对：找出历史库中的新增条目 → AI 分析打标。
+      - name: Run local crawlers (exchange IPO)
+        run: node scripts/crawlers/run-all.mjs
+        continue-on-error: true
+
+      - name: Run GZ crawlers
+        run: node scripts/crawlers/run-gz.mjs
+        continue-on-error: true
+
+      - name: Upload crawler data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawler-data
+          path: |
+            data/crawled-articles.json
+            data/crawled-gz.json
+          retention-days: 30
 
       # 纯历史渲染验证：不访问任何网络源（OFFLINE），直接用本地数据文件
       # （crawled-articles.json / crawled-gz.json）+ 滚动历史缓存（article-history.json）

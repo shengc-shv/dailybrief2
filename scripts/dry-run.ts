@@ -81,7 +81,7 @@ async function main() {
           title: item.title || '无标题',
           url: item.url || '',
           excerpt: item.excerpt || '',
-          publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
+          publishedAt: item.publishedAt ? new Date(item.publishedAt) : undefined,
           category,
           summary: item.summary || '',
         });
@@ -115,7 +115,7 @@ async function main() {
           title: item.title || '无标题',
           url: item.url || '',
           excerpt: item.excerpt || '',
-          publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
+          publishedAt: item.publishedAt ? new Date(item.publishedAt) : undefined,
           category: regCat ?? 'gz',
           summary: item.summary || '',
         });

@@ -164,6 +164,14 @@ export type RawByCategory = Record<Category, SubGroup[]>;
 
 // ----- labels & ordering -----
 
+/**
+ * 广州商机杂讯兜底词表（与 scripts/analyze-gz.ts 的 HEURISTIC_RULES 无关词表一致，
+ * 生产验证过）。南沙/政府列表页会长期挂旧政策文件库存（电费补贴/招聘/摆卖/殡葬/
+ * 诊所备案等），LLM 相关性分类偶有漏网——此词表在渲染层兜底过滤。
+ */
+const GZ_NOISE_RE =
+  /历史建筑|门前三包|禁燃|黑烟|柴油货车|限行|交通管制|禁停|环境保护|生态|绿化|消防|防汛|水务|河道|畜牧|兽医|文物|非遗|民政局|街道办|居委会|司法厅|决定书|注销|律师|执业|行政许可|招聘|竞投|摆卖|摊位|路灯|景观照明|电费补贴|排污|噪声|拆迁补偿|工伤|教师资格|招生|赛事|演出|博物馆|公园|厕所|殡葬|诊所备案|欠薪|养犬|渔港|见义勇为|储备土地|低保|入学|气瓶/;
+
 const CATEGORY_LABELS: Record<Category, string> = {
   tech: STR.catTech,
   finance: STR.catFinance,
@@ -480,6 +488,16 @@ export function groupRaw(
     // 需要精准过滤（历史建筑/招聘/娱乐等）；tech/ipo/politics 参考区不做银行相关
     // 过滤，避免 LLM 误判把 GitHub/论文/IPO 全清空。
     if (a.relevant === false && (a.category === "gz" || a.category === "finance")) continue;
+    // gz 杂讯兜底（不依赖 LLM）：AI 未明确判相关(relevant!==true) 且标题命中
+    // 城市治理/民生杂讯词（电费补贴/招聘/摆卖/殡葬/诊所备案等）→ 过滤。
+    // 南沙/政府列表页会长期挂旧政策文件库存，LLM 分类偶有漏网（ai_relevant=null），
+    // 此兜底保证垃圾内容绝不进商机面板。
+    if (
+      a.category === "gz" &&
+      a.relevant !== true &&
+      GZ_NOISE_RE.test(a.title)
+    )
+      continue;
     if (a.category === "politics" && isSportsArticle(a.title)) continue;
     if (
       (a.sourceId === "v2ex-hot" || a.sourceId === "linuxdo") &&

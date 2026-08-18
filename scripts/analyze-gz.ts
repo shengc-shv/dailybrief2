@@ -2,6 +2,7 @@ import "./_env";
 import fs from "node:fs";
 import { runLlm } from "../lib/ai/llm";
 import { extractJson } from "../lib/ai/json-util";
+import { loadAllSources } from "../lib/sources/registry";
 import { fetchGovCnPolicy } from "../lib/sources/national-policy";
 
 /**
@@ -130,10 +131,12 @@ async function main() {
     return [];
   });
 
+  const regById = new Map(loadAllSources().map((s) => [s.id, s.category]));
   const items = [
     ...gz.map((x: any) => ({
       url: x.url, title: x.title, source: x.source || "广州政府", srcId: x.sourceId,
-      category: x.category || "gz", publishedAt: x.publishedAt || undefined,
+      // category 按注册表路由（gz-gov→finance 宏观政策；gz-stats/gz-nansha→gz 商机）
+      category: regById.get(x.sourceId) ?? "gz", publishedAt: x.publishedAt || undefined,
     })),
     ...govcn.map((x: any) => ({
       url: x.url, title: x.title, source: "中国政府网", srcId: x.sourceId,
@@ -198,7 +201,7 @@ async function main() {
         url,
         sourceId: prev?.sourceId ?? meta.srcId ?? "gz-local",
         source: prev?.source ?? meta.source ?? "广州商机",
-        category: (prev?.category ?? meta.category ?? "gz") as any,
+        category: (meta.category ?? prev?.category ?? "gz") as any,
         // 条目级 AI/启发式分类（覆盖注册表源级）；无关条目也保留分类供过滤
         subcategory: a.subcategory || prev?.subcategory,
         excerpt: prev?.excerpt ?? "",

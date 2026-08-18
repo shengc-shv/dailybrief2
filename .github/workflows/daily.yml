@@ -2,17 +2,17 @@ name: Daily Brief
 
 # Generate a fresh daily report and publish to GitHub Pages.
 #
-# Schedule: Beijing time 08:05 / 08:25 / 08:45 — three runs per morning
-# (UTC 00:05 / 00:25 / 00:45). GitHub Actions cron is UTC-only, so the
-# cron below is the Beijing-time morning mapped to UTC. A "gate" job:
-#   - lets workflow_dispatch always run;
-#   - skips this trigger if another run of this workflow is still in
-#     progress (the "前一次没跑完，下一次直接跳过" requirement) — done via
-#     the Actions API because `concurrency` would QUEUE (delay), not skip;
+# Schedule: Beijing time 08:05 / 08:25 / 08:45 — three cron triggers
+# (UTC 00:05 / 00:25 / 00:45) act as **redundant insurance** so the morning
+# run still fires even if GitHub silently drops one or two of them.
+# The "gate" job enforces **at most one build per day**:
+#   - workflow_dispatch always runs;
+#   - if another run of this workflow is still in progress, this trigger is
+#     skipped outright ("前一次没跑完，下一次直接跳过") — checked via the
+#     Actions API, because `concurrency` would QUEUE (delay) rather than skip;
+#   - if today's report already exists on gh-pages, this trigger is skipped
+#     (one build per day — the first successful morning run wins);
 #   - filters by REPORT_DAYS (default: every day).
-# There is intentionally NO "only one build per day" dedup anymore — each
-# of the three morning triggers runs the full pipeline and overwrites
-# today's report with the freshest data.
 
 on:
   schedule:
@@ -109,9 +109,25 @@ jobs:
             done
           fi
 
+          # 每天最多构建一次：当日报告已发布到 gh-pages 则跳过本次触发。
+          # （8:05/8:25/8:45 三个触发点互为保险——GitHub cron 会静默丢触发，
+          # 多设几个确保至少一次命中；第一个成功跑的发布报告后，其余触发全部跳过。）
+          # 并发跳过已在前面处理：前一次还在跑（in_progress）时本次直接跳过。
           if [ "$hour_match" = "true" ] && [ "$day_match" = "true" ]; then
-            echo "✓ Match — proceeding to build"
-            echo "should-run=true" >> "$GITHUB_OUTPUT"
+            TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
+            CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "$CHECK_URL" || echo "000")
+            if [ "$HTTP_CODE" = "404" ]; then
+              echo "✓ Match & today's report missing — proceeding to build"
+              echo "should-run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "Today's report already exists (HTTP $HTTP_CODE) — skipping (one build per day)"
+              echo "should-run=false" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "✗ No match — skipping (hour=$hour_match day=$day_match)"
             echo "should-run=false" >> "$GITHUB_OUTPUT"

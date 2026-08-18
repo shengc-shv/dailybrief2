@@ -1,5 +1,5 @@
 import { BaseCrawler } from '../base-crawler.mjs';
-import { isGuangdong } from '../province-resolver.mjs';
+import { regionOf } from '../province-resolver.mjs';
 import { fetch } from 'undici';
 
 /**
@@ -133,7 +133,7 @@ export class SZSEAPICrawler extends BaseCrawler {
         // 注：不再丢弃非广东企业——广东的进「广东地区IPO」，其余进「全国IPO/新股」
         provinceChecks++;
         await new Promise((r) => setTimeout(r, 80));
-        const guangdong = await isGuangdong(code, 'SZ');
+        const reg = await regionOf(code, 'SZ');
 
         // 每家公司只保留一条
         if (seen.has(code)) continue;
@@ -148,7 +148,7 @@ export class SZSEAPICrawler extends BaseCrawler {
           excerpt: `深交所公告 | ${title} | 日期: ${pubDate}`,
           publishedAt: pubDate,
           sourceId: 'gd-szse',
-          region: guangdong ? 'gd' : 'nation',
+          region: reg || 'nation',
         });
       }
 

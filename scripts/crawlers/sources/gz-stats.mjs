@@ -32,7 +32,7 @@ export class GzStatsCrawler extends BaseCrawler {
       url: absUrl(it.url, base),
       excerpt: `【广州统计局】${it.title}`,
       category: 'gz',
-      subcategory: 'gz-retail',
+      subcategory: 'gz-customer',
       region: 'gz',
       sourceId: 'gz-stats',
       source: '广州市统计局',

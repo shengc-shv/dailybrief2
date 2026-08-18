@@ -72,10 +72,11 @@ async function main() {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
         const srcId = item.sourceId || 'gd-local-scraper';
-        // 与 daily.ts 一致：region=nation 进「全国IPO/新股」，其余进「广东地区IPO」
-        const category = item.region === 'nation' ? 'ipo' : 'gd-ipo';
+        // 与 daily.ts 一致：region=gz(招行广州分行辖区) → 广州商机·企业融资；gd(非广州)/nation/无 → 参考区 全国IPO
+        const category = item.region === 'gz' ? 'gz' : 'ipo';
+        const finalSrcId = category === 'gz' ? srcId.replace(/^gd-/, 'gz-') : srcId;
         articles.push({
-          sourceId: srcId,
+          sourceId: finalSrcId,
           source: item.source || '广东本地爬虫',
           title: item.title || '无标题',
           url: item.url || '',
@@ -106,6 +107,8 @@ async function main() {
       for (const item of items) {
         const exists = articles.some(a => a.url === item.url);
         if (exists) continue;
+        // category 按注册表路由（gz-gov 已迁入宏观政策·广州政策）
+        const regCat = loadAllSources().find(s => s.id === item.sourceId)?.category;
         articles.push({
           sourceId: item.sourceId || 'gz-local',
           source: item.source || '广州商机',
@@ -113,7 +116,7 @@ async function main() {
           url: item.url || '',
           excerpt: item.excerpt || '',
           publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
-          category: 'gz',
+          category: regCat ?? 'gz',
           summary: item.summary || '',
         });
         count++;

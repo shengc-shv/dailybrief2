@@ -35,7 +35,7 @@ export class GzNanshaCrawler extends BaseCrawler {
       url: absUrl(it.url, base),
       excerpt: `【南沙】${it.title}`,
       category: 'gz',
-      subcategory: 'gz-nansha',
+      subcategory: 'gz-private',
       region: 'gz',
       sourceId: 'gz-nansha',
       source: '广州南沙区政府',

@@ -33,7 +33,7 @@ export class GzGovCrawler extends BaseCrawler {
       url: absUrl(it.url, base),
       excerpt: `【广州市政府】${it.title}`,
       category: 'gz',
-      subcategory: 'gz-industry',
+      subcategory: 'gz-policy',
       region: 'gz',
       sourceId: 'gz-gov',
       source: '广州市政府',

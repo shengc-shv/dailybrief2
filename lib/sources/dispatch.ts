@@ -1,5 +1,6 @@
 import { fetchAttentionVc } from "./attentionvc";
 import { fetchCctvFinance, fetchSinaFinance } from "./domestic-finance";
+import { fetchGovCnPolicy } from "./national-policy";
 import { fetchGithubTrending } from "./github-trending";
 import { fetchHackerNews } from "./hackernews";
 import { fetchHuggingfacePapers } from "./huggingface-papers";
@@ -21,6 +22,7 @@ export async function fetchSource(source: SourceDef): Promise<RawArticle[]> {
   if (source.id === "huggingface-papers") return fetchHuggingfacePapers(source.id, source.keywords);
   if (source.id === "sina-finance") return fetchSinaFinance(source.id);
   if (source.id === "cctv-finance") return fetchCctvFinance(source.id);
+  if (source.id === "govcn-policy") return fetchGovCnPolicy(source.id);
   return fetchRss(source.id, source.url, source.category, {
     useCurl: source.useCurl,
   });

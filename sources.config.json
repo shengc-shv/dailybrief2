@@ -261,6 +261,20 @@
     "notes": "新华网财经 RSS(news_finance.xml)停滞于 2022-12、新华网主站为 SPA 无法静态抓取，改用央视财经首页（服务端渲染，实时）"
   },
   {
+    "id": "govcn-policy",
+    "name": "中国政府网·国务院政策",
+    "type": "scrape",
+    "url": "https://www.gov.cn/zhengce/",
+    "category": "finance",
+    "subcategory": "cn-policy",
+    "enabled": true,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "国家级宏观政策权威源：国务院政策文件/批复/条例（服务端渲染列表，标题+日期+链接可稳定解析）。央行/金监总局/统计局官网为 JS/模板渲染不可静态抓，其权威动态由新浪/央视媒体解读在同子标签覆盖"
+  },
+  {
     "id": "cninfo",
     "name": "巨潮A股披露",
     "type": "api",
@@ -479,20 +493,20 @@
     "category": "gz",
     "enabled": false,
     "url": "file://./data/crawled-gz.json",
-    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出（sourceId=gz-stats/gz-gov/gz-nansha），此条目仅用于 registry 识别（subcatOf 路由）与 knownSourceIds 防丢弃，不直接抓取",
+    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出（sourceId=gz-stats/gz-nansha），此条目仅用于 registry 识别（subcatOf 路由）与 knownSourceIds 防丢弃，不直接抓取",
     "id": "gz-stats",
     "name": "广州市统计局(爬虫产物)",
-    "subcategory": "gz-retail"
+    "subcategory": "gz-customer"
   },
   {
     "type": "scrape",
-    "category": "gz",
+    "category": "finance",
     "enabled": false,
     "url": "file://./data/crawled-gz.json",
-    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出，仅用于 registry 识别",
+    "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出（sourceId=gz-gov），已从广州商机迁入宏观政策·广州政策子标签",
     "id": "gz-gov",
     "name": "广州市政府(爬虫产物)",
-    "subcategory": "gz-industry"
+    "subcategory": "gz-policy"
   },
   {
     "type": "scrape",
@@ -502,6 +516,56 @@
     "notes": "广州商机爬虫兼容占位源：由 scripts/crawlers/run-gz.mjs 产出，仅用于 registry 识别",
     "id": "gz-nansha",
     "name": "广州南沙区政府(爬虫产物)",
-    "subcategory": "gz-nansha"
+    "subcategory": "gz-private"
+  },
+  {
+    "type": "api",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "广州辖区 IPO 兼容占位源：daily 分流将 region=gz 的交易所公告 sourceId 改写为 gz-* 前缀（gd-sse→gz-sse 等），供 subcatOf 路由到广州商机·企业融资",
+    "id": "gz-sse",
+    "name": "广州辖区上交所IPO(分流改写)",
+    "subcategory": "gz-ipo"
+  },
+  {
+    "type": "api",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "广州辖区 IPO 兼容占位源：见 gz-sse",
+    "id": "gz-szse",
+    "name": "广州辖区深交所IPO(分流改写)",
+    "subcategory": "gz-ipo"
+  },
+  {
+    "type": "api",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "广州辖区 IPO 兼容占位源：见 gz-sse",
+    "id": "gz-bse",
+    "name": "广州辖区北交所IPO(分流改写)",
+    "subcategory": "gz-ipo"
+  },
+  {
+    "type": "api",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "广州辖区 IPO 兼容占位源：见 gz-sse",
+    "id": "gz-hkex",
+    "name": "广州辖区港交所(分流改写)",
+    "subcategory": "gz-ipo"
+  },
+  {
+    "type": "api",
+    "category": "gz",
+    "enabled": false,
+    "url": "file://./data/crawled-articles.json",
+    "notes": "广州辖区 IPO 兼容占位源：见 gz-sse",
+    "id": "gz-em-ipo",
+    "name": "广州辖区东财辅导(分流改写)",
+    "subcategory": "gz-ipo"
   }
 ]

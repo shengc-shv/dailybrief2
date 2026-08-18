@@ -1,6 +1,6 @@
 import { BaseCrawler } from '../base-crawler.mjs';
 import { fetch } from 'undici';
-import { isGuangdong } from '../province-resolver.mjs';
+import { regionOf } from '../province-resolver.mjs';
 
 const BSE_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
@@ -119,7 +119,7 @@ export class BSEAPICrawler extends BaseCrawler {
 
         // 2) 按股票代码解析省份，标记是否广东企业（不再丢弃非广东——全国进「全国IPO/新股」）
         provinceChecks++;
-        const guangdong = await isGuangdong(stockCode, 'BJ');
+        const reg = await regionOf(stockCode, 'BJ');
 
         // 日期
         const pubDate = (item.publishDate || '').match(/(\d{4}-\d{2}-\d{2})/)?.[1]
@@ -138,7 +138,7 @@ export class BSEAPICrawler extends BaseCrawler {
         articles.push({
           title, url: detailUrl, excerpt, publishedAt: pubDate,
           sourceId: 'gd-bse',
-          region: guangdong ? 'gd' : 'nation',
+          region: reg || 'nation',
         });
       }
 

@@ -201,11 +201,13 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
   tech: ["trending-papers", "x-viral", "ai-news", "cn-tech"],
-  finance: ["cn-finance", "news"],
+  // 宏观政策：国内政策(权威) / 国内财经(媒体) / 广州政策 / 国际
+  finance: ["cn-policy", "cn-finance", "gz-policy", "news"],
   'gd-ipo': ["szse", "sse", "bse", "hkex", "ipo-tutoring", "overseas"],
-  ipo: ["sse", "szse", "bse"],
-  // 广州商机：子维度配置化，后续可在此加细分项（如 gz-ipo/gz-zhanjiang/gz-qingyuan）
-  gz: ["gz-retail", "gz-industry", "gz-nansha", "gz-ipo", "gz-zhanjiang", "gz-qingyuan"],
+  // 参考区·全国IPO/新股：全部交易所+辅导（非广州辖区的广东企业也归此）
+  ipo: ["sse", "szse", "bse", "hkex", "ipo-tutoring", "overseas"],
+  // 广州商机：按分行零售业务线组织（财富/个贷/客群/私行/企业融资）
+  gz: ["gz-wealth", "gz-credit", "gz-customer", "gz-private", "gz-ipo"],
   politics: ["world"],
 };
 
@@ -223,6 +225,8 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   "blog-weekly": STR.subBlogWeekly,
   news: STR.subFinanceNews,
   "cn-finance": STR.subFinanceCn,
+  "cn-policy": "国内政策",
+  "gz-policy": "广州政策",
   world: STR.subWorld,
   // 广东地区IPO 的 6 个二级标签（地域→市场 分发；预备上市统一进 IPO辅导）
   szse: "深交所",
@@ -231,13 +235,12 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   hkex: "港交所",
   "ipo-tutoring": "IPO辅导",
   overseas: "境外",
-  // 广州商机 子维度（配置化，可扩展）
-  "gz-retail": "零售客群",
-  "gz-industry": "产业招商",
-  "gz-nansha": "南沙",
+  // 广州商机 子维度（按分行零售业务线）
+  "gz-wealth": "财富业务",
+  "gz-credit": "个人信贷",
+  "gz-customer": "零售客群",
+  "gz-private": "私行业务",
   "gz-ipo": "企业融资",
-  "gz-zhanjiang": "湛江",
-  "gz-qingyuan": "清远",
 };
 
 /**
@@ -1802,8 +1805,7 @@ export function renderHtml(
     <button class="tab active" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
     ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
     <button class="tab" data-tab="gz">${CATEGORY_LABELS['gz']}<span class="count">${counts['gz']}</span></button>
-    <button class="tab" data-tab="gd-ipo">${CATEGORY_LABELS['gd-ipo']}<span class="count">${counts['gd-ipo']}</span></button>
-    <button class="tab" data-tab="ipo">${CATEGORY_LABELS['ipo']}<span class="count">${counts['ipo']}</span></button>
+    <button class="tab tab-fold" data-tab="ipo">${CATEGORY_LABELS['ipo']}<span class="count">${counts['ipo']}</span></button>
     <button class="tab tab-fold" data-tab="tech">${CATEGORY_LABELS.tech}<span class="count">${counts.tech}</span></button>
   </nav>
 
@@ -1813,9 +1815,6 @@ export function renderHtml(
   ${trading ? `<section class="panel" data-panel="trading">${renderTradingPanel(trading)}</section>` : ""}
   <section class="panel" data-panel="gz">
     ${renderRawCategoryPanel("gz", raw["gz"] || [], date)}
-  </section>
-  <section class="panel" data-panel="gd-ipo">
-    ${renderRawCategoryPanel("gd-ipo", raw["gd-ipo"] || [], date)}
   </section>
   <section class="panel" data-panel="ipo">
     ${renderRawCategoryPanel("ipo", raw["ipo"] || [], date)}

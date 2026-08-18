@@ -1,12 +1,11 @@
-name: Test Run (AI pre-fill, no publish)
+name: Test Run (data package + render, no publish)
+
+# 手动触发（workflow_dispatch only）：跑爬虫产出最新数据包 + 抓取全部信息源渲染验证。
+# 与 daily.yml 逻辑一致，但：无自动触发、无 AI 调用、不推送静态页面。
+# 产出 crawler-data artifact 供本地「预 AI 分析加载」任务拉回比对历史、识别新增条目。
 
 on:
   workflow_dispatch:
-  schedule:
-    # 每日 07:30 北京时间（UTC 23:30）跑 AI 预填，赶在 daily.yml（默认 08:00 北京时间）之前，
-    # 把当日/滚动文章分析好写进 data/article-history.json；daily.yml 走 dry-run 直接复用 → AI 成本≈0。
-    # 若你改了 daily.yml 的 REPORT_HOUR，请把这里的 cron 同步提前到它之前。
-    - cron: "30 23 * * *"
 
 jobs:
   test:
@@ -52,22 +51,14 @@ jobs:
             data/crawled-gz.json
           retention-days: 30
 
-      # 纯历史渲染验证：不访问任何网络源（OFFLINE），直接用本地数据文件
-      # （crawled-articles.json / crawled-gz.json）+ 滚动历史缓存（article-history.json）
-      # 渲染当日 HTML，验证渲染管线与源路由无回归。无 AI 调用。
-      - name: Render from history (OFFLINE, no fetch)
+      # 抓取全部信息源（RSS/API/新浪/央视等，非 OFFLINE）+ 渲染验证。
+      # dry-run 无 AI 调用（不生成/不消费 LLM）；仅更新 lastSeenAt 写回历史。
+      - name: Fetch sources and render (no AI)
         env:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           WEB_MODE: 'true'
-          OFFLINE: 'true'
         run: npm run dry-run
-
-      - name: Upload HTML for preview
-        uses: actions/upload-artifact@v4
-        with:
-          name: preview-report
-          path: daily_reports/
 
       # 回写滚动 30 天文章历史（当天/过去30天 的数据源）。每次 test 运行都更新
       # lastSeenAt，故通常会有 diff；仅在有变化时提交。本步骤已复制进 daily.yml。
@@ -84,8 +75,7 @@ jobs:
           fi
 
   # 每周刷新粤企注册表（企业名/股票/城市 单一真相源）。
-  # 仅周一（北京时间）运行，重建 JSON 并在有变化时提交回 main；不发布任何报告。
-  # 注意：本 job 跟随 test.yml 的每日 cron 触发，但用「周一(北京时间)」闸门限制为每周一次。
+  # 仅周一（北京时间）运行（手动触发 test.yml 时也会检查），重建 JSON 并在有变化时提交回 main；不发布任何报告。
   refresh-guangdong-registry:
     runs-on: ubuntu-latest
     permissions:

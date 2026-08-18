@@ -2,8 +2,8 @@ name: Daily Brief
 
 # Generate a fresh daily report and publish to GitHub Pages.
 #
-# Schedule: Beijing time 08:05 / 08:25 / 08:45 — three cron triggers
-# (UTC 00:05 / 00:25 / 00:45) act as **redundant insurance** so the morning
+# Schedule: Beijing time 09:05 / 09:25 / 09:45 — three cron triggers
+# (UTC 01:05 / 01:25 / 01:45) act as **redundant insurance** so the morning
 # run still fires even if GitHub silently drops one or two of them.
 # The "gate" job enforces **at most one build per day**:
 #   - workflow_dispatch always runs;
@@ -16,7 +16,7 @@ name: Daily Brief
 
 on:
   schedule:
-    # Beijing 08:05 / 08:25 / 08:45 = UTC 00:05 / 00:25 / 00:45
+    # Beijing 09:05 / 09:25 / 09:45 = UTC 01:05 / 01:25 / 01:45
     - cron: '5,25,45 1 * * *'
   workflow_dispatch:
 
@@ -64,7 +64,7 @@ jobs:
           fi
 
           TZ_VAL="${REPORT_TZ:-Asia/Shanghai}"
-          HOURS_VAL="${REPORT_HOUR:-8}"
+          HOURS_VAL="${REPORT_HOUR:-9}"
           DAYS_VAL="${REPORT_DAYS:-*}"
 
           NOW_HOUR=$(TZ="$TZ_VAL" date +%-H)
@@ -110,7 +110,7 @@ jobs:
           fi
 
           # 每天最多构建一次：当日报告已发布到 gh-pages 则跳过本次触发。
-          # （8:05/8:25/8:45 三个触发点互为保险——GitHub cron 会静默丢触发，
+          # （9:05/9:25/9:45 三个触发点互为保险——GitHub cron 会静默丢触发，
           # 多设几个确保至少一次命中；第一个成功跑的发布报告后，其余触发全部跳过。）
           # 并发跳过已在前面处理：前一次还在跑（in_progress）时本次直接跳过。
           if [ "$hour_match" = "true" ] && [ "$day_match" = "true" ]; then

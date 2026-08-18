@@ -74,6 +74,15 @@ export interface RawArticle {
    */
   fetchedToday?: boolean;
   /**
+   * 条目级子标签（AI/启发式逐条分类结果，覆盖注册表源级 subcategory）。
+   * 由分析脚本写入历史库，buildRolling 透传；groupRaw 优先用它路由子标签。
+   */
+  subcategory?: string;
+  /**
+   * 条目级相关性（AI/启发式判断）：false = 与银行业务无关，渲染时过滤。
+   */
+  relevant?: boolean;
+  /**
    * Populated by render's cross-source story dedup: when several sources
    * cover the same story inside a merged subgroup, the kept item lists the
    * other source names here so the renderer can show "多家来源" (multi-source).

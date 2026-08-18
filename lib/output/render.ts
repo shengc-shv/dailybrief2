@@ -475,6 +475,8 @@ export function groupRaw(
 
   for (const a of articles) {
     if (!knownSourceIds.has(a.sourceId)) continue;
+    // 条目级相关性过滤：AI/启发式判断「与银行业务无关」的条目不进任何面板
+    if (a.relevant === false) continue;
     if (a.category === "politics" && isSportsArticle(a.title)) continue;
     if (
       (a.sourceId === "v2ex-hot" || a.sourceId === "linuxdo") &&
@@ -661,8 +663,12 @@ export function groupRaw(
           if (n > 0) perCap = Math.ceil((mergeLimit ?? 20) / n);
         }
         for (const [id, b] of buckets[cat].entries()) {
-          if (subcatOf.get(id) === subId) {
-            flat.push(...(perCap ? takeFirstToday(b.items, perCap) : b.items));
+          // 条目级 subcategory 优先（AI/启发式分类），注册表源级兜底
+          const matched = b.items.filter(
+            (a) => (a.subcategory ?? subcatOf.get(id)) === subId,
+          );
+          if (matched.length) {
+            flat.push(...(perCap ? takeFirstToday(matched, perCap) : matched));
           }
         }
         if (flat.length === 0) {
@@ -703,7 +709,13 @@ export function groupRaw(
       const limit = displayLimitFor(cat, subId);
       const sources: SourceGroup[] = [];
       for (const [id, b] of buckets[cat].entries()) {
-        if (subcatOf.get(id) === subId) sources.push(toSourceGroup(id, b, limit));
+        // 条目级 subcategory 优先（AI/启发式分类），注册表源级兜底
+        const items = b.items.filter(
+          (a) => (a.subcategory ?? subcatOf.get(id)) === subId,
+        );
+        if (items.length) {
+          sources.push({ sourceId: id, sourceName: b.sourceName, items });
+        }
       }
       // 广东地区IPO / 财经要点 / 广州商机 的二级标签始终渲染，即使当天为空也保留
       // 标签 + “暂无内容”占位，保证结构稳定可见（不折叠成单子标签）。

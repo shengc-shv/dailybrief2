@@ -31,12 +31,15 @@ export interface HistoryEntry {
   sourceId: string;
   source: string;
   category: Category;
+  /** 条目级子标签：AI/启发式逐条分类结果（覆盖注册表源级）；由分析脚本写入。 */
   subcategory?: string;
   excerpt?: string;
   /** ISO string (from article.publishedAt). */
   publishedAt?: string;
   /** AI-generated summary in the active REPORT_LOCALE, if analyzed before. */
   summary?: string;
+  /** 条目级相关性：false = 与银行业务无关，渲染时过滤；由分析脚本写入。 */
+  ai_relevant?: boolean;
   /** ISO — first time we saw this URL. */
   firstSeenAt: string;
   /** ISO — most recent run that carried this URL. Used for 7-day pruning by occurrence time. */
@@ -100,6 +103,9 @@ function entryToArticle(e: HistoryEntry, fetchedToday: boolean): ArticleInput {
     summary: e.summary,
     source: e.source,
     fetchedToday,
+    // 条目级 AI/启发式分类透传
+    ...(e.subcategory ? { subcategory: e.subcategory } : {}),
+    ...(e.ai_relevant !== undefined ? { relevant: e.ai_relevant } : {}),
   };
 }
 
@@ -119,7 +125,14 @@ export function buildRolling(
     map.set(e.url, entryToArticle(e, false));
   }
   for (const a of today) {
-    map.set(a.url, { ...a, fetchedToday: true });
+    // Today's items win on URL collision, but keep the history's per-item
+    // AI classification (subcategory / relevance) when today's fetch didn't
+    // carry one — otherwise real-time fetches would wipe the analysis.
+    const h = map.get(a.url);
+    const merged = { ...a, fetchedToday: true };
+    if (h?.subcategory && !merged.subcategory) merged.subcategory = h.subcategory;
+    if (h?.relevant !== undefined && merged.relevant === undefined) merged.relevant = h.relevant;
+    map.set(a.url, merged);
   }
   return Array.from(map.values());
 }
@@ -143,7 +156,9 @@ export function saveHistory(
       sourceId: a.sourceId,
       source: a.source,
       category: a.category,
-      subcategory: subcatOf(a),
+      // 条目级 AI 分类优先，注册表源级兜底
+      subcategory: a.subcategory ?? subcatOf(a),
+      ...(a.relevant !== undefined ? { ai_relevant: a.relevant } : {}),
       excerpt: a.excerpt,
       publishedAt: a.publishedAt?.toISOString(),
       // Keep a previously-cached summary if this run produced none

@@ -872,8 +872,9 @@ function tzDateStr(d: Date): string {
 /**
  * 广东地区IPO / 全国IPO / 广州商机 的「当天 / 过去7天」按信息发生时间 publishedAt（发文/公告日期）拆分，
  * 而不是按抓取时间 fetchedToday —— 否则今天抓到的 8 月 12 日公告（或 5 月的月度数据）会被错放进
- * 「当天」。规则：
- *  - 有 publishedAt：发文=今天 → 当天；今天之前（7天内及更早，均在滚动窗口内）→ 过去7天；
+ * 「当天」。规则（严格 7 天窗口）：
+ *  - 有 publishedAt：发文=今天 → 当天；在 [过去7天窗口, 今天) 内 → 过去7天；
+ *  - 有 publishedAt 但早于 7 天窗口（如 2025 年旧数据、过期月度数据）：超窗口，**不显示**（不属于最近7天简报）；
  *  - 无 publishedAt：回退 fetchedToday（今天抓到 → 当天；历史缓存 → 过去7天），避免丢失。
  */
 function splitGdIpoByPublishedAt(
@@ -894,7 +895,9 @@ function splitGdIpoByPublishedAt(
     for (const a of s.items) {
       const ds = a.publishedAt ? tzDateStr(a.publishedAt) : undefined;
       if (ds === dateStr) t.push(a);
-      else if (ds && ds < dateStr) p.push(a);
+      else if (ds && ds >= pastStartStr && ds < dateStr) p.push(a);
+      // 有日期但早于 7 天窗口（2025 年旧数据/过期月度数据）：超窗口，直接丢弃不进任何视图
+      else if (ds && ds < pastStartStr) continue;
       else if (!ds && a.fetchedToday === true) t.push(a);
       else p.push(a);
     }

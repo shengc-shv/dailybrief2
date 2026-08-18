@@ -125,6 +125,10 @@ export function buildRolling(
     map.set(e.url, entryToArticle(e, false));
   }
   for (const a of today) {
+    // 当天抓到的旧链接（publishedAt 超 7 天窗口，如 RSS 滚动列表里的老文章、
+    // 爬虫列表页里的 2025 年旧数据）：不属于「当天/过去7天」简报，直接丢弃不进渲染。
+    // 无 publishedAt 的条目不受此限制（无法判断发文时间，靠 fetchedToday 归属）。
+    if (a.publishedAt && Date.now() - a.publishedAt.getTime() > MAX_AGE_MS) continue;
     // Today's items win on URL collision, but keep the history's per-item
     // AI analysis (subcategory / relevance / summary) when today's fetch
     // didn't carry one — otherwise real-time fetches would wipe it.

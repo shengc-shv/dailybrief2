@@ -201,6 +201,13 @@ async function main() {
   fs.writeFileSync(`${base}.html`, html, "utf8");
   console.log(`✅ 报告已生成: ${base}.html`);
 
+  // 导出信息源抓取结果（排除爬虫产物 gd-*/gz-*），供 test.yml 上传为 fetched-data artifact、
+  // 本地「预 AI 分析加载」任务拉回比对：识别历史库中没有的信息源新增条目 → AI 分析打标。
+  const fetched = articles.filter((a) => !/^(gd-|gz-)/.test(a.sourceId || ""));
+  fs.mkdirSync("data", { recursive: true });
+  fs.writeFileSync("data/fetched-articles.json", JSON.stringify(fetched, null, 2), "utf8");
+  console.log(`📤 信息源抓取结果导出: ${fetched.length} 条 → data/fetched-articles.json`);
+
   console.log(`\n📝 前 10 条文章:`);
   articles.slice(0, 10).forEach((a, i) => {
     console.log(`  ${i + 1}. [${a.category}] ${a.title?.slice(0, 50)}`);

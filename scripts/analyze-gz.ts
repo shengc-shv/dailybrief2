@@ -57,16 +57,19 @@ function classifyHeuristic(title: string, sourceId: string): { relevant: boolean
   if (sourceId === "govcn-policy") {
     return { relevant: true, subcategory: "cn-policy" };
   }
+  // 全国性财经资讯源（新浪理财/21财经）：内容都是全国资讯，不是广州本地商机，
+  // 直接归宏观政策·国内财经（cn-finance），不再走 gz 子标签关键词规则。
+  if (sourceId === "sina-money" || sourceId === "21jingji-finance") {
+    return { relevant: true, subcategory: "cn-finance" };
+  }
   for (const r of HEURISTIC_RULES) {
     if (r.re.test(title)) {
       if (r.relevant === false) return { relevant: false, subcategory: "" };
       return { relevant: true, subcategory: r.sub || "" };
     }
   }
-  // 完全未命中：政府源默认相关并归广州政策；财富/信贷源按源兜底；其他源默认相关（源级兜底）
+  // 完全未命中：政府源默认相关并归广州政策；其他源默认相关（源级兜底）
   if (sourceId === "gz-gov") return { relevant: true, subcategory: "gz-policy" };
-  if (sourceId === "sina-money") return { relevant: true, subcategory: "gz-wealth" };
-  if (sourceId === "21jingji-finance") return { relevant: true, subcategory: "gz-credit" };
   return { relevant: true, subcategory: "" };
 }
 

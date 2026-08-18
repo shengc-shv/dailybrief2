@@ -279,26 +279,28 @@
     "name": "新浪财经·理财保险",
     "type": "scrape",
     "url": "https://finance.sina.com.cn/money/",
-    "category": "gz",
+    "category": "finance",
     "enabled": true,
     "lang": "zh",
     "locales": [
       "zh"
     ],
-    "notes": "财富管理商机源：新浪 money 频道，关键词过滤理财/保险/基金/黄金/存款/利率 → 广州商机·财富业务（gz-wealth），子标签由启发式/AI 路由"
+    "notes": "财富管理资讯源（全国）：新浪 money 频道，理财/保险/基金/黄金/存款利率。全国性资讯，归宏观政策·国内财经，不作广州商机（广州商机只收广州本地可落地商机）",
+    "subcategory": "cn-finance"
   },
   {
     "id": "21jingji-finance",
     "name": "21世纪经济报道·金融",
     "type": "scrape",
     "url": "https://www.21jingji.com/channel/finance",
-    "category": "gz",
+    "category": "finance",
     "enabled": true,
     "lang": "zh",
     "locales": [
       "zh"
     ],
-    "notes": "个人信贷商机源：21财经金融频道，关键词过滤房贷/消费贷/普惠/信贷/金融监管 → 广州商机·个人信贷（gz-credit），子标签由启发式/AI 路由"
+    "notes": "信贷/银行资讯源（全国）：21财经金融频道，房贷/消费贷/普惠/银行动态。全国性资讯，归宏观政策·国内财经，不作广州商机",
+    "subcategory": "cn-finance"
   },
   {
     "id": "cninfo",

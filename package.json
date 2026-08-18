@@ -13,6 +13,7 @@
     "sources:check": "tsx scripts/sources.ts check",
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",
+    "crawl:gz": "node scripts/crawlers/run-gz.mjs",
     "open": "node scripts/open-report.mjs"
   },
   "dependencies": {

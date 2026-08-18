@@ -74,3 +74,74 @@ export async function isGuangdong(stockCode, exchange) {
   if (lookupByCode(stockCode)) return true;
   return (await provinceOf(stockCode, exchange)) === '广东';
 }
+
+/**
+ * 解析股票代码的注册地址（含城市，如 "广东省广州市番禺区…"）。失败/未知返回 ''。
+ * 与 provinceOf 共用 F10 接口，但独立缓存（同一代码同一流程内只请求一次）。
+ */
+const addrCache = new Map();
+export async function addressOf(stockCode, exchange) {
+  const code = toEastMoneyCode(stockCode, exchange);
+  if (!code) return '';
+  if (addrCache.has(code)) return addrCache.get(code);
+  try {
+    const res = await fetch(
+      `https://emweb.securities.eastmoney.com/PC_HSF10/CompanySurvey/PageAjax?code=${code}`,
+      {
+        headers: { 'User-Agent': UA, 'Referer': 'https://emweb.securities.eastmoney.com/' },
+        signal: AbortSignal.timeout(10000),
+      },
+    );
+    if (!res.ok) return '';
+    const data = await res.json();
+    const jbzl = data && data.jbzl;
+    const rec = (jbzl && jbzl[0]) || {};
+    // REG_ADDRESS 为注册地址（最权威），缺失时退 ADDRESS（办公地址）
+    const addr = rec.REG_ADDRESS || rec.ADDRESS || '';
+    if (addr) addrCache.set(code, addr);
+    return addr;
+  } catch {
+    return '';
+  }
+}
+
+/** 招行广州分行辖区城市（广州市区含南沙；湛江/清远为分行辖内异地支行城市） */
+const GZ_BRANCH_CITIES = ['广州', '湛江', '清远'];
+
+function isGzCity(city) {
+  return GZ_BRANCH_CITIES.some((c) => (city || '').includes(c));
+}
+
+function isGzAddress(addr) {
+  if (!addr) return false;
+  // 兼容两种写法："广东省广州市…"（含市）与 "湛江开发区…"（城市名开头、无"市"字）
+  return GZ_BRANCH_CITIES.some(
+    (c) => addr.includes(`${c}市`) || addr.startsWith(c),
+  );
+}
+
+/**
+ * 判断股票注册归属区域：'gz'（招行广州分行辖区）| 'gd'（广东非广州辖区）| 'nation'（全国其他）| ''（未知）。
+ * 一次 F10 请求同时判定城市与省份，避免 gz/gd 判断各请求一次。
+ * 优先本地粤企注册表（离线秒级）：命中即广东；city 有值直接判辖区，city 为空回退 F10 地址解析。
+ */
+export async function regionOf(stockCode, exchange) {
+  const reg = lookupByCode(stockCode);
+  if (reg) {
+    if (reg.city) return isGzCity(reg.city) ? 'gz' : 'gd';
+    // 注册表命中但 city 未知：回退 F10 地址，判断不出辖区也按 gd（注册表即广东企业表）
+    const addr = await addressOf(stockCode, exchange);
+    if (addr && isGzAddress(addr)) return 'gz';
+    return 'gd';
+  }
+  const addr = await addressOf(stockCode, exchange);
+  if (!addr) return '';
+  if (isGzAddress(addr)) return 'gz';
+  if (addr.includes('广东')) return 'gd';
+  return 'nation';
+}
+
+/** 是否为招行广州分行辖区企业（广州市区/南沙/湛江/清远）。 */
+export async function isGzBranch(stockCode, exchange) {
+  return (await regionOf(stockCode, exchange)) === 'gz';
+}

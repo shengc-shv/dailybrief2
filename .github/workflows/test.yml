@@ -28,6 +28,11 @@ jobs:
         run: node scripts/crawlers/run-all.mjs
         continue-on-error: true
 
+      # 广州商机源抓取验证（统计局/市政府/南沙）。独立于 run-all.mjs，不影响 IPO 流程。
+      - name: Run GZ crawlers
+        run: node scripts/crawlers/run-gz.mjs
+        continue-on-error: true
+
       - name: Ensure data file exists
         run: |
           mkdir -p data

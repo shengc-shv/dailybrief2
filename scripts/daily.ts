@@ -430,10 +430,11 @@ async function main() {
     throw new Error("no articles fetched — aborting");
   }
   
-  // Enrich GH Trending, papers, finance news, and politics with summaries.
+  // Enrich tech / politics subgroups with summaries (tech/politics 不参与银行相关分类，
+  // 走各自专属摘要 prompt)。finance 不再单独 enrich——其摘要+分类统一由下方
+  // classifyItemsWithLlm 一次批量调用完成（中文/英文源全覆盖，省一次重复调用）。
   await enrichGhTrending(articles);
   await enrichTrendingPapers(articles);
-  await enrichFinanceNews(articles);
   await enrichPolitics(articles);
   await enrichAiNews(articles);
   await enrichXViral(articles);
@@ -457,26 +458,6 @@ async function main() {
       );
     }
   }
-
-  // ===== 为广州商机数据生成中文摘要（复用历史缓存去重，成本≈0 当全部命中）=====
-  const gzArticles = articles.filter(a => a.category === 'gz');
-  if (gzArticles.length > 0) {
-    const pending = applyCache(gzArticles);
-    if (pending.length === 0) {
-      console.log(`[daily] enriching gz: ${gzArticles.length} 条全部命中历史缓存，跳过 LLM`);
-    } else {
-      console.log(`[daily] enriching ${pending.length}/${gzArticles.length} gz items with ${REPORT_LOCALE} summaries…`);
-      const t0 = Date.now();
-      const summaries = await enrichFinanceNewsSummaries(pending);
-      for (const a of pending) {
-        const s = summaries.get(a.url);
-        if (s) a.summary = s;
-      }
-      console.log(
-        `[daily] gz enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s, matched ${summaries.size}/${pending.length}`,
-      );
-    }
-  }
   // Trading signals: Yahoo fetch + indicators + commentary. Non-fatal —
   // if it errors, we still ship the news digest.
   let trading: TradingSection | null = null;
@@ -487,8 +468,9 @@ async function main() {
     console.warn(`[daily] trading section failed: ${msg}`);
   }
 
-  // 条目级 LLM 分类：只对 广州商机(gz) 与 宏观政策(finance) 的新增条目（历史中无 ai_relevant 的）
-  // 批量分类到业务线子标签 + 银行视角摘要。
+  // 条目级 LLM 分类：只对 广州商机(gz) 与 宏观政策(finance) 的**新条目**（历史中既无 ai_relevant 又无 summary）
+  // 批量分类到业务线子标签 + 银行视角摘要（一次批量调用同时输出 relevant/subcategory/summary，
+  // 中文/英文源全覆盖——中文源同样需要银行视角分析，不做"跳过中文"的旧逻辑）。
   // tech/ipo/politics 等参考区分类不参与银行相关判定——它们的相关性与渲染由
   // 各自的 enrich 摘要 + 注册表子标签路由负责，避免 LLM 把 GitHub/论文/IPO 误判为
   // "与银行无关"而被 relevant 过滤清空。
@@ -496,7 +478,7 @@ async function main() {
   const classifyPending = articles.filter((a) => {
     if (a.category !== "gz" && a.category !== "finance") return false;
     const h = history[a.url];
-    return !h || h.ai_relevant === undefined;
+    return !h || (h.ai_relevant === undefined && !h.summary);
   });
   if (classifyPending.length > 0) {
     console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);

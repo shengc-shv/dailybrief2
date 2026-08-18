@@ -475,8 +475,11 @@ export function groupRaw(
 
   for (const a of articles) {
     if (!knownSourceIds.has(a.sourceId)) continue;
-    // 条目级相关性过滤：AI/启发式判断「与银行业务无关」的条目不进任何面板
-    if (a.relevant === false) continue;
+    // 条目级相关性过滤：AI/启发式判断「与银行业务无关」的条目不进任何面板。
+    // 仅对 广州商机(gz) 与 宏观政策(finance) 生效——这两个分类定位是"商机/政策"，
+    // 需要精准过滤（历史建筑/招聘/娱乐等）；tech/ipo/politics 参考区不做银行相关
+    // 过滤，避免 LLM 误判把 GitHub/论文/IPO 全清空。
+    if (a.relevant === false && (a.category === "gz" || a.category === "finance")) continue;
     if (a.category === "politics" && isSportsArticle(a.title)) continue;
     if (
       (a.sourceId === "v2ex-hot" || a.sourceId === "linuxdo") &&

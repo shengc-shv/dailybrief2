@@ -17,7 +17,8 @@ name: Daily Brief
 on:
   schedule:
     # Beijing 09:05 / 09:25 / 09:45 = UTC 01:05 / 01:25 / 01:45
-    - cron: '5,25,45 1 * * *'
+    - cron: '5 * * * *'
+    - cron: '35 * * * *'
   workflow_dispatch:
 
 permissions:

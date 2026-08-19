@@ -490,12 +490,18 @@ async function main() {
   }
   // Trading signals: Yahoo fetch + indicators + commentary. Non-fatal —
   // if it errors, we still ship the news digest.
+  // SKIP_AI 模式下跳过整个交易板块：其点评(market_overview/picks)由 LLM 生成，
+  // 仅指标无点评时 renderTradingPanel 会因读取 commentary.picks 等字段崩溃。
   let trading: TradingSection | null = null;
-  try {
-    trading = await runTrading();
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    console.warn(`[daily] trading section failed: ${msg}`);
+  if (SKIP_AI) {
+    console.log(`[daily] SKIP_AI: 跳过交易分析板块（含 LLM 点评）`);
+  } else {
+    try {
+      trading = await runTrading();
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn(`[daily] trading section failed: ${msg}`);
+    }
   }
 
   // 条目级 LLM 分类：对**所有类别**的「全新条目」（历史库未命中）做 AI 分析，
@@ -571,7 +577,7 @@ async function main() {
       console.log(
         `[daily] 执行摘要已生成: 必读 ${execSummary.must_read.length} 条 / 商机提示 ${execSummary.insights.length} 条`,
       );
-    } else {
+    } else if (!SKIP_AI) {
       console.warn("[daily] 执行摘要生成失败（LLM 不可用或解析失败），跳过该板块");
     }
   } catch (e) {

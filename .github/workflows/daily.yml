@@ -236,7 +236,7 @@ jobs:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           WEB_MODE: 'true'
-        run: npm run daily
+        run: npm run dry-run
 
       # 每日流程会重写 data/article-history.json（含当日爬虫数据 + 被重新灌入的
       # 旧缓存，可能含陈旧日期）。先裁剪到最近 N 天（默认 7），被移除数据累积写入

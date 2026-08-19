@@ -1231,6 +1231,47 @@ export function renderHtml(
     color: var(--fg-soft);
   }
 
+  /* ===== 执行摘要板块（今日必读 + 商机提示）===== */
+  .exec-summary {
+    margin: 1.1rem 0 0.6rem;
+    border: 1px solid color-mix(in srgb, var(--c-finance) 30%, transparent);
+    border-left: 4px solid var(--c-finance);
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    background: color-mix(in srgb, var(--c-finance) 6%, var(--bg));
+    box-shadow: var(--shadow-1);
+  }
+  .exec-head { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.6rem; }
+  .exec-title { margin: 0; font-size: 1.05rem; color: var(--fg); letter-spacing: 0.02em; }
+  .exec-sub { font-size: 0.75rem; color: var(--muted); }
+  .exec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  @media (max-width: 760px) { .exec-grid { grid-template-columns: 1fr; } }
+  .exec-col-title { margin: 0 0 0.45rem; font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+  .must-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .must-item { display: flex; gap: 0.5rem; align-items: baseline; }
+  .must-index {
+    flex: none; width: 1.15rem; height: 1.15rem; border-radius: 50%;
+    background: color-mix(in srgb, var(--c-finance) 18%, transparent);
+    color: var(--c-finance); font-size: 0.72rem; font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .must-body { display: flex; flex-direction: column; }
+  .must-body strong { font-size: 0.86rem; color: var(--fg); font-weight: 600; }
+  .must-why { font-size: 0.76rem; color: var(--fg-soft); line-height: 1.5; }
+  .insight-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+  .insight-card {
+    border: 1px solid var(--line); border-radius: 10px; padding: 0.55rem 0.7rem;
+    background: var(--bg);
+  }
+  .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
+  .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+  .tag {
+    display: inline-block; font-size: 0.66rem; font-weight: 700; color: var(--c-finance);
+    background: color-mix(in srgb, var(--c-finance) 12%, transparent);
+    border-radius: 4px; padding: 0.05rem 0.35rem; margin-right: 0.35rem; vertical-align: 0.08em;
+  }
+  .tag-action { color: var(--c-gdipo); background: color-mix(in srgb, var(--c-gdipo) 12%, transparent); }
+
   /* ===== sticky primary tabs ===== */
   .tabs {
     position: sticky;
@@ -1837,6 +1878,8 @@ export function renderHtml(
     ${process.env.WEB_MODE === "true" ? `<a class="archive-link" href="../archive.html">${STR.archiveLink}</a>` : ""}
   </header>
 
+  ${report.executive_summary ? renderExecutiveSummary(report.executive_summary) : ""}
+
   <nav class="tabs" role="tablist">
     <button class="tab active" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
     ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
@@ -2084,6 +2127,45 @@ function renderCryptoWidgets(t: TradingSection): string {
     </div>`);
   }
   return `<div class="crypto-widgets">${items.join("")}</div>`;
+}
+
+/**
+ * 执行摘要板块：今日必读 + 商机提示（页面顶部横幅）。
+ */
+function renderExecutiveSummary(exec: import("./executive-summary").ExecutiveSummary): string {
+  const must = exec.must_read
+    .map(
+      (m, i) => `<li class="must-item">
+        <span class="must-index">${i + 1}</span>
+        <div class="must-body"><strong>${escapeHtml(m.title)}</strong><span class="must-why">${escapeHtml(m.why)}</span></div>
+      </li>`,
+    )
+    .join("");
+  const insights = exec.insights
+    .map(
+      (it) => `<div class="insight-card">
+        <h4 class="insight-topic">${escapeHtml(it.topic)}</h4>
+        <p class="insight-impact"><span class="tag">影响</span>${escapeHtml(it.impact)}</p>
+        <p class="insight-action"><span class="tag tag-action">建议</span>${escapeHtml(it.action)}</p>
+      </div>`,
+    )
+    .join("");
+  return `<section class="exec-summary">
+    <div class="exec-head">
+      <h2 class="exec-title">执行摘要</h2>
+      <span class="exec-sub">今日必读 · 商机提示（AI 生成）</span>
+    </div>
+    <div class="exec-grid">
+      <div class="exec-col must-col">
+        <h3 class="exec-col-title">📌 今日必读</h3>
+        <ol class="must-list">${must}</ol>
+      </div>
+      <div class="exec-col insight-col">
+        <h3 class="exec-col-title">💡 商机提示</h3>
+        <div class="insight-grid">${insights}</div>
+      </div>
+    </div>
+  </section>`;
 }
 
 function renderTradingPanel(trading: TradingSection): string {

@@ -27,6 +27,8 @@ export interface DailyReport {
   keywords: string[];
   /** Optional trading-signals section, present when scripts/daily.ts ran successfully. */
   trading?: TradingSection;
+  /** Optional executive summary (今日必读 + 商机提示), present when LLM call succeeded. */
+  executive_summary?: import("./executive-summary").ExecutiveSummary;
 }
 
 import type { TickerAnalysis } from "../trading/signals";

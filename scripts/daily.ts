@@ -39,6 +39,7 @@ import { classifyItemsWithLlm } from "../lib/ai/item-classifier";
 import { fetchCryptoFearGreed } from "../lib/trading/fear-greed";
 import { fetchCryptoGlobal } from "../lib/trading/coingecko";
 import { generateTradingCommentary } from "../lib/ai/trading-commentary";
+import { generateExecutiveSummary } from "../lib/ai/executive-summary";
 import type { TradingSection } from "../lib/ai/pipeline";
 import { todayKey } from "../lib/utils";
 
@@ -516,6 +517,32 @@ async function main() {
   const raw = groupRaw(rolling, sources);
   const report = buildReportFromRaw(raw);
   if (trading) report.trading = trading;
+
+  // ===== 执行摘要 / 商机提示（每天一次 LLM 调用；失败不崩、页面不渲染该板块）=====
+  try {
+    const flat = (cat: Category) =>
+      (raw[cat] ?? [])
+        .flatMap((sg) => sg.sources.flatMap((s) => s.items))
+        .slice(0, 12)
+        .map((a) => ({ title: a.title, summary: a.summary, subcategory: a.subcategory }));
+    const execSummary = await generateExecutiveSummary({
+      date,
+      finance: flat("finance"),
+      gz: flat("gz"),
+      marketOverview: trading?.market_overview,
+    });
+    if (execSummary) {
+      report.executive_summary = execSummary;
+      console.log(
+        `[daily] 执行摘要已生成: 必读 ${execSummary.must_read.length} 条 / 商机提示 ${execSummary.insights.length} 条`,
+      );
+    } else {
+      console.warn("[daily] 执行摘要生成失败（LLM 不可用或解析失败），跳过该板块");
+    }
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    console.warn(`[daily] 执行摘要生成异常（${msg}），跳过该板块`);
+  }
 
   const dateDir = path.join(OUTPUT_DIR, date);
   fs.mkdirSync(dateDir, { recursive: true });

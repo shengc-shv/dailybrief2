@@ -469,24 +469,23 @@ async function main() {
     console.warn(`[daily] trading section failed: ${msg}`);
   }
 
-  // 条目级 LLM 分类：只对 广州商机(gz) 与 宏观政策(finance) 的**新条目**（历史中既无 ai_relevant 又无 summary）
-  // 批量分类到业务线子标签 + 银行视角摘要（一次批量调用同时输出 relevant/subcategory/summary，
-  // 中文/英文源全覆盖——中文源同样需要银行视角分析，不做"跳过中文"的旧逻辑）。
-  // tech/ipo/politics 等参考区分类不参与银行相关判定——它们的相关性与渲染由
-  // 各自的 enrich 摘要 + 注册表子标签路由负责，避免 LLM 把 GitHub/论文/IPO 误判为
-  // "与银行无关"而被 relevant 过滤清空。
+  // 条目级 LLM 分类：对**所有类别**的「全新条目」（历史库未命中）做 AI 分析，
+  // 由 AI 决定进入哪个子标签(subcategory) + 写银行视角摘要(summary) + 银行相关性(relevant)。
+  // 这是用户设计核心：所有信息都经 AI 打标，不依赖源配置的硬编码子类。
+  // - gz/finance：AI 判银行相关性(relevant) + 业务线子标签(gz-*/cn-* 等)。
+  // - tech/ipo/gd-ipo/politics 等参考区：relevant 固定 true（不按银行相关性过滤），
+  //   AI 仅决定 subcategory（各自标签体系，见 item-classifier 的 RULES）。
+  // - gd-ipo 渲染路由最终由三道闸区域分类器(classifyGdIpo)裁定，此处 AI 标注仅作初步。
+  // 摘要：gz/finance 无独立 enrich，由本分类器输出 summary；tech/ipo/gd-ipo 已有各自 enrich
+  // 摘要，循环中仅在条目确实无摘要时(!a.summary)用分类器摘要兜底，避免覆盖。
+  // 历史命中(已分析过)一律跳过，绝不复选。
   // 失败（如 LLM 余额不足）→ 自动跳过，降级到启发式/注册表分类，绝不影响主流程。
-  const classifyPending = articles.filter((a) => {
-    if (a.category !== "gz" && a.category !== "finance") return false;
-    // 仅对历史库未命中的「全新」条目做 LLM 分类；历史命中（无论是否含摘要）一律跳过，
-    // 避免旧幽灵条目（无 ai_relevant 且无 summary）被反复拉去复选。
-    return !history[a.url];
-  });
+  const classifyPending = articles.filter((a) => !history[a.url]);
   if (classifyPending.length > 0) {
     console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);
     try {
       const cls = await classifyItemsWithLlm(
-        classifyPending.map((a) => ({ url: a.url, title: a.title, source: a.source })),
+        classifyPending.map((a) => ({ url: a.url, title: a.title, source: a.source, category: a.category })),
       );
       let tagged = 0;
       for (const a of classifyPending) {
@@ -494,7 +493,7 @@ async function main() {
         if (r) {
           a.subcategory = r.subcategory || a.subcategory;
           a.relevant = r.relevant;
-          if (r.summary && r.summary.length > 10) a.summary = r.summary;
+          if (r.summary && r.summary.length > 10 && !a.summary) a.summary = r.summary;
           tagged++;
         }
       }

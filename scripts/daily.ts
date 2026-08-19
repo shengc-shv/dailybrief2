@@ -478,8 +478,9 @@ async function main() {
   // 失败（如 LLM 余额不足）→ 自动跳过，降级到启发式/注册表分类，绝不影响主流程。
   const classifyPending = articles.filter((a) => {
     if (a.category !== "gz" && a.category !== "finance") return false;
-    const h = history[a.url];
-    return !h || (h.ai_relevant === undefined && !h.summary);
+    // 仅对历史库未命中的「全新」条目做 LLM 分类；历史命中（无论是否含摘要）一律跳过，
+    // 避免旧幽灵条目（无 ai_relevant 且无 summary）被反复拉去复选。
+    return !history[a.url];
   });
   if (classifyPending.length > 0) {
     console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);
@@ -567,7 +568,9 @@ async function main() {
   console.log(`[daily] done.`);
 }
 
-main().catch((e) => {
-  console.error(`[daily] FAILED:`, e);
-  process.exit(1);
-});
+main()
+  .then(() => process.exit(0))
+  .catch((e) => {
+    console.error(`[daily] FAILED:`, e);
+    process.exit(1);
+  });

@@ -45,6 +45,12 @@ import { todayKey } from "../lib/utils";
 
 const OUTPUT_DIR = "daily_reports";
 
+// 当 SKIP_AI=true 时，跳过所有 LLM 调用（凭证校验 / 分类 / 摘要富集 / 执行摘要 /
+// 交易点评），仅复用历史缓存中的 AI 摘要(applyCache)渲染报告。供 test2.yml 做
+// 「不重新触发 AI、基于已有 AI 历史重新生成并推送报告」的失败恢复流程。
+// 默认关闭，不影响正常 daily 流程。
+const SKIP_AI = process.env.SKIP_AI === "true";
+
 /**
  * Rolling 30-day article history + AI-summary cache. Loaded once in main(),
  * read by every `enrich*` helper (to skip LLM calls for already-analyzed
@@ -94,6 +100,10 @@ async function enrichGhTrending(articles: ArticleInput[]): Promise<void> {
   const pending = applyCache(gh);
   if (pending.length === 0) {
     console.log(`[daily] enriching GitHub Trending: ${gh.length} 条全部命中历史缓存，跳过 LLM`);
+    return;
+  }
+  if (SKIP_AI) {
+    console.log(`[daily] SKIP_AI: 跳过 GitHub Trending LLM 富集（${pending.length} 条仅用历史缓存摘要）`);
     return;
   }
   console.log(
@@ -147,6 +157,10 @@ async function enrichXViral(articles: ArticleInput[]): Promise<void> {
     console.log(`[daily] enriching X 推文: ${xPosts.length} 条全部命中历史缓存，跳过 LLM`);
     return;
   }
+  if (SKIP_AI) {
+    console.log(`[daily] SKIP_AI: 跳过 X 推文 LLM 富集（${pending.length} 条仅用历史缓存摘要）`);
+    return;
+  }
   console.log(`[daily] enriching ${pending.length}/${xPosts.length} X posts with ${REPORT_LOCALE} summaries…`);
   const t0 = Date.now();
   // Author handle is encoded in the URL (https://x.com/{handle}/status/{id})
@@ -181,6 +195,10 @@ async function enrichTrendingPapers(articles: ArticleInput[]): Promise<void> {
   const pending = applyCache(papers);
   if (pending.length === 0) {
     console.log(`[daily] enriching 热门论文: ${papers.length} 条全部命中历史缓存，跳过 LLM`);
+    return;
+  }
+  if (SKIP_AI) {
+    console.log(`[daily] SKIP_AI: 跳过热门论文 LLM 富集（${pending.length} 条仅用历史缓存摘要）`);
     return;
   }
   console.log(
@@ -255,6 +273,10 @@ async function enrichMergedSubgroup(
     );
     return;
   }
+  if (SKIP_AI) {
+    console.log(`[daily] SKIP_AI: 跳过 ${category}:${subcategory} LLM 富集（${pending.length} 条仅用历史缓存摘要）`);
+    return;
+  }
   console.log(
     `[daily] enriching ${pending.length}/${toEnrich.length} ${category}:${subcategory} items with ${REPORT_LOCALE} summaries…`,
   );
@@ -290,16 +312,20 @@ async function runTrading(): Promise<TradingSection | null> {
         : ", CG ✗"),
   );
   if (tickers.length === 0) return null;
-  console.log(`[daily] generating trading commentary with ${getModelTag()}…`);
+  console.log(`[daily] generating trading commentary${SKIP_AI ? " (SKIP_AI: 跳过)" : ` with ${getModelTag()}`}…`);
   const t1 = Date.now();
-  const commentary = await generateTradingCommentary({
-    tickers,
-    cryptoFearGreed: cryptoFearGreed ?? undefined,
-    cryptoGlobal: cryptoGlobal ?? undefined,
-  });
-  console.log(
-    `[daily] trading commentary ready in ${((Date.now() - t1) / 1000).toFixed(1)}s`,
-  );
+  const commentary = SKIP_AI
+    ? null
+    : await generateTradingCommentary({
+        tickers,
+        cryptoFearGreed: cryptoFearGreed ?? undefined,
+        cryptoGlobal: cryptoGlobal ?? undefined,
+      });
+  if (!SKIP_AI) {
+    console.log(
+      `[daily] trading commentary ready in ${((Date.now() - t1) / 1000).toFixed(1)}s`,
+    );
+  }
   return {
     ...commentary,
     tickers,
@@ -345,7 +371,8 @@ function buildReportFromRaw(raw: RawByCategory): DailyReport {
 async function main() {
   // Fail fast on misconfigured backend before we spend 30s fetching
   // 500+ articles only to discover the LLM has no credentials.
-  validateBackendCredentials();
+  // SKIP_AI 模式不调用 LLM，无需凭证，跳过该校验。
+  if (!SKIP_AI) validateBackendCredentials();
 
   // 加载滚动 30 天历史（含已解读的 AI 摘要缓存），供富集去重 + 过去30天 tab 使用。
   history = loadHistory();
@@ -446,6 +473,8 @@ async function main() {
     const pending = applyCache(gdIpoArticles);
     if (pending.length === 0) {
       console.log(`[daily] enriching gd-ipo+ipo: ${gdIpoArticles.length} 条全部命中历史缓存，跳过 LLM`);
+    } else if (SKIP_AI) {
+      console.log(`[daily] SKIP_AI: 跳过 gd-ipo+ipo LLM 富集（${pending.length} 条仅用历史缓存摘要）`);
     } else {
       console.log(`[daily] enriching ${pending.length}/${gdIpoArticles.length} gd-ipo+ipo items with ${REPORT_LOCALE} summaries…`);
       const t0 = Date.now();
@@ -482,25 +511,29 @@ async function main() {
   // 失败（如 LLM 余额不足）→ 自动跳过，降级到启发式/注册表分类，绝不影响主流程。
   const classifyPending = articles.filter((a) => !history[a.url]);
   if (classifyPending.length > 0) {
-    console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);
-    try {
-      const cls = await classifyItemsWithLlm(
-        classifyPending.map((a) => ({ url: a.url, title: a.title, source: a.source, category: a.category })),
-      );
-      let tagged = 0;
-      for (const a of classifyPending) {
-        const r = cls.get(a.url);
-        if (r) {
-          a.subcategory = r.subcategory || a.subcategory;
-          a.relevant = r.relevant;
-          if (r.summary && r.summary.length > 10 && !a.summary) a.summary = r.summary;
-          tagged++;
+    if (SKIP_AI) {
+      console.log(`[daily] SKIP_AI: 跳过 ${classifyPending.length} 条新条目 LLM 分类（仅用历史缓存摘要）`);
+    } else {
+      console.log(`[daily] classifying ${classifyPending.length} new items (LLM per-item tag)…`);
+      try {
+        const cls = await classifyItemsWithLlm(
+          classifyPending.map((a) => ({ url: a.url, title: a.title, source: a.source, category: a.category })),
+        );
+        let tagged = 0;
+        for (const a of classifyPending) {
+          const r = cls.get(a.url);
+          if (r) {
+            a.subcategory = r.subcategory || a.subcategory;
+            a.relevant = r.relevant;
+            if (r.summary && r.summary.length > 10 && !a.summary) a.summary = r.summary;
+            tagged++;
+          }
         }
+        console.log(`[daily] item classification done: ${tagged}/${classifyPending.length} tagged`);
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        console.warn(`[daily] item classification skipped (${msg}) — falling back to heuristic/registry`);
       }
-      console.log(`[daily] item classification done: ${tagged}/${classifyPending.length} tagged`);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      console.warn(`[daily] item classification skipped (${msg}) — falling back to heuristic/registry`);
     }
   }
 
@@ -525,12 +558,14 @@ async function main() {
         .flatMap((sg) => sg.sources.flatMap((s) => s.items))
         .slice(0, 12)
         .map((a) => ({ title: a.title, summary: a.summary, subcategory: a.subcategory }));
-    const execSummary = await generateExecutiveSummary({
-      date,
-      finance: flat("finance"),
-      gz: flat("gz"),
-      marketOverview: trading?.market_overview,
-    });
+    const execSummary = SKIP_AI
+      ? null
+      : await generateExecutiveSummary({
+          date,
+          finance: flat("finance"),
+          gz: flat("gz"),
+          marketOverview: trading?.market_overview,
+        });
     if (execSummary) {
       report.executive_summary = execSummary;
       console.log(

@@ -1,0 +1,123 @@
+name: Daily Brief (recover, no-AI)
+
+# 失败恢复工作流：复制自 daily.yml，但**不重新触发任何 AI 调用**，
+# 仅基于 data/article-history.json 中已有的 AI 摘要重新生成并推送报告。
+#
+# 适用场景：daily.yml 当日流程因进程挂起/超时被 cancel（如 2026-08-19 那次
+# AI 已跑完、报告渲染完、却因缺少 process.exit(0) 挂起导致 publish 未执行），
+# 但 AI 分析结果已回写历史缓存。此时手动触发本流程即可用已有 AI 历史
+# 重新渲染+发布报告，零额外 LLM 开销。
+#
+# 与 daily.yml 的区别：
+#   1. on: 仅 workflow_dispatch（手动触发），不挂 cron —— 避免与 daily.yml 重复发布；
+#   2. Generate 步骤设 SKIP_AI=true，且不传任何 LLM_* 凭证 —— daily.ts 跳过全部
+#      LLM 调用（凭证校验/分类/摘要富集/执行摘要/交易点评），仅 applyCache 复用历史摘要；
+#   3. 去掉「Trim history / Commit rolling history」步骤 —— 恢复流程不改动 main 分支历史，
+#      daily.ts 的本地 saveHistory 写盘在 runner 结束后随 ephemeral 环境丢弃，无副作用。
+#
+# 发布逻辑与 daily.yml 完全一致：build-site 生成 index/archive → 推送到 gh-pages。
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write  # needed to push to gh-pages
+
+jobs:
+  build:
+    name: Build & publish (no AI, from existing history)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Bring previous reports into the workspace so they survive each run
+      # and so build-site can list them all in the archive.
+      - name: Restore existing reports from gh-pages
+        run: |
+          mkdir -p daily_reports
+          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+            git fetch origin gh-pages --depth=1
+            git --work-tree=daily_reports checkout origin/gh-pages -- . || true
+            # Drop the index/archive — build-site regenerates them
+            rm -f daily_reports/index.html daily_reports/archive.html
+            restored=$(ls -1d daily_reports/20*/ 2>/dev/null | wc -l | tr -d ' ')
+            echo "Restored ${restored} prior report dirs"
+            # Guard against accidentally wiping published history: publish
+            # uses keep_files:false, so if restore produced nothing the push
+            # would delete every historical report. Abort instead.
+            if [ "${restored}" -eq 0 ]; then
+              echo "::error::gh-pages restore produced no report dirs — aborting to avoid wiping published history"
+              exit 1
+            fi
+          else
+            echo "gh-pages doesn't exist yet — first run"
+          fi
+
+      - name: Run local crawlers (exchange IPO)
+        run: node scripts/crawlers/run-all.mjs
+        continue-on-error: true
+
+      # 广州商机源（统计局/市政府/南沙）。独立于 run-all.mjs，产出 data/crawled-gz.json，
+      # 供 daily.ts 加载（否则报「广州商机数据文件不存在」）。
+      - name: Run GZ crawlers
+        run: node scripts/crawlers/run-gz.mjs
+        continue-on-error: true
+
+      # ---------- 检查数据文件，若不存在则创建空文件 ----------
+      - name: Ensure data files exist
+        run: |
+          mkdir -p data
+          for f in data/crawled-articles.json data/crawled-gz.json; do
+            if [ ! -f "$f" ]; then
+              echo "⚠️ $f 未生成，创建空文件"
+              echo '[]' > "$f"
+            else
+              count=$(cat "$f" | jq '. | length' 2>/dev/null || echo 0)
+              echo "✅ $f 存在，共 $count 条"
+            fi
+          done
+
+      # ---------- 将爬虫数据保存为 Artifact（永久下载） ----------
+      - name: Upload crawler data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawler-data
+          path: |
+            data/crawled-articles.json
+            data/crawled-gz.json
+          retention-days: 30
+
+      # 不重新触发 AI：SKIP_AI=true 让 daily.ts 跳过全部 LLM 调用，
+      # 仅 applyCache 复用 data/article-history.json 里已有的 AI 摘要，
+      # 渲染与 daily 同结构的报告（含 gz/finance/tech/ipo 各板块 + 广东IPO路由）。
+      # 不传任何 LLM_* 凭证 —— 即使误传也不会被消费。
+      - name: Regenerate report from existing AI history (no AI)
+        env:
+          SKIP_AI: 'true'
+          REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          WEB_MODE: 'true'
+        run: npm run daily
+
+      - name: Build static site (index + archive)
+        run: npm run build-site
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./daily_reports
+          publish_branch: gh-pages
+          keep_files: false  # we restored everything above, so a clean publish is fine
+          commit_message: 'daily(recover): report for ${{ github.run_id }} (no AI, from existing history)'

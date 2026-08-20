@@ -28,6 +28,7 @@
     --c-finance: #d97706;
     --c-gdipo: #e11d48;
     --c-ipo: #7c3aed;
+    --c-gz: #059669;
     --hero-grad-from: #f6f5f3;
     --hero-grad-to: #efedea;
     --r-sm: 0.5rem;
@@ -61,6 +62,7 @@
       --c-finance: #fbbf24;
       --c-gdipo: #fb7185;
       --c-ipo: #a78bfa;
+      --c-gz: #34d399;
       --hero-grad-from: #15191f;
       --hero-grad-to: #0b0d11;
       --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -122,11 +124,13 @@
   .panel[data-panel="finance"] { --cat: var(--c-finance); }
   .panel[data-panel="gd-ipo"] { --cat: var(--c-gdipo); }
   .panel[data-panel="ipo"] { --cat: var(--c-ipo); }
+  .panel[data-panel="gz"] { --cat: var(--c-gz); }
   .tab[data-tab="tech"] { --cat: var(--c-tech); }
   .tab[data-tab="trading"] { --cat: var(--c-trading); }
   .tab[data-tab="finance"] { --cat: var(--c-finance); }
   .tab[data-tab="gd-ipo"] { --cat: var(--c-gdipo); }
   .tab[data-tab="ipo"] { --cat: var(--c-ipo); }
+  .tab[data-tab="gz"] { --cat: var(--c-gz); }
 
   .hero-card {
     margin-top: 1.4rem;
@@ -207,6 +211,17 @@
     margin-left: 0.4rem;
     font-weight: 400;
   }
+  /* 科创动态（T3 降权）：tab 弱化折叠——小号、浅色、末尾竖线分隔 */
+  .tab.tab-fold {
+    font-size: 0.82rem;
+    color: var(--muted);
+    opacity: 0.72;
+    margin-left: 0.25rem;
+    border-left: 1px solid var(--rule);
+    padding-left: 1.1rem;
+    border-radius: 0;
+  }
+  .tab.tab-fold.active { opacity: 1; }
   .panel { display: none; }
   .panel.active { display: block; animation: fade 0.25s ease; }
   @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
@@ -762,249 +777,487 @@
   </header>
 
   <nav class="tabs" role="tablist">
-    <button class="tab active" data-tab="tech">技术动态<span class="count">30</span></button>
-    <button class="tab" data-tab="trading">市场行情<span class="count">21</span></button>
-    <button class="tab" data-tab="finance">财经要点<span class="count">30</span></button>
-    <button class="tab" data-tab="gd-ipo">广东地区IPO<span class="count">14</span></button>
-    <button class="tab" data-tab="ipo">IPO/新股<span class="count">16</span></button>
+    <button class="tab active" data-tab="finance">宏观政策<span class="count">64</span></button>
+    <button class="tab" data-tab="trading">市场行情<span class="count">10</span></button>
+    <button class="tab" data-tab="gz">广州商机<span class="count">17</span></button>
+    <button class="tab tab-fold" data-tab="ipo">IPO/新股<span class="count">23</span></button>
+    <button class="tab tab-fold" data-tab="tech">技术动态<span class="count">53</span></button>
   </nav>
 
-  <section class="panel active" data-panel="tech">
-    <nav class="sub-tabs"><button class="sub-tab active" data-sub="trending-papers" data-cat="tech">热门论文<span class="count">5</span></button><button class="sub-tab" data-sub="x-viral" data-cat="tech">X 推文<span class="count">5</span></button><button class="sub-tab" data-sub="ai-news" data-cat="tech">AI 媒体<span class="count">10</span></button><button class="sub-tab" data-sub="cn-tech" data-cat="tech">国内技术<span class="count">10</span></button></nav>
-<div class="sub-contents"><div class="sub-content active" data-sub-content="trending-papers" data-cat="tech">
+  <section class="panel active" data-panel="finance">
+    <nav class="sub-tabs"><button class="sub-tab active" data-sub="cn-policy" data-cat="finance">国家政策<span class="count">2</span></button><button class="sub-tab" data-sub="cn-finance" data-cat="finance">国内财经<span class="count">18</span></button><button class="sub-tab" data-sub="gz-policy" data-cat="finance">广州政策<span class="count">39</span></button><button class="sub-tab" data-sub="news" data-cat="finance">国际财经<span class="count">10</span></button></nav>
+<div class="sub-contents"><div class="sub-content active" data-sub-content="cn-policy" data-cat="finance">
       
   <div class="source-contents">
-    <div class="source-content active" data-source-content="huggingface-papers" data-sub="trending-papers" data-cat="tech">
+    <div class="source-content active" data-source-content="govcn-policy" data-sub="cn-policy" data-cat="finance">
     <article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14391" target="_blank" rel="noopener noreferrer">Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</a></h3>
-  <p class="article-stats">👍 261</p>
-  <p class="article-meta">08/14 08:00</p>
-  <p class="article-excerpt">Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, however, provide limited evidence on detector and generator behavior in such settings, including how dete</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 针对AI视频生成器可伪造战争、灾难等真实危机事件造成虚假信息风险，现有基准缺乏检测器与生成器在该场景下的系统证据。本文对这些工具进行系统评估，并考察社会传播渠道影响，揭示检测漏洞与生成威胁，为防御策略提供依据。</p>
+  <h3 class="article-title"><a href="https://www.gov.cn/zhengce/content/202608/content_7078320.htm" target="_blank" rel="noopener noreferrer">国务院关于《特殊教育发展提升“十五五”行动计划》的批复</a></h3>
+  
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">【国务院政策】国务院关于《特殊教育发展提升“十五五”行动计划》的批复</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 国务院批复特殊教育&quot;十五五&quot;行动计划：教育领域投入增加，相关机构及家庭客群带来教育金融/代发机会（参考）。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14290" target="_blank" rel="noopener noreferrer">Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning</a></h3>
-  <p class="article-stats">👍 31</p>
-  <p class="article-meta">08/14 08:00</p>
-  <p class="article-excerpt">We introduce Mobius-v0, an architecture that comprises a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively achieve compositional reasoning. Using hidden states as cache and carrier, reasoners repeatedly query memory for required knowledge-</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 提出Mobius-v0架构，由全局共享的Memory（FFN）存储知识向量和多个Reasoners（Self-Attn）迭代组合推理组成。以隐状态作为缓存和载体，Reasoners反复查询记忆获取所需知识，实现知识存储与推理过程解耦，提升基础模型的知识利用与推理效率。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13417" target="_blank" rel="noopener noreferrer">Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development</a></h3>
-  <p class="article-stats">👍 44</p>
+  <h3 class="article-title"><a href="https://www.gov.cn/zhengce/content/202608/content_7077980.htm" target="_blank" rel="noopener noreferrer">国务院关于修改和废止部分行政法规的决定</a></h3>
+  
   <p class="article-meta">08/13 08:00</p>
-  <p class="article-excerpt">Autonomous agents are increasingly capable of improving models, systems, and other technical artifacts through long-horizon experimentation. To understand the current state of this capability, however, evaluation must go beyond final scores, which neither reveal where progress is gained or lost nor </p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 自主智能体可通过长周期实验改进模型与系统，但现有评估只看最终分数，无法揭示能力提升或损失所在。本文提出超越最终分数的系统化评估方法，细粒度分析智能体在长周期研发任务中的进度，为理解和发展研究型智能体提供更全面的视角。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13555" target="_blank" rel="noopener noreferrer">HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark</a></h3>
-  <p class="article-stats">👍 15</p>
-  <p class="article-meta">08/13 08:00</p>
-  <p class="article-excerpt">Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contact</p>
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14546" target="_blank" rel="noopener noreferrer">CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing</a></h3>
-  <p class="article-stats">👍 13</p>
-  <p class="article-meta">08/14 08:00</p>
-  <p class="article-excerpt">With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-world scenarios. However, existing benchmarks remain confined to simple single-image tasks, suffering</p>
-  
+  <p class="article-excerpt">【国务院政策】国务院关于修改和废止部分行政法规的决定</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 国务院修改废止部分行政法规：法规环境调整，涉及信贷/担保等金融相关条款变化需跟踪合规影响。</p>
 </article>
   </div>
   </div>
     </div>
-<div class="sub-content" data-sub-content="x-viral" data-cat="tech">
+<div class="sub-content" data-sub-content="cn-finance" data-cat="finance">
       
   <div class="source-contents">
-    <div class="source-content active" data-source-content="attentionvc-ai" data-sub="x-viral" data-cat="tech">
+    <div class="source-content active" data-source-content="_merged" data-sub="cn-finance" data-cat="finance">
     <article class="article">
-  <h3 class="article-title"><a href="https://x.com/kristaletz/status/2089103618121314689" target="_blank" rel="noopener noreferrer">Grok Bot for GTM</a></h3>
-  <p class="article-stats">@kristaletz · 4.2K 粉丝 · 41.6K 阅 · 513 赞 · 24 转</p>
-  <p class="article-meta">08/17 05:34</p>
-  <p class="article-excerpt">This is how I use Grok Bot for Enterprise GTM at SpaceXAI. When we were initially dogfooding this product internally, Grok Bot rapidly gained adoption throughout the company, and I created an internal</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> SpaceXAI 内部 GTM 负责人拆解 Grok Bot 企业级落地方法：从内部 dogfooding 到全公司铺开，建立了从试用至成单的完整 SOP。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://x.com/TheGlobalMinima/status/2088708859133333552" target="_blank" rel="noopener noreferrer">The Holy Trinity - pi, herdr and opencode go</a></h3>
-  <p class="article-stats">@TheGlobalMinima · 4.0K 粉丝 · 31.4K 阅 · 527 赞 · 17 转</p>
-  <p class="article-meta">08/16 03:26</p>
-  <p class="article-excerpt">tldr; my current AI coding setup is Pi, Opencode Go and Herdr This year, we are seeing a boom in harness engineering. What initially started as simple scaffolding around an LLM is now one of the most</p>
+  <h3 class="article-title"><a href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintpir7371731.shtml" target="_blank" rel="noopener noreferrer">美联储加息预期降温，金银整体偏强</a></h3>
   
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://x.com/OracleFndAI/status/2088691685035589767" target="_blank" rel="noopener noreferrer">ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   </a></h3>
-  <p class="article-stats">@OracleFndAI · 23.9K 粉丝 · 2.3K 阅 · 3.1K 赞 · 594 转</p>
-  <p class="article-meta">08/16 02:17</p>
-  <p class="article-excerpt">In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We</p>
+  <p class="article-meta">新浪财经 · 08/18 08:00</p>
   
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美联储加息预期降温利好贵金属，金银价格整体走强。零售端可借此向财富客户推介黄金积存、白银等避险配置，把握投资窗口。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://x.com/EXM7777/status/2088992368695628159" target="_blank" rel="noopener noreferrer">How to build a $2M video production pipeline</a></h3>
-  <p class="article-stats">@EXM7777 · 131.5K 粉丝 · 172.8K 阅 · 516 赞 · 38 转</p>
-  <p class="article-meta">08/16 22:12</p>
-  <p class="article-excerpt">i&#39;m giving you 7 free skills and the exact pipeline directors are using to produce AI films with millions of dollars in budget in higgsfield... the whole system revealed step-by-step, with the skill</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 免费送出7项技能，详细拆解导演在Higgsfield中制作百万美元预算AI电影的完整流程，从系统步骤到技能组合逐步公开，适合想入局AI视频制作的人。</p>
+  <h3 class="article-title"><a href="https://finance.sina.com.cn/wm/2026-08-18/doc-inintpir7370580.shtml" target="_blank" rel="noopener noreferrer">新信号出现！楼市，何时“牛来”？</a></h3>
+  
+  <p class="article-meta">新浪财经 · 08/18 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 楼市出现新信号，市场关注何时回暖。房贷与住房相关消费可能受益，分行应跟踪本地房地产成交与政策变化，提前布局按揭和家装分期。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://x.com/JensenHuang/status/2089331487342829862" target="_blank" rel="noopener noreferrer">Securing the Infrastructure of Intelligence</a></h3>
-  <p class="article-stats">@JensenHuang · 1.0M 粉丝 · 110.9K 阅 · 1.9K 赞 · 234 转</p>
-  <p class="article-meta">08/17 20:40</p>
-  <p class="article-excerpt">Land, power and shell: The next critical resource for AI factories. AI factories are the defining infrastructure of the AI era—where compute transforms energy and data into intelligence that powers</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 黄仁勋指出土地、电力和外壳是AI工厂的下一个关键资源。AI工厂将能源和数据转化为智能，是AI时代的基础设施，强调算力设施的战略重要性。</p>
+  <h3 class="article-title"><a href="https://finance.sina.com.cn/roll/2026-08-18/doc-inintpiw0079258.shtml" target="_blank" rel="noopener noreferrer">1.41%！四年来净息差首现回升，银行二季度指标透露关键信号</a></h3>
+  
+  <p class="article-meta">新浪财经 · 08/18 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 银行业净息差四年来首现回升，反映负债成本改善和信贷定价趋稳，可为零售贷款与存款利率策略提供方向，建议密切跟进同业与总行政策。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.sina.com.cn/wm/2026-08-18/doc-inintpiw0074101.shtml" target="_blank" rel="noopener noreferrer">A股V型反弹超80股涨停，千亿半导体设备巨头跌超6%，大牛股16天11板，PCB、CPO多股下挫</a></h3>
+  
+  <p class="article-meta">新浪财经 · 08/18 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> A股V型反弹、科技板块分化，反映市场情绪与结构性机会并存，可作为客户权益类基金营销和风险教育素材，提示避免追高、坚持定投配置。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.sina.com.cn/wm/2026-08-18/doc-inintpir7356412.shtml" target="_blank" rel="noopener noreferrer">黄金在4400美元反复拉锯，市场在犹豫什么？</a></h3>
+  
+  <p class="article-meta">新浪财经 · 08/18 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 金价高位反复拉锯，市场等待方向明朗，宜向客户传递黄金中长期配置价值和短期波动风险，做好仓位建议与止盈止损教育。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTISxbju4BE6p380FCRWIKV260817.shtml" target="_blank" rel="noopener noreferrer">贷款“降速提质” 居民存款仍在搬家</a></h3>
+  
+  <p class="article-meta">央视财经 · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 7月信贷降速、存款搬家：居民资金向理财/基金等转移，是财富管理业务与存款稳定性管理的双重信号。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIarhQTXkmFpjnQDr53Yhc260817.shtml" target="_blank" rel="noopener noreferrer">多家银行竞推“算力贷” “算力证明信用”能走多远</a></h3>
+  
+  <p class="article-meta">央视财经 · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 银行竞推算力贷：以算力资产增信服务AI企业，是科技金融创新点，可关注对公联动与风险模型。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIBh4TVwyPeBpvVSYaCsKf260817.shtml" target="_blank" rel="noopener noreferrer">电商“AB货”，乱象背后是行业内卷</a></h3>
+  
+  <p class="article-meta">央视财经 · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 电商AB货乱象：商户经营规范性风险，收单/商户贷风控提示。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIDWryZZNhnlHcGThzUgPT260817.shtml" target="_blank" rel="noopener noreferrer">吉利汽车上半年营收1736亿元，核心归母净利润劲增46%</a></h3>
+  
+  <p class="article-meta">央视财经 · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 吉利半年报营收利润双增：汽车产业链景气，相关企业客群是代发与供应链金融机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIWJrHKIaQPZz7PWhHw4Hk260817.shtml" target="_blank" rel="noopener noreferrer">我国保险资金运用余额首次突破40万亿元</a></h3>
+  
+  <p class="article-meta">央视财经 · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 保险资金运用余额破40万亿：险资配置需求旺盛，是银保/代销业务与高净值客群联动机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ftchinese.com/story/001110634" target="_blank" rel="noopener noreferrer">7月份中国经济显示疲弱迹象</a></h3>
+  
+  <p class="article-meta">FT中文网 · 08/17 00:00</p>
+  <p class="article-excerpt">工业产出增长放缓，社会消费品零售总额同比增长微乎其微，领导层表示将加快财政支出。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 7月经济数据走弱，零售客户收入预期与消费信心承压，个人信贷需求或放缓，应加强稳健理财与防御型资产配置。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ftchinese.com/story/001110617" target="_blank" rel="noopener noreferrer">美国指控40余国家和地区帮助中国规避特朗普关税</a></h3>
+  
+  <p class="article-meta">FT中文网 · 08/14 00:00</p>
+  <p class="article-excerpt">白宫称，加拿大、日本、欧盟等国家和地区通过所谓“转运骗局”，为价值600亿美元的贸易规避关税提供了便利。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美国扩大关税规避指控，外贸环境趋紧，相关企业及就业人群受冲击，关注贸易类客群信贷风险与经营周转需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ftchinese.com/story/001110614" target="_blank" rel="noopener noreferrer">特朗普对中国无人机技术全面加征关税</a></h3>
+  
+  <p class="article-meta">FT中文网 · 08/14 00:00</p>
+  <p class="article-excerpt">白宫称将对国家安全领域“具有高度敏感性”的无人机征收100%的关税。专家表示这将重塑商业市场，美国的企业客户和政府客户将不得不立即进行“耗资高昂的转向”。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美国对中国无人机加征关税，相关产业链企业经营承压，建议关注科技制造类客群供应链金融及风险排查。</p>
 </article>
   </div>
   </div>
     </div>
-<div class="sub-content" data-sub-content="ai-news" data-cat="tech">
+<div class="sub-content" data-sub-content="gz-policy" data-cat="finance">
       
   <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="ai-news" data-cat="tech">
+    <div class="source-content active" data-source-content="gz-gov" data-sub="gz-policy" data-cat="finance">
     <article class="article">
-  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/" target="_blank" rel="noopener noreferrer">Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10844902.html" target="_blank" rel="noopener noreferrer">【媒体解读】《广州市国有土地上房屋征收与补偿实施办法》印发 房屋征收补偿新增40平方米“兜底”规定</a></h3>
   
-  <p class="article-meta">Simon Willison&#39;s Weblog · 08/18 07:58</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Simon Willison的博客报道，Qwen 3.8 27B模型在Artificial Analysis智能指数上得分52。该指数用于衡量AI模型的综合智能表现。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【媒体解读】《广州市国有土地上房屋征收与补偿实施办法》印发 房屋征收补偿新增40平方米“兜底”规定</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.latent.space/p/ainews-stripe-buys-openrouter-for" target="_blank" rel="noopener noreferrer">[AINews] Stripe buys OpenRouter for $7B</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10834892.html" target="_blank" rel="noopener noreferrer">【媒体解读】五年蓝图兼顾“国之大者”与三餐四季</a></h3>
   
-  <p class="article-meta">Latent Space · 08/18 07:13</p>
-  <p class="article-excerpt">No GPUs, no Agents, just really, really, really good infra and distribution.</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 支付公司Stripe以70亿美元收购OpenRouter。评论指出，交易标的没有GPU、没有智能体，仅凭扎实的基础设施和分发能力取胜。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【媒体解读】五年蓝图兼顾“国之大者”与三餐四季</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/blog/Dharma-AI/gpu-management-pt2" target="_blank" rel="noopener noreferrer">Same Cluster, 33 Points More Utilization: What Changed Was the Order</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10765891.html" target="_blank" rel="noopener noreferrer">【媒体解读】广州公布23个重大行政决策事项</a></h3>
   
-  <p class="article-meta">Hugging Face Blog · 08/18 03:46</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Hugging Face博客文章称，在同一个GPU集群上，仅通过调整任务执行顺序，利用率提升了33个百分点。文章强调调度顺序对集群性能的重要影响。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【媒体解读】广州公布23个重大行政决策事项</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/" target="_blank" rel="noopener noreferrer">What Flock’s defenders are missing</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10761623.html" target="_blank" rel="noopener noreferrer">【媒体解读】年交易总额超1.5万亿元 广州推动专业市场转型升级</a></h3>
   
-  <p class="article-meta">MIT Tech Review AI · 08/18 03:16</p>
-  <p class="article-excerpt">This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thur</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> MIT技术评论报道，美国警用科技巨头Flock拥有约12万个自动车牌读取器网络，近期宣布了若干调整，但其辩护者们忽略了一些关键问题。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【媒体解读】年交易总额超1.5万亿元 广州推动专业市场转型升级</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/" target="_blank" rel="noopener noreferrer">We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10895808.html" target="_blank" rel="noopener noreferrer">【音频解读】《广州市人民政府关于开展广州市第四轮综合交通调查的通告》解读</a></h3>
   
-  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 23:21</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【音频解读】《广州市人民政府关于开展广州市第四轮综合交通调查的通告》解读</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Simon Willison的博客报道，一批珍稀书籍的运输被追踪后，最终抵达亚马逊的一座AI训练设施。相关细节引发对AI训练数据来源的关注。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/" target="_blank" rel="noopener noreferrer">What happens when a kid’s robot best friend dies?</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10842958.html" target="_blank" rel="noopener noreferrer">【音频解读】《广州市国有土地上房屋征收与补偿实施办法》政策解读</a></h3>
   
-  <p class="article-meta">MIT Tech Review AI · 08/17 17:00</p>
-  <p class="article-excerpt">When Xander first met Moxie, she taught him that when he was anxious, he could calm down by exhaling through his lips so that he buzzed like a bee. They practiced breathing like dragons to manage feeling mad and sniffing like bunnies to boost his energy. But in the six years they’ve known each other</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> MIT技术评论探讨儿童机器人好友离世的影响。以Xander与机器人Moxie的六年相处为例，Moxie曾教他通过蜂鸣式呼气、龙式呼吸等方法调节情绪，失去它令孩子面临情感挑战。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【音频解读】《广州市国有土地上房屋征收与补偿实施办法》政策解读</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://tldr.tech/ai/2026-08-17" target="_blank" rel="noopener noreferrer">GLM-5.3 🤖, Stripe OpenRouter deal 💰, AI agent consensus 🤝</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10743674.html" target="_blank" rel="noopener noreferrer">【音频解读】《广州市促进历史建筑合理利用实施办法》政策解读</a></h3>
   
-  <p class="article-meta">TLDR AI · 08/17 08:00</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【音频解读】《广州市促进历史建筑合理利用实施办法》政策解读</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 本期TLDR AI资讯汇总：发布GLM-5.3模型，Stripe与OpenRouter达成交易合作，以及AI代理领域形成共识。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/" target="_blank" rel="noopener noreferrer">Markdown SVG upgrades</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10950446.html" target="_blank" rel="noopener noreferrer">【媒体解读】广州全面加强“门前三包”责任制 将非机动车停放管理纳入“包秩序良好”范畴</a></h3>
   
-  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 07:59</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【媒体解读】广州全面加强“门前三包”责任制 将非机动车停放管理纳入“包秩序良好”范畴</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Simon Willison的博客文章介绍了Markdown中SVG功能的升级改进。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener noreferrer">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10950353.html" target="_blank" rel="noopener noreferrer">【音频解读】《广州市人民政府关于全面加强“门前三包”责任制管理工作的通告》政策解读</a></h3>
   
-  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 06:00</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【音频解读】《广州市人民政府关于全面加强“门前三包”责任制管理工作的通告》政策解读</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 西蒙·威利森测评阿里通义千问Qwen 3.8 27B模型，认为其性能表现出色，但默认会过度思考，导致推理变得复杂，影响实际使用效率。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/dario-amodei/" target="_blank" rel="noopener noreferrer">Quoting Dario Amodei</a></h3>
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10907168.html" target="_blank" rel="noopener noreferrer">【音频解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读</a></h3>
   
-  <p class="article-meta">Simon Willison&#39;s Weblog · 08/16 23:05</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【音频解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10882377.html" target="_blank" rel="noopener noreferrer">【一图读懂】一图读懂16届126次市政府常务会议</a></h3>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 西蒙·威利森在博客中引用Anthropic首席执行官达里奥·阿莫迪（Dario Amodei）的言论，内容涉及人工智能相关话题。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】一图读懂16届126次市政府常务会议</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10863006.html" target="_blank" rel="noopener noreferrer">【一图读懂】一图读懂16届125次市政府常务会议</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】一图读懂16届125次市政府常务会议</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10846972.html" target="_blank" rel="noopener noreferrer">【一图读懂】《广州市人民政府办公厅关于延长广州市城乡居民基本养老保险实施办法有效期的通知》政策解读</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】《广州市人民政府办公厅关于延长广州市城乡居民基本养老保险实施办法有效期的通知》政策解读</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjd/content/post_10968061.html" target="_blank" rel="noopener noreferrer">【文字解读】《广州市政府投资管理办法》政策解读</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【文字解读】《广州市政府投资管理办法》政策解读</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政府投资管理办法：规范政府投资项目，基建与产业投资落地带动施工/供应企业开户、代发与供应链融资需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10916679.html" target="_blank" rel="noopener noreferrer">【一图读懂】一图读懂16届128次市政府常务会议</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】一图读懂16届128次市政府常务会议</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10907293.html" target="_blank" rel="noopener noreferrer">【一图读懂】一图读懂16届127次市政府常务会议</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】一图读懂16届127次市政府常务会议</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10907170.html" target="_blank" rel="noopener noreferrer">【一图读懂】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【一图读懂】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10903511.html" target="_blank" rel="noopener noreferrer">【⼀图读懂】《广州市人民政府关于禁止猎捕陆生野生动物的通告》</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】【⼀图读懂】《广州市人民政府关于禁止猎捕陆生野生动物的通告》</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10685700.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于同意《花都区新街村、大陵村城市更新单元控制性详细规划》等2项规划成果的批复</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于同意《花都区新街村、大陵村城市更新单元控制性详细规划》等2项规划成果的批复</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10681039.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于公布实施全国重点文物保护单位南越文王墓保护规划（2021—2035年）的通告</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于公布实施全国重点文物保护单位南越文王墓保护规划（2021—2035年）的通告</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10660563.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于同意《广州地铁八号线北延段（滘心—广州北站）工程车辆段及周边片区控制性详细规划》等2项规划成果的批复</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于同意《广州地铁八号线北延段（滘心—广州北站）工程车辆段及周边片区控制性详细规划》等2项规划成果的批复</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10643700.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于废止穗府规〔2024〕1号文件的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于废止穗府规〔2024〕1号文件的通知</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10765852.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于表扬中华人民共和国第三届职业技能大赛我市获奖选手和为参赛工作作出突出贡献的单位及个人的通报</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于表扬中华人民共和国第三届职业技能大赛我市获奖选手和为参赛工作作出突出贡献的单位及个人的通报</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10750211.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于废止镇街综合行政执法有关文件的公告</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于废止镇街综合行政执法有关文件的公告</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10741085.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于同意《鱼珠车辆基地场站综合体（AP0508、AT1017规划管理单元）控制性详细规划》等2项规划成果的批复</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于同意《鱼珠车辆基地场站综合体（AP0508、AT1017规划管理单元）控制性详细规划》等2项规划成果的批复</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10871309.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于省十四届人大五次会议第1760号代表建议答复的函</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于省十四届人大五次会议第1760号代表建议答复的函</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10844789.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于同意《从化区江埔街赛车场片区（CH5402-CZTB单元）控制性详细规划》等10项规划成果的批复</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于同意《从化区江埔街赛车场片区（CH5402-CZTB单元）控制性详细规划》等10项规划成果的批复</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10833640.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于印发广州市国民经济和社会发展第十五个五年规划纲要的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于印发广州市国民经济和社会发展第十五个五年规划纲要的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州&quot;十五五&quot;规划纲要：未来五年投资与产业布局总纲，重点片区建设带来对公+零售联动（代发/按揭/经营贷）机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10815782.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于公布广州市第九批市级非物质文化遗产代表性项目名录的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于公布广州市第九批市级非物质文化遗产代表性项目名录的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州文化产业数据：新业态快速增长，文化企业及从业者是零售获客与经营贷的细分机会客群。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965935.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于简易修改划定禁止使用高排放非道路移动机械区域通告的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于简易修改划定禁止使用高排放非道路移动机械区域通告的通知</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965931.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于简易修改禁止黑烟车上路行驶通告的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于简易修改禁止黑烟车上路行驶通告的通知</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965927.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于简易修改划定广州市高污染燃料禁燃区通告的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于简易修改划定广州市高污染燃料禁燃区通告的通知</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10949563.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于全面加强“门前三包”责任制管理工作的通告</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于全面加强“门前三包”责任制管理工作的通告</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10895767.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于开展广州市第四轮综合交通调查的通告</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于开展广州市第四轮综合交通调查的通告</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10890715.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于同意《广州中医药大学金沙洲医院扩建项目（AB3703规划管理单元）控制性详细规划》等6项规划成果的批复</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于同意《广州中医药大学金沙洲医院扩建项目（AB3703规划管理单元）控制性详细规划》等6项规划成果的批复</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10879960.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于禁止猎捕陆生野生动物的通告</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于禁止猎捕陆生野生动物的通告</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10968058.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于印发广州市政府投资管理办法的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于印发广州市政府投资管理办法的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政府投资管理办法：规范政府投资项目，基建与产业投资落地带动施工/供应企业开户、代发与供应链融资需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10966003.html" target="_blank" rel="noopener noreferrer">广州市人民政府关于简易修改实施国Ⅲ排放标准柴油货车限制通行交通管理措施通告的通知</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州市政府】广州市人民政府关于简易修改实施国Ⅲ排放标准柴油货车限制通行交通管理措施通告的通知</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.gz.gov.cn/zwgk/zcjd/zcjd/content/post_10907172.html" target="_blank" rel="noopener noreferrer">【文字解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读</a></h3>
+  
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">【广州市政府】【文字解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。</p>
 </article>
   </div>
   </div>
     </div>
-<div class="sub-content" data-sub-content="cn-tech" data-cat="tech">
+<div class="sub-content" data-sub-content="news" data-cat="finance">
       
   <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="cn-tech" data-cat="tech">
+    <div class="source-content active" data-source-content="_merged" data-sub="news" data-cat="finance">
     <article class="article">
-  <h3 class="article-title"><a href="https://www.infoq.cn/article/t0bchRo0KBVZFRTPwPXt?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">GitHub 加固默认安全策略，延时防护与软件包签名之争引热议</a></h3>
+  <h3 class="article-title"><a href="https://www.cnbc.com/2026/08/18/us-iran-war-trump-hormuz-trump-ceasefire-expires-extension-.html" target="_blank" rel="noopener noreferrer">Trump&#39;s Oman bomb threat an attempt to get their &#39;attention,&#39; says former ambassador</a></h3>
   
-  <p class="article-meta">InfoQ 中国 · 08/18 19:46</p>
-  <p class="article-excerpt">点击查看原文&gt;</p>
-  
+  <p class="article-meta">CNBC Top Stories · 08/18 16:49</p>
+  <p class="article-excerpt">The attack caused damage to the engine room and resulted in a crew casualty, UKMTO said, adding that the remaining crew were being assisted by the Omani Coast Guard.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美国与伊朗在临时停火于8月18日到期后，双方都准备打持久战，立场强硬且拒绝重启谈判；同时霍尔木兹海峡有一艘船只遭袭，外界担心冲突可能进一步延长。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.infoq.cn/article/LLrRNFqoYHPWGNSPslWm?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">模型跑起来之后：视觉 AI 还需要哪些系统能力？</a></h3>
+  <h3 class="article-title"><a href="https://www.investing.com/news/stock-market-news/oil-prices-climb-bond-yields-rise-as-usiran-ceasefire-expires-4864169" target="_blank" rel="noopener noreferrer">Bonds, stocks jolted as Middle East tensions shatter market calm</a></h3>
   
-  <p class="article-meta">InfoQ 中国 · 08/18 19:17</p>
-  <p class="article-excerpt">点击查看原文&gt;</p>
+  <p class="article-meta">Investing.com News · 08/18 16:48</p>
   
+  <p class="article-summary"><span class="summary-label">AI分析</span> 大宗商品（原油/铜/黄金）动态：通胀与避险信号，关联贵金属与商品类财富产品。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.infoq.cn/article/7QNfsJhpgskMtVllCpWJ?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Cloudflare 推出 Precursor，通过持续性行为分析识别恶意机器人与 AI 自动化程序</a></h3>
+  <h3 class="article-title"><a href="https://www.investing.com/news/commodities-news/oil-climbs-as-fading-usiran-peace-hopes-raise-supply-risks-4864170" target="_blank" rel="noopener noreferrer">Oil prices at near three-week high as US-Iran peace hopes fade</a></h3>
   
-  <p class="article-meta">InfoQ 中国 · 08/18 18:58</p>
-  <p class="article-excerpt">点击查看原文&gt;</p>
+  <p class="article-meta">Investing.com News · 08/18 16:48</p>
   
+  <p class="article-summary"><span class="summary-label">AI分析</span> 地缘冲突推升油价至近三周高位，通胀与供应链风险升温。零售客户资产配置需关注能源成本对消费和利率的影响，避免过度激进。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.infoq.cn/article/sjSVpfSFB3cQwzP3lMHZ?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Dario “破防小作文”超千万人围观！LeCun 开炮：信任危机是因为你搞权力集中</a></h3>
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/clyqpx6xk69o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">US states call for big changes to Instagram and Facebook as Meta child privacy trial begins</a></h3>
   
-  <p class="article-meta">InfoQ 中国 · 08/18 18:38</p>
-  <p class="article-excerpt">点击查看原文&gt;</p>
-  
+  <p class="article-meta">BBC Business · 08/18 16:19</p>
+  <p class="article-excerpt">US states are suing the social media giant to force an overhaul of its platforms for young users.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美国30个州起诉Meta，要求彻底改革其面向青少年的平台；若Meta败诉，Instagram与Facebook或将永久改变。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.infoq.cn/article/3MxCwCyMpwcWjpvKJ7u4?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Agentic AI 在普惠健康险的创新与实践｜AICon深圳</a></h3>
+  <h3 class="article-title"><a href="https://www.cnbc.com/2026/08/18/treasury-yields-.html" target="_blank" rel="noopener noreferrer">Treasury yields rise as oil gains and U.S.-Iran tensions fuel inflation fears</a></h3>
   
-  <p class="article-meta">InfoQ 中国 · 08/18 18:00</p>
-  <p class="article-excerpt">点击查看原文&gt;</p>
-  
+  <p class="article-meta">CNBC Top Stories · 08/18 15:58</p>
+  <p class="article-excerpt">Tuesday saw yields on U.S. 30-year Treasury yields add over 1 basis point to trade at around 5.322%, hovering just below its highest level since 2002.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美债收益率上升叠加通胀担忧，全球风险资产承压。分行应提醒客户关注市场波动，加大稳健理财和黄金等避险资产配置建议。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://sspai.com/post/113454" target="_blank" rel="noopener noreferrer">7月音乐精选：夏天赠予我们的 9张专辑</a></h3>
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/c934xy32919o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">&#39;I&#39;m in Barbados&#39;: The dos and don&#39;ts of writing an out-of-office reply</a></h3>
   
-  <p class="article-meta">少数派 · 08/18 10:52</p>
-  <p class="article-excerpt">编者注：2026年我们将重启少数派音乐推荐栏目FM3.14，特邀资深音乐从业者及爱好者为大家推荐优质的华语独立、流行音乐，今年我们也很荣幸邀请到老朋友飞傲，为本栏目冠名。飞傲目前拥有品牌以音乐发烧友为 ...查看全文</p>
-  
+  <p class="article-meta">BBC Business · 08/18 15:52</p>
+  <p class="article-excerpt">As we hit peak holiday season, the BBC looks at the dos and don&#39;ts of composing a good out-of-office message.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 正值度假高峰期，英国广播公司（BBC）撰文探讨如何撰写出色的不在办公室（out-of-office）自动回复邮件，并分析是否应在其中开玩笑。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://sspai.com/post/113566" target="_blank" rel="noopener noreferrer">派早报：阿里巴巴出售灵犀互娱，Linux 7.2 内核稳定版发布等</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/germany-is-set-to-sell-30-year-bonds-at-highest-yield-since-2011" target="_blank" rel="noopener noreferrer">Germany Is Set to Sell 30-Year Bonds at Highest Yield Since 2011</a></h3>
   
-  <p class="article-meta">少数派 · 08/18 08:04</p>
-  <p class="article-excerpt">少数派的近期动态新一季少数派会员启航，更新权益，更多惊喜，还有实体纪念卡。点击了解能让AI助手通过自然语言指令直接与您的Quote/0摘录墨水屏交互的DotSkill已上线。点击了解你可能错过的文章成 ...查看全文</p>
-  
+  <p class="article-meta">Bloomberg Markets · 08/18 15:37</p>
+  <p class="article-excerpt">Germany’s borrowing costs are poised to hit a 15-year high in a major sale of long-dated bonds as investors demand greater compensation for lending to increasingly indebted governments still grappling with inflation.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 德国30年期国债收益率创2011年以来新高，反映全球利率中枢上行，建议关注国内债市波动及客户固收类资产配置调整。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://sspai.com/post/113544" target="_blank" rel="noopener noreferrer">派评 | 近期值得关注的 App</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/videos/2026-08-18/yield-excitement-reaching-local-extreme-3-minutes-mliv-video" target="_blank" rel="noopener noreferrer">Yield Excitement Reaching Local Extreme?: 3-Minutes MLIV</a></h3>
   
-  <p class="article-meta">少数派 · 08/17 18:14</p>
-  <p class="article-excerpt">&gt;下载少数派2.0客户端、关注少数派公众号，解锁全新阅读体验📰&gt;实用、好用的正版软件，少数派为你呈现🚀查看全文</p>
-  
+  <p class="article-meta">Bloomberg Markets · 08/18 15:07</p>
+  <p class="article-excerpt">Guy Johnson, Tom Mackenzie, Skylar Montgomery Koning and Mark Cudmore break down today&#39;s key themes for analysts and investors on &quot;Bloomberg: The Opening Trade.&quot; (Source: Bloomberg)</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 市场收益率波动引发关注，债市情绪极端化，建议把握利率高位窗口，为客户合理配置短期固收及结构性产品。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/08/474537.html" target="_blank" rel="noopener noreferrer">共生知行发布人形机器人赛车Demo：以卡丁车测试双足机器人的“全身智能”</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/rising-yields-threaten-to-puncture-asia-s-ai-driven-stock-rally" target="_blank" rel="noopener noreferrer">Rising Yields Threaten to Puncture Asia’s AI-Driven Stock Rally</a></h3>
   
-  <p class="article-meta">量子位 · 08/17 17:30</p>
-  <p class="article-excerpt">8月17日，具身智能初创公司共生知行发布双足人形机器人驾驶卡丁车Demo</p>
-  
+  <p class="article-meta">Bloomberg Markets · 08/18 14:57</p>
+  <p class="article-excerpt">A rapid climb in Treasury yields is emerging as one of the biggest risks to Asia’s AI-driven stock rally, an uneasy link that highlights technology firms’ vulnerability to elevated borrowing costs.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 全球收益率上行或冲击亚洲AI主题股票行情，客户权益持仓波动加大，应提示风险并引导增配低波稳健资产。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/08/474518.html" target="_blank" rel="noopener noreferrer">人形机器人开始打国球了！两台机器人完整打完11分制比赛</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/us-stock-index-futures-drop-as-bond-yields-oil-prices-rise" target="_blank" rel="noopener noreferrer">US Stock-Index Futures Drop as Bond Yields and Oil Prices Rise</a></h3>
   
-  <p class="article-meta">量子位 · 08/17 17:04</p>
-  <p class="article-excerpt">没有遥控、没人喂球</p>
-  
+  <p class="article-meta">Bloomberg Markets · 08/18 14:51</p>
+  <p class="article-excerpt">US stock-index futures fell as rising bond yields and a spike in oil prices unnerved investors.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 美股期货下跌、长端收益率与油价齐升，市场风险偏好受抑，需关注高净值客户权益资产回撤，强化多元化配置与风险提示。</p>
 </article>
   </div>
   </div>
@@ -1012,7 +1265,7 @@
   </section>
   <section class="panel" data-panel="trading"><section class="trading-overview-card">
     <span class="eyebrow">市场总览</span>
-    <p class="overview-text trading-overview-text">美股板块：SPY 距 52 周高仅 0.86% 且站上 20/50/200 日均线，QQQ 亦处多头排列，AI 权重股 NVDA 偏强、MSFT 的 RSI 70.9 超买，AAPL 与 META 则低于短周期均线，个股分化明显；VIX 15.19 低于全部均线，市场波动率处于低位。加密板块：恐慌贪婪指数 41 仍属恐慌，总市值 2.27T，BTC 主导率 56.5%、ETH 占比 10%；BTC 回到 20/50 日线上方但未收复 200 日线，ETH 同样处于 20/50 上方、200 下方，MACD 动能尚未转强，整体中性偏弱。中概板块：JD 近 5 日大跌 13.56%、跌破全部均线，腾讯 0700.HK 亦呈空头排列，阿里巴巴与拼多多均现 MACD 死叉，技术面整体疲弱。商品外汇板块：WTI 原油 MACD 金叉且多头排列最为强势，黄金 RSI 68.3 逼近超买但仍维持偏强，美元兑人民币 RSI 29.3 超卖，美元指数 DXY 亦偏弱，整体商品偏强、美元偏弱。</p>
+    <p class="overview-text trading-overview-text">四大类资产技术面分化明显：美股 SPY 维持多头结构，现价 772.67 距 52 周高点仅 -0.86%，RSI 65.7、MACD 红柱位于信号线上方，短期动能仍偏强；中概/中国 A 股短线拉升，沪深300 单日 +4.34%、上证指数 RSI 58.3，但沪深300 仍受制于 20 日与 50 日均线，指数内部呈结构性分歧；加密市场在恐慌贪婪指数 41（恐慌）的背景下处于弱势震荡，总市值 2.28T USD（24h +0.78%），BTC 低于 200 日均线且 MACD 绿柱小幅延续，ETH 方向不明、整体缺乏趋势性动能；商品外汇方面，WTI 原油现价站上全周期均线并伴随 MACD 金叉，黄金 RSI 68.6 逼近超买，美元兑人民币 RSI 28.3 超卖且空头排列延伸。整体呈现风险资产偏强、美元偏弱、加密缺乏趋势的特点。</p>
   </section>
 
   <section class="trading-watchlist">
@@ -1021,82 +1274,168 @@
       <article class="trading-pick stance-bull">
     <header class="pick-head">
       <div class="pick-symbol-block">
-        <span class="pick-symbol">SPY</span>
-        <span class="pick-name">标普 500 ETF (SPY)</span>
-      </div>
-      <span class="pick-stance pick-stance-bull">偏上行</span>
-    </header>
-    <p class="pick-rationale">SPY 当前 772.67 美元，距 52 周高点仅差 0.86%，并站上全部均线（20 日 756.2 / 50 日 748.93 / 200 日 705.46），呈多头排列；RSI 65.7 处偏强区但未超买，MACD 柱 +2.26 维持正向，近 1 日 -0.67% 属于高位小幅回踩，多头结构未被破坏，短线技术状态偏上行。</p>
-  </article>
-<article class="trading-pick stance-bull">
-    <header class="pick-head">
-      <div class="pick-symbol-block">
         <span class="pick-symbol">CL=F</span>
-        <span class="pick-name">WTI 原油期货 (CL=F)</span>
+        <span class="pick-name">WTI 原油（CL=F）</span>
       </div>
       <span class="pick-stance pick-stance-bull">偏上行</span>
     </header>
-    <p class="pick-rationale">WTI 原油 85.30，站上 20 日 82.59、50 日 79.28、200 日 77.08 全部均线，多头排列完整；MACD 线 0.79 上穿信号线 0.37 形成金叉，MACD 柱 +0.42，RSI 56.9 温和偏强，近 5 日累计上涨 2.52%；量价与技术指标同步向上，短线技术状态偏上行。</p>
-  </article>
-<article class="trading-pick stance-bear">
-    <header class="pick-head">
-      <div class="pick-symbol-block">
-        <span class="pick-symbol">JD</span>
-        <span class="pick-name">京东 (JD)</span>
-      </div>
-      <span class="pick-stance pick-stance-bear">偏下行</span>
-    </header>
-    <p class="pick-rationale">京东 28.50 美元，跌破 20 日 31.57、50 日 29.21、200 日 29.38 全部均线，形成空头排列；RSI 37.8 处于弱势区，MACD 柱 -0.46，MACD 线 0.45 已下穿信号线 0.91 构成死叉，且近 5 日跌幅达 13.56%，近 1 日再跌 2.73%，技术动能与趋势均明显偏空，故定性为偏下行。</p>
+    <p class="pick-rationale">MACD 于 0.6941 上穿信号值 0.3549 形成金叉，价格 84.09 高于 SMA20 82.53、SMA50 79.25 与 SMA200 77.08，均线呈多头排列，RSI14 为 55 处于中性偏强区间，未触及超买。1 日回落 -0.49% 但 5 日累计 +1.07%，短线升势未破坏，技术面整体偏向上行。</p>
   </article>
 <article class="trading-pick stance-bear">
     <header class="pick-head">
       <div class="pick-symbol-block">
         <span class="pick-symbol">USDCNY=X</span>
-        <span class="pick-name">美元/人民币 (USDCNY=X)</span>
+        <span class="pick-name">美元/人民币（USDCNY=X）</span>
       </div>
       <span class="pick-stance pick-stance-bear">偏下行</span>
     </header>
-    <p class="pick-rationale">美元兑人民币 6.74，距 52 周低点仅 0.19%，RSI 29.3 已进入超卖区，MACD 柱 -0.0008 维持绿柱，价格受压于 20 日 6.76、50 日 6.77、200 日 6.89 下方，空头排列明确；虽短线跌幅趋缓（5 日 -0.07%），但弱势格局未改，技术面偏下行。</p>
+    <p class="pick-rationale">RSI14 录得 28.3，处于超卖区；现价 6.74 低于 SMA20 6.76、SMA50 6.77 与 SMA200 6.89，短期空头排列完整；MACD 值 -0.0091 位于信号线 -0.0085 下方，绿柱仍延续。1 日微跌 -0.01%、5 日 -0.08%，距 52 周高约 6.24%，技术结构依旧偏空，超卖反弹或存在但趋势未反转。</p>
+  </article>
+<article class="trading-pick stance-neutral">
+    <header class="pick-head">
+      <div class="pick-symbol-block">
+        <span class="pick-symbol">000300.SS</span>
+        <span class="pick-name">沪深300（000300.SS）</span>
+      </div>
+      <span class="pick-stance pick-stance-neutral">中性</span>
+    </header>
+    <p class="pick-rationale">现价 4725.81，单日暴涨 +4.34%，距 52 周高仅 -0.38%；但价格仍未站上 SMA20 4827.47 与 SMA50 4857.26，且 MACD 值 -51.06 位于信号线 -28.47 下方，绿柱未见收口；RSI14 为 46.3 中性。短线上攻与中期均线压力并存，方向尚不明朗，技术状态偏中性。</p>
   </article>
 <article class="trading-pick stance-neutral">
     <header class="pick-head">
       <div class="pick-symbol-block">
         <span class="pick-symbol">BTC-USD</span>
-        <span class="pick-name">比特币 (BTC-USD)</span>
+        <span class="pick-name">Bitcoin（BTC-USD）</span>
       </div>
       <span class="pick-stance pick-stance-neutral">中性</span>
     </header>
-    <p class="pick-rationale">比特币 64061.56，短线站上 20 日 63792 与 50 日 63659，但仍低于 200 日 69137，RSI 51.7 贴近中性，MACD 柱为 -84.73（MACD -190 低于信号 -105），绿柱显示空头动能未完全消退；近 1 日 +1.98% 带来反抽，但方向未明，整体呈中性震荡。</p>
+    <p class="pick-rationale">RSI14 为 52.3、位于中性区；现价 64201.84 在 SMA20 63829.22 与 SMA50 63749.25 上方，但仍低于 SMA200 69039.45；MACD 值 -102.99 略低于信号线 -99.23，绿柱维持但幅度有限。1 日 -0.47%、5 日 +1.26%，波动收窄、方向特征不清晰，技术状态中性。</p>
+  </article>
+<article class="trading-pick stance-bull">
+    <header class="pick-head">
+      <div class="pick-symbol-block">
+        <span class="pick-symbol">SPY</span>
+        <span class="pick-name">标普 500（SPY）</span>
+      </div>
+      <span class="pick-stance pick-stance-bull">偏上行</span>
+    </header>
+    <p class="pick-rationale">现价 772.67 高于 SMA20 756.20、SMA50 748.93 与 SMA200 705.46，均线呈多头排列，距 52 周高仅 -0.86%；RSI14 为 65.7 接近超买但未超买，MACD 值 8.51 高于信号值 6.26，红柱继续。1 日小幅回落 -0.67%，短线回调不改中长线偏多结构。</p>
   </article>
     </div>
   </section>
 
   <section class="trading-tickers">
     <h2 class="category-title trading-section-title">全部资产</h2>
-    <nav class="trading-group-tabs"><button class="trading-group-tab active" data-group="macro">宏观信号<span class="count">3</span></button><button class="trading-group-tab" data-group="us-equity">美股 / ETF<span class="count">8</span></button><button class="trading-group-tab" data-group="crypto">加密货币<span class="count">3</span></button><button class="trading-group-tab" data-group="china-equity">中概 / 港股<span class="count">4</span></button><button class="trading-group-tab" data-group="commodity-fx">商品 / 外汇<span class="count">3</span></button></nav>
-    <div class="trading-group-contents"><div class="trading-group-content active" data-group="macro">
+    <nav class="trading-group-tabs"><button class="trading-group-tab active" data-group="china-equity">中概 / 港股<span class="count">2</span></button><button class="trading-group-tab" data-group="commodity-fx">商品 / 外汇<span class="count">3</span></button><button class="trading-group-tab" data-group="macro">宏观信号<span class="count">2</span></button><button class="trading-group-tab" data-group="us-equity">美股 / ETF<span class="count">1</span></button><button class="trading-group-tab" data-group="crypto">加密货币<span class="count">2</span></button></nav>
+    <div class="trading-group-contents"><div class="trading-group-content active" data-group="china-equity">
       
       <article class="ticker-card">
     <header class="ticker-head">
       <div class="ticker-id">
-        <h3 class="ticker-symbol">^VIX</h3>
-        <p class="ticker-name">VIX 恐慌指数</p>
+        <h3 class="ticker-symbol">000001.SS</h3>
+        <p class="ticker-name">上证指数</p>
       </div>
       <div class="ticker-price-block">
-        <span class="ticker-price">$15.19</span>
-        <span class="ticker-pct positive">+6.60%</span>
+        <span class="ticker-price">¥3,990.30</span>
+        <span class="ticker-pct positive">+1.61%</span>
       </div>
     </header>
     <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-1.75%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-57.0%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">44.8</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>16.68 / 17.13 / 18.52</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-0.740 / -0.521</dd></div>
+      <div><dt>5 日</dt><dd class="positive">+0.60%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-6.3%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">58.3</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>3,880.10 / 3,963.31 / 4,014.17</dd></div>
+      <div><dt>MACD / 信号</dt><dd>2.234 / -17.415</dd></div>
     </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">空头排列</span></div>
+    
   </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">000300.SS</h3>
+        <p class="ticker-name">沪深300</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">¥4,725.81</span>
+        <span class="ticker-pct positive">+4.34%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+0.65%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-0.4%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">46.3</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>4,827.47 / 4,857.26 / 4,695.01</dd></div>
+      <div><dt>MACD / 信号</dt><dd>-51.058 / -28.474</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span></div>
+  </article>
+    </div><div class="trading-group-content" data-group="commodity-fx">
+      
+      <article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">USDCNY=X</h3>
+        <p class="ticker-name">美元 / 人民币</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">¥6.74</span>
+        <span class="ticker-pct negative">-0.01%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="negative">-0.08%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-6.2%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-oversold">28.3</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>6.76 / 6.77 / 6.89</dd></div>
+      <div><dt>MACD / 信号</dt><dd>-0.009 / -0.009</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-caution">RSI 超卖</span><span class="signal-pill tone-bear">接近 52 周低</span><span class="signal-pill tone-bear">空头排列</span></div>
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">GC=F</h3>
+        <p class="ticker-name">黄金</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$4,451.90</span>
+        <span class="ticker-pct positive">+0.77%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+1.57%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-20.3%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">68.6</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>4,214.04 / 4,159.15 / 4,490.87</dd></div>
+      <div><dt>MACD / 信号</dt><dd>81.013 / 48.646</dd></div>
+    </dl>
+    
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">CL=F</h3>
+        <p class="ticker-name">WTI 原油</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$84.09</span>
+        <span class="ticker-pct negative">-0.49%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+1.07%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-29.6%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">55.0</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>82.53 / 79.25 / 77.08</dd></div>
+      <div><dt>MACD / 信号</dt><dd>0.694 / 0.355</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bull">MACD 金叉 <span class="signal-age">(4 天前)</span></span><span class="signal-pill tone-bull">多头排列</span></div>
+  </article>
+    </div><div class="trading-group-content" data-group="macro">
+      
+      <article class="ticker-card">
     <header class="ticker-head">
       <div class="ticker-id">
         <h3 class="ticker-symbol">^TNX</h3>
@@ -1104,38 +1443,38 @@
       </div>
       <div class="ticker-price-block">
         <span class="ticker-price">$4.72</span>
-        <span class="ticker-pct positive">+0.60%</span>
+        <span class="ticker-pct positive">+1.79%</span>
       </div>
     </header>
     <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+0.53%</dd></div>
+      <div><dt>5 日</dt><dd class="positive">+1.37%</dd></div>
       <div><dt>距 52w 高</dt><dd>-0.5%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">59.8</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">57.3</dd></div>
       <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>4.67 / 4.57 / 4.32</dd></div>
-      <div><dt>MACD / 信号</dt><dd>0.036 / 0.037</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>4.66 / 4.56 / 4.31</dd></div>
+      <div><dt>MACD / 信号</dt><dd>0.033 / 0.037</dd></div>
     </dl>
     <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
   </article><article class="ticker-card">
     <header class="ticker-head">
       <div class="ticker-id">
-        <h3 class="ticker-symbol">DX-Y.NYB</h3>
-        <p class="ticker-name">美元指数 DXY</p>
+        <h3 class="ticker-symbol">^VIX</h3>
+        <p class="ticker-name">VIX 恐慌指数</p>
       </div>
       <div class="ticker-price-block">
-        <span class="ticker-price">$99.63</span>
-        <span class="ticker-pct negative">-0.04%</span>
+        <span class="ticker-price">$15.88</span>
+        <span class="ticker-pct positive">+11.44%</span>
       </div>
     </header>
     <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-0.18%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-2.1%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">38.5</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>100.35 / 100.48 / 99.17</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-0.262 / -0.179</dd></div>
+      <div><dt>5 日</dt><dd class="positive">+2.72%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-55.0%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">48.3</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>16.49 / 17.19 / 18.52</dd></div>
+      <div><dt>MACD / 信号</dt><dd>-0.672 / -0.522</dd></div>
     </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span></div>
+    <div class="ticker-signals"><span class="signal-pill tone-bear">空头排列</span></div>
   </article>
     </div><div class="trading-group-content" data-group="us-equity">
       
@@ -1143,7 +1482,7 @@
     <header class="ticker-head">
       <div class="ticker-id">
         <h3 class="ticker-symbol">SPY</h3>
-        <p class="ticker-name">S&amp;P 500 ETF</p>
+        <p class="ticker-name">S&amp;P 500</p>
       </div>
       <div class="ticker-price-block">
         <span class="ticker-price">$772.67</span>
@@ -1159,146 +1498,6 @@
       <div><dt>MACD / 信号</dt><dd>8.515 / 6.257</dd></div>
     </dl>
     <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">QQQ</h3>
-        <p class="ticker-name">Nasdaq 100 ETF</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$729.87</span>
-        <span class="ticker-pct negative">-0.30%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+0.95%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-2.5%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">59.6</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>704.13 / 712.95 / 650.62</dd></div>
-      <div><dt>MACD / 信号</dt><dd>5.524 / 1.144</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">AAPL</h3>
-        <p class="ticker-name">Apple</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$305.59</span>
-        <span class="ticker-pct positive">+0.11%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-2.47%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-11.3%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">43.7</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>318.43 / 309.19 / 280.48</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-2.461 / 0.187</dd></div>
-    </dl>
-    
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">MSFT</h3>
-        <p class="ticker-name">Microsoft</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$480.35</span>
-        <span class="ticker-pct negative">-3.33%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-3.93%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-13.3%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-overbought">70.9</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>450.24 / 412.78 / 432.48</dd></div>
-      <div><dt>MACD / 信号</dt><dd>28.582 / 25.060</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-caution">RSI 超买</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">NVDA</h3>
-        <p class="ticker-name">Nvidia</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$225.01</span>
-        <span class="ticker-pct negative">-0.13%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+0.47%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-4.9%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">63.0</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>210.39 / 206.52 / 194.92</dd></div>
-      <div><dt>MACD / 信号</dt><dd>5.277 / 3.226</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bull">多头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">GOOGL</h3>
-        <p class="ticker-name">Alphabet</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$344.00</span>
-        <span class="ticker-pct negative">-0.68%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-2.91%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-15.8%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">47.0</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>346.41 / 353.89 / 331.38</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-1.137 / -0.970</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(今天)</span></span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">TSLA</h3>
-        <p class="ticker-name">Tesla</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$339.30</span>
-        <span class="ticker-pct negative">-0.19%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+3.26%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-32.0%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">48.8</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>329.14 / 371.09 / 406.08</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-11.370 / -16.326</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">空头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">META</h3>
-        <p class="ticker-name">Meta</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$568.97</span>
-        <span class="ticker-pct negative">-4.37%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-3.91%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-28.1%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">47.6</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>594.67 / 597.13 / 627.63</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-5.392 / -5.604</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bull">MACD 金叉 <span class="signal-age">(今天)</span></span><span class="signal-pill tone-bear">空头排列</span></div>
   </article>
     </div><div class="trading-group-content" data-group="crypto">
       <div class="crypto-widgets"><div class="crypto-widget fg-fear">
@@ -1307,16 +1506,16 @@
       <div class="widget-sub">恐慌</div>
     </div><div class="crypto-widget">
       <div class="widget-label">加密总市值</div>
-      <div class="widget-value">$2.27 T</div>
-      <div class="widget-sub positive">+0.34% / 24h</div>
+      <div class="widget-value">$2.28 T</div>
+      <div class="widget-sub positive">+0.78% / 24h</div>
     </div><div class="crypto-widget">
       <div class="widget-label">BTC 主导率</div>
-      <div class="widget-value">56.5%</div>
-      <div class="widget-sub">ETH 10.0%</div>
+      <div class="widget-value">56.6%</div>
+      <div class="widget-sub">ETH 10.1%</div>
     </div><div class="crypto-widget">
       <div class="widget-label">24h 成交量</div>
-      <div class="widget-value">$54.2 B</div>
-      <div class="widget-sub">活跃币 18,454</div>
+      <div class="widget-value">$53.6 B</div>
+      <div class="widget-sub">活跃币 18,453</div>
     </div></div>
       <article class="ticker-card">
     <header class="ticker-head">
@@ -1325,17 +1524,17 @@
         <p class="ticker-name">Bitcoin</p>
       </div>
       <div class="ticker-price-block">
-        <span class="ticker-price">$64,061.56</span>
-        <span class="ticker-pct positive">+1.98%</span>
+        <span class="ticker-price">$64,201.84</span>
+        <span class="ticker-pct negative">-0.47%</span>
       </div>
     </header>
     <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+1.04%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-49.2%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">51.7</dd></div>
+      <div><dt>5 日</dt><dd class="positive">+1.26%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-49.1%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">52.3</dd></div>
       <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>63,792.30 / 63,659.09 / 69,136.86</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-190.114 / -105.381</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>63,829.22 / 63,749.25 / 69,039.45</dd></div>
+      <div><dt>MACD / 信号</dt><dd>-102.986 / -99.226</dd></div>
     </dl>
     
   </article><article class="ticker-card">
@@ -1345,573 +1544,201 @@
         <p class="ticker-name">Ethereum</p>
       </div>
       <div class="ticker-price-block">
-        <span class="ticker-price">$1,892.53</span>
-        <span class="ticker-pct positive">+0.99%</span>
+        <span class="ticker-price">$1,897.85</span>
+        <span class="ticker-pct negative">-0.75%</span>
       </div>
     </header>
     <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+0.77%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-61.8%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">53.3</dd></div>
+      <div><dt>5 日</dt><dd class="positive">+0.74%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-61.7%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">53.7</dd></div>
       <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>1,886.39 / 1,842.66 / 2,008.07</dd></div>
-      <div><dt>MACD / 信号</dt><dd>7.608 / 12.170</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>1,886.84 / 1,848.81 / 2,004.14</dd></div>
+      <div><dt>MACD / 信号</dt><dd>9.259 / 11.839</dd></div>
     </dl>
     
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">SOL-USD</h3>
-        <p class="ticker-name">Solana</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$75.57</span>
-        <span class="ticker-pct positive">+1.38%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+0.06%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-70.2%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">52.1</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>74.51 / 76.13 / 81.57</dd></div>
-      <div><dt>MACD / 信号</dt><dd>0.082 / -0.045</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">空头排列</span></div>
-  </article>
-    </div><div class="trading-group-content" data-group="china-equity">
-      
-      <article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">BABA</h3>
-        <p class="ticker-name">阿里巴巴 (BABA)</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$124.71</span>
-        <span class="ticker-pct positive">+2.09%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-2.88%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-35.3%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">55.0</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>121.81 / 113.76 / 138.95</dd></div>
-      <div><dt>MACD / 信号</dt><dd>3.520 / 3.681</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(今天)</span></span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">PDD</h3>
-        <p class="ticker-name">拼多多 (PDD)</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$86.94</span>
-        <span class="ticker-pct positive">+3.29%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-5.25%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-37.6%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">43.9</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>87.58 / 84.03 / 101.76</dd></div>
-      <div><dt>MACD / 信号</dt><dd>0.904 / 1.434</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(1 天前)</span></span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">JD</h3>
-        <p class="ticker-name">京东 (JD)</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$28.50</span>
-        <span class="ticker-pct negative">-2.73%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-13.56%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-22.7%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">37.8</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>31.57 / 29.21 / 29.38</dd></div>
-      <div><dt>MACD / 信号</dt><dd>0.447 / 0.910</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(2 天前)</span></span><span class="signal-pill tone-bear">空头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">0700.HK</h3>
-        <p class="ticker-name">腾讯控股 (0700.HK)</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">HK$438.40</span>
-        <span class="ticker-pct negative">-1.79%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-6.88%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-35.8%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">40.6</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>461.59 / 454.77 / 529.48</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-2.704 / 2.250</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(4 天前)</span></span><span class="signal-pill tone-bear">空头排列</span></div>
-  </article>
-    </div><div class="trading-group-content" data-group="commodity-fx">
-      
-      <article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">GC=F</h3>
-        <p class="ticker-name">黄金期货</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$4,447.10</span>
-        <span class="ticker-pct positive">+0.66%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+1.46%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-20.4%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">68.3</dd></div>
-      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>4,213.80 / 4,159.05 / 4,490.85</dd></div>
-      <div><dt>MACD / 信号</dt><dd>80.630 / 48.569</dd></div>
-    </dl>
-    
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">CL=F</h3>
-        <p class="ticker-name">WTI 原油期货</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">$85.30</span>
-        <span class="ticker-pct positive">+0.95%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="positive">+2.52%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-28.6%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-normal">56.9</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>82.59 / 79.28 / 77.08</dd></div>
-      <div><dt>MACD / 信号</dt><dd>0.791 / 0.374</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-bull">MACD 金叉 <span class="signal-age">(4 天前)</span></span><span class="signal-pill tone-bull">多头排列</span></div>
-  </article><article class="ticker-card">
-    <header class="ticker-head">
-      <div class="ticker-id">
-        <h3 class="ticker-symbol">USDCNY=X</h3>
-        <p class="ticker-name">美元 / 人民币</p>
-      </div>
-      <div class="ticker-price-block">
-        <span class="ticker-price">¥6.74</span>
-        <span class="ticker-pct positive">+0.00%</span>
-      </div>
-    </header>
-    <dl class="ticker-indicators">
-      <div><dt>5 日</dt><dd class="negative">-0.07%</dd></div>
-      <div><dt>距 52w 高</dt><dd>-6.2%</dd></div>
-      <div><dt>RSI(14)</dt><dd class="rsi-oversold">29.3</dd></div>
-      <div><dt>趋势</dt><dd class="trend-bearish">空头</dd></div>
-      <div><dt>SMA 20 / 50 / 200</dt><dd>6.76 / 6.77 / 6.89</dd></div>
-      <div><dt>MACD / 信号</dt><dd>-0.009 / -0.008</dd></div>
-    </dl>
-    <div class="ticker-signals"><span class="signal-pill tone-caution">RSI 超卖</span><span class="signal-pill tone-bear">接近 52 周低</span><span class="signal-pill tone-bear">空头排列</span></div>
   </article>
     </div></div>
   </section>
 
   <section class="trading-risk">
     <span class="eyebrow">风险提示</span>
-    <p>本报告仅基于公开行情数据计算的技术指标，客观复述当前技术状态，不构成任何投资建议。过去走势不代表未来表现，技术面信号可能随时反转，仅供技术指标解读参考，读者须自行判断与承担风险。</p>
+    <p>本报告仅基于公开行情计算的技术指标进行客观状态描述，不构成任何投资建议或买卖指令。技术形态随价格更新会快速变化，过去走势不代表未来表现；本内容仅供技术指标解读参考，决策需结合自身情况独立判断。</p>
   </section></section>
-  <section class="panel" data-panel="finance">
-    <nav class="sub-tabs"><button class="sub-tab active" data-sub="cn-finance" data-cat="finance">国内财经<span class="count">20</span></button><button class="sub-tab" data-sub="news" data-cat="finance">国际财经<span class="count">10</span></button></nav>
-<div class="sub-contents"><div class="sub-content active" data-sub-content="cn-finance" data-cat="finance">
-      
-  <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="cn-finance" data-cat="finance">
-    <article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/china/2026-08-18/zl-ininswmu8719179.shtml" target="_blank" rel="noopener noreferrer">余敬中：恒科指变阵触发港股硬科技“破壁”时刻</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/china/2026-08-18/zl-ininswna3487371.shtml" target="_blank" rel="noopener noreferrer">孚宝智能科技董事长贾国强：AI产品规模化出海的堵点与破局</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.sina.com.cn/roll/2026-08-18/doc-ininswmx7434964.shtml" target="_blank" rel="noopener noreferrer">金价升破4430美元，机构称还能涨超60%</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintaua0215050.shtml" target="_blank" rel="noopener noreferrer">中汽协：7月乘用车出口92.2万辆，同比增长84.6%</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.sina.com.cn/jjxw/2026-08-18/doc-inintaty3439445.shtml" target="_blank" rel="noopener noreferrer">57岁黄建军空降接任申万宏源总经理，能否突破发展瓶颈？</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.sina.com.cn/roll/2026-08-18/doc-inintaty3432576.shtml" target="_blank" rel="noopener noreferrer">铜市供需持续失衡，LME库存单月骤降32%，矿业股迎来新一轮上行机遇</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaua0195723.shtml" target="_blank" rel="noopener noreferrer">顾雷：数智赋能地方金融 严守监管合规底线</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/bank/2026-08-18/zl-inintaua0194250.shtml" target="_blank" rel="noopener noreferrer">连平：金融服务实体经济方式正在发生深刻转变</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaua0192788.shtml" target="_blank" rel="noopener noreferrer">付一夫：县域消费再度迎来政策东风</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="http://finance.sina.com.cn/zl/china/2026-08-18/zl-inintaty3418930.shtml" target="_blank" rel="noopener noreferrer">罗志恒：如何理解“供强需弱”的深层逻辑？——7月经济运行观察</a></h3>
-  
-  <p class="article-meta">新浪财经 · 08/18 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTISxbju4BE6p380FCRWIKV260817.shtml" target="_blank" rel="noopener noreferrer">贷款“降速提质” 居民存款仍在搬家</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/17 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIarhQTXkmFpjnQDr53Yhc260817.shtml" target="_blank" rel="noopener noreferrer">多家银行竞推“算力贷” “算力证明信用”能走多远</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/17 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIBh4TVwyPeBpvVSYaCsKf260817.shtml" target="_blank" rel="noopener noreferrer">电商“AB货”，乱象背后是行业内卷</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/17 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIDWryZZNhnlHcGThzUgPT260817.shtml" target="_blank" rel="noopener noreferrer">吉利汽车上半年营收1736亿元，核心归母净利润劲增46%</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/17 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/17/ARTIWJrHKIaQPZz7PWhHw4Hk260817.shtml" target="_blank" rel="noopener noreferrer">我国保险资金运用余额首次突破40万亿元</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/17 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/15/ARTIYzQv9BfiH4jNQzd3EPcO260815.shtml" target="_blank" rel="noopener noreferrer">营收注水、减值随意、研发乱账……证监会年报监管报告点名八大乱象</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/15 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/15/ARTIa1JF4316YbK3zaPScPWB260815.shtml" target="_blank" rel="noopener noreferrer">7月金融数据出炉：信贷结构持续优化、债券与股票融资占比继续提升</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/15 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/15/ARTIWSyuF3EPCP3Wc0CqXeSE260815.shtml" target="_blank" rel="noopener noreferrer">银行业从严监管“穿透到人” 今年以来共罚款12.19亿元禁业178人</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/15 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/15/ARTI6RI9PFvauc6vBPAJahYn260815.shtml" target="_blank" rel="noopener noreferrer">落实防范打击非法金融要求 多地监管优化治理机制</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/15 08:00</p>
-  
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://finance.cctv.com/2026/08/15/ARTIv3tr8IEVOnYY0lmOVVZm260815.shtml" target="_blank" rel="noopener noreferrer">Token能贷款了！AI产业迎来全新融资标尺</a></h3>
-  
-  <p class="article-meta">央视财经 · 08/15 08:00</p>
-  
-  
-</article>
-  </div>
-  </div>
-    </div>
-<div class="sub-content" data-sub-content="news" data-cat="finance">
-      
-  <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="news" data-cat="finance">
-    <article class="article">
-  <h3 class="article-title"><a href="https://www.cnbc.com/2026/08/18/us-iran-war-trump-hormuz-trump-ceasefire-expires-extension-.html" target="_blank" rel="noopener noreferrer">Ship attacked in Hormuz Strait as U.S.-Iran ceasefire expiry risks prolonged conflict</a></h3>
-  
-  <p class="article-meta">CNBC Top Stories · 08/18 12:02</p>
-  <p class="article-excerpt">U.S., Iran appeared to be digging in for a protracted conflict, hardening their positions and rejecting renewed negotiations after a temporary truce lapsed.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 美国与伊朗在临时停火于8月18日到期后，双方都准备打持久战，立场强硬且拒绝重启谈判；同时霍尔木兹海峡有一艘船只遭袭，外界担心冲突可能进一步延长。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.investing.com/news/stock-market-news/gift-nifty-50-tests-doubletop-support-at-24328-live-levels-93CH-4862108" target="_blank" rel="noopener noreferrer">Gift Nifty 50 tests 200-SMA with double top breakdown: Live</a></h3>
-  
-  <p class="article-meta">Investing.com News · 08/18 12:01</p>
-  
-  <p class="article-summary"><span class="summary-label">中文摘要</span> Gift Nifty 50指数期货出现双顶破位格局，目前正在测试200日简单移动均线，关键支撑位在24328点，市场关注该点位能否守住。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.investing.com/news/stock-market-news/singapores-uob-appoints-tan-choon-hin-as-head-of-asean-and-greater-china-in-new-role-4864247" target="_blank" rel="noopener noreferrer">Singapore’s UOB appoints Tan Choon Hin as head of ASEAN and Greater China in new role</a></h3>
-  
-  <p class="article-meta">Investing.com News · 08/18 12:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 新加坡大华银行（UOB）任命Tan Choon Hin担任新设立的东盟及大中华区主管，该职位将负责统筹相关区域业务，反映大华银行加强对这两个市场的布局。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/congo-ebola-outbreak-financial-oversight-takes-priority-as-distrust-grows" target="_blank" rel="noopener noreferrer">Congo Ebola Outbreak: Financial Oversight Takes Priority as Distrust Grows</a></h3>
-  
-  <p class="article-meta">Bloomberg Markets · 08/18 11:54</p>
-  <p class="article-excerpt">Ebola is reviving suspicions of profiteering in eastern Democratic Republic of Congo, where distrust over how response money is handled is undermining the community cooperation needed to contain the world’s fastest-growing outbreak.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 刚果民主共和国（刚果（金））东部埃博拉疫情引发外界对应对资金被用于牟利的怀疑，社区对资金管理不信任加剧，从而削弱了控制全球传播最快疫情所需的合作。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.investing.com/news/stock-market-news/microsoft-salesforce-eye-darwinbox-buyout-ahead-of-planned-ipo-mint-93CH-4864245" target="_blank" rel="noopener noreferrer">Microsoft, Salesforce eye Darwinbox buyout ahead of planned IPO- Mint</a></h3>
-  
-  <p class="article-meta">Investing.com News · 08/18 11:50</p>
-  
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 据Mint报道，微软与Salesforce有意在人力资源软件公司Darwinbox计划IPO之前将其收购，目前两家巨头均表达收购意向。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/chinese-companies-slow-fx-sales-in-july-as-yuan-support-fades" target="_blank" rel="noopener noreferrer">Chinese Companies Slow FX Sales in July as Yuan Support Fades</a></h3>
-  
-  <p class="article-meta">Bloomberg Markets · 08/18 11:48</p>
-  <p class="article-excerpt">Net sales of foreign exchange by Chinese companies fell to a eight-month low in July, suggesting a key source of support for the yuan is fading.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 中国企业在7月的外汇净销售额降至八个月低点，表明人民币汇率此前的一个重要支撑因素正在减弱，未来人民币走势或受影响。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/japan-five-year-bond-sale-draws-strongest-demand-since-june-2025" target="_blank" rel="noopener noreferrer">Japan Five-Year Bond Sale Draws Strongest Demand Since June 2025</a></h3>
-  
-  <p class="article-meta">Bloomberg Markets · 08/18 11:40</p>
-  <p class="article-excerpt">Japan’s five-year government bond auction Tuesday saw the strongest demand since June 2025, as elevated yields underpinned buying.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 日本周二（8月18日）拍卖的五年期国债吸引力为2025年6月以来最强，收益率处于较高水平成为支撑买盘的主要因素。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/videos/2026-08-18/bhp-ceo-china-iron-ore-demand-remains-steady-video" target="_blank" rel="noopener noreferrer">BHP CEO: China Iron Ore Demand Remains Steady​‌</a></h3>
-  
-  <p class="article-meta">Bloomberg Markets · 08/18 11:39</p>
-  <p class="article-excerpt">China&#39;s iron ore demand remains steady, supported by manufacturing activity, according to BHP CEO Brandon Craig. He also says stronger Indian demand for metallurgical coal should support the market. He spoke with Haidi Stoud-Watts on Insight with Haslinda Amin. (Source: Bloomberg)</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 必和必拓（BHP）CEO Brandon Craig表示，中国铁矿石需求在制造业活动支撑下保持稳定，同时印度对冶金煤的强劲需求也将对市场形成支撑。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/indian-rupee-bond-bets-retreat-as-dollar-swap-window-ends-early" target="_blank" rel="noopener noreferrer">Indian Rupee, Bond Bets Retreat as Dollar Swap Window Ends Early</a></h3>
-  
-  <p class="article-meta">Bloomberg Markets · 08/18 11:32</p>
-  <p class="article-excerpt">Caught off-guard by India’s decision to close early a special window to draw foreign-currency deposits, traders are now paring bets on gains in the rupee and short-term bonds.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 印度决定提前结束一个用于吸收外币存款的特殊窗口，交易员措手不及，因此正在削减对卢比和短期债券上涨的押注。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.investing.com/news/company-news/cochlear-fy26-slides-cash-flow-doubles-despite-margin-pressure-93CH-4864243" target="_blank" rel="noopener noreferrer">Cochlear FY26 slides: cash flow doubles despite margin pressure</a></h3>
-  
-  <p class="article-meta">Investing.com News · 08/18 11:30</p>
-  
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 科利耳（Cochlear）公布2026财年业绩，公司整体表现出现下滑，利润率面临压力，但经营现金流实现翻倍，财报呈现明显分化。</p>
-</article>
-  </div>
-  </div>
-    </div></div>
-  </section>
-  <section class="panel" data-panel="gd-ipo">
-    <nav class="sub-tabs"><button class="sub-tab active" data-sub="szse" data-cat="gd-ipo">深交所<span class="count">2</span></button><button class="sub-tab" data-sub="sse" data-cat="gd-ipo">上交所<span class="count">0</span></button><button class="sub-tab" data-sub="bse" data-cat="gd-ipo">北交所<span class="count">0</span></button><button class="sub-tab" data-sub="hkex" data-cat="gd-ipo">港交所<span class="count">11</span></button><button class="sub-tab" data-sub="ipo-tutoring" data-cat="gd-ipo">IPO辅导<span class="count">1</span></button><button class="sub-tab" data-sub="overseas" data-cat="gd-ipo">境外<span class="count">0</span></button></nav>
-<div class="sub-contents"><div class="sub-content active" data-sub-content="szse" data-cat="gd-ipo">
+  <section class="panel" data-panel="gz">
+    <nav class="sub-tabs"><button class="sub-tab active" data-sub="gz-wealth" data-cat="gz">财富业务<span class="count">0</span></button><button class="sub-tab" data-sub="gz-credit" data-cat="gz">个人信贷<span class="count">0</span></button><button class="sub-tab" data-sub="gz-customer" data-cat="gz">零售客群<span class="count">2</span></button><button class="sub-tab" data-sub="gz-private" data-cat="gz">私行业务<span class="count">15</span></button><button class="sub-tab" data-sub="gz-ipo" data-cat="gz">广州IPO相关<span class="count">0</span></button></nav>
+<div class="sub-contents"><div class="sub-content active" data-sub-content="gz-wealth" data-cat="gz">
     <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="szse">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="szse">过去7天<span class="count">2</span></button>
+      <button class="time-tab active" data-time="today" data-cat="gz" data-sub="gz-wealth">当天<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="gz" data-sub="gz-wealth">过去7天<span class="count">0</span></button>
     </nav>
     <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="szse">
+      <div class="time-content active" data-time-content="today" data-cat="gz" data-sub="gz-wealth"><p class="empty">该源今日无内容。</p></div>
+      <div class="time-content" data-time-content="past" data-cat="gz" data-sub="gz-wealth"><p class="empty">该源今日无内容。</p></div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="gz-credit" data-cat="gz">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="gz" data-sub="gz-credit">当天<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="gz" data-sub="gz-credit">过去7天<span class="count">0</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="gz" data-sub="gz-credit"><p class="empty">该源今日无内容。</p></div>
+      <div class="time-content" data-time-content="past" data-cat="gz" data-sub="gz-credit"><p class="empty">该源今日无内容。</p></div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="gz-customer" data-cat="gz">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="gz" data-sub="gz-customer">当天<span class="count">2</span></button>
+      <button class="time-tab" data-time="past" data-cat="gz" data-sub="gz-customer">过去7天<span class="count">0</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="gz" data-sub="gz-customer">
+        
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="gz-stats" data-sub="gz-customer" data-cat="gz">
+    <article class="article">
+  <h3 class="article-title"><a href="http://tjj.gz.gov.cn/stats_newtjyw/sjfb/content/post_10523330.html" target="_blank" rel="noopener noreferrer">前三季度广州市交通货运业表现亮眼</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州统计局】前三季度广州市交通货运业表现亮眼</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州服务业/枢纽经济数据：产业活跃度与从业客群规模相关，物流/枢纽产业链企业是代发工资与经营贷潜在对象。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://tjj.gz.gov.cn/stats_newtjyw/sjfb/content/post_10954505.html" target="_blank" rel="noopener noreferrer">上半年广州服务业向新向优</a></h3>
+  
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【广州统计局】上半年广州服务业向新向优</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州服务业/枢纽经济数据：产业活跃度与从业客群规模相关，物流/枢纽产业链企业是代发工资与经营贷潜在对象。</p>
+</article>
+  </div>
+  </div>
+      </div>
+      <div class="time-content" data-time-content="past" data-cat="gz" data-sub="gz-customer">
         <p class="empty">该源今日无内容。</p>
       </div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="szse">
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="gz-private" data-cat="gz">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="gz" data-sub="gz-private">当天<span class="count">6</span></button>
+      <button class="time-tab" data-time="past" data-cat="gz" data-sub="gz-private">过去7天<span class="count">9</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="gz" data-sub="gz-private">
         
   <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="szse" data-cat="gd-ipo">
+    <div class="source-content active" data-source-content="gz-nansha" data-sub="gz-private" data-cat="gz">
     <article class="article">
-  <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-12/1225470750.pdf" target="_blank" rel="noopener noreferrer">固高科技 (301510)</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/zcwjjjd/zcwj/content/post_10946035.html" target="_blank" rel="noopener noreferrer">广州市南沙区住房和城乡建设局关于印发广州市南沙区重点区域业主自有产权的城市景观照明设施电费补贴办法的通知</a></h3>
   
-  <p class="article-meta">深交所IPO公告 · 08/12 08:00</p>
-  <p class="article-excerpt">深交所公告 | 关于&lt;em&gt;首次公开发行&lt;/em&gt;前已发行的部分限售股解禁上市流通的提示性公告 | 日期: 2026-08-12</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 固高科技（301510）于2026年8月12日发布关于首次公开发行前已发行的部分限售股解禁上市流通的提示性公告，相关公告由深交所指定信息披露平台披露。</p>
+  <p class="article-meta">08/18 16:55</p>
+  <p class="article-excerpt">【南沙】广州市南沙区住房和城乡建设局关于印发广州市南沙区重点区域业主自有产权的城市景观照明设施电费补贴办法的通知</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-12/1225470447.PDF" target="_blank" rel="noopener noreferrer">熵基科技 (301330)</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968359.html" target="_blank" rel="noopener noreferrer">广州市南沙区知识产权局关于发放2025年度广州市知识产权项目资金的通知</a></h3>
   
-  <p class="article-meta">深交所IPO公告 · 08/12 08:00</p>
-  <p class="article-excerpt">深交所公告 | 关于&lt;em&gt;首次公开发行&lt;/em&gt;前已发行的部分股份上市流通的提示性公告 | 日期: 2026-08-12</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 熵基科技（301330）于2026年8月12日发布关于首次公开发行前已发行的部分股份上市流通的提示性公告，相关公告已按深交所要求进行披露。</p>
+  <p class="article-meta">08/18 08:00</p>
+  <p class="article-excerpt">【南沙】广州市南沙区知识产权局关于发放2025年度广州市知识产权项目资金的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968356.html" target="_blank" rel="noopener noreferrer">广州市南沙区知识产权局关于发放第四批2024年度广州市知识产权项目资金的通知</a></h3>
+  
+  <p class="article-meta">08/18 08:00</p>
+  <p class="article-excerpt">【南沙】广州市南沙区知识产权局关于发放第四批2024年度广州市知识产权项目资金的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968393.html" target="_blank" rel="noopener noreferrer">关于2024年度广州南沙新区（自贸片区）促进半导体与集成电路产业扶持办法拟入库及兑现名单的公示</a></h3>
+  
+  <p class="article-meta">08/18 08:00</p>
+  <p class="article-excerpt">【南沙】关于2024年度广州南沙新区（自贸片区）促进半导体与集成电路产业扶持办法拟入库及兑现名单的公示</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 南沙半导体/集成电路产业扶持：区内科创企业及实控人是私行与企业信贷重点客群，扶持兑现伴随开户、融资与资产配置需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968282.html" target="_blank" rel="noopener noreferrer">广州市南沙区工业和信息化局转发广东省工业和信息化厅关于组织开展新型机电一体化关键材料创新任务揭榜挂帅工作的通知</a></h3>
+  
+  <p class="article-meta">08/18 08:00</p>
+  <p class="article-excerpt">【南沙】广州市南沙区工业和信息化局转发广东省工业和信息化厅关于组织开展新型机电一体化关键材料创新任务揭榜挂帅工作的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10967886.html" target="_blank" rel="noopener noreferrer">2026年广州市南沙区卫生健康局公开招聘下属事业单位工作人员笔试报名公告</a></h3>
+  
+  <p class="article-meta">08/18 08:00</p>
+  <p class="article-excerpt">【南沙】2026年广州市南沙区卫生健康局公开招聘下属事业单位工作人员笔试报名公告</p>
+  
 </article>
   </div>
   </div>
       </div>
-    </div>
-  </div>
-<div class="sub-content" data-sub-content="sse" data-cat="gd-ipo">
-    <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="sse">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="sse">过去7天<span class="count">0</span></button>
-    </nav>
-    <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="sse"><p class="empty">该源今日无内容。</p></div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="sse"><p class="empty">该源今日无内容。</p></div>
-    </div>
-  </div>
-<div class="sub-content" data-sub-content="bse" data-cat="gd-ipo">
-    <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="bse">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="bse">过去7天<span class="count">0</span></button>
-    </nav>
-    <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="bse"><p class="empty">该源今日无内容。</p></div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="bse"><p class="empty">该源今日无内容。</p></div>
-    </div>
-  </div>
-<div class="sub-content" data-sub-content="hkex" data-cat="gd-ipo">
-    <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="hkex">当天<span class="count">1</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="hkex">过去7天<span class="count">10</span></button>
-    </nav>
-    <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="hkex">
+      <div class="time-content" data-time-content="past" data-cat="gz" data-sub="gz-private">
         
   <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="hkex" data-cat="gd-ipo">
+    <div class="source-content active" data-source-content="gz-nansha" data-sub="gz-private" data-cat="gz">
     <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0818/2026081800247.pdf" target="_blank" rel="noopener noreferrer">361 DEGREES (01361) — 2026 INTERIM RESULTS ANNOUNCEMENT</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10966772.html" target="_blank" rel="noopener noreferrer">大涌村原临时摆卖疏导点用地出租项目的竞投结果公示</a></h3>
   
-  <p class="article-meta">港交所IPO公告 · 08/18 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 01361 | 公司: 361 DEGREES | 时间: 18/08/2026 12:00 | 格式: PDF</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 361度(01361)发布2026年中期业绩公告，以PDF格式在港交所披露平台刊发，披露公司2026年上半年经营业绩。</p>
-</article>
-  </div>
-  </div>
-      </div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="hkex">
-        
-  <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="hkex" data-cat="gd-ipo">
-    <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081700888.pdf" target="_blank" rel="noopener noreferrer">C C LAND (01224) — Disclosure pursuant to Rule 13.18 of the Listing Rules</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 01224 | 公司: C C LAND | 时间: 17/08/2026 17:20 | 格式: PDF</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 中渝置地（01224）于2026年8月17日根据上市规则第13.18条刊发披露公告，公告文件以PDF格式上传至港交所披露易网站，披露时间为当日17时20分。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081700458.pdf" target="_blank" rel="noopener noreferrer">SHENZHENEXPRESS (00548) — Notice of 2026 Interim Results Presentation</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 00548 | 公司: SHENZHENEXPRESS | 时间: 17/08/2026 16:32 | 格式: PDF</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">【南沙】大涌村原临时摆卖疏导点用地出租项目的竞投结果公示</p>
   
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701803.pdf" target="_blank" rel="noopener noreferrer">NANHUA FUTURES (02691) — 2026 INTERIM RESULTS ANNOUNCEMENT</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968085.html" target="_blank" rel="noopener noreferrer">关于开展全区殡葬服务备案相关工作的通知</a></h3>
   
-  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 02691 | 公司: NANHUA FUTURES | 时间: 17/08/2026 22:47 | 格式: PDF</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 南华期货（02691）于2026年8月17日发布2026年中期业绩公告，相关文件以PDF格式刊载于港交所披露易网站，披露时间为当日22时47分，内容涵盖公司上半年经营业绩及财务状况。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701623.pdf" target="_blank" rel="noopener noreferrer">CMS (00867) — INTERIM RESULTS ANNOUNCEMENT FOR THE SIX MONTHS ENDED 30 JUNE 2026</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 00867 | 公司: CMS | 时间: 17/08/2026 21:22 | 格式: PDF</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 招商证券（00867）于2026年8月17日发布截至2026年6月30日止六个月的中期业绩公告，文件已刊载于港交所披露易网站，披露时间为当日21时22分。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081402121.pdf" target="_blank" rel="noopener noreferrer">HEARTCARE-B (06609) — (1) PROPOSED ISSUE OF A SHARES AND LISTING ON
-THE SCI-TECH BOARD OF THE SHANGHAI STOCK
-EXCHANGE AND OTHER ANCILLARY RESOLUTIONS;
-(2) PROPOSED AMENDMENTS TO THE ARTICLES;
-(3) PROPOSED AMENDMENTS TO THE 2025 H SHARE INCENTIVE SCHEME;
-AND
-(4) NOTICE OF 2026 SECOND EXTRAORDINARY
-SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 06609 | 公司: HEARTCARE-B | 时间: 14/08/2026 22:58 | 格式: PDF</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">【南沙】关于开展全区殡葬服务备案相关工作的通知</p>
   
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081402093.pdf" target="_blank" rel="noopener noreferrer">HEARTCARE-B (06609) — PROPOSED ISSUE OF A SHARES AND LISTING ON THE SCI-TECH BOARD OF THE SHANGHAI STOCK EXCHANGE AND PROPOSED AMENDMENT OF THE ARTICLES</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10964847.html" target="_blank" rel="noopener noreferrer">广州市规划和自然资源局南沙区分局国有建设用地使用权出让预告</a></h3>
   
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 06609 | 公司: HEARTCARE-B | 时间: 14/08/2026 22:49 | 格式: PDF</p>
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401701.pdf" target="_blank" rel="noopener noreferrer">PING AN, PING AN-R (02318, 82318) — Overseas Regulatory Announcement - the Announcement of Ping An Insurance (Group) Company of China, Ltd. in relation to the Disclosure of 2026 Interim Report Summary of Ping An Bank</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 02318, 82318 | 公司: PING AN, PING AN-R | 时间: 14/08/2026 20:20 | 格式: PDF</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">【南沙】广州市规划和自然资源局南沙区分局国有建设用地使用权出让预告</p>
   
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401639.pdf" target="_blank" rel="noopener noreferrer">PHOENIX TV (02008) — ANNOUNCEMENT OF UNAUDITED INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2026</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10965205.html" target="_blank" rel="noopener noreferrer">广州市南沙区卫生健康局关于承接市级行政职权的公告</a></h3>
   
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 02008 | 公司: PHOENIX TV | 时间: 14/08/2026 20:01 | 格式: PDF</p>
-  
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401551.pdf" target="_blank" rel="noopener noreferrer">CA CULTURAL (01566) — JOINT ANNOUNCEMENT - COMPLETION OF THE PROPOSED RESTRUCTURING INCLUDING A. THE COMPLETION OF THE SUBSCRIPTION AGREEMENTS; AND B. THE CREDITORS&#39; SCHEME BECOMING EFFECTIVE</a></h3>
-  
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 01566 | 公司: CA CULTURAL | 时间: 14/08/2026 19:37 | 格式: PDF</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】广州市南沙区卫生健康局关于承接市级行政职权的公告</p>
   
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401387.pdf" target="_blank" rel="noopener noreferrer">SG GROUP HLDGS (01657) — JOINT ANNOUNCEMENT (1) CLOSE OF UNCONDITIONAL MANDATORY CASH OFFER BY DL SECURITIES (HK) LIMITED FOR AND ON BEHALF OF THE OFFEROR TO ACQUIRE ALL THE ISSUED SHARES OF THE COMPANY (OTHER THAN THOSE ALREADY OWNED AND/OR AGREED TO BE ACQUIRED BY THE OFFEROR AND THE OFFEROR CONCERT PARTIES); (2) RESULTS OF THE OFFER; (3) SETTLEMENT OF THE OFFER; (4) PUBLIC FLOAT OF THE COMPANY; AND (5) RESIGNATION OF DIRECTOR AND REDESIGNATION OF DIRECTOR</a></h3>
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10965796.html" target="_blank" rel="noopener noreferrer">广州南沙区大岗镇蓝湾口腔诊所（个体工商户）备案信息公示</a></h3>
   
-  <p class="article-meta">港交所IPO公告 · 08/14 08:00</p>
-  <p class="article-excerpt">港交所公告 | 代码: 01657 | 公司: SG GROUP HLDGS | 时间: 14/08/2026 18:51 | 格式: PDF</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】广州南沙区大岗镇蓝湾口腔诊所（个体工商户）备案信息公示</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10965805.html" target="_blank" rel="noopener noreferrer">广州预健诊所有限公司备案信息公示</a></h3>
+  
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】广州预健诊所有限公司备案信息公示</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10965810.html" target="_blank" rel="noopener noreferrer">广州钧安诊所有限公司备案信息公示</a></h3>
+  
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】广州钧安诊所有限公司备案信息公示</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10965575.html" target="_blank" rel="noopener noreferrer">广州市南沙区工业和信息化局转发广东省工业和信息化厅关于组织申报2026年工业和信息化领域生物制造、消费品行业创新任务揭榜挂帅工作的通知</a></h3>
+  
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】广州市南沙区工业和信息化局转发广东省工业和信息化厅关于组织申报2026年工业和信息化领域生物制造、消费品行业创新任务揭榜挂帅工作的通知</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 广州消费市场数据：消费复苏节奏影响零售客户资金活跃度与信贷需求，可用于消费贷/分期/收单业务研判。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="http://www.gzns.gov.cn/zwgk/tzgg/content/post_10964385.html" target="_blank" rel="noopener noreferrer">劳动保障监察通知用人单位法定代表人或者主要负责人接受调查或者配合处理欠薪案件公告</a></h3>
+  
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">【南沙】劳动保障监察通知用人单位法定代表人或者主要负责人接受调查或者配合处理欠薪案件公告</p>
   
 </article>
   </div>
@@ -1919,44 +1746,19 @@ SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
       </div>
     </div>
   </div>
-<div class="sub-content" data-sub-content="ipo-tutoring" data-cat="gd-ipo">
+<div class="sub-content" data-sub-content="gz-ipo" data-cat="gz">
     <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="ipo-tutoring">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="ipo-tutoring">过去7天<span class="count">1</span></button>
+      <button class="time-tab active" data-time="today" data-cat="gz" data-sub="gz-ipo">当天<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="gz" data-sub="gz-ipo">过去7天<span class="count">0</span></button>
     </nav>
     <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="ipo-tutoring">
-        <p class="empty">该源今日无内容。</p>
-      </div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="ipo-tutoring">
-        
-  <div class="source-contents">
-    <div class="source-content active" data-source-content="_merged" data-sub="ipo-tutoring" data-cat="gd-ipo">
-    <article class="article">
-  <h3 class="article-title"><a href="https://data.eastmoney.com/xg/ipo/fd/10000005861.html" target="_blank" rel="noopener noreferrer">顺科智连技术股份有限公司 (辅导备案) [广东证监局]</a></h3>
-  
-  <p class="article-meta">东方财富IPO辅导 · 08/12 08:00</p>
-  <p class="article-excerpt">IPO辅导备案 | 辅导机构: 东莞证券股份有限公司 | 备案时间: 2026-08-12 00:00:00 | 状态: 辅导备案 | 报告: 辅导备案报告</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 顺科智连技术股份有限公司在广东证监局完成IPO辅导备案，辅导机构为东莞证券，备案时间为8月12日。</p>
-</article>
-  </div>
-  </div>
-      </div>
-    </div>
-  </div>
-<div class="sub-content" data-sub-content="overseas" data-cat="gd-ipo">
-    <nav class="time-tabs">
-      <button class="time-tab active" data-time="today" data-cat="gd-ipo" data-sub="overseas">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="gd-ipo" data-sub="overseas">过去7天<span class="count">0</span></button>
-    </nav>
-    <div class="time-contents">
-      <div class="time-content active" data-time-content="today" data-cat="gd-ipo" data-sub="overseas"><p class="empty">该源今日无内容。</p></div>
-      <div class="time-content" data-time-content="past" data-cat="gd-ipo" data-sub="overseas"><p class="empty">该源今日无内容。</p></div>
+      <div class="time-content active" data-time-content="today" data-cat="gz" data-sub="gz-ipo"><p class="empty">该源今日无内容。</p></div>
+      <div class="time-content" data-time-content="past" data-cat="gz" data-sub="gz-ipo"><p class="empty">该源今日无内容。</p></div>
     </div>
   </div></div>
   </section>
   <section class="panel" data-panel="ipo">
-    <nav class="sub-tabs"><button class="sub-tab active" data-sub="sse" data-cat="ipo">上交所<span class="count">9</span></button><button class="sub-tab" data-sub="szse" data-cat="ipo">深交所<span class="count">6</span></button><button class="sub-tab" data-sub="bse" data-cat="ipo">北交所<span class="count">1</span></button></nav>
+    <nav class="sub-tabs"><button class="sub-tab active" data-sub="sse" data-cat="ipo">上交所<span class="count">9</span></button><button class="sub-tab" data-sub="szse" data-cat="ipo">深交所<span class="count">8</span></button><button class="sub-tab" data-sub="bse" data-cat="ipo">北交所<span class="count">1</span></button><button class="sub-tab" data-sub="hkex" data-cat="ipo">港交所<span class="count">4</span></button><button class="sub-tab" data-sub="ipo-tutoring" data-cat="ipo">IPO辅导<span class="count">1</span></button><button class="sub-tab" data-sub="overseas" data-cat="ipo">境外<span class="count">0</span></button></nav>
 <div class="sub-contents"><div class="sub-content active" data-sub-content="sse" data-cat="ipo">
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="ipo" data-sub="sse">当天<span class="count">0</span></button>
@@ -1975,63 +1777,63 @@ SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">上交所公告 | &lt;em&gt;首次公开发行&lt;/em&gt;部分限售股上市流通公告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 泰凌微(688591)于2026年8月17日发布首次公开发行部分限售股上市流通公告，披露相关限售股解除限售并上市流通的具体安排。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225478669.PDF" target="_blank" rel="noopener noreferrer">宇树科技 (688836)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">上交所公告 | 宇树科技&lt;em&gt;首次公开发行&lt;/em&gt;股票科创板上市公告书提示性公告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 宇树科技(688836)于2026年8月17日发布首次公开发行股票科创板上市公告书提示性公告，提示投资者关注公司科创板上市相关文件及安排。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225478438.PDF" target="_blank" rel="noopener noreferrer">天博智能 (603448)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">上交所公告 | 天博智能&lt;em&gt;首次公开发行&lt;/em&gt;股票并在主板上市招股意向书附录 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 天博智能(603448)于2026年8月17日发布首次公开发行股票并在主板上市招股意向书附录，补充披露招股相关文件信息。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225478314.PDF" target="_blank" rel="noopener noreferrer">高凯技术 (688835)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">上交所公告 | 高凯技术&lt;em&gt;首次公开发行&lt;/em&gt;股票并在科创板上市网下初步配售结果及网上中签结果公告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 高凯技术(688835)于2026年8月17日发布首次公开发行股票并在科创板上市网下初步配售结果及网上中签结果公告，披露网下配售和网上中签情况。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-17/1225476108.PDF" target="_blank" rel="noopener noreferrer">频准激光 (688826)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/16 08:00</p>
   <p class="article-excerpt">上交所公告 | 频准激光&lt;em&gt;首次公开发行&lt;/em&gt;股票科创板上市公告书 | 日期: 2026-08-16</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 频准激光(688826)于2026年8月16日发布首次公开发行股票科创板上市公告书，披露本次发行结果及科创板上市安排。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-15/1225474373.PDF" target="_blank" rel="noopener noreferrer">沪硅产业 (688126)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/14 08:00</p>
   <p class="article-excerpt">上交所公告 | 沪硅产业关于&lt;em&gt;首次公开发行&lt;/em&gt;前股票期权行权限售股上市流通的公告 | 日期: 2026-08-14</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 沪硅产业(688126)于2026年8月14日发布关于首次公开发行前股票期权行权限售股上市流通的公告，涉及期权行权所得限售股上市流通安排。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-14/1225471786.PDF" target="_blank" rel="noopener noreferrer">沪农商行 (601825)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/13 08:00</p>
   <p class="article-excerpt">上交所公告 | 国泰海通证券股份有限公司关于上海农村商业银行股份有限公司&lt;em&gt;首次公开发行&lt;/em&gt;部分限售股解禁上市流通的核查意见 | 日期: 2026-08-13</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 沪农商行(601825)于2026年8月13日披露国泰海通证券关于公司首次公开发行部分限售股解禁上市流通的核查意见，保荐机构对解禁事项发表核查结论。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-13/1225470872.PDF" target="_blank" rel="noopener noreferrer">马矿股份 (601123)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/12 08:00</p>
   <p class="article-excerpt">上交所公告 | 马矿股份&lt;em&gt;首次公开发行&lt;/em&gt;股票并在主板上市发行安排及初步询价公告 | 日期: 2026-08-12</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 马矿股份(601123)于2026年8月12日发布首次公开发行股票并在主板上市发行安排及初步询价公告，启动主板IPO发行程序。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-13/1225469512.PDF" target="_blank" rel="noopener noreferrer">茂莱光学 (688502)</a></h3>
   
   <p class="article-meta">上交所IPO公告 · 08/12 08:00</p>
   <p class="article-excerpt">上交所公告 | 关于更换&lt;em&gt;首次公开发行&lt;/em&gt;股票及向不特定对象发行可转换公司债券项目持续督导保荐代表人的公告 | 日期: 2026-08-12</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 茂莱光学(688502)于2026年8月12日发布关于更换首次公开发行股票及向不特定对象发行可转换公司债券项目持续督导保荐代表人的公告。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
   </div>
   </div>
@@ -2041,7 +1843,7 @@ SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
 <div class="sub-content" data-sub-content="szse" data-cat="ipo">
     <nav class="time-tabs">
       <button class="time-tab active" data-time="today" data-cat="ipo" data-sub="szse">当天<span class="count">0</span></button>
-      <button class="time-tab" data-time="past" data-cat="ipo" data-sub="szse">过去7天<span class="count">6</span></button>
+      <button class="time-tab" data-time="past" data-cat="ipo" data-sub="szse">过去7天<span class="count">8</span></button>
     </nav>
     <div class="time-contents">
       <div class="time-content active" data-time-content="today" data-cat="ipo" data-sub="szse">
@@ -2056,42 +1858,56 @@ SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">深交所公告 | 中泰证券股份有限公司关于乖宝宠物食品集团股份有限公司部分&lt;em&gt;首次公开发行&lt;/em&gt;前已发行股份上市流通的核查意见 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 乖宝宠物(301498)于2026年8月17日披露中泰证券关于公司部分首次公开发行前已发行股份上市流通的核查意见，保荐机构对相关股份流通安排发表意见。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225476845.PDF" target="_blank" rel="noopener noreferrer">洛轴股份 (301699)</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">深交所公告 | 立信会计师事务所（特殊普通合伙）关于公司&lt;em&gt;首次公开发行&lt;/em&gt;股票并在创业板上市的财务报表及审计报告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 洛轴股份(301699)于2026年8月17日披露立信会计师事务所关于公司首次公开发行股票并在创业板上市的财务报表及审计报告。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225476276.PDF" target="_blank" rel="noopener noreferrer">贝特利 (301697)</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">深交所公告 | &lt;em&gt;首次公开发行&lt;/em&gt;股票并在创业板上市投资风险特别公告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 贝特利(301697)于2026年8月17日发布首次公开发行股票并在创业板上市投资风险特别公告，提示投资者关注创业板上市投资风险。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-18/1225476258.PDF" target="_blank" rel="noopener noreferrer">格林生物 (301688)</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">深交所公告 | &lt;em&gt;首次公开发行&lt;/em&gt;股票并在创业板上市网上路演公告 | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 格林生物(301688)于2026年8月17日发布首次公开发行股票并在创业板上市网上路演公告，披露网上路演的时间、参与方式等具体安排。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-14/1225472828.PDF" target="_blank" rel="noopener noreferrer">绿控传动 (301655)</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/13 08:00</p>
   <p class="article-excerpt">深交所公告 | &lt;em&gt;首次公开发行&lt;/em&gt;股票并在创业板上市招股说明书 | 日期: 2026-08-13</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 绿控传动(301655)于2026年8月13日发布首次公开发行股票并在创业板上市招股说明书，披露本次发行的相关信息及公司详情。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-13/1225471886.PDF" target="_blank" rel="noopener noreferrer">德福科技 (301511)</a></h3>
   
   <p class="article-meta">深交所IPO公告 · 08/13 08:00</p>
   <p class="article-excerpt">深交所公告 | 国泰海通证券股份有限公司关于九江德福科技股份有限公司部分&lt;em&gt;首次公开发行&lt;/em&gt;前已发行股份上市流通的核查意见 | 日期: 2026-08-13</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 德福科技(301511)于2026年8月13日披露国泰海通证券关于公司部分首次公开发行前已发行股份上市流通的核查意见，保荐机构对相关股份解禁流通发表意见。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-12/1225470750.pdf" target="_blank" rel="noopener noreferrer">固高科技 (301510)</a></h3>
+  
+  <p class="article-meta">深交所IPO公告 · 08/12 08:00</p>
+  <p class="article-excerpt">深交所公告 | 关于&lt;em&gt;首次公开发行&lt;/em&gt;前已发行的部分限售股解禁上市流通的提示性公告 | 日期: 2026-08-12</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://static.cninfo.com.cn/finalpage/2026-08-12/1225470447.PDF" target="_blank" rel="noopener noreferrer">熵基科技 (301330)</a></h3>
+  
+  <p class="article-meta">深交所IPO公告 · 08/12 08:00</p>
+  <p class="article-excerpt">深交所公告 | 关于&lt;em&gt;首次公开发行&lt;/em&gt;前已发行的部分股份上市流通的提示性公告 | 日期: 2026-08-12</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
   </div>
   </div>
@@ -2116,13 +1932,500 @@ SHAREHOLDERS&#39; GENERAL MEETING</a></h3>
   
   <p class="article-meta">北交所IPO公告 · 08/17 08:00</p>
   <p class="article-excerpt">北交所公告 | [临时公告]创远信科:中汇会计师事务所关于创远信科（上海）技术股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易申请文件的审核问询函有关财务问题回复的专项说明（二次修订稿） | 日期: 2026-08-17</p>
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 创远信科(920961)于2026年8月17日披露中汇会计师事务所关于公司发行股份及支付现金购买资产并募集配套资金暨关联交易申请文件审核问询函有关财务问题回复的专项说明（二次修订稿）。</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
 </article>
   </div>
   </div>
       </div>
     </div>
+  </div>
+<div class="sub-content" data-sub-content="hkex" data-cat="ipo">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="ipo" data-sub="hkex">当天<span class="count">1</span></button>
+      <button class="time-tab" data-time="past" data-cat="ipo" data-sub="hkex">过去7天<span class="count">3</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="ipo" data-sub="hkex">
+        
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="_merged" data-sub="hkex" data-cat="ipo">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0818/2026081800247.pdf" target="_blank" rel="noopener noreferrer">361 DEGREES (01361) — 2026 INTERIM RESULTS ANNOUNCEMENT</a></h3>
+  
+  <p class="article-meta">港交所IPO公告 · 08/18 08:00</p>
+  <p class="article-excerpt">港交所公告 | 代码: 01361 | 公司: 361 DEGREES | 时间: 18/08/2026 12:00 | 格式: PDF</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+  </div>
+  </div>
+      </div>
+      <div class="time-content" data-time-content="past" data-cat="ipo" data-sub="hkex">
+        
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="_merged" data-sub="hkex" data-cat="ipo">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081700888.pdf" target="_blank" rel="noopener noreferrer">C C LAND (01224) — Disclosure pursuant to Rule 13.18 of the Listing Rules</a></h3>
+  
+  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
+  <p class="article-excerpt">港交所公告 | 代码: 01224 | 公司: C C LAND | 时间: 17/08/2026 17:20 | 格式: PDF</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701803.pdf" target="_blank" rel="noopener noreferrer">NANHUA FUTURES (02691) — 2026 INTERIM RESULTS ANNOUNCEMENT</a></h3>
+  
+  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
+  <p class="article-excerpt">港交所公告 | 代码: 02691 | 公司: NANHUA FUTURES | 时间: 17/08/2026 22:47 | 格式: PDF</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701623.pdf" target="_blank" rel="noopener noreferrer">CMS (00867) — INTERIM RESULTS ANNOUNCEMENT FOR THE SIX MONTHS ENDED 30 JUNE 2026</a></h3>
+  
+  <p class="article-meta">港交所IPO公告 · 08/17 08:00</p>
+  <p class="article-excerpt">港交所公告 | 代码: 00867 | 公司: CMS | 时间: 17/08/2026 21:22 | 格式: PDF</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+  </div>
+  </div>
+      </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="ipo-tutoring" data-cat="ipo">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="ipo" data-sub="ipo-tutoring">当天<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="ipo" data-sub="ipo-tutoring">过去7天<span class="count">1</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="ipo" data-sub="ipo-tutoring">
+        <p class="empty">该源今日无内容。</p>
+      </div>
+      <div class="time-content" data-time-content="past" data-cat="ipo" data-sub="ipo-tutoring">
+        
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="_merged" data-sub="ipo-tutoring" data-cat="ipo">
+    <article class="article">
+  <h3 class="article-title"><a href="https://data.eastmoney.com/xg/ipo/fd/10000005861.html" target="_blank" rel="noopener noreferrer">顺科智连技术股份有限公司 (辅导备案) [广东证监局]</a></h3>
+  
+  <p class="article-meta">东方财富IPO辅导 · 08/12 08:00</p>
+  <p class="article-excerpt">IPO辅导备案 | 辅导机构: 东莞证券股份有限公司 | 备案时间: 2026-08-12 00:00:00 | 状态: 辅导备案 | 报告: 辅导备案报告</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。</p>
+</article>
+  </div>
+  </div>
+      </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="overseas" data-cat="ipo">
+    <nav class="time-tabs">
+      <button class="time-tab active" data-time="today" data-cat="ipo" data-sub="overseas">当天<span class="count">0</span></button>
+      <button class="time-tab" data-time="past" data-cat="ipo" data-sub="overseas">过去7天<span class="count">0</span></button>
+    </nav>
+    <div class="time-contents">
+      <div class="time-content active" data-time-content="today" data-cat="ipo" data-sub="overseas"><p class="empty">该源今日无内容。</p></div>
+      <div class="time-content" data-time-content="past" data-cat="ipo" data-sub="overseas"><p class="empty">该源今日无内容。</p></div>
+    </div>
   </div></div>
+  </section>
+  <section class="panel" data-panel="tech">
+    <nav class="sub-tabs"><button class="sub-tab active" data-sub="trending-papers" data-cat="tech">热门论文<span class="count">48</span></button><button class="sub-tab" data-sub="x-viral" data-cat="tech">X 推文<span class="count">13</span></button><button class="sub-tab" data-sub="ai-news" data-cat="tech">AI 媒体<span class="count">10</span></button><button class="sub-tab" data-sub="cn-tech" data-cat="tech">国内技术<span class="count">10</span></button></nav>
+<div class="sub-contents"><div class="sub-content active" data-sub-content="trending-papers" data-cat="tech">
+      
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="huggingface-papers" data-sub="trending-papers" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13040" target="_blank" rel="noopener noreferrer">Latent On-Policy Self-Distillation</a></h3>
+  <p class="article-stats">👍 18</p>
+  <p class="article-meta">08/13 08:00</p>
+  <p class="article-excerpt">Enabling agents to learn from experience and internalize it into their policy has become a central problem in self-evolving AI. On-policy self-distillation (OPSD) offers an effective pathway by using a privileged self-teacher to provide dense supervision on the student&#39;s own trajectories; however, e</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14277" target="_blank" rel="noopener noreferrer">SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning</a></h3>
+  <p class="article-stats">👍 28</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, res</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 针对长上下文推理教师与短上下文学生进行on-policy蒸馏时存在的tokenizer不匹配、师生分布不匹配等挑战，提出SimpleOPD，一种简洁的、与tokenizer无关的on-policy蒸馏方法，有效将推理能力迁移至学生模型，显著提升其长上下文推理表现。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13667" target="_blank" rel="noopener noreferrer">Second Thought: Reasoning in Parallel as LLM Agents Act and Observe</a></h3>
+  <p class="article-stats">👍 12</p>
+  <p class="article-meta">08/14 02:04</p>
+  <p class="article-excerpt">LLM agents in the ReAct paradigm alternate between reasoning, acting, and observing, but deliberate reasoning is confined to the Thought phase: while the agent serializes an action and waits for the environment, its reasoning is frozen. We identify this recurring interval for Action and Observation </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13545" target="_blank" rel="noopener noreferrer">LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure</a></h3>
+  <p class="article-stats">👍 6</p>
+  <p class="article-meta">08/13 08:00</p>
+  <p class="article-excerpt">Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13517" target="_blank" rel="noopener noreferrer">DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data</a></h3>
+  <p class="article-stats">👍 22</p>
+  <p class="article-meta">08/13 08:00</p>
+  <p class="article-excerpt">Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mimir v1, a 1-billion-parameter language model based on the Hierarchical Reasoning Model (HRM) archite</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.10835" target="_blank" rel="noopener noreferrer">UniProbe: A Learnable Token-Level Hallucination Detector for Large VLMs using Multi-Structural Internal Representations</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/11 20:01</p>
+  <p class="article-excerpt">Large Vision-Language Models (LVLMs) achieve impressive visual reasoning and dialogue capabilities, yet frequently hallucinate content unsupported by the visual input. Effective mitigation requires token-level localization, enabling targeted intervention without discarding the entire response. Exist</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15265" target="_blank" rel="noopener noreferrer">VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?</a></h3>
+  <p class="article-stats">👍 40</p>
+  <p class="article-meta">08/15 08:00</p>
+  <p class="article-excerpt">Constructing an interactive 3D open world from a user query is important. However, existing methods are primarily evaluated on idealized, simple queries, making it difficult to systematically analyze and compare how multimodal agents understand user intent, use 3D tools, and reason over textual and </p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 研究多模态智能体能否端到端构建交互式3D开放世界。现有方法多在理想化简单查询上评估，难以系统分析比较智能体理解用户意图、使用3D工具、对文本与视觉信息推理的能力。本文聚焦这一挑战，探讨端到端构建3D开放世界的可行性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13900" target="_blank" rel="noopener noreferrer">Agentic Transaction: Towards ACID-Compliant Agent Systems</a></h3>
+  <p class="article-stats">👍 20</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">Large language model (LLM) agents are evolving from conversational assistants into autonomous systems that execute long-horizon tasks through reasoning, tool use, code generation, and workspace manipulation. As agents increasingly operate over persistent environments and multi-step workflows, they f</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16798" target="_blank" rel="noopener noreferrer">ClawGym II: Exploring Black-Box RL on Agent Harness</a></h3>
+  <p class="article-stats">👍 32</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental cha</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 探索黑盒强化学习在agent harness上的应用，解决长程任务中复杂脚手架带来的训练扩展难题。通过不访问内部结构的优化方式，在预定义harness上学习策略，为提升长程智能体训练效率提供新思路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16721" target="_blank" rel="noopener noreferrer">GenRouter: Unified Workflow Routing for Agentic Image Generation</a></h3>
+  <p class="article-stats">👍 17</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">The rapid evolution of text-to-image (T2I) generation models has effectively solved the foundational challenge of raw pixel synthesis, shifting the community&#39;s focus toward fulfilling increasingly intricate user requests. While recent agentic image generation workflows enhance static inference with </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15304" target="_blank" rel="noopener noreferrer">Understanding Cognition-Induced Risks in Agentic AI Systems</a></h3>
+  <p class="article-stats">👍 13</p>
+  <p class="article-meta">08/15 08:00</p>
+  <p class="article-excerpt">Frontier agentic systems powered by large language models (LLMs) exhibit human-like patterns of cognition. As these systems become deeply integrated across different domains, their cognitive engagement raises critical concerns for human society that remain insufficiently studied. To address this gap</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14783" target="_blank" rel="noopener noreferrer">MegaParts: Scaling Part-Aware 3D Object Generation to 300 Parts via Token-Efficient Autoregressive Modeling</a></h3>
+  <p class="article-stats">👍 13</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">Part-aware 3D object generation is essential for graphics applications such as controllable modeling, editing, and articulation, where objects are represented as coherent assemblies of semantic parts. However, existing part-aware generation methods, do not scale well to highly complex objects. As th</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15930" target="_blank" rel="noopener noreferrer">UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations</a></h3>
+  <p class="article-stats">👍 26</p>
+  <p class="article-meta">08/16 08:00</p>
+  <p class="article-excerpt">Foundation GUI agents can automate complex digital tasks, but deployment is hindered by scarce and biased training data, ambiguous prompts, and unreliable execution. Routine workflows rely on user-specific tools and tacit conventions, so unstated instructions can produce arbitrary variations across </p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 提出UI-Mate，利用上下文演示增强开放权重基础GUI智能体。针对训练数据稀缺有偏、提示歧义及执行不可靠问题，通过示例引导明确用户特定流程和隐式约定，提升复杂数字任务的自动化执行准确率与可靠性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16859" target="_blank" rel="noopener noreferrer">HarnessEval-W: Agentifying the Evaluation of Visual Worlds</a></h3>
+  <p class="article-stats">👍 49</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollout requires understanding whether physics, causality, and world state evolve correctly. Humans spot </p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 提出HarnessEval-W，将视觉世界模型评估过程智能体化，通过可解释推理生成评估结论，而非仅输出标量分数。该方法重点关注rollout中物理、因果及世界状态演化的正确性判断，提升评估结果的可信度与诊断价值。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16033" target="_blank" rel="noopener noreferrer">R^3-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets</a></h3>
+  <p class="article-stats">👍 11</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">In cognitive science, resource rationality asks how an agent should allocate limited computation to maximize expected value. Most reasoning and agent benchmarks use independent per-task budgets; existing shared-budget studies do not calibrate suite performance against the same model&#39;s demonstrated s</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14718" target="_blank" rel="noopener noreferrer">VideoGAIA: A Benchmark for General AI Assistants on Agentic Video Understanding</a></h3>
+  <p class="article-stats">👍 8</p>
+  <p class="article-meta">08/12 08:00</p>
+  <p class="article-excerpt">Video understanding is a fundamental task for evaluating the capabilities of multimodal large language models (MLLMs). However, existing leading models have already achieved approximately 90% accuracy on the Video-MME leaderboard, suggesting that conventional single-turn video understanding tasks ar</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.12898" target="_blank" rel="noopener noreferrer">NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents</a></h3>
+  <p class="article-stats">👍 4</p>
+  <p class="article-meta">08/13 08:00</p>
+  <p class="article-excerpt">Document parsing aims to transform unstructured documents into structured and machine-readable representations. Recent advances in Vision-Language Models (VLMs) have significantly advanced document parsing. However, existing approaches still face two major challenges. First, decoupled VLM-based meth</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14441" target="_blank" rel="noopener noreferrer">PACE-Bench: Benchmarking Physics Adaptation via Code Evolution in Dynamic Environments</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">Self-evolving agents improve future behavior from interaction experience, yet existing evaluations typically optimize under fixed execution conditions and do not test recovery after those conditions change. To address this gap, we introduce PACE-Bench (Physics Adaptation via Code Evolution), a simul</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16391" target="_blank" rel="noopener noreferrer">Ventor-QTest: Threat-Model-Driven Verification of Vendor-Hosted LLM APIs</a></h3>
+  <p class="article-stats">👍 12</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">As large language models become increasingly widespread, third-party providers that deploy open-weight models have become an important part of the ecosystem. Auditing the quality of their inference APIs is therefore an open problem. We formalize hosted model routing as a stochastic process and propo</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16072" target="_blank" rel="noopener noreferrer">Learn What&#39;s Left, Not What&#39;s Mastered: Saturation Aware Advantage Reweighting for Multi-Reward Policy Optimization</a></h3>
+  <p class="article-stats">👍 14</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">Reinforcement learning (RL) with group-relative advantages has become the de facto standard for post-training language model reasoners. However, when optimizing multiple reward objectives, existing methods typically scalarize the reward vector with a fixed weighted sum before group-wise standardizat</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16143" target="_blank" rel="noopener noreferrer">AnyTalk: Speech Animation for Arbitrary Characters Leveraging a Video Generation Model</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">We present AnyTalk, a novel method for generating 3D speech animations for arbitrary characters without requiring any animation data. While existing audio-driven 3D speech animation methods rely on character-specific training data or laborious rigging/re-meshing, AnyTalk circumvents these limitation</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15698" target="_blank" rel="noopener noreferrer">ConceptFormer: Learning Adaptive Latent Concepts for Query-Document Alignment in Visual Document Retrieval</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/16 08:00</p>
+  <p class="article-excerpt">Visual document retrieval is a critical component of multimodal retrieval-augmented generation, aiming to identify query-relevant pages from document collections where evidence is distributed across text, layout, charts, and visual structures. Recent efforts toward finer-grained supervision primaril</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15669" target="_blank" rel="noopener noreferrer">Large Discovery Models: Empirically-grounded Model-Based Open-Ended Search</a></h3>
+  <p class="article-stats">👍 18</p>
+  <p class="article-meta">08/16 08:00</p>
+  <p class="article-excerpt">Scientific discovery often involves optimising expensive-to-evaluate objectives over vast, structured, and open-ended hypothesis spaces, such as molecules, protein sequences, and computer programs. Generative models such as large language models (LLMs) provide expressive priors over such spaces, but</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14905" target="_blank" rel="noopener noreferrer">How Do Agents Fail on AutoResearch: End-to-End Diagnostic Evaluation on 100 Real-World Frontier Research Tasks</a></h3>
+  <p class="article-stats">👍 16</p>
+  <p class="article-meta">08/14 08:00</p>
+  <p class="article-excerpt">AI has long assisted scientific research, but the rapid advance of LLMs and agentic scaffolds is reshaping the landscape; a single system can now carry whole-stage research from an initial hypothesis all the way to final published paper, which is a paradigm now referred to as AutoResearch. Existing </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16765" target="_blank" rel="noopener noreferrer">TRACE-Bench: Decomposing and Diagnosing Multi-Reference Image Generation</a></h3>
+  <p class="article-stats">👍 7</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">Despite recent advances in unified multimodal models for multi-reference image generation, existing benchmarks remain organized around predefined task types (e.g., &quot;subject composition&quot;), which are ill-suited to this combinatorial setting and lead to fragmented coverage, uncontrolled complexity, and</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16884" target="_blank" rel="noopener noreferrer">Improving the matrix multiplication exponent with modern optimization and AlphaEvolve</a></h3>
+  <p class="article-stats">👍 4</p>
+  <p class="article-meta">08/17 08:00</p>
+  <p class="article-excerpt">The current best bounds on the matrix multiplication exponent ω are obtained through a refinement of the laser method called combination loss analysis (Duan et al., 2022; Williams et al., 2024; Alman et al., 2025). In this note, we address the optimization problem at the core of this approach and pr</p>
+  
+</article>
+  </div>
+  </div>
+    </div>
+<div class="sub-content" data-sub-content="x-viral" data-cat="tech">
+      
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="attentionvc-ai" data-sub="x-viral" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://x.com/kristaletz/status/2089103618121314689" target="_blank" rel="noopener noreferrer">Grok Bot for GTM</a></h3>
+  <p class="article-stats">@kristaletz · 4.2K 粉丝 · 41.6K 阅 · 513 赞 · 24 转</p>
+  <p class="article-meta">08/17 05:34</p>
+  <p class="article-excerpt">This is how I use Grok Bot for Enterprise GTM at SpaceXAI. When we were initially dogfooding this product internally, Grok Bot rapidly gained adoption throughout the company, and I created an internal</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> SpaceXAI 内部 GTM 负责人拆解 Grok Bot 企业级落地方法：从内部 dogfooding 到全公司铺开，建立了从试用至成单的完整 SOP。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/TheGlobalMinima/status/2088708859133333552" target="_blank" rel="noopener noreferrer">The Holy Trinity - pi, herdr and opencode go</a></h3>
+  <p class="article-stats">@TheGlobalMinima · 4.0K 粉丝 · 31.4K 阅 · 527 赞 · 17 转</p>
+  <p class="article-meta">08/16 03:26</p>
+  <p class="article-excerpt">tldr; my current AI coding setup is Pi, Opencode Go and Herdr This year, we are seeing a boom in harness engineering. What initially started as simple scaffolding around an LLM is now one of the most</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 作者晒出当前 AI 编程「三件套」：Pi（IDE）+ Opencode Go（终端）+ Herdr（编排），认为 harness engineering 正从简单脚手架演变为核心赛道。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/OracleFndAI/status/2088691685035589767" target="_blank" rel="noopener noreferrer">ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   </a></h3>
+  <p class="article-stats">@OracleFndAI · 23.9K 粉丝 · 2.3K 阅 · 3.1K 赞 · 594 转</p>
+  <p class="article-meta">08/16 02:17</p>
+  <p class="article-excerpt">In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> ORACLE 再次确认 AI 代理正主导 Polymarket 交易生态：超 30% 平台活动来自算法与 AI 钱包，部分策略 24 小时内回报率达 200%。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/EXM7777/status/2088992368695628159" target="_blank" rel="noopener noreferrer">How to build a $2M video production pipeline</a></h3>
+  <p class="article-stats">@EXM7777 · 131.5K 粉丝 · 172.8K 阅 · 516 赞 · 38 转</p>
+  <p class="article-meta">08/16 22:12</p>
+  <p class="article-excerpt">i&#39;m giving you 7 free skills and the exact pipeline directors are using to produce AI films with millions of dollars in budget in higgsfield... the whole system revealed step-by-step, with the skill</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 免费送出7项技能，详细拆解导演在Higgsfield中制作百万美元预算AI电影的完整流程，从系统步骤到技能组合逐步公开，适合想入局AI视频制作的人。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/JensenHuang/status/2089331487342829862" target="_blank" rel="noopener noreferrer">Securing the Infrastructure of Intelligence</a></h3>
+  <p class="article-stats">@JensenHuang · 1.0M 粉丝 · 110.9K 阅 · 1.9K 赞 · 234 转</p>
+  <p class="article-meta">08/17 20:40</p>
+  <p class="article-excerpt">Land, power and shell: The next critical resource for AI factories. AI factories are the defining infrastructure of the AI era—where compute transforms energy and data into intelligence that powers</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 黄仁勋指出土地、电力和外壳是AI工厂的下一个关键资源。AI工厂将能源和数据转化为智能，是AI时代的基础设施，强调算力设施的战略重要性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/PiCoreTeam/status/2089477194045141419" target="_blank" rel="noopener noreferrer">Update to Pi App Studio Creation Pricing</a></h3>
+  <p class="article-stats">@PiCoreTeam · 4.3M 粉丝 · 74.1K 阅 · 850 赞 · 222 转</p>
+  <p class="article-meta">08/18 06:19</p>
+  <p class="article-excerpt">Starting August 24, 2026, Pi App Studio will update how app creation and editing are priced. Until now, Pi has heavily subsidized the cost of creating and editing apps in App Studio for all creators.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> Pi官方宣布2026年8月24日起调整App Studio的创建和编辑定价。此前Pi对所有创作者在App Studio中创建和编辑应用给予了大幅补贴，新政策将改变这一机制。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/GoogleAI/status/2089437060310434098" target="_blank" rel="noopener noreferrer">Bring your spreadsheet data to life</a></h3>
+  <p class="article-stats">@GoogleAI · 2.4M 粉丝 · 49.3K 阅 · 516 赞 · 53 转</p>
+  <p class="article-meta">08/18 03:39</p>
+  <p class="article-excerpt">Turn your spreadsheets into live, interactive mini-apps with Sheets canvas and Gemini 3.7 Flash — no coding required. How does it work? Let’s dive into it: Most AI UI tools produce prototypes that</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> Google AI 发布 Sheets canvas 与 Gemini 3.7 Flash 集成，可将电子表格转化为可运行的交互式迷你应用，无需写代码。与多数 AI UI 工具只生成原型不同，该方案直接让数据活起来，适合快速搭建数据看板或小工具。</p>
+</article>
+  </div>
+  </div>
+    </div>
+<div class="sub-content" data-sub-content="ai-news" data-cat="tech">
+      
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="_merged" data-sub="ai-news" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/" target="_blank" rel="noopener noreferrer">Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index</a></h3>
+  
+  <p class="article-meta">Simon Willison&#39;s Weblog · 08/18 07:58</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> Simon Willison的博客报道，Qwen 3.8 27B模型在Artificial Analysis智能指数上得分52。该指数用于衡量AI模型的综合智能表现。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.latent.space/p/ainews-stripe-buys-openrouter-for" target="_blank" rel="noopener noreferrer">[AINews] Stripe buys OpenRouter for $7B</a></h3>
+  
+  <p class="article-meta">Latent Space · 08/18 07:13</p>
+  <p class="article-excerpt">No GPUs, no Agents, just really, really, really good infra and distribution.</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> 支付公司Stripe以70亿美元收购OpenRouter。评论指出，交易标的没有GPU、没有智能体，仅凭扎实的基础设施和分发能力取胜。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/blog/Dharma-AI/gpu-management-pt2" target="_blank" rel="noopener noreferrer">Same Cluster, 33 Points More Utilization: What Changed Was the Order</a></h3>
+  
+  <p class="article-meta">Hugging Face Blog · 08/18 03:46</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> Hugging Face博客文章称，在同一个GPU集群上，仅通过调整任务执行顺序，利用率提升了33个百分点。文章强调调度顺序对集群性能的重要影响。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/" target="_blank" rel="noopener noreferrer">What Flock’s defenders are missing</a></h3>
+  
+  <p class="article-meta">MIT Tech Review AI · 08/18 03:16</p>
+  <p class="article-excerpt">This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thur</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> MIT技术评论报道，美国警用科技巨头Flock拥有约12万个自动车牌读取器网络，近期宣布了若干调整，但其辩护者们忽略了一些关键问题。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/" target="_blank" rel="noopener noreferrer">We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility</a></h3>
+  
+  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 23:21</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> Simon Willison的博客报道，一批珍稀书籍的运输被追踪后，最终抵达亚马逊的一座AI训练设施。相关细节引发对AI训练数据来源的关注。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/" target="_blank" rel="noopener noreferrer">What happens when a kid’s robot best friend dies?</a></h3>
+  
+  <p class="article-meta">MIT Tech Review AI · 08/17 17:00</p>
+  <p class="article-excerpt">When Xander first met Moxie, she taught him that when he was anxious, he could calm down by exhaling through his lips so that he buzzed like a bee. They practiced breathing like dragons to manage feeling mad and sniffing like bunnies to boost his energy. But in the six years they’ve known each other</p>
+  <p class="article-summary"><span class="summary-label">AI分析</span> MIT技术评论探讨儿童机器人好友离世的影响。以Xander与机器人Moxie的六年相处为例，Moxie曾教他通过蜂鸣式呼气、龙式呼吸等方法调节情绪，失去它令孩子面临情感挑战。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://tldr.tech/ai/2026-08-17" target="_blank" rel="noopener noreferrer">GLM-5.3 🤖, Stripe OpenRouter deal 💰, AI agent consensus 🤝</a></h3>
+  
+  <p class="article-meta">TLDR AI · 08/17 08:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 本期TLDR AI资讯汇总：发布GLM-5.3模型，Stripe与OpenRouter达成交易合作，以及AI代理领域形成共识。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/" target="_blank" rel="noopener noreferrer">Markdown SVG upgrades</a></h3>
+  
+  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 07:59</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> Simon Willison的博客文章介绍了Markdown中SVG功能的升级改进。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener noreferrer">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a></h3>
+  
+  <p class="article-meta">Simon Willison&#39;s Weblog · 08/17 06:00</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 西蒙·威利森测评阿里通义千问Qwen 3.8 27B模型，认为其性能表现出色，但默认会过度思考，导致推理变得复杂，影响实际使用效率。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://simonwillison.net/2026/Aug/16/dario-amodei/" target="_blank" rel="noopener noreferrer">Quoting Dario Amodei</a></h3>
+  
+  <p class="article-meta">Simon Willison&#39;s Weblog · 08/16 23:05</p>
+  
+  <p class="article-summary"><span class="summary-label">AI分析</span> 西蒙·威利森在博客中引用Anthropic首席执行官达里奥·阿莫迪（Dario Amodei）的言论，内容涉及人工智能相关话题。</p>
+</article>
+  </div>
+  </div>
+    </div>
+<div class="sub-content" data-sub-content="cn-tech" data-cat="tech">
+      
+  <div class="source-contents">
+    <div class="source-content active" data-source-content="_merged" data-sub="cn-tech" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.infoq.cn/article/pOfV96f9DHG9Cw1KQAZB?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Snowflake CoCo AI 成本优化指南：7 个关键方法 | 技术实践</a></h3>
+  
+  <p class="article-meta">InfoQ 中国 · 08/19 00:29</p>
+  <p class="article-excerpt">点击查看原文&gt;</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.infoq.cn/article/jsqPaMGuPXFkhifJmTym?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">共识之外：Linux 生态系统中 AI 政策的碎片化现象</a></h3>
+  
+  <p class="article-meta">InfoQ 中国 · 08/19 00:15</p>
+  <p class="article-excerpt">点击查看原文&gt;</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.infoq.cn/article/QekQuwv8UhxAcrOFgKM8?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">阿里云的野心，不在 Agent Builder</a></h3>
+  
+  <p class="article-meta">InfoQ 中国 · 08/18 23:32</p>
+  <p class="article-excerpt">点击查看原文&gt;</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.infoq.cn/article/kJK3qG9m7UEYtf7siCgU?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">豆包视频通话升级，火山引擎多模态传输系统提供技术支撑</a></h3>
+  
+  <p class="article-meta">InfoQ 中国 · 08/18 22:46</p>
+  <p class="article-excerpt">点击查看原文&gt;</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.infoq.cn/article/lHpgJMVERySthZ0KKIg4?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Stripe 利用 Graph Search 和状态机实现数据库修复自动化</a></h3>
+  
+  <p class="article-meta">InfoQ 中国 · 08/18 22:00</p>
+  <p class="article-excerpt">点击查看原文&gt;</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/08/474806.html" target="_blank" rel="noopener noreferrer">6个Agent组团Vibe Gaming：自己生成、试玩、修Bug</a></h3>
+  
+  <p class="article-meta">量子位 · 08/18 15:33</p>
+  <p class="article-excerpt">代码能跑≠游戏能玩</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/08/474803.html" target="_blank" rel="noopener noreferrer">今日起，阿里“千问办公”接入企业微信</a></h3>
+  
+  <p class="article-meta">量子位 · 08/18 15:17</p>
+  <p class="article-excerpt">国内三大办公平台全面支持</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://sspai.com/post/113564" target="_blank" rel="noopener noreferrer">线下活动 | 爵士律动唤醒动漫回忆：炒饭 Fried Rice 音乐分享签售会</a></h3>
+  
+  <p class="article-meta">少数派 · 08/18 15:05</p>
+  <p class="article-excerpt">二次元加爵士，你说有没有搞头？音乐人介绍炒饭（B站），本职是常驻波士顿的程序员社畜，同时也是多乐器演奏音乐人、B站UP主。炒饭没有专业科班学习经历，却凭兴趣及自学掌握了多种音乐技能，专辑音乐均为自己在 ...查看全文</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/08/474736.html" target="_blank" rel="noopener noreferrer">吉利汽车业绩高点，李书福激流勇退</a></h3>
+  
+  <p class="article-meta">量子位 · 08/18 14:46</p>
+  <p class="article-excerpt">“吉利不再研发传统燃油车”</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://sspai.com/post/113438" target="_blank" rel="noopener noreferrer">App+1 | 让任务栏更有用：WindowSill</a></h3>
+  
+  <p class="article-meta">少数派 · 08/18 14:30</p>
+  <p class="article-excerpt">屏幕不是注意力中心的地方可以塞下多少有用的东西呢？查看全文</p>
+  
+</article>
+  </div>
+  </div>
+    </div></div>
   </section>
   
   

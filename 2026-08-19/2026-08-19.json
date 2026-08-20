@@ -1,0 +1,223 @@
+{
+  "hero_headline": "",
+  "daily_overview": "",
+  "tech_briefs": [
+    {
+      "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2608.13489",
+      "source": "HuggingFace Trending Papers",
+      "summary": "提出DreamX-Phi 1.0，一种面向机器人操作的动作条件视频世界模型。给定观测帧、语言指令和动作序列（末端执行器位姿与夹爪状态），预测未来观测；超越真实感，强调行为效用。",
+      "importance": 1
+    },
+    {
+      "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
+      "url": "https://huggingface.co/papers/2608.13505",
+      "source": "HuggingFace Trending Papers",
+      "summary": "介绍Intern-S2-Preview系列科学智能体基础模型，支持跨异质模态科学证据推理、与科学工具环境交互，并能在长任务周期中持续推进，覆盖科研全流程。",
+      "importance": 1
+    },
+    {
+      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+      "url": "https://huggingface.co/papers/2608.13560",
+      "source": "HuggingFace Trending Papers",
+      "summary": "提出AutoDesign，面向长时程智能体设计的元harness优化。将多模态源转化为结构化媒体输出视为基于模型-harness系统的长时程智能过程，通过经验积累自动迭代harness，使其符合人类设计先验。",
+      "importance": 1
+    },
+    {
+      "title": "PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives",
+      "url": "https://huggingface.co/papers/2608.13552",
+      "source": "HuggingFace Trending Papers",
+      "summary": "提出PlayWorld基准，以智能体玩家在长时程目标下评测视频世界模型。针对现有交互式世界模型难以公平比较的问题，利用智能体在长目标驱动下与模型交互，衡量视频一致性和动作可控性。",
+      "importance": 1
+    },
+    {
+      "title": "Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence",
+      "url": "https://huggingface.co/papers/2608.12743",
+      "source": "HuggingFace Trending Papers",
+      "summary": "提出空间记忆智能体，利用经验锚定的程序记忆增强VLM智能体的空间推理。不同于SFT/RL等后训练方法，该工作构建可检索的空间经验记忆，为空间智能提供新的记忆机制。",
+      "importance": 1
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "国务院关于修改《住房公积金管理条例》的决定",
+      "url": "https://www.gov.cn/zhengce/content/202608/content_7078477.htm",
+      "source": "中国政府网·国务院政策",
+      "summary": "【国务院政策】国务院关于修改《住房公积金管理条例》的决定",
+      "importance": 1
+    },
+    {
+      "title": "国务院关于《特殊教育发展提升“十五五”行动计划》的批复",
+      "url": "https://www.gov.cn/zhengce/content/202608/content_7078320.htm",
+      "source": "中国政府网·国务院政策",
+      "summary": "国务院批复特殊教育\"十五五\"行动计划：教育领域投入增加，相关机构及家庭客群带来教育金融/代发机会（参考）。",
+      "importance": 1
+    },
+    {
+      "title": "国务院关于修改和废止部分行政法规的决定",
+      "url": "https://www.gov.cn/zhengce/content/202608/content_7077980.htm",
+      "source": "中国政府网·国务院政策",
+      "summary": "国务院修改废止部分行政法规：法规环境调整，涉及信贷/担保等金融相关条款变化需跟踪合规影响。",
+      "importance": 1
+    },
+    {
+      "title": "美伊谈判陷入僵局，机构：央行购金与地缘支撑中长期金价",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-19/doc-ininvfsz9560189.shtml",
+      "source": "新浪财经",
+      "summary": "",
+      "importance": 1
+    },
+    {
+      "title": "就在今晚！美债又将迎“大考”……",
+      "url": "https://finance.sina.com.cn/roll/2026-08-19/doc-ininvfsz9560446.shtml",
+      "source": "新浪财经",
+      "summary": "",
+      "importance": 1
+    }
+  ],
+  "politics_briefs": [],
+  "gd_ipo_briefs": [
+    {
+      "title": "SHENZHENEXPRESS (00548) — Notice of 2026 Interim Results Presentation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081700458.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "HEARTCARE-B (06609) — (1) PROPOSED ISSUE OF A SHARES AND LISTING ON\nTHE SCI-TECH BOARD OF THE SHANGHAI STOCK\nEXCHANGE AND OTHER ANCILLARY RESOLUTIONS;\n(2) PROPOSED AMENDMENTS TO THE ARTICLES;\n(3) PROPOSED AMENDMENTS TO THE 2025 H SHARE INCENTIVE SCHEME;\nAND\n(4) NOTICE OF 2026 SECOND EXTRAORDINARY\nSHAREHOLDERS' GENERAL MEETING",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081402121.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "HEARTCARE-B (06609) — PROPOSED ISSUE OF A SHARES AND LISTING ON THE SCI-TECH BOARD OF THE SHANGHAI STOCK EXCHANGE AND PROPOSED AMENDMENT OF THE ARTICLES",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081402093.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "PING AN, PING AN-R (02318, 82318) — Overseas Regulatory Announcement - the Announcement of Ping An Insurance (Group) Company of China, Ltd. in relation to the Disclosure of 2026 Interim Report Summary of Ping An Bank",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401701.pdf",
+      "source": "港交所IPO公告",
+      "summary": "港股公告：上市公司中报/披露动态，作为港股企业客户经营状况与对公机会的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "PHOENIX TV (02008) — ANNOUNCEMENT OF UNAUDITED INTERIM RESULTS FOR THE SIX MONTHS ENDED 30 JUNE 2026",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401639.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "CA CULTURAL (01566) — JOINT ANNOUNCEMENT - COMPLETION OF THE PROPOSED RESTRUCTURING INCLUDING A. THE COMPLETION OF THE SUBSCRIPTION AGREEMENTS; AND B. THE CREDITORS' SCHEME BECOMING EFFECTIVE",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401551.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "SG GROUP HLDGS (01657) — JOINT ANNOUNCEMENT (1) CLOSE OF UNCONDITIONAL MANDATORY CASH OFFER BY DL SECURITIES (HK) LIMITED FOR AND ON BEHALF OF THE OFFEROR TO ACQUIRE ALL THE ISSUED SHARES OF THE COMPANY (OTHER THAN THOSE ALREADY OWNED AND/OR AGREED TO BE ACQUIRED BY THE OFFEROR AND THE OFFEROR CONCERT PARTIES); (2) RESULTS OF THE OFFER; (3) SETTLEMENT OF THE OFFER; (4) PUBLIC FLOAT OF THE COMPANY; AND (5) RESIGNATION OF DIRECTOR AND REDESIGNATION OF DIRECTOR",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081401387.pdf",
+      "source": "港交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "马矿股份 (601123)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480711.PDF",
+      "source": "上交所IPO公告",
+      "summary": "沪市马矿股份（601123）发布公告，广东矿业上市公司动态，关注企业融资、并购及产业链上下游金融服务需求。",
+      "importance": 1
+    },
+    {
+      "title": "甘李药业 (603087)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480319.PDF",
+      "source": "上交所IPO公告",
+      "summary": "甘李药业（603087）发布公告，医药行业上市公司动态，关注其研发投入、资金需求及上下游供应链金融机会。",
+      "importance": 1
+    },
+    {
+      "title": "泰凌微 (688591)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478760.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "宇树科技 (688836)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478669.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "天博智能 (603448)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478438.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "高凯技术 (688835)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478314.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "频准激光 (688826)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-17/1225476108.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "沪硅产业 (688126)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474373.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "沪农商行 (601825)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225471786.PDF",
+      "source": "上交所IPO公告",
+      "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
+      "importance": 1
+    },
+    {
+      "title": "绿控传动 (301655)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225481019.PDF",
+      "source": "深交所IPO公告",
+      "summary": "绿控传动（301655）发布公告，新能源传动系统企业动态，关注绿色产业企业融资与供应链金融服务需求。",
+      "importance": 1
+    },
+    {
+      "title": "英特科技 (301399)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479686.PDF",
+      "source": "深交所IPO公告",
+      "summary": "英特科技（301399）发布公告，科技制造企业动态，关注其经营与融资动向，挖掘对公信贷与结算合作机会。",
+      "importance": 1
+    },
+    {
+      "title": "波长光电 (301421)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479343.PDF",
+      "source": "深交所IPO公告",
+      "summary": "波长光电（301421）发布公告，光电企业动态，关注高端制造企业设备更新与技改信贷需求。",
+      "importance": 1
+    },
+    {
+      "title": "和泰机电 (001225)",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479214.PDF",
+      "source": "深交所IPO公告",
+      "summary": "和泰机电（001225）发布公告，机电制造企业动态，关注制造业企业资金周转与供应链金融合作机会。",
+      "importance": 1
+    }
+  ],
+  "editor_note": "",
+  "keywords": []
+}

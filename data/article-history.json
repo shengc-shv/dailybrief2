@@ -23,46 +23,7 @@
     "publishedAt": "2026-08-15T15:46:22.000Z",
     "summary": "Flue 2 借鉴 React 设计理念，由 Astro 创始人 Fred Schott 将 hooks 引入智能体编排框架。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
-  },
-  "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm": {
-    "title": "[AINews] Gemini 3.7 Flash brings GDM back to the forefront",
-    "url": "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm",
-    "sourceId": "latent-space",
-    "source": "Latent Space",
-    "category": "tech",
-    "subcategory": "ai-news",
-    "excerpt": "Down, but not out!",
-    "publishedAt": "2026-08-14T05:30:39.000Z",
-    "summary": "Google 发布 Gemini 3.7 Flash 模型，推动 DeepMind 重返 AI 前沿竞争行列。",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
-  },
-  "https://x.com/sarahdingwang/status/2088271571848986965": {
-    "title": "Cursor + SpaceXAI: the fastest iterating team wins ",
-    "url": "https://x.com/sarahdingwang/status/2088271571848986965",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "By @BornsteinMatt, @martin_casado, and myself. AI coding could be the biggest addressable market of our lives. And, unless you think we’ve fully addressed it (which no one thinks; we are more like 1%",
-    "publishedAt": "2026-08-14T14:28:35.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "Cursor 与 SpaceXAI 合伙人联合发文，认为 AI 编码是「此生最大可寻址市场」，目前仅开发约 1%，迭代速度最快的团队将主导软件工程下一阶段。"
-  },
-  "https://x.com/Zai_org/status/2088280509474320693": {
-    "title": "Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense",
-    "url": "https://x.com/Zai_org/status/2088280509474320693",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "When GLM-5.2 helped Hugging Face investigate an incident in which an AI autonomously bypassed its own safeguards, it highlighted a broader shift. AI is becoming part of both cyber offense and cyber",
-    "publishedAt": "2026-08-14T15:04:06.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "GLM-5.2 曾协助 Hugging Face 调查 AI 自主绕过安全护栏事件，团队宣布即将开源 GLM-5.3 并定位为网络防御工具，凸显 AI 正成为网络攻防双刃剑。"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/kristaletz/status/2089103618121314689": {
     "title": "Grok Bot for GTM",
@@ -77,32 +38,6 @@
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-19T01:12:16.071Z"
   },
-  "https://x.com/AndrewYNg/status/2088302050706686198": {
-    "title": "The AI Engineering Skills Map",
-    "url": "https://x.com/AndrewYNg/status/2088302050706686198",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "I am delighted to present The AI Engineering Skills Map. AI allows us to build software very differently today than in 2022, and everyone with the skills to take advantage of this shift has numerous",
-    "publishedAt": "2026-08-14T16:29:42.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "吴恩达发布「AI 工程技能地图」，指出 2026 年构建软件方式已与 2022 年截然不同，掌握 AI 工程能力者将拥有大量职业机会。"
-  },
-  "https://x.com/GoogleAIStudio/status/2088279677756473533": {
-    "title": "What's new in Gemini 3.7 Flash",
-    "url": "https://x.com/GoogleAIStudio/status/2088279677756473533",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "Gemini 3.7 Flash (gemini-3.7-flash) is generally available (GA) and ready for production use. It is our most intelligent workhorse model yet for software engineering, and agentic workflows. This guide",
-    "publishedAt": "2026-08-14T15:00:48.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "Gemini 3.7 Flash 正式上线 GA，Google 称其为最强「牛马模型」(workhorse)，专攻软件工程与智能体工作流，现已开放生产部署使用。"
-  },
   "https://x.com/TheGlobalMinima/status/2088708859133333552": {
     "title": "The Holy Trinity - pi, herdr and opencode go",
     "url": "https://x.com/TheGlobalMinima/status/2088708859133333552",
@@ -115,32 +50,6 @@
     "summary": "作者晒出当前 AI 编程「三件套」：Pi（IDE）+ Opencode Go（终端）+ Herdr（编排），认为 harness engineering 正从简单脚手架演变为核心赛道。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-18T10:09:50.328Z"
-  },
-  "https://x.com/QwenDevs/status/2088289608031510811": {
-    "title": "Qwen3.8-27B Practical Guide: Control Reasoning Depth and Extend Context to 1M Tokens",
-    "url": "https://x.com/QwenDevs/status/2088289608031510811",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "Qwen3.8-27B is here — a compact, deployment-friendly dense model built on the Qwen3.5 architecture, with native vision-language understanding and flexible thinking control. Two developer-facing",
-    "publishedAt": "2026-08-14T15:40:15.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "通义千问发布 Qwen3.8-27B 实用指南：基于 Qwen3.5 架构的稠密模型，支持视觉理解与可控思维链推理，上下文可扩展至 1M tokens，部署友好。"
-  },
-  "https://x.com/OracleFoundtion/status/2088382164773826775": {
-    "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours",
-    "url": "https://x.com/OracleFoundtion/status/2088382164773826775",
-    "sourceId": "attentionvc-ai",
-    "source": "X 推文 (AttentionVC)",
-    "category": "tech",
-    "subcategory": "x-viral",
-    "excerpt": "In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We",
-    "publishedAt": "2026-08-14T21:48:03.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "ORACLE 证实自主 AI 代理已在 Polymarket 上活跃交易，部分 24 小时内回报率达 200%，预测平台超 30% 活动来自算法与 AI 钱包。"
   },
   "https://x.com/OracleFndAI/status/2088691685035589767": {
     "title": "ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   ",
@@ -341,19 +250,6 @@
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
     "summary": "四只表现惊人的股票仍被华尔街视为最被憎恨和恐惧的标的，Cramer 称市场可能打破常规。"
   },
-  "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html": {
-    "title": "Nvidia discloses $21 billion stake in SpaceX at end of second quarter",
-    "url": "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "Nvidia's stake in SpaceX, which came through an investment in xAI, was worth about $21 billion at the end of the second quarter.",
-    "publishedAt": "2026-08-14T21:45:19.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
-  },
   "https://www.cnbc.com/2026/08/16/grandma-gail-advice-for-late-bloomers-it-doesnt-all-have-to-be-perfect.html": {
     "title": "The internet's grandma has advice for late bloomers: 'It doesn't all have to be perfect'",
     "url": "https://www.cnbc.com/2026/08/16/grandma-gail-advice-for-late-bloomers-it-doesnt-all-have-to-be-perfect.html",
@@ -393,20 +289,6 @@
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
     "summary": "大麻改革成为美国中期选举议题，两党均有涉及，但其左右选情的能力仍不确定。",
-    "ai_relevant": false
-  },
-  "https://www.cnbc.com/2026/08/14/world-liberty-trump-occ-bank-charter-stablecoin.html": {
-    "title": "Trump family-backed crypto firm World Liberty gets conditional bank charter approval",
-    "url": "https://www.cnbc.com/2026/08/14/world-liberty-trump-occ-bank-charter-stablecoin.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "The OCC conditionally approved World Liberty Trust Co.’s national trust bank charter. That would allow the Trump family-backed firm to issue stablecoins.",
-    "publishedAt": "2026-08-14T23:41:50.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "特朗普家族支持的 World Liberty 获 OCC 有条件批准国民信托银行牌照，将可发行稳定币。",
     "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/15/software-defined-vehicles-rivian-tesla.html": {
@@ -473,45 +355,6 @@
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
     "summary": "俄罗斯战时经济预算赤字扩大，分析师警告明年压力可能进一步加剧。"
-  },
-  "https://www.cnbc.com/2026/08/13/cnbc-poll-half-of-those-18-to-34-view-democratic-socialism-positively.html": {
-    "title": "New CNBC Generation Lab poll shows almost half of 18- to 34-year-olds see democratic socialism positively",
-    "url": "https://www.cnbc.com/2026/08/13/cnbc-poll-half-of-those-18-to-34-view-democratic-socialism-positively.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "New CNBC Generation Lab poll shows almost half of 18- to 34-year-olds see democratic socialism positively and nearly 80% see the U.S. economy negatively.",
-    "publishedAt": "2026-08-14T15:22:00.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "CNBC 民调显示近半数 18–34 岁年轻人对民主社会主义持正面看法，近八成对美国经济看法负面。"
-  },
-  "https://www.cnbc.com/2026/08/14/open-ai-ipo-red-flag.html": {
-    "title": "OpenAI talent exodus raises 'huge red flag' ahead of IPO",
-    "url": "https://www.cnbc.com/2026/08/14/open-ai-ipo-red-flag.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "OpenAI's C-suite turnover gives investors another reason for concern as the company pushes toward a mammoth IPO.",
-    "publishedAt": "2026-08-14T19:07:11.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T10:10:54.912Z",
-    "summary": "AI产业投资动态：全球AI资本开支高企，科技产业链融资与财富科技主题参考。"
-  },
-  "https://www.cnbc.com/2026/08/14/trump-ballroom-supreme-court-white-house.html": {
-    "title": "Trump asks Supreme Court to let White House ballroom construction continue",
-    "url": "https://www.cnbc.com/2026/08/14/trump-ballroom-supreme-court-white-house.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "President Donald Trump tore down the White House East Wing to make way for the ballroom project.",
-    "publishedAt": "2026-08-14T19:10:18.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T09:31:59.195Z",
-    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。"
   },
   "http://www.xinhuanet.com/finance/2022-12/08/c_1129190871.htm": {
     "title": "英国伦敦股市《金融时报》100种股票平均价格指数7日下跌",
@@ -757,32 +600,6 @@
     "summary": "西蒙·威利森在博客中记录了一次目击北鲣鸟（Northern Gannet）的观鸟见闻。",
     "firstSeenAt": "2026-08-17T05:57:40.858Z",
     "lastSeenAt": "2026-08-19T01:12:16.071Z"
-  },
-  "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/": {
-    "title": "Don't classify. Hallucinate!",
-    "url": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
-    "sourceId": "simonwillison",
-    "source": "Simon Willison's Weblog",
-    "category": "tech",
-    "subcategory": "ai-news",
-    "excerpt": "",
-    "publishedAt": "2026-08-14T21:54:35.000Z",
-    "summary": "西蒙·威利森发文「不要分类，要幻觉」，主张在信息处理中放弃显式分类，转而利用AI的幻觉能力来生成答案。",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-19T01:12:16.071Z"
-  },
-  "https://www.infoq.cn/article/ZiLdF4HaE2o3ieYydQQv?utm_source=rss&utm_medium=article": {
-    "title": "InfoQ 2026 年趋势报告：文化与方法论篇",
-    "url": "https://www.infoq.cn/article/ZiLdF4HaE2o3ieYydQQv?utm_source=rss&utm_medium=article",
-    "sourceId": "infoq-cn",
-    "source": "InfoQ 中国",
-    "category": "tech",
-    "subcategory": "cn-tech",
-    "excerpt": "点击查看原文>",
-    "publishedAt": "2026-08-14T15:17:00.000Z",
-    "firstSeenAt": "2026-08-17T05:57:40.858Z",
-    "lastSeenAt": "2026-08-17T06:00:27.278Z",
-    "summary": "广州文化产业数据：新业态快速增长，文化企业及从业者是零售获客与经营贷的细分机会客群。"
   },
   "https://www.qbitai.com/2026/08/473669.html": {
     "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
@@ -1213,19 +1030,6 @@
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T09:03:39.020Z"
   },
-  "https://www.bbc.co.uk/news/articles/c9826zl0945o?at_medium=RSS&at_campaign=rss": {
-    "title": "Protein or pickled garlic? What's new in ice cream",
-    "url": "https://www.bbc.co.uk/news/articles/c9826zl0945o?at_medium=RSS&at_campaign=rss",
-    "sourceId": "bbc-business",
-    "source": "BBC Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "There's a constant battle in ice cream to come up with new flavours and to keep costs down.",
-    "publishedAt": "2026-08-14T21:20:19.000Z",
-    "summary": "冰淇淋行业持续推新口味（如蛋白、腌蒜）以平衡创新与成本压力。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
   "https://www.bbc.co.uk/news/articles/c0jlyqdj6geo?at_medium=RSS&at_campaign=rss": {
     "title": "Temporary ban on disposable BBQs as military deployed to help battle wildfires",
     "url": "https://www.bbc.co.uk/news/articles/c0jlyqdj6geo?at_medium=RSS&at_campaign=rss",
@@ -1236,58 +1040,6 @@
     "excerpt": "Single-use grills pose a \"significant risk to the public\" in current drought and heatwave conditions, the government warns.",
     "publishedAt": "2026-08-15T03:58:31.000Z",
     "summary": "英国旱情与热浪下临时禁用一次性烧烤，并部署军队协助扑灭野火，政府称其构成重大公共风险。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://www.bbc.co.uk/news/articles/c8jn2811we4o?at_medium=RSS&at_campaign=rss": {
-    "title": "Selena Gomez sued for alleged fraud over mental health company",
-    "url": "https://www.bbc.co.uk/news/articles/c8jn2811we4o?at_medium=RSS&at_campaign=rss",
-    "sourceId": "bbc-business",
-    "source": "BBC Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "Investors say the actor and singer did not take an \"active role\" in the company as promised.",
-    "publishedAt": "2026-08-14T11:32:05.000Z",
-    "summary": "赛琳娜·戈麦斯因涉嫌心理健康公司欺诈被投资者起诉，称其未如承诺般「深度参与」经营。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://www.bbc.co.uk/news/articles/ckg6x3n5erpo?at_medium=RSS&at_campaign=rss": {
-    "title": "I got an £89 refund – how to cancel and  avoid unwanted subscriptions",
-    "url": "https://www.bbc.co.uk/news/articles/ckg6x3n5erpo?at_medium=RSS&at_campaign=rss",
-    "sourceId": "bbc-business",
-    "source": "BBC Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "After the PM announced a crackdown on subscription traps, readers share how they got into and out of unwanted plans.",
-    "publishedAt": "2026-08-14T07:45:51.000Z",
-    "summary": "英国首相宣布整治「订阅陷阱」后，读者分享如何取消不必要订阅并拿回退款（有人获89英镑）。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://www.bbc.co.uk/news/articles/c1l1yj0zd9no?at_medium=RSS&at_campaign=rss": {
-    "title": "Electric vehicle sales targets could be cut after pressure from car makers",
-    "url": "https://www.bbc.co.uk/news/articles/c1l1yj0zd9no?at_medium=RSS&at_campaign=rss",
-    "sourceId": "bbc-business",
-    "source": "BBC Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "The government says it is considering cutting the new electric car sales target from 80% to 50% by 2030.",
-    "publishedAt": "2026-08-14T15:58:21.000Z",
-    "summary": "在车企施压下，英国政府考虑将2030年新电动车销售占比目标从80%下调至50%。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://www.bbc.co.uk/news/articles/c78gy6ep3n5o?at_medium=RSS&at_campaign=rss": {
-    "title": "US says dozens of countries helped China dodge Trump's tariffs",
-    "url": "https://www.bbc.co.uk/news/articles/c78gy6ep3n5o?at_medium=RSS&at_campaign=rss",
-    "sourceId": "bbc-business",
-    "source": "BBC Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "A new US report said China had moved goods through nations with lower tariffs to dodge higher levies.",
-    "publishedAt": "2026-08-14T08:39:46.000Z",
-    "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。",
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-18T09:03:39.020Z"
   },
@@ -1668,19 +1420,6 @@
     "lastSeenAt": "2026-08-17T10:56:25.847Z",
     "summary": "美国房贷/利率动态：跨境利率环境参考，提示国内房贷利率趋势与海外置业客群。"
   },
-  "https://finance.yahoo.com/personal-finance/credit-cards/review/us-bank-triple-cash-rewards-visa-business-card-220252786.html": {
-    "title": "U.S. Bank Triple Cash Rewards Visa Business Card review: A solid option for everyday business costs",
-    "url": "https://finance.yahoo.com/personal-finance/credit-cards/review/us-bank-triple-cash-rewards-visa-business-card-220252786.html",
-    "sourceId": "yahoo-finance",
-    "source": "Yahoo Finance",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "",
-    "publishedAt": "2026-08-14T22:02:52.000Z",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-17T10:56:25.847Z",
-    "summary": "海外银行/信贷动态：国际信贷环境与金融创新参考。"
-  },
   "https://www.investing.com/news/commodities-news/gold-rises-near-4400-as-fed-minutes-oil-risks-shape-rate-outlook-4862058": {
     "title": "Gold edges higher near $4,400 as softer dollar offsets Middle East inflation risks",
     "url": "https://www.investing.com/news/commodities-news/gold-rises-near-4400-as-fed-minutes-oil-risks-shape-rate-outlook-4862058",
@@ -1719,19 +1458,6 @@
     "firstSeenAt": "2026-08-17T06:00:27.278Z",
     "lastSeenAt": "2026-08-17T06:00:27.278Z",
     "summary": "中国经济相关报道：外部视角观察中国经济，提示宏观政策与市场预期变化。"
-  },
-  "https://www.theguardian.com/media/2026/aug/14/bbc-trump-children-subpoenas-lawsuit": {
-    "title": "BBC seeks to subpoena Trump children and son-in-law over defamation lawsuit",
-    "url": "https://www.theguardian.com/media/2026/aug/14/bbc-trump-children-subpoenas-lawsuit",
-    "sourceId": "guardian-business",
-    "source": "The Guardian Business",
-    "category": "finance",
-    "subcategory": "news",
-    "excerpt": "Network wants to serve Jared Kushner, Ivanka Trump and Donald Trump Jr after president sues over January 6 documentary The BBC is trying to subpoena Donald Trump’s children as it builds its defense against the president’s defamation lawsuit centered on a documentary on the January 6 insurrection. In",
-    "publishedAt": "2026-08-14T21:05:47.000Z",
-    "summary": "美国政治经济动态：政策不确定性影响全球市场情绪与资产配置。",
-    "firstSeenAt": "2026-08-17T06:00:27.278Z",
-    "lastSeenAt": "2026-08-19T01:12:16.071Z"
   },
   "https://www.theguardian.com/business/2026/aug/15/trump-big-beautiful-bill-millionaires": {
     "title": "Donald Trump doesn’t just love billionaires, he loves multimillionaires too",
@@ -1797,7 +1523,7 @@
     "publishedAt": "2026-08-17T09:00:00.000Z",
     "summary": "MIT技术评论探讨儿童机器人好友离世的影响。以Xander与机器人Moxie的六年相处为例，Moxie曾教他通过蜂鸣式呼气、龙式呼吸等方法调节情绪，失去它令孩子面临情感挑战。",
     "firstSeenAt": "2026-08-17T09:31:59.195Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/EXM7777/status/2088992368695628159": {
     "title": "How to build a $2M video production pipeline",
@@ -2514,7 +2240,7 @@
     "publishedAt": "2026-08-17T19:46:21.000Z",
     "summary": "Hugging Face博客文章称，在同一个GPU集群上，仅通过调整任务执行顺序，利用率提升了33个百分点。文章强调调度顺序对集群性能的重要影响。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://tldr.tech/ai/2026-08-17": {
     "title": "GLM-5.3 🤖, Stripe OpenRouter deal 💰, AI agent consensus 🤝",
@@ -2527,7 +2253,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "本期TLDR AI资讯汇总：发布GLM-5.3模型，Stripe与OpenRouter达成交易合作，以及AI代理领域形成共识。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://news.smol.ai/issues/26-08-17-not-much/": {
     "title": "not much happened today",
@@ -2553,7 +2279,7 @@
     "publishedAt": "2026-08-17T23:13:41.000Z",
     "summary": "支付公司Stripe以70亿美元收购OpenRouter。评论指出，交易标的没有GPU、没有智能体，仅凭扎实的基础设施和分发能力取胜。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/": {
     "title": "What Flock’s defenders are missing",
@@ -2566,7 +2292,7 @@
     "publishedAt": "2026-08-17T19:16:09.000Z",
     "summary": "MIT技术评论报道，美国警用科技巨头Flock拥有约12万个自动车牌读取器网络，近期宣布了若干调整，但其辩护者们忽略了一些关键问题。",
     "firstSeenAt": "2026-08-17T23:46:53.827Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/JensenHuang/status/2089331487342829862": {
     "title": "Securing the Infrastructure of Intelligence",
@@ -3321,7 +3047,7 @@
     "publishedAt": "2026-08-17T16:00:00.000Z",
     "summary": "美国与阿曼地缘冲突风险升级，避险情绪或升温，油价黄金波动加大，建议关注避险资产配置与客户资产保值需求。",
     "firstSeenAt": "2026-08-18T00:28:10.237Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bloomberg.com/news/articles/2026-08-18/m-g-backs-korean-bonds-sees-too-many-rate-hikes-priced-in": {
     "title": "M&G Backs Korean Bonds, Sees Too Many Rate Hikes Priced In",
@@ -3610,30 +3336,6 @@
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
     "lastSeenAt": "2026-08-19T01:12:16.071Z"
   },
-  "https://finance.cctv.com/2026/08/15/ARTIYzQv9BfiH4jNQzd3EPcO260815.shtml": {
-    "title": "营收注水、减值随意、研发乱账……证监会年报监管报告点名八大乱象",
-    "url": "https://finance.cctv.com/2026/08/15/ARTIYzQv9BfiH4jNQzd3EPcO260815.shtml",
-    "sourceId": "cctv-finance",
-    "source": "央视财经",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "证监会年报监管点名财务乱象：银行业尽调/审计需强化财务真实性识别，防范信贷风险。",
-    "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-19T01:12:16.071Z"
-  },
-  "https://finance.cctv.com/2026/08/15/ARTIa1JF4316YbK3zaPScPWB260815.shtml": {
-    "title": "7月金融数据出炉：信贷结构持续优化、债券与股票融资占比继续提升",
-    "url": "https://finance.cctv.com/2026/08/15/ARTIa1JF4316YbK3zaPScPWB260815.shtml",
-    "sourceId": "cctv-finance",
-    "source": "央视财经",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "7月金融数据：信贷结构优化、直接融资占比提升，反映实体经济融资渠道变化，影响银行信贷投放策略。",
-    "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-19T01:12:16.071Z"
-  },
   "https://finance.cctv.com/2026/08/17/ARTIBh4TVwyPeBpvVSYaCsKf260817.shtml": {
     "title": "电商“AB货”，乱象背后是行业内卷",
     "url": "https://finance.cctv.com/2026/08/17/ARTIBh4TVwyPeBpvVSYaCsKf260817.shtml",
@@ -3658,30 +3360,6 @@
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
     "lastSeenAt": "2026-08-18T09:03:39.020Z"
   },
-  "https://finance.cctv.com/2026/08/15/ARTIWSyuF3EPCP3Wc0CqXeSE260815.shtml": {
-    "title": "银行业从严监管“穿透到人” 今年以来共罚款12.19亿元禁业178人",
-    "url": "https://finance.cctv.com/2026/08/15/ARTIWSyuF3EPCP3Wc0CqXeSE260815.shtml",
-    "sourceId": "cctv-finance",
-    "source": "央视财经",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "银行业严监管穿透到人：合规红线收紧，分行需强化员工行为管理与消保合规。",
-    "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://finance.cctv.com/2026/08/15/ARTI6RI9PFvauc6vBPAJahYn260815.shtml": {
-    "title": "落实防范打击非法金融要求 多地监管优化治理机制",
-    "url": "https://finance.cctv.com/2026/08/15/ARTI6RI9PFvauc6vBPAJahYn260815.shtml",
-    "sourceId": "cctv-finance",
-    "source": "央视财经",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "打击非法金融：消保与合规治理，分行需配合开展风险排查。",
-    "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
   "https://finance.cctv.com/2026/08/17/ARTIWJrHKIaQPZz7PWhHw4Hk260817.shtml": {
     "title": "我国保险资金运用余额首次突破40万亿元",
     "url": "https://finance.cctv.com/2026/08/17/ARTIWJrHKIaQPZz7PWhHw4Hk260817.shtml",
@@ -3693,31 +3371,6 @@
     "summary": "保险资金运用余额破40万亿：险资配置需求旺盛，是银保/代销业务与高净值客群联动机会。",
     "firstSeenAt": "2026-08-18T01:43:25.793Z",
     "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://finance.cctv.com/2026/08/15/ARTIv3tr8IEVOnYY0lmOVVZm260815.shtml": {
-    "title": "Token能贷款了！AI产业迎来全新融资标尺",
-    "url": "https://finance.cctv.com/2026/08/15/ARTIv3tr8IEVOnYY0lmOVVZm260815.shtml",
-    "sourceId": "cctv-finance",
-    "source": "央视财经",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "AI产业数据资产融资新标尺：数据资产质押/评估是未来信贷创新方向，宜提前研究。",
-    "firstSeenAt": "2026-08-18T01:43:25.793Z",
-    "lastSeenAt": "2026-08-18T09:03:39.020Z"
-  },
-  "https://huggingface.co/papers/2608.15265": {
-    "title": "VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?",
-    "url": "https://huggingface.co/papers/2608.15265",
-    "sourceId": "huggingface-papers",
-    "source": "HuggingFace Trending Papers",
-    "category": "tech",
-    "subcategory": "trending-papers",
-    "excerpt": "Constructing an interactive 3D open world from a user query is important. However, existing methods are primarily evaluated on idealized, simple queries, making it difficult to systematically analyze and compare how multimodal agents understand user intent, use 3D tools, and reason over textual and ",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "研究多模态智能体能否端到端构建交互式3D开放世界。现有方法多在理想化简单查询上评估，难以系统分析比较智能体理解用户意图、使用3D工具、对文本与视觉信息推理的能力。本文聚焦这一挑战，探讨端到端构建3D开放世界的可行性。",
-    "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-19T01:12:16.071Z"
   },
   "https://huggingface.co/papers/2608.16798": {
     "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
@@ -4240,7 +3893,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478669.PDF": {
     "title": "宇树科技 (688836)",
@@ -4253,7 +3906,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478438.PDF": {
     "title": "天博智能 (603448)",
@@ -4266,7 +3919,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478314.PDF": {
     "title": "高凯技术 (688835)",
@@ -4292,7 +3945,7 @@
     "publishedAt": "2026-08-16T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225477657.PDF": {
     "title": "乖宝宠物 (301498)",
@@ -4305,7 +3958,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225476845.PDF": {
     "title": "洛轴股份 (301699)",
@@ -4318,7 +3971,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "新股观察：该企业 IPO/公告进程反映资本市场活跃度，作为对公客户储备与理财市场环境的参考信息。",
     "firstSeenAt": "2026-08-18T04:12:19.018Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-18/1225476276.PDF": {
     "title": "贝特利 (301697)",
@@ -4642,7 +4295,7 @@
     "excerpt": "【广州市政府】广州市人民政府关于印发广州市政府投资管理办法的通知",
     "summary": "广州市政府投资管理办法：规范政府投资项目，基建与产业投资落地带动施工/供应企业开户、代发与供应链融资需求。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10833640.html": {
     "title": "广州市人民政府关于印发广州市国民经济和社会发展第十五个五年规划纲要的通知",
@@ -4654,7 +4307,7 @@
     "excerpt": "【广州市政府】广州市人民政府关于印发广州市国民经济和社会发展第十五个五年规划纲要的通知",
     "summary": "广州\"十五五\"规划纲要：未来五年投资与产业布局总纲，重点片区建设带来对公+零售联动（代发/按揭/经营贷）机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10815782.html": {
     "title": "广州市人民政府关于公布广州市第九批市级非物质文化遗产代表性项目名录的通知",
@@ -4666,7 +4319,7 @@
     "excerpt": "【广州市政府】广州市人民政府关于公布广州市第九批市级非物质文化遗产代表性项目名录的通知",
     "summary": "广州文化产业数据：新业态快速增长，文化企业及从业者是零售获客与经营贷的细分机会客群。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10916679.html": {
     "title": "【一图读懂】一图读懂16届128次市政府常务会议",
@@ -4678,7 +4331,7 @@
     "excerpt": "【广州市政府】【一图读懂】一图读懂16届128次市政府常务会议",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10907293.html": {
     "title": "【一图读懂】一图读懂16届127次市政府常务会议",
@@ -4690,7 +4343,7 @@
     "excerpt": "【广州市政府】【一图读懂】一图读懂16届127次市政府常务会议",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10907170.html": {
     "title": "【一图读懂】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》",
@@ -4702,7 +4355,7 @@
     "excerpt": "【广州市政府】【一图读懂】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10882377.html": {
     "title": "【一图读懂】一图读懂16届126次市政府常务会议",
@@ -4714,7 +4367,7 @@
     "excerpt": "【广州市政府】【一图读懂】一图读懂16届126次市政府常务会议",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10863006.html": {
     "title": "【一图读懂】一图读懂16届125次市政府常务会议",
@@ -4750,7 +4403,7 @@
     "excerpt": "【广州市政府】【文字解读】《广州市政府投资管理办法》政策解读",
     "summary": "广州市政府投资管理办法：规范政府投资项目，基建与产业投资落地带动施工/供应企业开户、代发与供应链融资需求。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjd/content/post_10907172.html": {
     "title": "【文字解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读",
@@ -4763,7 +4416,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10907168.html": {
     "title": "【音频解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读",
@@ -4775,7 +4428,7 @@
     "excerpt": "【广州市政府】【音频解读】《广州市人民政府办公厅关于延长广州市临时救助实施细则有效期的通知》政策解读",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10842958.html": {
     "title": "【音频解读】《广州市国有土地上房屋征收与补偿实施办法》政策解读",
@@ -4787,7 +4440,7 @@
     "excerpt": "【广州市政府】【音频解读】《广州市国有土地上房屋征收与补偿实施办法》政策解读",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10844902.html": {
     "title": "【媒体解读】《广州市国有土地上房屋征收与补偿实施办法》印发 房屋征收补偿新增40平方米“兜底”规定",
@@ -4799,7 +4452,7 @@
     "excerpt": "【广州市政府】【媒体解读】《广州市国有土地上房屋征收与补偿实施办法》印发 房屋征收补偿新增40平方米“兜底”规定",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10834892.html": {
     "title": "【媒体解读】五年蓝图兼顾“国之大者”与三餐四季",
@@ -4811,7 +4464,7 @@
     "excerpt": "【广州市政府】【媒体解读】五年蓝图兼顾“国之大者”与三餐四季",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10765891.html": {
     "title": "【媒体解读】广州公布23个重大行政决策事项",
@@ -4823,7 +4476,7 @@
     "excerpt": "【广州市政府】【媒体解读】广州公布23个重大行政决策事项",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10761623.html": {
     "title": "【媒体解读】年交易总额超1.5万亿元 广州推动专业市场转型升级",
@@ -4835,7 +4488,7 @@
     "excerpt": "【广州市政府】【媒体解读】年交易总额超1.5万亿元 广州推动专业市场转型升级",
     "summary": "广州市政策解读：官方解读文件帮助快速把握政策要点，涉投资/产业/民生政策可直接映射对公与零售业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968359.html": {
     "title": "广州市南沙区知识产权局关于发放2025年度广州市知识产权项目资金的通知",
@@ -4848,7 +4501,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968356.html": {
     "title": "广州市南沙区知识产权局关于发放第四批2024年度广州市知识产权项目资金的通知",
@@ -4861,7 +4514,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968393.html": {
     "title": "关于2024年度广州南沙新区（自贸片区）促进半导体与集成电路产业扶持办法拟入库及兑现名单的公示",
@@ -4874,7 +4527,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "南沙半导体/集成电路产业扶持：区内科创企业及实控人是私行与企业信贷重点客群，扶持兑现伴随开户、融资与资产配置需求。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968282.html": {
     "title": "广州市南沙区工业和信息化局转发广东省工业和信息化厅关于组织开展新型机电一体化关键材料创新任务揭榜挂帅工作的通知",
@@ -4887,7 +4540,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "南沙产业扶持政策（知识产权/总部/独角兽等）：高成长企业及高管客群是私行、代发与企业融资的精准目标，政策落地即业务机会。",
     "firstSeenAt": "2026-08-18T06:50:00.680Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bloomberg.com/news/articles/2026-08-18/bond-rout-sends-long-term-borrowing-costs-to-highest-in-decades": {
     "title": "Bond Slump Sends Long-Term Debt Costs to Highest in Decades",
@@ -5082,7 +4735,7 @@
     "excerpt": "【广州统计局】上半年广州服务业向新向优",
     "summary": "广州服务业/枢纽经济数据：产业活跃度与从业客群规模相关，物流/枢纽产业链企业是代发工资与经营贷潜在对象。",
     "firstSeenAt": "2026-08-18T07:37:34.214Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://tjj.gz.gov.cn/stats_newtjyw/sjfb/content/post_10523330.html": {
     "title": "前三季度广州市交通货运业表现亮眼",
@@ -5094,7 +4747,7 @@
     "excerpt": "【广州统计局】前三季度广州市交通货运业表现亮眼",
     "summary": "广州服务业/枢纽经济数据：产业活跃度与从业客群规模相关，物流/枢纽产业链企业是代发工资与经营贷潜在对象。",
     "firstSeenAt": "2026-08-18T07:37:34.214Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gov.cn/zhengce/content/202608/content_7078320.htm": {
     "title": "国务院关于《特殊教育发展提升“十五五”行动计划》的批复",
@@ -5107,7 +4760,7 @@
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "summary": "国务院批复特殊教育\"十五五\"行动计划：教育领域投入增加，相关机构及家庭客群带来教育金融/代发机会（参考）。",
     "firstSeenAt": "2026-08-18T07:37:34.214Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bloomberg.com/news/articles/2026-08-18/germany-is-set-to-sell-30-year-bonds-at-highest-yield-since-2011": {
     "title": "Germany Is Set to Sell 30-Year Bonds at Highest Yield Since 2011",
@@ -5548,7 +5201,7 @@
     "excerpt": "【财富管理】视频|死磕白酒四年浮亏44% 宏利基金经理邱楠宇“下台”",
     "summary": "基金经理因长期重仓白酒大幅浮亏离任，公募投研洗牌加剧，提示代销机构关注产品业绩回撤与投研团队稳定性，做好客户安抚与适当性管理。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/roll/2026-08-19/doc-ininuzku8384342.shtml": {
     "title": "美联储9月维持利率不变的概率为65%",
@@ -5673,7 +5326,7 @@
     "excerpt": "【21财经】重磅新政来了，《住房公积金管理条例》正式公布",
     "summary": "《住房公积金管理条例》正式公布，公积金制度完善利好住房消费与刚需购房，关注房贷、公积金组合贷联动营销与住房场景金融机会。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0818/2026081801889.pdf": {
     "title": "OCT (ASIA) (03366) — 2026 INTERIM RESULTS ANNOUNCEMENT",
@@ -5712,7 +5365,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "甘李药业（603087）发布公告，医药行业上市公司动态，关注其研发投入、资金需求及上下游供应链金融机会。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-19/1225481019.PDF": {
     "title": "绿控传动 (301655)",
@@ -5725,7 +5378,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "绿控传动（301655）发布公告，新能源传动系统企业动态，关注绿色产业企业融资与供应链金融服务需求。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479686.PDF": {
     "title": "英特科技 (301399)",
@@ -5738,7 +5391,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "英特科技（301399）发布公告，科技制造企业动态，关注其经营与融资动向，挖掘对公信贷与结算合作机会。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479343.PDF": {
     "title": "波长光电 (301421)",
@@ -5751,7 +5404,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "波长光电（301421）发布公告，光电企业动态，关注高端制造企业设备更新与技改信贷需求。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479214.PDF": {
     "title": "和泰机电 (001225)",
@@ -5764,7 +5417,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "和泰机电（001225）发布公告，机电制造企业动态，关注制造业企业资金周转与供应链金融合作机会。",
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479054.PDF": {
     "title": "格林生物 (301688)",
@@ -5805,19 +5458,6 @@
     "firstSeenAt": "2026-08-19T00:59:04.615Z",
     "lastSeenAt": "2026-08-19T01:12:16.071Z"
   },
-  "https://huggingface.co/papers/2608.15089": {
-    "title": "StateM: Reaching 95.3% Raw Accuracy, or a \\$15 Frontier Run, on Terminal-Bench 2.1 via Harness Scaling",
-    "url": "https://huggingface.co/papers/2608.15089",
-    "sourceId": "huggingface-papers",
-    "source": "HuggingFace Trending Papers",
-    "category": "tech",
-    "subcategory": "trending-papers",
-    "excerpt": "Long-horizon agents can fail even when their underlying models can solve the constituent steps. They may lose track of mutable state, fail to reactivate lessons from earlier executions, skip known procedures, or stop prematurely. We bet on harness scaling to improve the execution system around an ag",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "summary": "AI智能体在终端任务评测取得新突破，银行可参考该技术评估自身智能客服、自动化审批等场景的落地潜力。",
-    "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-20T01:49:51.543Z"
-  },
   "https://tldr.tech/ai/2026-08-18": {
     "title": "Cursor Origin 👨‍💻, Anthropic $65B revenue 💰, deadline dividend scaling 📈",
     "url": "https://tldr.tech/ai/2026-08-18",
@@ -5829,7 +5469,7 @@
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "summary": "AI创业公司融资与产品进展密集，全球AI赛道热度不减，提示分行关注科技企业信贷与股权投资合作机会。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.latent.space/p/glean-model-routing": {
     "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
@@ -5842,7 +5482,7 @@
     "publishedAt": "2026-08-18T21:41:10.000Z",
     "summary": "前沿模型推理成本高企推动模型路由需求，银行AI应用应注重降本增效与多模型选型策略。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/": {
     "title": "We still don’t know how people are really using AI",
@@ -5855,7 +5495,7 @@
     "publishedAt": "2026-08-18T10:06:43.000Z",
     "summary": "用户实际使用AI的方式仍不清晰，提示银行零售客群的AI应用需求尚在探索期，产品设计宜渐进式迭代。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/": {
     "title": "AI’s recursive self-improvement might not come so quickly after all",
@@ -5868,7 +5508,7 @@
     "publishedAt": "2026-08-18T09:00:00.000Z",
     "summary": "AI自我进化的速度可能低于预期，提示理性看待AI能力预期，避免过度投入短期无法兑现的技术项目。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/milesdeutscher/status/2089724781449052255": {
     "title": "Grok Bot: The Ultimate Guide ",
@@ -6273,7 +5913,7 @@
     "publishedAt": "2026-08-18T17:50:12.000Z",
     "summary": "股指与实体经济背离现象加剧，市场结构性分化明显，提示理财配置需关注指数失真下的真实风险。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.economist.com/finance-and-economics/2026/08/18/the-white-houses-absurd-claim-of-a-chinese-transshipment-scam": {
     "title": "The White House’s absurd claim of a Chinese transshipment “scam”",
@@ -6286,7 +5926,7 @@
     "publishedAt": "2026-08-18T15:42:49.000Z",
     "summary": "美方炒作中国转口贸易问题，外贸监管环境趋严，提示出口企业客户关注合规与关税风险，做好跨境结算安排。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.cnbc.com/2026/08/18/trump-carney-canada-tariffs-dealine-talks.html": {
     "title": "Trump, Carney reportedly in talks ahead of new 50% tariffs on Canadian goods",
@@ -6651,7 +6291,7 @@
     "publishedAt": "2026-08-18T21:39:20.000Z",
     "summary": "编程语言Mojo宣布开源，AI开发工具链加速演进，银行技术团队可关注新兴语言生态降低AI开发成本。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.qbitai.com/2026/08/474907.html": {
     "title": "年轻人首选B级闪充轿车秦MAX正式上市，售价10.99-14.39万元",
@@ -6742,7 +6382,7 @@
     "publishedAt": "2026-08-18T11:50:40.000Z",
     "summary": "美伊停火协议到期油价跳涨，地缘冲突反复推升能源价格，提示关注通胀预期与大宗商品理财风险。",
     "firstSeenAt": "2026-08-19T01:01:26.435Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/business/2026/aug/18/governments-borrowing-costs-us-iran-bond-yields-trump": {
     "title": "Governments’ borrowing costs hit further multi-decade highs as US-Iran peace hopes fade",
@@ -6815,7 +6455,7 @@
     "excerpt": "上交所公告 | 高凯技术<em>首次公开发行</em>股票并在科创板上市招股说明书 | 日期: 2026-08-19",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483441.PDF": {
     "title": "马矿股份 (601123)",
@@ -6827,7 +6467,7 @@
     "excerpt": "上交所公告 | 马矿股份<em>首次公开发行</em>股票并在主板上市发行公告 | 日期: 2026-08-19",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483835.PDF": {
     "title": "电科思仪 (301689)",
@@ -6839,7 +6479,7 @@
     "excerpt": "深交所公告 | 容诚会计师事务所（特殊普通合伙）关于公司<em>首次公开发行</em>股票并在创业板上市的财务报表及审计报告 | 日期: 2026-08-19",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482235.PDF": {
     "title": "贝特利 (301697)",
@@ -6863,7 +6503,7 @@
     "excerpt": "深交所公告 | 华福证券股份有限公司关于上海真兰仪表科技股份有限公司<em>首次公开发行</em>前已发行股份解除限售并上市流通的核查意见 | 日期: 2026-08-19",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bse.cn/disclosure/2026/2026-08-19/79747cb56451427eb6e4cbd6a559709b.pdf": {
     "title": "森合高科 (920038)",
@@ -6886,7 +6526,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《海珠区赤沙涌以东储备用地（HZ0401单元）控制性详细规划》等3项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10966003.html": {
     "title": "广州市人民政府关于简易修改实施国Ⅲ排放标准柴油货车限制通行交通管理措施通告的通知",
@@ -6897,7 +6537,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于简易修改实施国Ⅲ排放标准柴油货车限制通行交通管理措施通告的通知",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965935.html": {
     "title": "广州市人民政府关于简易修改划定禁止使用高排放非道路移动机械区域通告的通知",
@@ -6908,7 +6548,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于简易修改划定禁止使用高排放非道路移动机械区域通告的通知",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965931.html": {
     "title": "广州市人民政府关于简易修改禁止黑烟车上路行驶通告的通知",
@@ -6919,7 +6559,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于简易修改禁止黑烟车上路行驶通告的通知",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10965927.html": {
     "title": "广州市人民政府关于简易修改划定广州市高污染燃料禁燃区通告的通知",
@@ -6930,7 +6570,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于简易修改划定广州市高污染燃料禁燃区通告的通知",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10949563.html": {
     "title": "广州市人民政府关于全面加强“门前三包”责任制管理工作的通告",
@@ -6941,7 +6581,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于全面加强“门前三包”责任制管理工作的通告",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10895767.html": {
     "title": "广州市人民政府关于开展广州市第四轮综合交通调查的通告",
@@ -6952,7 +6592,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于开展广州市第四轮综合交通调查的通告",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10890715.html": {
     "title": "广州市人民政府关于同意《广州中医药大学金沙洲医院扩建项目（AB3703规划管理单元）控制性详细规划》等6项规划成果的批复",
@@ -6963,7 +6603,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《广州中医药大学金沙洲医院扩建项目（AB3703规划管理单元）控制性详细规划》等6项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10879960.html": {
     "title": "广州市人民政府关于禁止猎捕陆生野生动物的通告",
@@ -6974,7 +6614,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于禁止猎捕陆生野生动物的通告",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10871309.html": {
     "title": "广州市人民政府关于省十四届人大五次会议第1760号代表建议答复的函",
@@ -6985,7 +6625,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于省十四届人大五次会议第1760号代表建议答复的函",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10844789.html": {
     "title": "广州市人民政府关于同意《从化区江埔街赛车场片区（CH5402-CZTB单元）控制性详细规划》等10项规划成果的批复",
@@ -6996,7 +6636,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《从化区江埔街赛车场片区（CH5402-CZTB单元）控制性详细规划》等10项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10765852.html": {
     "title": "广州市人民政府关于表扬中华人民共和国第三届职业技能大赛我市获奖选手和为参赛工作作出突出贡献的单位及个人的通报",
@@ -7007,7 +6647,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于表扬中华人民共和国第三届职业技能大赛我市获奖选手和为参赛工作作出突出贡献的单位及个人的通报",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10750211.html": {
     "title": "广州市人民政府关于废止镇街综合行政执法有关文件的公告",
@@ -7018,7 +6658,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于废止镇街综合行政执法有关文件的公告",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10741085.html": {
     "title": "广州市人民政府关于同意《鱼珠车辆基地场站综合体（AP0508、AT1017规划管理单元）控制性详细规划》等2项规划成果的批复",
@@ -7029,7 +6669,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《鱼珠车辆基地场站综合体（AP0508、AT1017规划管理单元）控制性详细规划》等2项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10685700.html": {
     "title": "广州市人民政府关于同意《花都区新街村、大陵村城市更新单元控制性详细规划》等2项规划成果的批复",
@@ -7040,7 +6680,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《花都区新街村、大陵村城市更新单元控制性详细规划》等2项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10681039.html": {
     "title": "广州市人民政府关于公布实施全国重点文物保护单位南越文王墓保护规划（2021—2035年）的通告",
@@ -7051,7 +6691,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于公布实施全国重点文物保护单位南越文王墓保护规划（2021—2035年）的通告",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/fggw/szfwj/content/post_10660563.html": {
     "title": "广州市人民政府关于同意《广州地铁八号线北延段（滘心—广州北站）工程车辆段及周边片区控制性详细规划》等2项规划成果的批复",
@@ -7062,7 +6702,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】广州市人民政府关于同意《广州地铁八号线北延段（滘心—广州北站）工程车辆段及周边片区控制性详细规划》等2项规划成果的批复",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10903511.html": {
     "title": "【⼀图读懂】《广州市人民政府关于禁止猎捕陆生野生动物的通告》",
@@ -7073,7 +6713,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【⼀图读懂】《广州市人民政府关于禁止猎捕陆生野生动物的通告》",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10950353.html": {
     "title": "【音频解读】《广州市人民政府关于全面加强“门前三包”责任制管理工作的通告》政策解读",
@@ -7084,7 +6724,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【音频解读】《广州市人民政府关于全面加强“门前三包”责任制管理工作的通告》政策解读",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10895808.html": {
     "title": "【音频解读】《广州市人民政府关于开展广州市第四轮综合交通调查的通告》解读",
@@ -7095,7 +6735,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【音频解读】《广州市人民政府关于开展广州市第四轮综合交通调查的通告》解读",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/yspjd/content/post_10743674.html": {
     "title": "【音频解读】《广州市促进历史建筑合理利用实施办法》政策解读",
@@ -7106,7 +6746,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【音频解读】《广州市促进历史建筑合理利用实施办法》政策解读",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10950446.html": {
     "title": "【媒体解读】广州全面加强“门前三包”责任制 将非机动车停放管理纳入“包秩序良好”范畴",
@@ -7117,7 +6757,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【媒体解读】广州全面加强“门前三包”责任制 将非机动车停放管理纳入“包秩序良好”范畴",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10970551.html": {
     "title": "关于转发广州市工业和信息化局征集重点领域智能眼镜典型应用场景与案例的通知",
@@ -7129,7 +6769,7 @@
     "excerpt": "【南沙】关于转发广州市工业和信息化局征集重点领域智能眼镜典型应用场景与案例的通知",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10967886.html": {
     "title": "2026年广州市南沙区卫生健康局公开招聘下属事业单位工作人员笔试报名公告",
@@ -7141,7 +6781,7 @@
     "excerpt": "【南沙】2026年广州市南沙区卫生健康局公开招聘下属事业单位工作人员笔试报名公告",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10966772.html": {
     "title": "大涌村原临时摆卖疏导点用地出租项目的竞投结果公示",
@@ -7153,7 +6793,7 @@
     "excerpt": "【南沙】大涌村原临时摆卖疏导点用地出租项目的竞投结果公示",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10968085.html": {
     "title": "关于开展全区殡葬服务备案相关工作的通知",
@@ -7165,7 +6805,7 @@
     "excerpt": "【南沙】关于开展全区殡葬服务备案相关工作的通知",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10964847.html": {
     "title": "广州市规划和自然资源局南沙区分局国有建设用地使用权出让预告",
@@ -7177,7 +6817,7 @@
     "excerpt": "【南沙】广州市规划和自然资源局南沙区分局国有建设用地使用权出让预告",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "http://www.gzns.gov.cn/zwgk/zcwjjjd/zcwj/content/post_10946035.html": {
     "title": "广州市南沙区住房和城乡建设局关于印发广州市南沙区重点区域业主自有产权的城市景观照明设施电费补贴办法的通知",
@@ -7188,7 +6828,7 @@
     "subcategory": "gz-private",
     "excerpt": "【南沙】广州市南沙区住房和城乡建设局关于印发广州市南沙区重点区域业主自有产权的城市景观照明设施电费补贴办法的通知",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/blog/LiquidAI/qad": {
     "title": "LFM2.5 Q4\\_0 Checkpoints from Quantization-Aware Distillation",
@@ -7212,7 +6852,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T18:09:38.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/blog/multi-vector-encoder": {
     "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
@@ -7224,7 +6864,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.17310": {
     "title": "Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements",
@@ -7286,18 +6926,6 @@
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
     "lastSeenAt": "2026-08-21T01:56:03.727Z"
   },
-  "https://huggingface.co/papers/2608.15045": {
-    "title": "MOSS-VL Technical Report",
-    "url": "https://huggingface.co/papers/2608.15045",
-    "sourceId": "huggingface-papers",
-    "source": "HuggingFace Trending Papers",
-    "category": "tech",
-    "subcategory": "trending-papers",
-    "excerpt": "We present MOSS-VL, an open vision-language model family that treats real-time interaction -- perceiving while it speaks -- as a first-class capability. It is co-designed across the stack: the language decoder attends to vision only through gated cross-attention, so the model can naturally see incom",
-    "publishedAt": "2026-08-15T00:00:00.000Z",
-    "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-20T01:49:51.543Z"
-  },
   "https://tldr.tech/ai/2026-08-19": {
     "title": "GLM-5.3 API 🤖, Cerebras’ new chip ⚡, OpenAI cyber slowdown 🚨",
     "url": "https://tldr.tech/ai/2026-08-19",
@@ -7308,7 +6936,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.latent.space/p/ainews-memory-prices-up-500-in-12": {
     "title": "[AINews] Memory prices up 500% in 12 months",
@@ -7320,19 +6948,7 @@
     "excerpt": "the Memory crunch continues - Moore’s Law reversed to 2007 levels",
     "publishedAt": "2026-08-19T08:44:52.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
-  },
-  "https://www.latent.space/p/ainews-cursors-60b-acquisition-by": {
-    "title": "[AINews] Cursor's $60B acquisition by SpaceXai closes",
-    "url": "https://www.latent.space/p/ainews-cursors-60b-acquisition-by",
-    "sourceId": "latent-space",
-    "source": "Latent Space",
-    "category": "tech",
-    "subcategory": "ai-news",
-    "excerpt": "Congrats to the team!",
-    "publishedAt": "2026-08-14T06:16:00.000Z",
-    "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/nateherk/status/2089917020087210160": {
     "title": "A Week of Grok Bot Lessons in 10 Mins ",
@@ -7344,7 +6960,7 @@
     "excerpt": "9 of my favorite Grok Bot hacks. I have been getting my hands dirty with Grok Bot, and the default setup is only the starting point. Creating a few bots is easy. The useful part is teaching them your",
     "publishedAt": "2026-08-19T03:27:01.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/sairahul1/status/2089995692874068433": {
     "title": "How To Build a One-Person Company Using Grok Bot ",
@@ -7356,7 +6972,7 @@
     "excerpt": "You are running a one-person company. You find the leads. Write the outreach. Make the images. Answer the replies. Count the week. Everything waits for you. Nothing gets handed off. And by the time",
     "publishedAt": "2026-08-19T08:39:38.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/XFreeze/status/2089954139220713662": {
     "title": "Here's the simplest way to get started with Grok Bot",
@@ -7368,7 +6984,7 @@
     "excerpt": "Grok Bot is one of the most viral AI product launches right now... it keeps going viral as more people discover how insanely useful it is Just think about what you’re getting: You can have multiple",
     "publishedAt": "2026-08-19T05:54:30.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/mattyp/status/2089758434921160877": {
     "title": "Chat is all you need",
@@ -7740,7 +7356,7 @@
     "excerpt": "As stocks rise ever higher, yields have been climbing ominously",
     "publishedAt": "2026-08-19T18:02:58.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.economist.com/finance-and-economics/2026/08/17/the-worlds-most-influential-economist-is-oddly-unconvincing": {
     "title": "The world’s most influential economist is oddly unconvincing",
@@ -7752,7 +7368,7 @@
     "excerpt": "Daron Acemoglu is revered. Why?",
     "publishedAt": "2026-08-17T17:34:22.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.cnbc.com/2026/08/19/us-government-debt-passes-40-trillion-mark-for-the-first-time.html": {
     "title": "U.S. government debt passes $40 trillion, more than doubling in a decade",
@@ -8233,7 +7849,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/19/ARTIaIXdV3IwSGurrOKdrWt9260819.shtml": {
     "title": "财报透视丨上市银行首份半年报出炉 平安银行营收、净利重回正增长",
@@ -8244,7 +7860,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/19/ARTIAr50D5dxeFUmx2mXbRJZ260819.shtml": {
     "title": "机器人能否实现“完美”陪伴",
@@ -8322,7 +7938,7 @@
     "excerpt": "【国务院政策】国务院关于修改《住房公积金管理条例》的决定",
     "publishedAt": "2026-08-18T00:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/roll/2026-08-18/doc-inintxxh8595871.shtml": {
     "title": "别再只盯着AI了，这些基金的单位净值悄悄创新高",
@@ -8333,7 +7949,7 @@
     "subcategory": "cn-finance",
     "excerpt": "【财富管理】别再只盯着AI了，这些基金的单位净值悄悄创新高",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/jryx/bank/2026-08-20/doc-ininxkrs8051020.shtml": {
     "title": "8月LPR报价出炉：5年期和1年期利率均维持不变",
@@ -8466,7 +8082,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-19T23:16:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://simonwillison.net/2026/Aug/19/jeremy-morrell/": {
     "title": "Quoting Jeremy Morrell",
@@ -8478,7 +8094,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-19T22:56:31.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/": {
     "title": "Conceptual integrity and counting lines of code",
@@ -8490,7 +8106,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-19T22:46:07.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.infoq.cn/article/ELr08T70hyUzfUolgw5g?utm_source=rss&utm_medium=article": {
     "title": "随着 AI 生成的代码日益增多，GitHub Code Quality 聚焦可维护性",
@@ -8742,7 +8358,7 @@
     "excerpt": "哈浮 VERSA 飞行口袋云台相机发布，OpenAI 回应少量 Codex 用户调用 GPT-5.6 系列 AI 模型误删文件问题等。查看全文",
     "publishedAt": "2026-08-20T00:46:04.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113618": {
     "title": "iOS 27 测试版近期动向，还有 Apple 产品新消息",
@@ -8754,7 +8370,7 @@
     "excerpt": "7月20日至今，Apple陆续发布了iOS27的DeveloperBeta4、5、6三个测试版本。随着9月秋季发布会的渐进，iOS27距离正式版的发布越来越近。今天，我们就来一起看看这三个Beta版本 ...查看全文",
     "publishedAt": "2026-08-19T09:39:05.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113588": {
     "title": "《控制》新作体验：新怪谈游戏的祖师爷，又杀回来了",
@@ -8766,7 +8382,7 @@
     "excerpt": "本文首发于「游研社」，作者@亚锌，少数派经授权转载，仅对排版略作调整。阅读原文在ChinaJoy期间，我参与了Remedy举办的《控制：共振》闭门试玩会。其实在开始前，我除了战斗部分之外，还非常期待本 ...查看全文",
     "publishedAt": "2026-08-19T07:20:08.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/111936": {
     "title": "App+1 | Inkive：把纸质书上划好的线存进 Obsidian",
@@ -8778,7 +8394,7 @@
     "excerpt": "让纸书上的划线，回到你的数字笔记里。查看全文",
     "publishedAt": "2026-08-19T02:54:52.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113607": {
     "title": "派早报：iQOO 发布手机新品、闪极举行 Loomos AI 眼镜发布会等",
@@ -8874,7 +8490,7 @@
     "excerpt": "Internal documents obtained by Guardian show White House meetings, scheduled calls with top Trump officials and communications with Fox News producers Continue reading...",
     "publishedAt": "2026-08-19T10:00:13.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/business/2026/aug/19/us-treasury-doubles-debt-buyback-bond-market": {
     "title": "US treasury doubles debt buyback to steady bond market amid inflation fears",
@@ -8886,7 +8502,7 @@
     "excerpt": "Interest rates, now sitting at about 3.5-3.7%, expected to go up if inflation doesn’t come down to Fed’s 2% target The US treasury is doubling its buyback of government debt in an effort to balance out the bond market as officials at the US Federal Reserve remain divided over how to deal with high i",
     "publishedAt": "2026-08-19T14:57:21.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/us-news/2026/aug/19/trump-delay-canada-tariffs-keystone-xl-oil-pipeline": {
     "title": "Trump pauses Canada tariffs threat, and hints at revival of Keystone XL pipeline",
@@ -8898,7 +8514,7 @@
     "excerpt": "US president delays 50% tariffs by three days, and says contentious oil project ‘may be awoken from the grave’ Canada has temporarily avoided a bruising 50% US tariff, reaching a Tuesday-evening agreement with Trump administration officials hours before a hike that would have affected $20bn worth of",
     "publishedAt": "2026-08-19T03:47:12.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/technology/2026/aug/19/ai-hiring-tools-discrimination": {
     "title": "Will AI give you the job? Automated hiring tools spark discrimination and secrecy lawsuits",
@@ -8910,7 +8526,7 @@
     "excerpt": "A rise in lawsuits over AI use in employment decisions is raising questions about how companies hire and fire For the last four years, Erin Kistler has applied for thousands of jobs at companies like Paypal, Microsoft and Netflix, only to find her résumé disappear into a black hole. A product manage",
     "publishedAt": "2026-08-19T11:00:13.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260819a.htm": {
     "title": "Minutes of the Federal Open Market Committee, July 28–29, 2026",
@@ -8922,7 +8538,7 @@
     "excerpt": "Minutes of the Federal Open Market Committee, July 28–29, 2026",
     "publishedAt": "2026-08-19T18:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110662": {
     "title": "美国财政部宣布将长期国债回购规模至少扩大一倍",
@@ -8934,7 +8550,7 @@
     "excerpt": "在美国长期国债遭遇剧烈抛售、导致借款成本飙升至多年高点的背景下，美国财政部宣布将“流动性支持回购操作的规模至少扩大一倍”。",
     "publishedAt": "2026-08-19T16:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110656": {
     "title": "宇树科技上市首日一度大涨600%",
@@ -8946,7 +8562,7 @@
     "excerpt": "在政府支持和投资者热情的双重作用下，中国一些最新科技公司的估值正处于历史高位。",
     "publishedAt": "2026-08-18T16:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110654": {
     "title": "中国开始放行英伟达H200芯片",
@@ -8958,7 +8574,7 @@
     "excerpt": "知情人士称，字节跳动和腾讯近几周已收到小批量H200芯片，这一进展将为力争追赶美国竞争对手的中国AI企业添加助力。",
     "publishedAt": "2026-08-18T16:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110652": {
     "title": "迪士尼将特朗普政府告上法庭",
@@ -8970,7 +8586,7 @@
     "excerpt": "旗下拥有ABC的迪士尼在诉状中表示，特朗普政府通过联邦通信委员会“发起了一场针对ABC的报复行动，就因为它不认同ABC播出的内容”。",
     "publishedAt": "2026-08-18T16:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110642": {
     "title": "4000万美元：法拉利首款电动汽车Luce拍出天价",
@@ -8982,7 +8598,7 @@
     "excerpt": "Luce的拍卖成交价远超拍卖前预估价，创下新车拍卖成交价的纪录。该车由苹果前设计师艾维设计，标准版车型起售价为55万欧元。",
     "publishedAt": "2026-08-17T16:00:00.000Z",
     "firstSeenAt": "2026-08-20T01:49:51.543Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110627": {
     "title": "莫迪承诺为印度青年提供免费辅导和AI培训",
@@ -9126,7 +8742,7 @@
     "excerpt": "深交所公告 | <em>首次公开发行</em>股票并在创业板上市网上申购情况及中签率公告 | 日期: 2026-08-20",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-21/1225484272.PDF": {
     "title": "贝特利 (301697)",
@@ -9138,7 +8754,7 @@
     "excerpt": "深交所公告 | <em>首次公开发行</em>股票并在创业板上市网下发行初步配售结果公告 | 日期: 2026-08-20",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-20/1225484911.PDF": {
     "title": "协昌科技 (301418)",
@@ -9150,7 +8766,7 @@
     "excerpt": "深交所公告 | 国金证券股份有限公司关于江苏协昌电子科技集团股份有限公司部分<em>首次公开发行</em>前已发行股份上市流通的核查意见 | 日期: 2026-08-20",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bse.cn/disclosure/2026/2026-08-20/d9b4c8261b334554b5ae168651b40d98.pdf": {
     "title": "珈凯生物 (920165)",
@@ -9197,7 +8813,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】【一图读懂】一图读懂16届129次市政府常务会议",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10947863.html": {
     "title": "（音频、图文解读）《广州市人民政府关于将部分市级行政职权调整由花都区实施的决定》政策解读",
@@ -9208,7 +8824,7 @@
     "subcategory": "gz-policy",
     "excerpt": "【广州市政府】（音频、图文解读）《广州市人民政府关于将部分市级行政职权调整由花都区实施的决定》政策解读",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/blog/LiquidAI/lfm25-dspark": {
     "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
@@ -9220,7 +8836,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-20T16:52:57.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.16590": {
     "title": "Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
@@ -9232,7 +8848,7 @@
     "excerpt": "Embodied agents are increasingly used to close the gap left by end-to-end policy models. Yet the agentic path has not realized closed-loop learning in physical execution: existing harnesses remain largely open-loop, following fixed skills during rollout and reflecting only after an episode completes",
     "publishedAt": "2026-08-17T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.18565": {
     "title": "SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation",
@@ -9244,7 +8860,7 @@
     "excerpt": "Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into an existing PLC project and then runs correctly has been checked only in limited tests. We present Se",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.17253": {
     "title": "Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL",
@@ -9256,7 +8872,7 @@
     "excerpt": "Reinforcement learning (RL) has emerged as a powerful approach for improving reasoning in language and vision-language models, yet its strongest successes still depend heavily on ground-truth supervision (e.g., verifiable reward). Such annotations are costly to obtain and become increasingly scarce ",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.19197": {
     "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
@@ -9268,7 +8884,7 @@
     "excerpt": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.18940": {
     "title": "Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis",
@@ -9280,7 +8896,7 @@
     "excerpt": "Single-step retrosynthesis is a central component of computer-aided synthesis planning, yet its intrinsically one-to-many nature is poorly captured by single-answer evaluation and benchmarking protocols. To address this, we introduce Top-K prompting as a robust training and inference paradigm to bet",
     "publishedAt": "2026-08-19T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://huggingface.co/papers/2608.17528": {
     "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
@@ -9304,7 +8920,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.latent.space/p/wayfinder-skill": {
     "title": "The /wayfinder Skill: Navigating the “Fog of War” of Planning",
@@ -9316,7 +8932,7 @@
     "excerpt": "Matt Pocock tells us about his /wayfinder skill, for greenfield projects or for when the way forward is unclear.",
     "publishedAt": "2026-08-20T20:59:09.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie": {
     "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 and the new Post-training Scaling Law",
@@ -9328,7 +8944,7 @@
     "excerpt": "Every lab CEO is on X now",
     "publishedAt": "2026-08-20T05:17:12.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/": {
     "title": "Debates over AI consciousness are a trap",
@@ -9340,7 +8956,7 @@
     "excerpt": "“Runaway” AI, “rogue” agents, and “autonomous” actors—the current rhetoric would have you believe that AI agents are not only awake and aware, but angry at their creators. Prominent tech leaders such as Demis Hassabis, Dario Amodei, and Sam Altman push for regulation of these seemingly “superhuman” ",
     "publishedAt": "2026-08-20T15:42:39.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.technologyreview.com/2026/08/20/1142070/unlocking-hidden-revenue-streams-with-market-models/": {
     "title": "Unlocking hidden revenue streams with market models",
@@ -9352,7 +8968,7 @@
     "excerpt": "Each day, an airline transports tens of thousands of passengers on hundreds of flights. Often these are not straightforward point-to-point routes, with passengers requiring multiple connections. The airline can consider potentially hundreds of variables to price each of these journeys: demand, seaso",
     "publishedAt": "2026-08-20T09:47:22.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/Sabrina_Ramonov/status/2089761229418221683": {
     "title": "This 1 Claude Skill fully replaces your Higgsfield subscription (FULL BREAKDOWN)",
@@ -9376,7 +8992,7 @@
     "excerpt": "I've turned Grok Bot into my CTO and I'm no longer the bottleneck for new ideas, bug fixes, or anything involving the project. Prompt to CTO When working on a new project I create a bot and give it",
     "publishedAt": "2026-08-19T21:54:57.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/heynavtoor/status/2090421070230966656": {
     "title": "How To Set Up Grokbot The Right Way So It Runs Your Business While You Sleep In 2026",
@@ -9388,7 +9004,7 @@
     "excerpt": "Elon Musk just told his followers to try Grokbot after a power user showed it replaced his $10,000 Mac Mini local AI setup (Elon on X, Aug 16). Gavin Baker says his AI usage went up about 100x after",
     "publishedAt": "2026-08-20T12:49:55.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://x.com/SlackHQ/status/2090415566351659267": {
     "title": "Agentic coding is now multiplayer: Introducing Slack Code ",
@@ -9400,7 +9016,7 @@
     "excerpt": "AI coding is now a team sport. Code channels bring software development out of private tabs, so teams and agents can write, review, and ship code together, in the open. Slack is where agents become",
     "publishedAt": "2026-08-20T12:28:03.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bloomberg.com/news/articles/2026-08-20/pop-mart-warns-of-2026-sales-target-miss-as-growth-abroad-cools": {
     "title": "Pop Mart Drops After Warning 2026 Growth Target Out of Reach",
@@ -9652,19 +9268,19 @@
     "excerpt": "Holidaymakers tell the BBC they paid for luxury breaks but faulty air conditioning left them in sweltering heat.",
     "publishedAt": "2026-08-20T22:59:35.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bbc.co.uk/news/articles/cgewlld498xo?at_medium=RSS&at_campaign=rss": {
-    "title": "Millennials are struggling to buy a home - but is it actually getting easier?",
+    "title": "Millennials have found it hard to buy homes – but things may be turning a corner",
     "url": "https://www.bbc.co.uk/news/articles/cgewlld498xo?at_medium=RSS&at_campaign=rss",
     "sourceId": "bbc-business",
     "source": "BBC Business",
     "category": "finance",
     "subcategory": "news",
-    "excerpt": "Twenty-somethings are much less likely to own a home than previous generations. But data suggests things may be turning a corner.",
-    "publishedAt": "2026-08-20T23:10:58.000Z",
+    "excerpt": "Twenty-somethings are much less likely to own a home than previous generations. But data suggests things may be improving.",
+    "publishedAt": "2026-08-21T10:02:03.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bbc.co.uk/news/articles/c9d8z72nn02o?at_medium=RSS&at_campaign=rss": {
     "title": "Why the US economy is ringing alarm bells",
@@ -9674,9 +9290,9 @@
     "category": "finance",
     "subcategory": "news",
     "excerpt": "The US hit a debt milestone this week, but just how worried should we be about the world's largest economy?",
-    "publishedAt": "2026-08-20T23:15:15.000Z",
+    "publishedAt": "2026-08-21T08:38:18.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bbc.co.uk/news/articles/cre4gdvlj9ro?at_medium=RSS&at_campaign=rss": {
     "title": "How much could Trump's 'economic D-Day' hurt Iran?",
@@ -9712,7 +9328,7 @@
     "excerpt": "The switch to quieter electric equipment is not going as fast as some would like.",
     "publishedAt": "2026-08-20T23:12:38.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.bbc.co.uk/news/articles/cpq8rjy7vxlo?at_medium=RSS&at_campaign=rss": {
     "title": "Walmart sales under strain as US shoppers pull back",
@@ -9748,7 +9364,7 @@
     "excerpt": "Freedom of navigation is worth preserving",
     "publishedAt": "2026-08-20T09:21:32.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.economist.com/finance-and-economics/2026/08/20/however-you-measure-it-chinas-job-market-is-weak": {
     "title": "However you measure it, China’s job market is weak",
@@ -9760,7 +9376,7 @@
     "excerpt": "Some workers are going back to the farm",
     "publishedAt": "2026-08-20T09:21:25.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.cnbc.com/2026/08/20/ai-data-center-election-backlash.html": {
     "title": "AI data center outrage is showing up everywhere from ads to elections",
@@ -9878,9 +9494,9 @@
     "category": "finance",
     "subcategory": "news",
     "excerpt": "The pending $12.5 billion Lakers sale would lift CNBC’s average NBA team valuation 21% to $6.68 billion, with the Warriors still No. 1.",
-    "publishedAt": "2026-08-20T20:28:21.000Z",
+    "publishedAt": "2026-08-21T13:15:27.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.yahoo.com/markets/stocks/articles/bank-america-sends-message-capital-090300253.html": {
     "title": "Bank of America sends message on Capital One stock",
@@ -10241,7 +9857,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-21T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/21/ARTIGQzuwQEMAeE7ZbdyeVmJ260821.shtml": {
     "title": "黄金，多极时代的新底仓？",
@@ -10252,7 +9868,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-21T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/20/ARTI09gweZGKxnPSJjxVpJ4q260820.shtml": {
     "title": "透视今年二季度人身险公司偿付能力 权益投资成“胜负手”",
@@ -10263,7 +9879,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/20/ARTIiJoyj99SsnGGb5bi7Obq260820.shtml": {
     "title": "财报透视丨首份保险半年报出炉 友邦人寿三大引擎共振 新业务价值增长20%",
@@ -10274,7 +9890,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.cctv.com/2026/08/20/ARTIsqVaAudTeAWkdcflWr5W260820.shtml": {
     "title": "上海出台楼市“沪八条”：加快推进收购二手住房用作保障性租赁住房",
@@ -10285,7 +9901,7 @@
     "subcategory": "cn-finance",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.gov.cn/202608/content_7078711.htm": {
     "title": "中共中央 国务院 中央军委关于给张陆颁发“二级航天功勋奖章” 授予武飞、张洪章“英雄航天员”荣誉称号并颁发“三级航天功勋奖章”的决定",
@@ -10297,7 +9913,7 @@
     "excerpt": "【国务院政策】中共中央 国务院 中央军委关于给张陆颁发“二级航天功勋奖章” 授予武飞、张洪章“英雄航天员”荣誉称号并颁发“三级航天功勋奖章”的决定",
     "publishedAt": "2026-08-20T00:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/roll/2026-08-20/doc-ininynci6686043.shtml": {
     "title": "正收益占比不足四成！次新基金为何一登场就沦为“毛基”",
@@ -10308,7 +9924,7 @@
     "subcategory": "cn-finance",
     "excerpt": "【财富管理】正收益占比不足四成！次新基金为何一登场就沦为“毛基”",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/jjxw/2026-08-20/doc-ininxeix6794408.shtml": {
     "title": "公募基金年内累计分红1094.63亿元",
@@ -10319,7 +9935,7 @@
     "subcategory": "cn-finance",
     "excerpt": "【财富管理】公募基金年内累计分红1094.63亿元",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/roll/2026-08-21/doc-ininzprc1618709.shtml": {
     "title": "连续五年下降 险资配置信托存量规模不足万亿",
@@ -10330,7 +9946,7 @@
     "subcategory": "cn-finance",
     "excerpt": "【财富管理】连续五年下降 险资配置信托存量规模不足万亿",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://finance.sina.com.cn/roll/2026-08-20/doc-ininyfvq1948319.shtml": {
     "title": "【信托知识库】信托知识百问百答",
@@ -10441,7 +10057,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-20T23:57:32.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/": {
     "title": "A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView",
@@ -10453,7 +10069,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-20T15:37:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.infoq.cn/article/D6IBeGO6rqVCjBDv1qwj?utm_source=rss&utm_medium=article": {
     "title": "Rust 再下一城：Astro 7 重写编译器与 Markdown 流水线",
@@ -10585,7 +10201,7 @@
     "excerpt": "影石推出竖拍云台相机 Luna Pro，森海塞尔发布 MOMENTUM True Wireless 5 真无线耳机等。查看全文",
     "publishedAt": "2026-08-20T23:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113650": {
     "title": "新玩意 249｜少数派的编辑们最近买了啥？",
@@ -10597,7 +10213,7 @@
     "excerpt": "编注：很多读者都会好奇少数派的编辑们到底平时都「买了啥」。我们希望通过「编辑部的新玩意」介绍编辑部成员们最近在用的新奇产品，让他们自己来谈谈这些新玩意的使用体验究竟如何。内容声明：《新玩意》栏目如含有 ...查看全文",
     "publishedAt": "2026-08-20T09:30:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113567": {
     "title": "十年阅读历程，这是我的阅读工具推荐",
@@ -10609,7 +10225,7 @@
     "excerpt": "从2017年开始，我养成了读书的习惯，到今年年底刚好完成十年的阅读之旅。在这十年里，我累计阅读的书籍有六百余本。在阅读的过程中，我使用了/曾经使用非常多的应用和服务，来辅助阅读、记录书单、整理笔记等。 ...查看全文",
     "publishedAt": "2026-08-20T07:25:47.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://sspai.com/post/113497": {
     "title": "「务实且高效」的日系次旗舰：夏普 AQUOS R9 评测",
@@ -10621,7 +10237,7 @@
     "excerpt": "在 R9 身上，我竟依稀能感到夏普正在谋求一种仰望星空和脚踏实地间的精妙平衡。查看全文",
     "publishedAt": "2026-08-20T02:41:31.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/business/2026/aug/20/us-national-debt-republicans": {
     "title": "‘Starve the beast’? The $40tn cost of Republicans’ false promises to cut spending",
@@ -10633,7 +10249,7 @@
     "excerpt": "The enormous US debt under Trump will hobble the next Democratic administration – just as the GOP planned Why is the Trump administration causing turmoil in the bond markets? You could pin the US’s staggering $40tn in government debt to Donald Trump’s Keystone Cops-style governance. Tariffs he sold ",
     "publishedAt": "2026-08-20T15:21:38.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/business/2026/aug/20/why-us-bond-market-turmoil-hitting-governments-worldwide": {
     "title": "Why is the Trump administration causing turmoil in the bond markets? | Richard Partington",
@@ -10645,7 +10261,7 @@
     "excerpt": "As yields are dragged higher in the UK, Europe and Japan, the impact for consumers and businesses will be far-reaching ‘Starve the beast’? The $40tn cost of Republicans’ false promises to cut spending Government borrowing costs around the world have surged to the highest levels in decades amid growi",
     "publishedAt": "2026-08-20T16:14:59.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/business/2026/aug/20/christine-hunsicker-caastle-sentenced-prison": {
     "title": "Fashion tech founder sentenced to prison for $300m fraud scheme",
@@ -10657,7 +10273,7 @@
     "excerpt": "Christine Hunsicker, former CEO of CaaStle, gave investors falsified documents that overstated profit and cash reserves A fashion tech founder was sentenced to five years in federal prison for her involvement in a $300m “fraud scheme” spanning from 2019 to 2025, the Manhattan US attorney’s office an",
     "publishedAt": "2026-08-20T22:27:41.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.theguardian.com/us-news/2026/aug/20/mcdonalds-congress-affordability-democrats": {
     "title": "From McDonald’s to Congress: can a former fry cook flip a key district for Democrats?",
@@ -10669,7 +10285,7 @@
     "excerpt": "Manny Rutinel hopes price-tag politics can win key voters in Colorado House race During his presidential campaign in October 2024, Donald Trump staged a photo op at a McDonald’s franchise in Pennsylvania, where he was briefly taught how to work the fryer and drive-thru window at the closed restauran",
     "publishedAt": "2026-08-20T11:00:50.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.federalreserve.gov/newsevents/pressreleases/orders20260820a.htm": {
     "title": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
@@ -10681,7 +10297,7 @@
     "excerpt": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
     "publishedAt": "2026-08-20T20:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820b.htm": {
     "title": "Federal Reserve Board issues enforcement action with SouthPoint Bancshares, Inc. and announces termination of enforcement action with Deutsche Bank AG, DB USA Corporation, and Deutsche Bank AG New York Branch",
@@ -10693,7 +10309,7 @@
     "excerpt": "Federal Reserve Board issues enforcement action with SouthPoint Bancshares, Inc. and announces termination of enforcement action with Deutsche Bank AG, DB USA Corporation, and Deutsche Bank AG New York Branch",
     "publishedAt": "2026-08-20T15:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820a.htm": {
     "title": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of United Community Bank",
@@ -10705,7 +10321,7 @@
     "excerpt": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of United Community Bank",
     "publishedAt": "2026-08-20T15:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110675": {
     "title": "许家印被判无期徒刑",
@@ -10717,7 +10333,7 @@
     "excerpt": "许家印的倒台是中国房地产行业时运变迁的缩影。",
     "publishedAt": "2026-08-19T16:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110669": {
     "title": "中国称欧盟对京东收购Ceconomy的调查构成“不当域外管辖”",
@@ -10729,7 +10345,7 @@
     "excerpt": "中国司法部已禁止任何组织、个人协助调查，并警告称，“中方将坚决依法反制”。",
     "publishedAt": "2026-08-19T16:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   },
   "https://www.ftchinese.com/story/001110668": {
     "title": "香港长江和记提请仲裁 向巴拿马索赔15亿美元",
@@ -10741,6 +10357,1578 @@
     "excerpt": "长江和记称巴拿马将其驱逐出巴拿马运河两个港口，导致其“投资损失”。",
     "publishedAt": "2026-08-19T16:00:00.000Z",
     "firstSeenAt": "2026-08-21T01:56:03.727Z",
-    "lastSeenAt": "2026-08-21T01:56:03.727Z"
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082101751.pdf": {
+    "title": "BAIYUNSHAN PH (00874) — SUMMARY OF THE 2026 INTERIM REPORT",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082101751.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 00874 | 公司: BAIYUNSHAN PH | 时间: 21/08/2026 21:41 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082101457.pdf": {
+    "title": "ZHONGTAIFUTURES (01461) — ANNOUNCEMENT OF INTERIM RESULTS\nFOR THE SIX MONTHS ENDED 30 JUNE 2026",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082101457.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 01461 | 公司: ZHONGTAIFUTURES | 时间: 21/08/2026 20:46 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100953.pdf": {
+    "title": "CM BANK (03968) — ANNOUNCEMENT ON CONVENING OF\n2026 INTERIM RESULTS PRESS CONFERENCE",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100953.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 03968 | 公司: CM BANK | 时间: 21/08/2026 18:29 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100843.pdf": {
+    "title": "ZTE (00763) — 2026 INTERIM RESULTS ANNOUNCEMENT",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100843.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 00763 | 公司: ZTE | 时间: 21/08/2026 18:13 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100812.pdf": {
+    "title": "LIVZON PHARMA (01513) — UNAUDITED INTERIM RESULTS ANNOUNCEMENT FOR THE SIX MONTHS ENDED 30 JUNE 2026",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100812.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 01513 | 公司: LIVZON PHARMA | 时间: 21/08/2026 18:09 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100686.pdf": {
+    "title": "OCT (ASIA) (03366) — POLL RESULTS OF THE EXTRAORDINARY GENERAL MEETING\nHELD ON 21 AUGUST 2026",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100686.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 03366 | 公司: OCT (ASIA) | 时间: 21/08/2026 17:43 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100592.pdf": {
+    "title": "DOWELL SERVICE (02352) — INTERIM RESULTS ANNOUNCEMENT FOR THE\nSIX MONTHS ENDED 30 JUNE 2026",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100592.pdf",
+    "sourceId": "gd-hkex",
+    "source": "港交所IPO公告",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "excerpt": "港交所公告 | 代码: 02352 | 公司: DOWELL SERVICE | 时间: 21/08/2026 17:28 | 格式: PDF",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://static.cninfo.com.cn/finalpage/2026-08-22/1225490527.PDF": {
+    "title": "聚胶股份 (301283)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225490527.PDF",
+    "sourceId": "gz-szse",
+    "source": "深交所IPO公告",
+    "category": "gz",
+    "subcategory": "gz-ipo",
+    "excerpt": "深交所公告 | 国泰海通证券股份有限公司关于聚胶新材料股份有限公司<em>首次公开发行</em>股票总部募投项目节余募集资金永久补充流动资金的核查意见 | 日期: 2026-08-21",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bse.cn/disclosure/2026/2026-08-21/d754e598b39d4760864676de95d46430.pdf": {
+    "title": "维琪科技 (920176)",
+    "url": "https://www.bse.cn/disclosure/2026/2026-08-21/d754e598b39d4760864676de95d46430.pdf",
+    "sourceId": "gd-bse",
+    "source": "北交所IPO公告",
+    "category": "ipo",
+    "subcategory": "bse",
+    "excerpt": "北交所公告 | [临时公告]维琪科技:关于拟变更公司注册资本、公司类型及修订《公司章程》并办理工商变更登记的公告 | 日期: 2026-08-21",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bse.cn/disclosure/2026/2026-08-21/293fffd1ac8642e79c8df2d838d30531.pdf": {
+    "title": "康美特 (920189)",
+    "url": "https://www.bse.cn/disclosure/2026/2026-08-21/293fffd1ac8642e79c8df2d838d30531.pdf",
+    "sourceId": "gd-bse",
+    "source": "北交所IPO公告",
+    "category": "ipo",
+    "subcategory": "bse",
+    "excerpt": "北交所公告 | [临时公告]康美特:关于拟变更公司注册资本、公司类型及修订《公司章程》的公告 | 日期: 2026-08-21",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://data.10jqka.com.cn/ipo/search/?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%89%BA%E6%84%9F%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8": {
+    "title": "深圳市艺感科技股份有限公司 [创业板] (预先披露更新)",
+    "url": "https://data.10jqka.com.cn/ipo/search/?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%89%BA%E6%84%9F%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+    "sourceId": "gd-szse",
+    "source": "同花顺新股预披露",
+    "category": "ipo",
+    "subcategory": "szse",
+    "excerpt": "同花顺新股预披露 | 板块: 创业板 | 类型: 预先披露更新 | 披露日期: 2026-08-21 | 募资: 9.51亿 | 发行: 1666.67万",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10970664.html": {
+    "title": "关于落实人防工程标志牌设置规范要求的通知",
+    "url": "http://www.gzns.gov.cn/zwgk/tzgg/content/post_10970664.html",
+    "sourceId": "gz-nansha",
+    "source": "广州南沙区政府",
+    "category": "gz",
+    "subcategory": "gz-private",
+    "excerpt": "【南沙】关于落实人防工程标志牌设置规范要求的通知",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/": {
+    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+    "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "sourceId": "deepmind-blog",
+    "source": "DeepMind Blog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+    "publishedAt": "2026-08-21T11:59:48.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://huggingface.co/blog/asr-benchmark-optimization": {
+    "title": "Measuring benchmark optimization in speech recognition",
+    "url": "https://huggingface.co/blog/asr-benchmark-optimization",
+    "sourceId": "huggingface-blog",
+    "source": "Hugging Face Blog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://huggingface.co/papers/2608.19880": {
+    "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+    "url": "https://huggingface.co/papers/2608.19880",
+    "sourceId": "huggingface-papers",
+    "source": "HuggingFace Trending Papers",
+    "category": "tech",
+    "subcategory": "trending-papers",
+    "excerpt": "LLM agents learn by interacting with environments, yet these environments are hand-built and static: blind to an agent's weaknesses, and quickly left behind as it improves. While recent environment generation methods attempt to address this, they require domain-specific pipelines, rely on expensive ",
+    "publishedAt": "2026-08-20T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://huggingface.co/papers/2608.18580": {
+    "title": "FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis",
+    "url": "https://huggingface.co/papers/2608.18580",
+    "sourceId": "huggingface-papers",
+    "source": "HuggingFace Trending Papers",
+    "category": "tech",
+    "subcategory": "trending-papers",
+    "excerpt": "Training terminal agents requires scalable executable supervision, yet synthesizing high-quality terminal tasks remains challenging. Each task couples an instruction, an initialized environment, a reference solution, and an executable verifier; if these artifacts are generated from inconsistent assu",
+    "publishedAt": "2026-08-19T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://huggingface.co/papers/2608.19799": {
+    "title": "SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?",
+    "url": "https://huggingface.co/papers/2608.19799",
+    "sourceId": "huggingface-papers",
+    "source": "HuggingFace Trending Papers",
+    "category": "tech",
+    "subcategory": "trending-papers",
+    "excerpt": "Software increasingly functions as part of the scientific instrument itself, making failures in scientific code capable of compromising not only program behavior but also the evidence underlying scientific conclusions. Yet existing evaluations of coding agents largely emphasize aggregate task succes",
+    "publishedAt": "2026-08-20T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://huggingface.co/papers/2608.20202": {
+    "title": "MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use",
+    "url": "https://huggingface.co/papers/2608.20202",
+    "sourceId": "huggingface-papers",
+    "source": "HuggingFace Trending Papers",
+    "category": "tech",
+    "subcategory": "trending-papers",
+    "excerpt": "Memory has become a key component of large language models, enabling them to retain information and learn from long-term interactions. However, existing memory benchmarks mainly evaluate whether information is correctly extracted, stored, and retrieved, while largely overlooking how retrieved memori",
+    "publishedAt": "2026-08-20T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://tldr.tech/ai/2026-08-21": {
+    "title": "ChatGPT Apple Messages 💬, Anthropic’s meeting recorder 💼, Mistral Agentic Search 🔍",
+    "url": "https://tldr.tech/ai/2026-08-21",
+    "sourceId": "tldr-ai",
+    "source": "TLDR AI",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.latent.space/p/simile": {
+    "title": "Simulation: the new Scaling Law — Joon Sung Park, Simile AI",
+    "url": "https://www.latent.space/p/simile",
+    "sourceId": "latent-space",
+    "source": "Latent Space",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "Simile’s CEO about his journey from the viral Generative Agents to creating 8 Billion Digital Twins of every living human... and why it’s gone from fun exploration to very serious business.",
+    "publishedAt": "2026-08-21T23:37:38.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.latent.space/p/ainews-poolside-gets-12b-reverse": {
+    "title": "[AINews] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud",
+    "url": "https://www.latent.space/p/ainews-poolside-gets-12b-reverse",
+    "sourceId": "latent-space",
+    "source": "Latent Space",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "Yes, we’re confused too.",
+    "publishedAt": "2026-08-21T05:45:21.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://x.com/gabepereyra/status/2090453918547685537": {
+    "title": "Update on our post-training effort",
+    "url": "https://x.com/gabepereyra/status/2090453918547685537",
+    "sourceId": "attentionvc-ai",
+    "source": "X 推文 (AttentionVC)",
+    "category": "tech",
+    "subcategory": "x-viral",
+    "excerpt": "Authors: @nikogrupen @ItsJulioPereyra @calvincongelado @vtrengarajan @gabepereyra Over the past six months, Harvey’s research agenda has focused on two goals: Building frontier legal intelligence",
+    "publishedAt": "2026-08-20T15:00:27.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://x.com/dzhng/status/2090252351533973768": {
+    "title": "Building software factories (with no slop)",
+    "url": "https://x.com/dzhng/status/2090252351533973768",
+    "sourceId": "attentionvc-ai",
+    "source": "X 推文 (AttentionVC)",
+    "category": "tech",
+    "subcategory": "x-viral",
+    "excerpt": "The amount of code being written today far outpaces our ability to review it. That part isn't controversial. What's more interesting is that we're visibly losing — the amount of AI slop in modern",
+    "publishedAt": "2026-08-20T01:39:30.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://x.com/AndrewYNg/status/2090840747738374568": {
+    "title": "AI Engineering Skills Map: Building and Deploying AI Applications",
+    "url": "https://x.com/AndrewYNg/status/2090840747738374568",
+    "sourceId": "attentionvc-ai",
+    "source": "X 推文 (AttentionVC)",
+    "category": "tech",
+    "subcategory": "x-viral",
+    "excerpt": "I previously wrote about our AI Engineering Skills Map, with the highest level skills being (i) Building and deploying AI applications, (ii) Software engineering fundamentals, (iii) Using coding",
+    "publishedAt": "2026-08-21T16:37:34.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://x.com/ID_AA_Carmack/status/2090514515129520516": {
+    "title": "RL Policy Churn",
+    "url": "https://x.com/ID_AA_Carmack/status/2090514515129520516",
+    "sourceId": "attentionvc-ai",
+    "source": "X 推文 (AttentionVC)",
+    "category": "tech",
+    "subcategory": "x-viral",
+    "excerpt": "I have a good theory about this now. The Phenomenon of Policy Churn https://arxiv.org/pdf/2206.00730 The classic exploration method in RL is “epsilon greedy”, where the agent normally takes the “greedy” action",
+    "publishedAt": "2026-08-20T19:01:14.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/articles/2026-08-22/mexico-optimistic-it-can-achieve-lower-us-tariffs-on-cars-steel": {
+    "title": "Mexico Optimistic it Can Achieve Lower US Tariffs on Cars, Steel",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-22/mexico-optimistic-it-can-achieve-lower-us-tariffs-on-cars-steel",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Mexico’s top trade negotiator expressed optimism he can secure less burdensome tariff terms from the US on Mexican automobile and steel exports, similar to revised measures Washington is discussing with Canada.",
+    "publishedAt": "2026-08-22T00:16:57.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/wall-street-week-ai-hits-wages-colorado-river-crisis-video": {
+    "title": "Wall Street Week | AI Hits Wages, USMCA Under Pressure, Colorado River Crisis",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/wall-street-week-ai-hits-wages-colorado-river-crisis-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "This week, Former IBM CEO Sam Palmisano discusses why companies may benefit from having a “Plan B” for AI implementation. And, AI may not be causing mass layoffs yet, but early data suggest it is already slowing wage growth in exposed occupations. Plus, Canada may have dodged Trump’s newest tariffs,",
+    "publishedAt": "2026-08-21T23:12:20.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/articles/2026-08-21/mexican-governor-accused-by-us-of-cartel-ties-returns-to-his-job": {
+    "title": "Mexico Governor Accused by US of Cartel Ties Returns to Post",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-21/mexican-governor-accused-by-us-of-cartel-ties-returns-to-his-job",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "The Mexican governor accused by the US of conspiring with a major criminal cartel to traffic drugs is ending his leave of absence, pledging to finish out his term through next year in a move that could inflame tensions with Washington.",
+    "publishedAt": "2026-08-21T18:01:03.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/articles/2026-08-21/lula-holds-lead-over-bolsonaro-six-weeks-from-brazilian-election": {
+    "title": "Lula Holds Lead Over Bolsonaro Six Weeks From Brazilian Election",
+    "url": "https://www.bloomberg.com/news/articles/2026-08-21/lula-holds-lead-over-bolsonaro-six-weeks-from-brazilian-election",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "President Luiz Inácio Lula da Silva maintained his lead over right-wing challenger Flávio Bolsonaro ahead of Brazil’s October election, a new poll found.",
+    "publishedAt": "2026-08-21T21:57:02.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/moderna-merck-cancer-vax-gives-hope-video": {
+    "title": "Moderna, Merck Cancer Vax Gives Hope",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/moderna-merck-cancer-vax-gives-hope-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Scientists are on the cusp of fulfilling a decades-long quest: to use vaccines to teach the immune system to spot and destroy cancer cells. News that an mRNA cancer vaccine developed by Merck & Co. and Moderna Inc. kept melanoma from returning in a large, late-stage trial marks a critical next chapt",
+    "publishedAt": "2026-08-21T21:53:36.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/parents-spend-95k-on-gap-years-to-give-kids-an-edge-video": {
+    "title": "Parents Spend $95K on Gap Years to Give Their Kids an Edge",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/parents-spend-95k-on-gap-years-to-give-kids-an-edge-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Bloomberg's Sarah Foster joins Scarlet Fu and Tom Keene on \"Bloomberg Money.\" Gap years are becoming more appealing as families question whether a college degree alone is enough to stand out, with some programs costing more than a year of tuition. (Source: Bloomberg)",
+    "publishedAt": "2026-08-21T20:36:38.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/trump-allows-tariff-relief-for-some-ground-beef-imports-video": {
+    "title": "Trump Allows Tariff Relief for Some Ground Beef Imports",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/trump-allows-tariff-relief-for-some-ground-beef-imports-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "President Donald Trump is aiming to deliver cost relief for some ground beef imports to lower prices for American consumers, by allowing up to 300,000 metric tons of product for ground beef to be imported with no out of quota tariff for the next 90 days. He also made a commitment that the beef will ",
+    "publishedAt": "2026-08-21T21:32:56.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/jerry-maguire-inspiration-on-lakers-sports-valuations-video": {
+    "title": "'Jerry Maguire’ Inspiration on Lakers, Sports Valuations",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/jerry-maguire-inspiration-on-lakers-sports-valuations-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Leigh Steinberg, legendary sports agent and founder of the Leigh Steinberg Foundation, spoke about the unprecedented valuations in the sports industry, highlighting the ongoing Los Angeles Lakers sale currently valued at $12.5 billion. He emphasized the dramatic increase in franchise values over the",
+    "publishedAt": "2026-08-21T21:15:54.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/young-people-don-t-believe-in-american-dream-gordon-video": {
+    "title": "Young People Don't Believe in 'American Dream': Kevin Gordon",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/young-people-don-t-believe-in-american-dream-gordon-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Kevin Gordon, head of macro research & strategy at Schwab Center for Financial Research, joins Scarlet Fu and Tom Keene on \"Bloomberg Money.\" (Source: Bloomberg)",
+    "publishedAt": "2026-08-21T21:22:26.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bloomberg.com/news/videos/2026-08-21/boxing-legend-mike-tyson-on-career-sugar-factory-launch-video": {
+    "title": "Boxing Legend Mike Tyson on Career, Sugar Factory Launch",
+    "url": "https://www.bloomberg.com/news/videos/2026-08-21/boxing-legend-mike-tyson-on-career-sugar-factory-launch-video",
+    "sourceId": "bloomberg-markets",
+    "source": "Bloomberg Markets",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Former Heavyweight Champion Mike Tyson discussed his new business venture partnering with Sugar Factory to produce high-protein sliders available in grocery stores. Tyson emphasized the health benefits of these sliders compared to typical frozen options that often contain unhealthy seed oils and exc",
+    "publishedAt": "2026-08-21T21:14:11.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/8b6b2021-bde2-4255-91a3-9c8dd44ffd51?syn-25a6b1a6=1": {
+    "title": "Pentagon fires military newspaper staffers for insubordination",
+    "url": "https://www.ft.com/content/8b6b2021-bde2-4255-91a3-9c8dd44ffd51?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Defence department dismisses Stars and Stripes editor-in-chief and Middle East reporter",
+    "publishedAt": "2026-08-22T00:19:47.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/12f457bc-8cb0-45bd-bf7f-83abf2d9c7d8?syn-25a6b1a6=1": {
+    "title": "SEC accuses ex-Bank of America utilities banker of insider trading",
+    "url": "https://www.ft.com/content/12f457bc-8cb0-45bd-bf7f-83abf2d9c7d8?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Regulator says Jason Satsky helped a friend make $18.5mn in illegal profits tied to planned takeover of South Jersey Industries",
+    "publishedAt": "2026-08-21T20:35:56.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/9a094571-604d-4f1e-b5ff-c0b5dc032dc1": {
+    "title": "Iran’s president calls to end war with US from ‘position of strength’",
+    "url": "https://www.ft.com/content/9a094571-604d-4f1e-b5ff-c0b5dc032dc1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Masoud Pezeshkian’s comments reflect debate within regime over how much economic pressure country can endure",
+    "publishedAt": "2026-08-21T18:51:35.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/ead7f466-1d6e-42e3-bedf-0ce5135372c9": {
+    "title": "Directors’ Deals: Pearson executive cashes in as digital growth boosts shares",
+    "url": "https://www.ft.com/content/ead7f466-1d6e-42e3-bedf-0ce5135372c9",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "First-half revenues at the education group rise by 19 per cent",
+    "publishedAt": "2026-08-21T17:00:10.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/fc1fc5b9-e73e-4e24-9495-4f9b16853be5": {
+    "title": "Stockpickers: Costain, Oxford Nanopore Technologies, BHP",
+    "url": "https://www.ft.com/content/fc1fc5b9-e73e-4e24-9495-4f9b16853be5",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Our experts discuss which companies to buy, sell or hold this week",
+    "publishedAt": "2026-08-21T17:00:10.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/ef7a32c6-c999-407a-9970-979bf1f3b103?syn-25a6b1a6=1": {
+    "title": "Italy’s MPS thinks three takeovers are better than one",
+    "url": "https://www.ft.com/content/ef7a32c6-c999-407a-9970-979bf1f3b103?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Crunching two banks together is challenging, and takes time; to attempt the same feat with four calls for some truly magical thinking",
+    "publishedAt": "2026-08-21T16:24:58.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/ac3f252d-bd49-4340-8565-f27a29652759?syn-25a6b1a6=1": {
+    "title": "Apollo says hackers accessed personal data in latest Wall Street breach",
+    "url": "https://www.ft.com/content/ac3f252d-bd49-4340-8565-f27a29652759?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Alternative asset manager’s probe determined names, home addresses and social security numbers were stolen in cyber attack last month",
+    "publishedAt": "2026-08-21T16:15:20.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/105b8b46-7109-402d-84cf-2616b17bfac1?syn-25a6b1a6=1": {
+    "title": "The US techlash is real",
+    "url": "https://www.ft.com/content/105b8b46-7109-402d-84cf-2616b17bfac1?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "AI companies and social networks should respond to the shift in the public mood",
+    "publishedAt": "2026-08-21T15:44:21.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/1603577e-89d8-4cfa-884b-b83fbb8dd20e?syn-25a6b1a6=1": {
+    "title": "Citadel offloads 80% of portfolio scooped up from Situational Awareness",
+    "url": "https://www.ft.com/content/1603577e-89d8-4cfa-884b-b83fbb8dd20e?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Ken Griffin’s hedge fund has executed more than $4bn worth of block trades in recent weeks",
+    "publishedAt": "2026-08-21T14:50:54.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ft.com/content/34d3874f-062a-499d-b5b6-a72ccbd0b8d6?syn-25a6b1a6=1": {
+    "title": "Prince Harry and other privacy claimants told to pay initial £9.5mn to Daily Mail publisher",
+    "url": "https://www.ft.com/content/34d3874f-062a-499d-b5b6-a72ccbd0b8d6?syn-25a6b1a6=1",
+    "sourceId": "ft-companies",
+    "source": "Financial Times",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "High Court rules that the losing parties must cover legal costs on an ‘indemnity’ basis",
+    "publishedAt": "2026-08-21T14:43:13.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/c1w1rg208xdo?at_medium=RSS&at_campaign=rss": {
+    "title": "Royal Mail misses delivery targets again but hails 'encouraging' signs",
+    "url": "https://www.bbc.co.uk/news/articles/c1w1rg208xdo?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "The struggling firm said it had improved its performance but missed regulator-set delivery targets.",
+    "publishedAt": "2026-08-21T11:20:57.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/czjlr0evy0do?at_medium=RSS&at_campaign=rss": {
+    "title": "'We have more work to do', says Canada negotiator as US trade deadline looms",
+    "url": "https://www.bbc.co.uk/news/articles/czjlr0evy0do?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Negotiations to finalise a deal between the US and Canada are going down to the wire ahead of a Friday night deadline.",
+    "publishedAt": "2026-08-22T00:40:47.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/cvg92p3ez17o?at_medium=RSS&at_campaign=rss": {
+    "title": "US borrowing costs rise as attempts to ease rates prove short-lived",
+    "url": "https://www.bbc.co.uk/news/articles/cvg92p3ez17o?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Economists said there were ongoing concerns over the level of borrowing as national debt passed $40tn.",
+    "publishedAt": "2026-08-21T16:45:09.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/cly8kzkyvwgo?at_medium=RSS&at_campaign=rss": {
+    "title": "UK borrows more than expected in July as Healey prepares for first Budget",
+    "url": "https://www.bbc.co.uk/news/articles/cly8kzkyvwgo?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Chancellor John Healey said the government is 'committed to meeting our fiscal rules'",
+    "publishedAt": "2026-08-21T09:45:11.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo?at_medium=RSS&at_campaign=rss": {
+    "title": "Panama Canal to cut number of ships passing through due to El Niño",
+    "url": "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "The crucial waterway's operator says low rainfall caused by the ocean pattern had led to the decision.",
+    "publishedAt": "2026-08-21T06:46:08.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.bbc.co.uk/news/articles/cx2r9gxp3xgo?at_medium=RSS&at_campaign=rss": {
+    "title": "The teen entrepreneur transforming farm management",
+    "url": "https://www.bbc.co.uk/news/articles/cx2r9gxp3xgo?at_medium=RSS&at_campaign=rss",
+    "sourceId": "bbc-business",
+    "source": "BBC Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "The app was designed to give farmers more time with their families by making the business more manageable.",
+    "publishedAt": "2026-08-20T23:01:01.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.economist.com/interactive/trump-tariff-costs-tracker": {
+    "title": "Tracking the cost of Donald Trump’s tariffs",
+    "url": "https://www.economist.com/interactive/trump-tariff-costs-tracker",
+    "sourceId": "economist-finance",
+    "source": "The Economist Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "America’s global effective tariff stands at 10.0%",
+    "publishedAt": "2026-08-21T17:00:33.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/ray-dalio-bessent-debt-crisis-bitcoin-gold.html": {
+    "title": "Ray Dalio says Bessent move is sign that a debt crisis is getting closer; recommends gold and bitcoin",
+    "url": "https://www.cnbc.com/2026/08/21/ray-dalio-bessent-debt-crisis-bitcoin-gold.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Billionaire investor Ray Dalio said the the debt buyback announcement this week fits into a larger pattern that could signal a forthcoming debt crisis.",
+    "publishedAt": "2026-08-21T20:19:21.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html": {
+    "title": "Anthropic IPO filing will show AI backlash as a risk factor, sources say",
+    "url": "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Anthropic is poised to debut on the stock market at a time when the public is increasingly upset about data centers and is fearful about AI taking jobs.",
+    "publishedAt": "2026-08-21T22:03:39.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/supreme-court-trump-white-house-ballroom.html": {
+    "title": "Supreme Court allows Trump to continue White House ballroom construction for now",
+    "url": "https://www.cnbc.com/2026/08/21/supreme-court-trump-white-house-ballroom.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "President Donald Trump had the White House's East Wing demolished in 2025 to make way for his controversial planned ballroom.",
+    "publishedAt": "2026-08-21T20:47:32.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/bessents-bond-gambit-aimed-at-calming-markets-is-instead-stirring-inflation-worries-.html": {
+    "title": "Bessent's bond gambit aimed at calming markets is instead stirring inflation worries",
+    "url": "https://www.cnbc.com/2026/08/21/bessents-bond-gambit-aimed-at-calming-markets-is-instead-stirring-inflation-worries-.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "The so-called breakeven rate hit its highest levels in more than two months.",
+    "publishedAt": "2026-08-21T17:51:10.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/citadel-situational-awareness-ken-griffin.html": {
+    "title": "Ken Griffin says Citadel unwound more than 80% of risk tied to Situational Awareness portfolio",
+    "url": "https://www.cnbc.com/2026/08/21/citadel-situational-awareness-ken-griffin.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Citadel has unwound more than 80% of the portfolio risk it acquired from Situational Awareness through over $4 billion in block trades, said Ken Griffin.",
+    "publishedAt": "2026-08-21T19:58:36.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/tesla-recalls-cars-in-china-over-doorhandle-safety-driver-monitoring.html": {
+    "title": "Tesla recalls 3 million vehicles in China over doorhandle safety, driver monitoring",
+    "url": "https://www.cnbc.com/2026/08/21/tesla-recalls-cars-in-china-over-doorhandle-safety-driver-monitoring.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Tesla will voluntarily recall about 3 million of its vehicles in China to address doorhandle safety concerns and deficient driver monitoring systems.",
+    "publishedAt": "2026-08-21T19:29:48.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/premier-league-gambling-shirt-sponsors.html": {
+    "title": "How one Silicon Valley firm is seizing an opportunity from Premier League soccer's gambling ad clampdown",
+    "url": "https://www.cnbc.com/2026/08/21/premier-league-gambling-shirt-sponsors.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Premier League clubs have removed betting brands from shirt fronts, opening new sponsorship opportunities while bookmakers shift spending elsewhere.",
+    "publishedAt": "2026-08-21T14:00:02.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/trump-canada-tariffs-trade-deal-deadline.html": {
+    "title": "Trump says U.S., Canada 'should be able' to reach trade deal as tariff deadline looms",
+    "url": "https://www.cnbc.com/2026/08/21/trump-canada-tariffs-trade-deal-deadline.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Trump had already postponed the 50% tariffs on a range of Canadian goods so Washington and Ottawa could finalize a tentative deal.",
+    "publishedAt": "2026-08-21T21:31:24.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.cnbc.com/2026/08/21/trump-ground-beef-import-tariff.html": {
+    "title": "Trump to allow import of 300,000 metric tons of ground beef without tariff",
+    "url": "https://www.cnbc.com/2026/08/21/trump-ground-beef-import-tariff.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Beef prices in the U.S have soared in 2026 due to a reduction in the nation's cattle herd.",
+    "publishedAt": "2026-08-21T22:35:17.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/technology/articles/t-stands-gain-verizon-loses-230000780.html": {
+    "title": "AT&T stands to gain as Verizon loses a customer related battle",
+    "url": "https://finance.yahoo.com/technology/articles/t-stands-gain-verizon-loses-230000780.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T23:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/options/articles/vix-inexpensive-going-historically-volatile-190002140.html": {
+    "title": "Is the VIX Inexpensive Going into the Historically Volatile Fall in 2026?",
+    "url": "https://finance.yahoo.com/markets/options/articles/vix-inexpensive-going-historically-volatile-190002140.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:00:02.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/healthcare/articles/pe-healthcare-rollups-seven-itch-190254871.html": {
+    "title": "PE healthcare rollups have a seven-year itch they can't scratch",
+    "url": "https://finance.yahoo.com/healthcare/articles/pe-healthcare-rollups-seven-itch-190254871.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:02:54.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-stanley-druckenmiller-agree-185505024.html": {
+    "title": "Cathie Wood and Stanley Druckenmiller Agree On Amazon (AMZN) and Alphabet (GOOGL)",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-stanley-druckenmiller-agree-185505024.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T18:55:05.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/stocks/articles/walmart-fast-delivery-helps-fuel-190433414.html": {
+    "title": "Walmart fast delivery helps fuel 24% growth in e-commerce sales",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/walmart-fast-delivery-helps-fuel-190433414.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:04:33.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/economy/policy/articles/hyundai-considers-georgia-metaplant-expansion-112106415.html": {
+    "title": "Hyundai considers Georgia Metaplant expansion to 800,000 units",
+    "url": "https://finance.yahoo.com/economy/policy/articles/hyundai-considers-georgia-metaplant-expansion-112106415.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T11:21:06.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/small-business/articles/dual-side-logistics-shippers-brokers-190919871.html": {
+    "title": "Dual-Side Logistics: What Shippers & Brokers MISS About Freight",
+    "url": "https://finance.yahoo.com/small-business/articles/dual-side-logistics-shippers-brokers-190919871.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:09:19.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/crypto/articles/bitgo-secures-south-korea-virtual-184800383.html": {
+    "title": "BitGo Secures South Korea Virtual Asset License",
+    "url": "https://finance.yahoo.com/markets/crypto/articles/bitgo-secures-south-korea-virtual-184800383.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T18:48:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/commodities/articles/nat-gas-prices-drop-cooler-191358400.html": {
+    "title": "Nat-Gas Prices Drop on a Cooler US Weather Outlook",
+    "url": "https://finance.yahoo.com/markets/commodities/articles/nat-gas-prices-drop-cooler-191358400.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:13:58.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.yahoo.com/markets/stocks/articles/google-reportedly-working-amd-tpu-191215799.html": {
+    "title": "Google Is Reportedly Working with AMD for Its New TPU. What This Means for AMD Stock.",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/google-reportedly-working-amd-tpu-191215799.html",
+    "sourceId": "yahoo-finance",
+    "source": "Yahoo Finance",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-20T19:12:15.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/solv-energy-management-holdings-disposes-of-13m-solv-energy-shares-93CH-4872259": {
+    "title": "Solv energy management holdings disposes of 1.3m Solv energy shares",
+    "url": "https://www.investing.com/news/insider-trading-news/solv-energy-management-holdings-disposes-of-13m-solv-energy-shares-93CH-4872259",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:31:16.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/solv-energy-american-securities-10-owner-sells-2205m-stock-93CH-4872257": {
+    "title": "Solv Energy: American securities, 10% owner, sells $220.5m stock",
+    "url": "https://www.investing.com/news/insider-trading-news/solv-energy-american-securities-10-owner-sells-2205m-stock-93CH-4872257",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:31:09.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/coreweaves-principal-accounting-officer-jeff-baker-sells-115401-in-stock-93CH-4872258": {
+    "title": "CoreWeave’s principal accounting officer Jeff Baker sells $115,401 in stock",
+    "url": "https://www.investing.com/news/insider-trading-news/coreweaves-principal-accounting-officer-jeff-baker-sells-115401-in-stock-93CH-4872258",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:31:09.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/coreweave-cfo-nitin-agrawal-sells-924496-in-stock-93CH-4872256": {
+    "title": "CoreWeave CFO Nitin Agrawal sells $924,496 in stock",
+    "url": "https://www.investing.com/news/insider-trading-news/coreweave-cfo-nitin-agrawal-sells-924496-in-stock-93CH-4872256",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:31:07.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/commodities-news/us-iran-keep-up-hostile-rhetoric-ahead-of-new-sanctions-4872246": {
+    "title": "US, Iran keep up hostile rhetoric ahead of new sanctions",
+    "url": "https://www.investing.com/news/commodities-news/us-iran-keep-up-hostile-rhetoric-ahead-of-new-sanctions-4872246",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:24:36.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/economy-news/us-iran-trade-warnings-as-new-sanctions-loom-and-hormuz-oil-flows-stall-4872251": {
+    "title": "U.S., Iran trade warnings as new sanctions loom and Hormuz oil flows stall",
+    "url": "https://www.investing.com/news/economy-news/us-iran-trade-warnings-as-new-sanctions-loom-and-hormuz-oil-flows-stall-4872251",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:23:38.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/neumora-therapeutics-coo-aurora-disposes-of-269966-in-stock-93CH-4872250": {
+    "title": "Neumora Therapeutics COO Aurora disposes of $269,966 in stock",
+    "url": "https://www.investing.com/news/insider-trading-news/neumora-therapeutics-coo-aurora-disposes-of-269966-in-stock-93CH-4872250",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:16:14.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/global-water-resources-director-levine-buys-57m-in-shares-93CH-4872249": {
+    "title": "Global Water Resources director Levine buys $5.7m in shares",
+    "url": "https://www.investing.com/news/insider-trading-news/global-water-resources-director-levine-buys-57m-in-shares-93CH-4872249",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:16:04.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/grocery-outlet-evp-miller-buys-87200-in-go-common-stock-93CH-4872248": {
+    "title": "Grocery Outlet EVP Miller buys $87,200 in GO common stock",
+    "url": "https://www.investing.com/news/insider-trading-news/grocery-outlet-evp-miller-buys-87200-in-go-common-stock-93CH-4872248",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:15:57.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/gilead-sciences-director-jeffrey-bluestone-sells-725077-in-stock-93CH-4872247": {
+    "title": "Gilead Sciences director Jeffrey Bluestone sells $725,077 in stock",
+    "url": "https://www.investing.com/news/insider-trading-news/gilead-sciences-director-jeffrey-bluestone-sells-725077-in-stock-93CH-4872247",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "",
+    "publishedAt": "2026-08-22T01:15:56.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-08-22/doc-inipcwvx7685452.shtml": {
+    "title": "星忆智能李当当：未来一到三年具身机器人将告别表演模式，真正落地产生价值",
+    "url": "https://finance.sina.com.cn/roll/2026-08-22/doc-inipcwvx7685452.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/wm/2026-08-22/doc-inipcwvt6205128.shtml": {
+    "title": "30亿元账面浮亏吞噬利润，网易Q2交出平淡成绩单，丁磊称对《遗忘之海》长期运营有信心",
+    "url": "https://finance.sina.com.cn/wm/2026-08-22/doc-inipcwvt6205128.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvt6183425.shtml": {
+    "title": "美股全线上涨，金价重回4600美元",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvt6183425.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvt6171962.shtml": {
+    "title": "“枕头被子”收入逼近主业，亚朵能筑牢利润护城河吗？",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvt6171962.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvz1327789.shtml": {
+    "title": "伊朗外交部回应美对伊经济制裁：远非延续针对单一国家非法“经济战”",
+    "url": "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvz1327789.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvx7649943.shtml": {
+    "title": "秘鲁因液化石油气短缺对五地区宣布紧急状态",
+    "url": "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvx7649943.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvx7640016.shtml": {
+    "title": "日本下财年预算申请据悉将超130万亿日元",
+    "url": "https://finance.sina.com.cn/world/2026-08-22/doc-inipcwvx7640016.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/world/2026-08-22/doc-inipcsqc1411867.shtml": {
+    "title": "8月22日隔夜要闻：道指涨约1% 油价录得周涨幅 锌价走高 金价大涨 特朗普称并未指示贝森特干预债券市场",
+    "url": "https://finance.sina.com.cn/world/2026-08-22/doc-inipcsqc1411867.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/world/2026-08-22/doc-inipcspv6248872.shtml": {
+    "title": "8月22日美股成交额前20：Moderna收高8.86% mRNA抗癌药疫苗突破提振医疗板块",
+    "url": "https://finance.sina.com.cn/world/2026-08-22/doc-inipcspv6248872.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcsqc1401198.shtml": {
+    "title": "1207家A股公司披露中期业绩 15家净利润跨过百亿元门槛",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcsqc1401198.shtml",
+    "sourceId": "sina-finance",
+    "source": "新浪财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-22T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.cctv.com/2026/08/21/ARTIIM4QYlZFRNn1BvVaPhw5260821.shtml": {
+    "title": "财报透视丨中国平安交出中报亮眼答卷 郭晓涛称低利率时代寿险迎来黄金发展期",
+    "url": "https://finance.cctv.com/2026/08/21/ARTIIM4QYlZFRNn1BvVaPhw5260821.shtml",
+    "sourceId": "cctv-finance",
+    "source": "央视财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.cctv.com/2026/08/21/ARTIPNZz3QTOwp7tYlwWqF1I260821.shtml": {
+    "title": "财报透视｜宁波银行：营收净利双提速“模范生”的增长新动能",
+    "url": "https://finance.cctv.com/2026/08/21/ARTIPNZz3QTOwp7tYlwWqF1I260821.shtml",
+    "sourceId": "cctv-finance",
+    "source": "央视财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-08-21/doc-ininzyev8210151.shtml": {
+    "title": "连续五年下降 险资配置信托存量规模不足万亿",
+    "url": "https://finance.sina.com.cn/roll/2026-08-21/doc-ininzyev8210151.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】连续五年下降 险资配置信托存量规模不足万亿",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/wm/2026-08-22/doc-inipcwvw0908361.shtml": {
+    "title": "达利欧：美债危机临近，囤点黄金和比特币吧",
+    "url": "https://finance.sina.com.cn/wm/2026-08-22/doc-inipcwvw0908361.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】达利欧：美债危机临近，囤点黄金和比特币吧",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/stock/usstock/c/2026-08-22/doc-inipazsc6436832.shtml": {
+    "title": "高盛：黄金看涨期权需求激增，或放大金价双向波动",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-22/doc-inipazsc6436832.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】高盛：黄金看涨期权需求激增，或放大金价双向波动",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvz1372065.shtml": {
+    "title": "多只基金，延长募集期",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-22/doc-inipcwvz1372065.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】多只基金，延长募集期",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-08-21/doc-iniparan1327324.shtml": {
+    "title": "规模齐涨时代落幕，“冷热不均”凸显！渤银理财增长12%，青银理财缩水近2成",
+    "url": "https://finance.sina.com.cn/roll/2026-08-21/doc-iniparan1327324.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】规模齐涨时代落幕，“冷热不均”凸显！渤银理财增长12%，青银理财缩水近2成",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260822/herald/825f53620cdccd23b537447f87e3a2a0.html": {
+    "title": "农行甘肃分行副行长董东渊出任甘肃农商银行董事长",
+    "url": "https://m.21jingji.com/article/20260822/herald/825f53620cdccd23b537447f87e3a2a0.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】农行甘肃分行副行长董东渊出任甘肃农商银行董事长",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/0a9203b0bebfdc016240b9dd93deb78f.html": {
+    "title": "服贸会金融展前瞻！四大行齐秀AI“肌肉”，人保将推“算力保”",
+    "url": "https://m.21jingji.com/article/20260821/herald/0a9203b0bebfdc016240b9dd93deb78f.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】服贸会金融展前瞻！四大行齐秀AI“肌肉”，人保将推“算力保”",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/aca7edd55442b1495423b36973c015fc.html": {
+    "title": "禁止任何单位和个人非法买卖人民币！央行等部门重磅发文",
+    "url": "https://m.21jingji.com/article/20260821/herald/aca7edd55442b1495423b36973c015fc.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】禁止任何单位和个人非法买卖人民币！央行等部门重磅发文",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/95176312612733e7890581e926446481.html": {
+    "title": "存1年期利率等于存3年，银行存款利率首现“一条直线”",
+    "url": "https://m.21jingji.com/article/20260821/herald/95176312612733e7890581e926446481.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】存1年期利率等于存3年，银行存款利率首现“一条直线”",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/8433b14512b389c5cf5fa241be5ff924.html": {
+    "title": "打击非法买卖人民币 两部门将开展专项清理整顿工作",
+    "url": "https://m.21jingji.com/article/20260821/herald/8433b14512b389c5cf5fa241be5ff924.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】打击非法买卖人民币 两部门将开展专项清理整顿工作",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/97c9b90bb1e9f50c5d392d5cb39665bc.html": {
+    "title": "新华财经晚报：金融监管总局规范互联网平台利用“流量优势”收取不合理费用行为",
+    "url": "https://m.21jingji.com/article/20260821/herald/97c9b90bb1e9f50c5d392d5cb39665bc.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】新华财经晚报：金融监管总局规范互联网平台利用“流量优势”收取不合理费用行为",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://m.21jingji.com/article/20260821/herald/263637125a3cce407231246b1d41b6af.html": {
+    "title": "贝森特干预债市治标不治本？小摩“泼冷水”：就像“刷信用卡还房贷”",
+    "url": "https://m.21jingji.com/article/20260821/herald/263637125a3cce407231246b1d41b6af.html",
+    "sourceId": "21jingji-finance",
+    "source": "21世纪经济报道·金融",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【21财经】贝森特干预债市治标不治本？小摩“泼冷水”：就像“刷信用卡还房贷”",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://simonwillison.net/2026/Aug/21/llm/": {
+    "title": "llm 0.32.1",
+    "url": "https://simonwillison.net/2026/Aug/21/llm/",
+    "sourceId": "simonwillison",
+    "source": "Simon Willison's Weblog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T17:16:13.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://simonwillison.net/2026/Aug/21/llm-openrouter/": {
+    "title": "llm-openrouter 0.7",
+    "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
+    "sourceId": "simonwillison",
+    "source": "Simon Willison's Weblog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T16:58:19.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://simonwillison.net/2026/Aug/21/stop-making-tuis/": {
+    "title": "Stop Making TUIs",
+    "url": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
+    "sourceId": "simonwillison",
+    "source": "Simon Willison's Weblog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T16:07:32.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://simonwillison.net/2026/Aug/21/matt-webb/": {
+    "title": "Quoting Matt Webb",
+    "url": "https://simonwillison.net/2026/Aug/21/matt-webb/",
+    "sourceId": "simonwillison",
+    "source": "Simon Willison's Weblog",
+    "category": "tech",
+    "subcategory": "ai-news",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T15:06:26.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/CQhb4TOREpEZshtqWZMy?utm_source=rss&utm_medium=article": {
+    "title": "JetBrains详细阐述了控制AI支出快速增长的首批举措",
+    "url": "https://www.infoq.cn/article/CQhb4TOREpEZshtqWZMy?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-22T09:05:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/3MNJh5F34GSsRQJJWJzY?utm_source=rss&utm_medium=article": {
+    "title": "神秘“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱 or 小米",
+    "url": "https://www.infoq.cn/article/3MNJh5F34GSsRQJJWJzY?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T19:41:49.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/jlTfe57D4r0Juzpz8Fk5?utm_source=rss&utm_medium=article": {
+    "title": "DeepSeek 发布多模态模型，“小鲸鱼”长出了眼睛",
+    "url": "https://www.infoq.cn/article/jlTfe57D4r0Juzpz8Fk5?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T19:34:36.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/YB51rwb95keVmlIZ0xQd?utm_source=rss&utm_medium=article": {
+    "title": "材科源图三个月完成两轮融资，AI全链路闭环加速材料产业化",
+    "url": "https://www.infoq.cn/article/YB51rwb95keVmlIZ0xQd?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T19:31:11.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/aGfkSN1YlmLrUQMPea9L?utm_source=rss&utm_medium=article": {
+    "title": "本地运行、支持视觉与工具调用：Meta 开源智能体模型",
+    "url": "https://www.infoq.cn/article/aGfkSN1YlmLrUQMPea9L?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T17:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/7FAcAhVUw89VJNwuOwrc?utm_source=rss&utm_medium=article": {
+    "title": "视频生成迎来“Claude Code时刻”，MiniMax Design “杀入” Adobe、Canva 腹地",
+    "url": "https://www.infoq.cn/article/7FAcAhVUw89VJNwuOwrc?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T16:55:09.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/9x1ohAMlMpMCLdygg8Yf?utm_source=rss&utm_medium=article": {
+    "title": "不跟风、不堆模型，百度靠什么突围AI办公赛道？",
+    "url": "https://www.infoq.cn/article/9x1ohAMlMpMCLdygg8Yf?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T16:47:55.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/v44qVA7JeYOckqlztLMP?utm_source=rss&utm_medium=article": {
+    "title": "Vercel Zero 引发争议：AI 时代真的需要一门新语言吗？",
+    "url": "https://www.infoq.cn/article/v44qVA7JeYOckqlztLMP?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T14:25:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/xL611mlF8NKR0zTB7aMl?utm_source=rss&utm_medium=article": {
+    "title": "初级岗位消失、高级人才断层：下一代高级工程师从哪里来？",
+    "url": "https://www.infoq.cn/article/xL611mlF8NKR0zTB7aMl?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T12:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.infoq.cn/article/hfJrKqqoww06UYcygUrJ?utm_source=rss&utm_medium=article": {
+    "title": "“Anthropic不再是AI圈的信仰”",
+    "url": "https://www.infoq.cn/article/hfJrKqqoww06UYcygUrJ?utm_source=rss&utm_medium=article",
+    "sourceId": "infoq-cn",
+    "source": "InfoQ 中国",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "点击查看原文>",
+    "publishedAt": "2026-08-21T11:04:26.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476778.html": {
+    "title": "最大运力自动驾驶轻卡落地，来自无人车巨头",
+    "url": "https://www.qbitai.com/2026/08/476778.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "载重4.2吨、容积19.32m³",
+    "publishedAt": "2026-08-21T11:47:27.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476733.html": {
+    "title": "明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景",
+    "url": "https://www.qbitai.com/2026/08/476733.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "明略科技（2718.HK）与海康机器人联合参展2026WRC，聚焦商业服务领域展示具身智能落地进展。",
+    "publishedAt": "2026-08-21T09:44:33.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476628.html": {
+    "title": "雷鸟iO发布：两天续航、全天候主动式AI，轻至34g",
+    "url": "https://www.qbitai.com/2026/08/476628.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "8月21日，全球领先的消费级AR品牌雷鸟创新（RayNeo）举办2026雷鸟AI眼镜新品发布会",
+    "publishedAt": "2026-08-21T09:00:06.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476596.html": {
+    "title": "机器人的GPT-3时刻真·来了！卡卡西上身，看3秒就学会新动作",
+    "url": "https://www.qbitai.com/2026/08/476596.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "机器人看3秒演示就能学会",
+    "publishedAt": "2026-08-21T07:17:58.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476591.html": {
+    "title": "科学家只管提问题，AI负责跑实验：深势科技把科研全流程搬进桌面",
+    "url": "https://www.qbitai.com/2026/08/476591.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "让科学家的时间回到科学创造",
+    "publishedAt": "2026-08-21T06:40:34.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476532.html": {
+    "title": "WRC展会拿旧Demo炒冷饭？扒一扒千寻藏在水下的全栈底牌",
+    "url": "https://www.qbitai.com/2026/08/476532.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "一点新鲜变化都没有吗？",
+    "publishedAt": "2026-08-21T05:38:12.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476525.html": {
+    "title": "设计无边界！中坚科技旗下子公司桦之坚携巨型概念机器人ZERO惊艳2026世界机器人大会",
+    "url": "https://www.qbitai.com/2026/08/476525.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "中坚科技（002779.SZ）旗下桦之坚携概念人形机器人ZERO亮相2026世界机器人大会。",
+    "publishedAt": "2026-08-21T05:09:33.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476468.html": {
+    "title": "Jeff Dean离职后首次公开访谈火力有点猛。。。",
+    "url": "https://www.qbitai.com/2026/08/476468.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "离开谷歌的原因之一：小团队可以极致聚焦！",
+    "publishedAt": "2026-08-21T04:05:11.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476413.html": {
+    "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
+    "url": "https://www.qbitai.com/2026/08/476413.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "墨奇，开始加速了",
+    "publishedAt": "2026-08-21T03:14:40.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.qbitai.com/2026/08/476409.html": {
+    "title": "国产“预制算力”来了：工厂预制率超90% 24小时内投运 交付效率提升70%",
+    "url": "https://www.qbitai.com/2026/08/476409.html",
+    "sourceId": "qbitai",
+    "source": "量子位",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "",
+    "publishedAt": "2026-08-21T02:31:10.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://sspai.com/post/113693": {
+    "title": "本周看什么 | 最近值得一看的 10 部作品",
+    "url": "https://sspai.com/post/113693",
+    "sourceId": "sspai",
+    "source": "少数派",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "📅本周新预告《复仇者联盟5》新预告8月15日，电影《复仇者联盟5：毁灭之日》发布了新预告，将于12月全球献映。罗素兄弟执导，克里斯·埃文斯、克里斯·海姆斯沃斯、佩德罗·帕斯卡等主演，小罗伯特·唐尼回归 ...查看全文",
+    "publishedAt": "2026-08-21T10:08:59.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://sspai.com/post/113586": {
+    "title": "TDS REVIEW | Nothing Ear (3a) 降噪真无线耳机体验",
+    "url": "https://sspai.com/post/113586",
+    "sourceId": "sspai",
+    "source": "少数派",
+    "category": "tech",
+    "subcategory": "cn-tech",
+    "excerpt": "Nothing Ear (3a) 保持了它作为 Nothing 产品的精良做工和标志性的外观设计，在操作等方面也做得不错，单元素质也在水平线之上，降噪等方面也并不差，至少在中价位产品中绝对不能算落后。查看全文",
+    "publishedAt": "2026-08-21T03:05:01.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.theguardian.com/business/2026/aug/21/tyson-foods-close-facilities-beef-prices-cattle-shortage": {
+    "title": "What does Tyson’s shutdown of two US beef plants mean for grocery costs?",
+    "url": "https://www.theguardian.com/business/2026/aug/21/tyson-foods-close-facilities-beef-prices-cattle-shortage",
+    "sourceId": "guardian-business",
+    "source": "The Guardian Business",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "Meat producer closes facilities in Utah and Illinois as beef prices rise for consumers amid historic cattle shortage People in the US: how much do you spend on food per month? Tyson Foods, the largest meatpacking company in the US, announced last week that it is closing two of its facilities in Illi",
+    "publishedAt": "2026-08-21T16:01:43.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
+  },
+  "https://www.ftchinese.com/story/001110680": {
+    "title": "投资者缩减对美英加息的押注",
+    "url": "https://www.ftchinese.com/story/001110680",
+    "sourceId": "ftchinese",
+    "source": "FT中文网",
+    "category": "finance",
+    "subcategory": "news",
+    "excerpt": "经济数据变弱压倒对油价上涨的担忧，使交易员预计美联储将在今年剩余时间维持利率不变，而英国央行不太可能在未来一年加息超过两次。",
+    "publishedAt": "2026-08-20T16:00:00.000Z",
+    "firstSeenAt": "2026-08-22T01:48:16.355Z",
+    "lastSeenAt": "2026-08-22T01:48:16.355Z"
   }
 }
